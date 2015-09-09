@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BatchRunner xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\dev\svnroot\phoenix\src\BatchRunner\BatchRunner.xsd">
+<RunInfo>
+	<RunName>run1</RunName>
+	<RunScenarioPath>C:\Users\ganberg\dev\svnroot\AFAR\AFAR1_A.xml</RunScenarioPath>
+	<RunLogDirectoryPath>.</RunLogDirectoryPath>
+	<RunDataTag>1</RunDataTag>
+	<RunDuration>15</RunDuration>
+	<ExternalSetupCommand>AFAR Airport View.exe</ExternalSetupCommand>
+	<ExternalSetupArguments>localhost 9999 Test_A.xml</ExternalSetupArguments>
+	<ExternalSetupWorkingDirectory>C:\Users\ganberg\dev\svnroot\AFAR\src\AFAR Airport View\bin\x64\Debug</ExternalSetupWorkingDirectory>
+	<ExternalSetupDelay>10</ExternalSetupDelay>
+	<ExternalTeardownCommand></ExternalTeardownCommand>
+	<ExternalTeardownArguments></ExternalTeardownArguments>
+	<ExternalTeardownWorkingDirectory></ExternalTeardownWorkingDirectory>
+	<ExternalTeardownDelay>1</ExternalTeardownDelay>
+</RunInfo>
+<RunInfo>
+	<RunName>run2</RunName>
+	<RunScenarioPath>C:\Users\ganberg\dev\svnroot\AFAR\AFAR1_A.xml</RunScenarioPath>
+	<RunLogDirectoryPath>.</RunLogDirectoryPath>
+	<RunDataTag>2</RunDataTag>
+	<RunDuration>15</RunDuration>
+	<ExternalSetupCommand>C:\Users\ganberg\dev\svnroot\AFAR\src\AFAR Airport View\bin\x64\Debug\AFAR Airport View.exe</ExternalSetupCommand>
+	<ExternalSetupArguments>localhost 9999 Test_A.xml</ExternalSetupArguments>
+	<ExternalSetupWorkingDirectory>C:\Users\ganberg\dev\svnroot\AFAR\src\AFAR Airport View\bin\x64\Debug\</ExternalSetupWorkingDirectory>
+	<ExternalSetupDelay>10</ExternalSetupDelay>
+	<ExternalTeardownCommand></ExternalTeardownCommand>
+	<ExternalTeardownArguments></ExternalTeardownArguments>
+	<ExternalTeardownWorkingDirectory></ExternalTeardownWorkingDirectory>
+	<ExternalTeardownDelay>1</ExternalTeardownDelay>
+</RunInfo>
+</BatchRunner>

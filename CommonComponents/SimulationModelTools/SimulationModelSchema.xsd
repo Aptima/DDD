@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<xs:schema id="SimulationModel" 
+                  targetNamespace="SimulationModel.xsd"
+                  elementFormDefault="qualified"
+                  xmlns="SimulationModel.xsd"
+                  xmlns:mstns="SimulationModel.xsd"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:include id="DataTypesSchema" schemaLocation="DataTypesSchema.xsd"></xs:include>
+  <xs:include id="EventModelSchema" schemaLocation="EventModelSchema.xsd"></xs:include>
+  <xs:include id="ObjectModelSchema" schemaLocation="ObjectModelSchema.xsd"></xs:include>
+  <xs:include id="SimulatorModelSchema" schemaLocation="SimulatorModelSchema.xsd"></xs:include>
+  <xs:include id="SimulationExecutionModelSchema" schemaLocation="SimulationExecutionModelSchema.xsd"></xs:include>
+
+  <xs:element name="SimulationModelRoot">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="ObjectModel" type="ObjectModelType" minOccurs="0" maxOccurs="1"></xs:element>
+        <xs:element name="EventModel" type="EventModelType" minOccurs="0" maxOccurs="1"></xs:element>
+        <xs:element name="SimulatorModel" type="SimulatorModelType" minOccurs="0" maxOccurs="1"></xs:element>
+        <xs:element name="SimulationExecutionModel" type="SimulationExecutionModelType" minOccurs="0" maxOccurs="1"></xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

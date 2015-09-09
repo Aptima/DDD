@@ -1,0 +1,10 @@
+﻿<Window x:Class="Decision_Aid.Test.AudioTests"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AudioTests" Height="300" Width="300">
+    <Grid>
+        <Button Content="Play Simple Sound" Height="23" HorizontalAlignment="Left" Margin="0,12,0,0" Name="button1" VerticalAlignment="Top" Width="125" Click="button1_Click" />
+        <Button Content="Play More Frantic Noise" Height="23" HorizontalAlignment="Left" Margin="0,50,0,0" Name="button2" VerticalAlignment="Top" Width="125" Click="button2_Click" />
+        <Button Content="Play Alarm" Height="23" HorizontalAlignment="Left" Margin="0,90,0,0" Name="button3" VerticalAlignment="Top" Width="125" Click="button3_Click" />
+    </Grid>
+</Window>

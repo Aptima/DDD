@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Danny Lecours (Aptima) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Root">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Scenario" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="LinkType" type="xs:string" use="required" fixed="Scenario"/>
+		</xs:complexType>
+		<xs:unique name="ScenarioAndNameKey">
+			<xs:selector xpath="Scenario"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="Scenario">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Playfield" minOccurs="0"/>
+				<xs:element ref="Team" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Classification" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LandRegion" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ActiveRegion" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DecisionMaker" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Network" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Engram" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Sensor" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Singleton" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Rule" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Score" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Genus" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Species" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CreateEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ChangeEngramEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="RemoveEngramEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="OpenChatRoomEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CloseChatRoomEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="OpenVoiceChannelEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CloseVoiceChannelEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SpeciesCompletionEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="FlushEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ReiterateEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SendChatMessageEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SendVoiceMessageEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SendVoiceMessageToUserEvent" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+		<xs:unique name="DecisionMakerTeamName">
+			<xs:selector xpath="DecisionMaker | Team"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:unique name="CreateEventSpeciesDMName">
+			<xs:selector xpath="CreateEvent | Species | DecisionMaker"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:unique name="DecisionMakerNetworkName">
+			<xs:selector xpath="Network | DecisionMaker"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:unique name="SensorName">
+			<xs:selector xpath="Sensor"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:unique name="Classification">
+			<xs:selector xpath="Classification"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:unique name="EngramName">
+			<xs:selector xpath="Engram"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:unique name="RuleName">
+			<xs:selector xpath="Rule"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:unique name="ScoreName">
+			<xs:selector xpath="Score"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:unique name="RegionName">
+			<xs:selector xpath="LandRegion | ActiveRegion"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+		<xs:unique name="ActiveRegionSensor">
+			<xs:selector xpath="Sensor | ActiveRegion"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="Playfield">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Team">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Classifications">
+			<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Classification" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			</xs:complexType>
+	</xs:element>
+	<xs:element name="Classification">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DecisionMaker">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Network">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OpenVoiceChannelEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CloseVoiceChannelEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Engram">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Emitter">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Level" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Sensor">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="SensorRange" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Capability">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Proximity" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Rule">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Score">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="State">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Emitter" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Combo" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Singleton" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Capability" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="InvisibleFunctions" use="optional" fixed="VisualRepresentation=DLL@Image.Icon">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Singleton">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="Transition" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Combo">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="Contribution" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Species">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="State" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+		<xs:unique name="StateName">
+			<xs:selector xpath="State"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="CreateEvent">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="RevealEvent" minOccurs="0"/>
+				<xs:element ref="MoveEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CompletionEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LaunchEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="WeaponLaunchEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="StateChangeEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="TransferEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DecisionMaker" minOccurs="0"/>
+				<xs:element ref="Subplatform" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="AdoptPlatform" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponentAndLinkTypeChildren; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RevealEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+			<xs:attribute name="InvisibleFunctions" type="xs:string" fixed="MoveAction=InsertXYIntoDB@InitialLocation.X@InitialLocation.Y"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MoveEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+			<xs:attribute name="InvisibleFunctions" type="xs:string" fixed="MoveAction=InsertXYIntoDB@DestinationLocation.X@DestinationLocation.Y"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OpenChatRoomEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CloseChatRoomEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SendChatMessageEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SendVoiceMessageEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SendVoiceMessageToUserEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChangeEngramEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RemoveEngramEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SpeciesCompletionEvent">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="RevealEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="MoveEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CompletionEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="TransferEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="StateChangeEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LaunchEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="WeaponLaunchEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ChangeEngramEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="RemoveEngramEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="FlushEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SpeciesCompletionEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ReiterateEvent" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FlushEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CompletionEvent">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="RevealEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="MoveEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CompletionEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="TransferEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="StateChangeEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LaunchEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="WeaponLaunchEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ReiterateEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ChangeEngramEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="RemoveEngramEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="FlushEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SpeciesCompletionEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SendChatMessageEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SendVoiceMessageEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SendVoiceMessageToUserEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CloseVoiceChannelEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="OpenVoiceChannelEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CloseChatRoomEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="OpenChatRoomEvent" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LaunchEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+			<xs:attribute name="InvisibleFunctions" type="xs:string" use="optional" fixed="MoveAction=InsertXYIntoDB@RelativeLocation.X@RelativeLocation.Y"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WeaponLaunchEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+			<xs:attribute name="InvisibleFunctions" type="xs:string" use="optional" fixed="MoveAction=InsertXYIntoDB@RelativeLocation.X@RelativeLocation.Y"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TransferEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReiterateEvent">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="MoveEvent"/>
+			</xs:choice>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StateChangeEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Subplatform">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Armament" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Armament">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AdoptPlatform">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+			<xs:attribute name="InvisibleFunctions" type="xs:string" fixed="MoveAction=InsertXYIntoDB@AdoptPlatformLocation.X@AdoptPlatformLocation.Y"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Transition">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Contribution">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LandRegion">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+			<xs:attribute name="InvisibleFunctions" use="optional" fixed="Drag=ApplicationNodes.PolygonToolTreeNode">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="Drag=(ApplicationNodes\.|AME.Nodes\.).*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ActiveRegion">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+			<xs:attribute name="InvisibleFunctions" use="optional" fixed="Drag=ApplicationNodes.PolygonToolTreeNode">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="Drag=(ApplicationNodes\.|AME.Nodes\.).*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Level">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SensorRange">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Genus">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Proximity">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Effect" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Effect">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="VisibleFunctions" type="xs:string" use="optional" fixed="Delete=DeleteComponent; Rename=RenameComponent"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

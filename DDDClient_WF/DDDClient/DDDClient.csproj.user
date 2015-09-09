@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>C:\Work\SVN\DDD\fresh phoenix\src\DDDClient_WF\Publish\05-17\|C:\Work\SVN\DDD\fresh phoenix\src\DDDClient_WF\Publish\TEST\|C:\Work\SVN\DDD\fresh phoenix\src\DDDClient_WF\Publish\11-21\|C:\Work\SVN\DDD\fresh phoenix\src\DDDClient_WF\Publish\11-07\|C:\Work\SVN\DDD\fresh phoenix\src\DDDClient_WF\Publish\10-27\</PublishUrlHistory>
+    <InstallUrlHistory>http://localhost/DDDClient/|http://kudzma2/DDDClient/</InstallUrlHistory>
+    <SupportUrlHistory>
+    </SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+    <ErrorReportUrlHistory />
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,62 @@
+body {
+background: #606a74;
+color: #FFFFFF;
+}
+.bodytext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+}
+.bodytitle {
+	font-family: Gill Sans, Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+}
+
+.bodyfooter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+}
+a:link {
+	color: #FFFFBB;
+
+}
+a:visited {
+	color: #FFFFBB;
+
+}
+
+#miniHeader{
+	
+	font-size: 18px;
+	font-weight: bold;
+}
+
+h2 a:link {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+h2 a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+h2 a:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+}

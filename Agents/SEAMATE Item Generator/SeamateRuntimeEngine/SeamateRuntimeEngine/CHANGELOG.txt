@@ -1,0 +1,5 @@
+﻿Changelog for SEAMATE Runtime Engine
+
+Version 1.2.3.1 - 2012-03-13:
+- Implemented Changelog ;)
+- Added an exception handler to TimeTick, with a spiffy new window to display exception details.

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aptima.Asim.DDD.CommonComponents.SimulationEventTools</name>
+    </assembly>
+    <members>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationEventTools.SimulationEventDistributor">
+            <summary>
+            A DDD Server internal object.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationEventTools.SimulationEventDistributorClient">
+            <summary>
+            A DDD Server internal object.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationEventTools.SimulationEvent">
+            <summary>
+            The SimulationEvent is the object used for transmitting information 
+            between the DDD Server and any client applications.
+            The SimulationEvent is effectively a dictionary of DataValue objects.
+            </summary>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationEventTools.SimulationEvent.Item(System.String)">
+            <summary>
+            Get or set a DataValue based on its parameter name.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7313A108-B56A-4C2B-B536-0F4EDE01E7A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Decision_Aid</RootNamespace>
+    <AssemblyName>Decision Aid</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.DataTypeTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DDDAgentFramework\bin\x86\Debug\Aptima.Asim.DDD.CommonComponents.DataTypeTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.ErrorLogTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DDDAgentFramework\bin\x86\Debug\Aptima.Asim.DDD.CommonComponents.ErrorLogTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.NetworkTools, Version=4.1.0.4, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DDDAgentFramework\bin\x86\Debug\Aptima.Asim.DDD.CommonComponents.NetworkTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.ServerOptionsTools, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DDDAgentFramework\bin\x86\Debug\Aptima.Asim.DDD.CommonComponents.ServerOptionsTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimMathTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DDDAgentFramework\bin\x86\Debug\Aptima.Asim.DDD.CommonComponents.SimMathTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationEventTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DDDAgentFramework\bin\x86\Debug\Aptima.Asim.DDD.CommonComponents.SimulationEventTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationModelTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DDDAgentFramework\bin\x86\Debug\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.dll</HintPath>
+    </Reference>
+    <Reference Include="DDDAgentFramework, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DDDAgentFramework\bin\x86\Debug\DDDAgentFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DDDLoginDialog.xaml.cs">
+      <DependentUpon>DDDLoginDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DMSelectorDialog.xaml.cs">
+      <DependentUpon>DMSelectorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectObjectDialog.xaml.cs">
+      <DependentUpon>SelectObjectDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test\AudioTests.xaml.cs">
+      <DependentUpon>AudioTests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThreadingExtensionMethod.cs" />
+    <Compile Include="ThreadsafeObservableCollection.cs" />
+    <Page Include="DDDLoginDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DMSelectorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SelectObjectDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test\AudioTests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Audio\ding.wav" />
+    <EmbeddedResource Include="Audio\alarm.wav" />
+    <EmbeddedResource Include="Audio\blip.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

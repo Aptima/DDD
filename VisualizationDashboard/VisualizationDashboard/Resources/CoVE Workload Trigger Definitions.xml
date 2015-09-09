@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HPML ID="CoVE_Workload_Triggers" xmlns="http://schemas.aptima.com/hpml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<SupportObjects>
+		<Configuration>
+			<DataSource ID="DDD"/>
+		</Configuration>
+	</SupportObjects>
+	<Measurements>
+		<MeasurementComponents>
+			<!--Trigger components-->
+			<MeasurementComponent ID="AttackObjectRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="AttackObjectRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="ClientMeasure_CapabilitySelected" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="ClientMeasure_CapabilitySelected" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="ClientMeasure_ObjectSelected" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="ClientMeasure_ObjectSelected" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="ClientMeasure_ObjectTabSelected" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="ClientMeasure_ObjectTabSelected" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="ClientMeasure_ScreenView" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="ClientMeasure_ScreenView" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="MoveObjectRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="MoveObjectRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="RequestChatRoomCreate" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="RequestChatRoomCreate" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="RequestCloseChatRoom" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="RequestCloseChatRoom" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="RequestJoinVoiceChannel" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="RequestJoinVoiceChannel" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="RequestLeaveVoiceChannel" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="RequestLeaveVoiceChannel" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="RequestMuteUser" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="RequestMuteUser" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="RequestStartedTalking" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="RequestStartedTalking" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="RequestStoppedTalking" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="RequestStoppedTalking" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="RequestUnmuteUser" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="RequestUnmuteUser" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="RequestWhiteboardRoomCreate" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="RequestWhiteboardRoomCreate" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="StartedTalking" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="StartedTalking" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="StoppedTalking" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="StoppedTalking" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="SubplatformDockRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="SubplatformDockRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="SubplatformLaunchRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="SubplatformLaunchRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="TextChatRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="TextChatRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="TransferObjectRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="TransferObjectRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="UpdateTag" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="UpdateTag" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WeaponLaunchRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="WeaponLaunchRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WhiteboardClearAllRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="WhiteboardClearAllRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WhiteboardClearRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="WhiteboardClearRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WhiteboardLineRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="WhiteboardLineRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WhiteboardSyncScreenViewRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="WhiteboardSyncScreenViewRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WhiteboardUndoRequest" Type="Interaction">
+				<Parameter Name="UserID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="WhiteboardUndoRequest" Where="%P%UserID == UserID"/>
+			</MeasurementComponent>
+		</MeasurementComponents>
+		<!--Measurement Definitions-->
+		<Measurement ID="AttackObjectRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="AttackObjectRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="ClientMeasure_CapabilitySelectedTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="ClientMeasure_CapabilitySelected">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="ClientMeasure_ObjectSelectedTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="ClientMeasure_ObjectSelected">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="ClientMeasure_ObjectTabSelectedTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="ClientMeasure_ObjectTabSelected">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="ClientMeasure_ScreenViewTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="ClientMeasure_ScreenView">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="MoveObjectRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="MoveObjectRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="RequestChatRoomCreateTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="RequestChatRoomCreate">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="RequestCloseChatRoomTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="RequestCloseChatRoom">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="RequestJoinVoiceChannelTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="RequestJoinVoiceChannel">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="RequestLeaveVoiceChannelTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="RequestLeaveVoiceChannel">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="RequestMuteUserTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="RequestMuteUser">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="RequestStartedTalkingTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="RequestStartedTalking">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="RequestStoppedTalkingTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="RequestStoppedTalking">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="RequestUnmuteUserTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="RequestUnmuteUser">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="RequestWhiteboardRoomCreateTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="RequestWhiteboardRoomCreate">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="StartedTalkingTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="StartedTalking">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="StoppedTalkingTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="StoppedTalking">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SubplatformDockRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="SubplatformDockRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SubplatformLaunchRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="SubplatformLaunchRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="TextChatRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="TextChatRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="TransferObjectRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="TransferObjectRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="UpdateTagTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="UpdateTag">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="WeaponLaunchRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="WeaponLaunchRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="WhiteboardClearAllRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="WhiteboardClearAllRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="WhiteboardClearRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="WhiteboardClearRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="WhiteboardLineRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="WhiteboardLineRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="WhiteboardSyncScreenViewRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="WhiteboardSyncScreenViewRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="WhiteboardUndoRequestTrigger" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="WhiteboardUndoRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="MoveObjectRequestCount" Continuit="Continuous">
+			<Parameter Name="UserID" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComponentRef Ref="MoveObjectRequest">
+					<ParameterValue Name="UserID" Type="ParameterRef" Ref="UserID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		
+		<!-- Utility Measures-->		
+		<!-- Frequency/Division-->
+		<Measurement ID="Frequency" Continuity="Continuous">
+			<Description>Gets the frequency in minutes</Description>
+			<Parameter Name="Count" Type="Int32"/>
+			<Constant Name="msToMin" Type="Int32" Value="6000"/>
+			<MeasurementComputation Operator="Divide">
+				<ParameterRef Name="Count"/>
+				<MeasurementComputation Operator="Divide">
+					<Timing Type="TotalRunningTime"/>
+					<ConstantRef Name="msToMin"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		
+		<Measurement ID="SumInt1" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt2" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt3" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt4" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt5" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<Parameter Name="Value5" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+				<ParameterRef Name="Value5"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt6" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<Parameter Name="Value5" Type="Int32"/>
+			<Parameter Name="Value6" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+				<ParameterRef Name="Value5"/>
+				<ParameterRef Name="Value6"/>
+			</MeasurementComputation>
+		</Measurement>
+		
+	</Measurements>
+</HPML>

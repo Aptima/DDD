@@ -1,0 +1,6 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimulationModelTools\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimulationModelTools\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimulationModelTools\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.xml
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimulationModelTools\obj\Debug\SimulationModelTools.csprojResolveAssemblyReference.cache
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimulationModelTools\obj\Debug\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimulationModelTools\obj\Debug\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.pdb

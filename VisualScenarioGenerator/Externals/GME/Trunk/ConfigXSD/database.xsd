@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Charles Kapopoulos (Aptima, Inc.) -->
+<xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="DataBaseXSD">
+	<xs:element name="database" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="configuration" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="componentTable">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="component" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="root" type="xs:boolean" use="optional"/>
+												<xs:attribute name="id" type="xs:string" use="optional"/>
+												<xs:attribute name="type" type="xs:string" use="required"/>
+												<xs:attribute name="name" type="xs:string" use="required"/>
+												<xs:attribute name="description" type="xs:string" use="required"/>
+												<xs:attribute name="eType" type="xs:string" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="linkTable">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="link" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="rootComponentId" type="xs:string" use="required"/>
+												<xs:attribute name="fromComponentId" type="xs:string" use="required"/>
+												<xs:attribute name="toComponentId" type="xs:string" use="required"/>
+												<xs:attribute name="type" type="xs:string" use="required"/>
+												<xs:attribute name="description" type="xs:string" use="required"/>
+												<xs:attribute name="id" type="xs:string" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="parameterTable">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="parameter" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="parentId" type="xs:string" use="required"/>
+												<xs:attribute name="parentType" type="xs:string" use="required"/>
+												<xs:attribute name="name" type="xs:string" use="required"/>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+												<xs:attribute name="description" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+						<xs:attribute name="name" type="xs:string" use="required"/>
+						<xs:attribute name="isRootController" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

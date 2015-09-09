@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Root">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateEvent" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="LinkType" type="xs:string" use="required" fixed="CreateEventKind"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Species">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Species"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

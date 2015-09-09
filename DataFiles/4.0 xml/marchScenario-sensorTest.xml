@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="marchSchema.xsd">
+
+	<ScenarioName>Test Beta Schema</ScenarioName>
+	<Description>This test scenario is prepared by Aptima for the first round of Beta testing in Dec 2006.</Description>
+	<Playfield>
+		<MapFileName>Map.jpg</MapFileName>
+		<UtmZone>25 M</UtmZone>
+		<VerticalScale>8.5</VerticalScale>
+		<HorizontalScale>8.6</HorizontalScale>
+	</Playfield>
+
+	<ActiveRegion>
+		<ID>Region_1</ID>
+		<Vertex>0 12000</Vertex>
+		<Vertex>0 12500</Vertex>
+		<Vertex>8500 12500</Vertex>
+		<Vertex>8500 12000</Vertex>
+		<Vertex>0 12000</Vertex>
+		<Start>0</Start>
+		<End>1000</End>
+		<SpeedMultiplier>1</SpeedMultiplier>
+		<SensorsBlocked>ClassName</SensorsBlocked>
+		<IsVisible>true</IsVisible>
+		<Color>Blue</Color>
+	</ActiveRegion>
+
+	<ActiveRegion>
+		<ID>Region_2</ID>
+		<Vertex>8500 12500</Vertex>
+		<Vertex>13500 8200</Vertex>
+		<Vertex>13000 8200</Vertex>
+		<Vertex>8500 12000</Vertex>
+		<Vertex>8500 12500</Vertex>
+		<Start>0</Start>
+		<End>1000</End>
+		<SpeedMultiplier>1</SpeedMultiplier>
+		<SensorsBlocked>State</SensorsBlocked>
+		<IsVisible>true</IsVisible>
+		<Color>Red</Color>
+	</ActiveRegion>
+
+	<ActiveRegion>
+		<ID>Region_3</ID>
+		<Vertex>13000 0</Vertex>
+		<Vertex>13000 8200</Vertex>
+		<Vertex>13500 8200</Vertex>
+		<Vertex>13500 0</Vertex>
+		<Vertex>13000 0</Vertex>
+		<Start>0</Start>
+		<End>1000</End>
+		<SpeedMultiplier>1</SpeedMultiplier>
+		<SensorsBlocked>Location</SensorsBlocked>
+		<IsVisible>true</IsVisible>
+		<Color>Orange</Color>
+	</ActiveRegion>
+
+	<Team>
+		<Name>Alliance</Name>
+	</Team>
+	<Team>
+		<Name>Empire</Name>
+	</Team>
+
+	<DecisionMaker>
+		<Role>Blue Commander</Role>
+		<Identifier>BluePlayer01</Identifier>
+		<Color>CornflowerBlue</Color>
+		<Briefing>Test your objects sensing capabilities</Briefing>
+		<Team>Alliance</Team>
+	</DecisionMaker>
+	<DecisionMaker>
+		<Role>Red Commander</Role>
+		<Identifier>RedPlayer01</Identifier>
+		<Color>Red</Color>
+		<Briefing>Your objects will be sensed.</Briefing>
+		<Team>Empire</Team>
+	</DecisionMaker>
+
+	<Network>
+		<Name>Blue Team</Name>
+		<Member>BluePlayer01</Member>
+	</Network>
+	<Network>
+		<Name>Red Team</Name>
+		<Member>RedPlayer01</Member>
+	</Network>
+	<Sensor>
+		<Name>S-10</Name>
+		<Extent>10000</Extent>
+	</Sensor>
+	<Sensor>
+		<Name>BlueLocation</Name>
+		<Attribute>Location</Attribute>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>5000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>A</Level>
+		</Cone>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>10000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>B</Level>
+		</Cone>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>30000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>C</Level>
+		</Cone>
+	</Sensor>
+	<Sensor>
+		<Name>BlueState</Name>
+		<Attribute>State</Attribute>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>5000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>A</Level>
+		</Cone>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>10000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>B</Level>
+		</Cone>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>30000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>C</Level>
+		</Cone>
+	</Sensor>
+		<Sensor>
+		<Name>BlueClass</Name>
+		<Attribute>ClassName</Attribute>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>5000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>A</Level>
+		</Cone>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>10000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>B</Level>
+		</Cone>
+			<Cone>
+				<Spread>360</Spread>
+				<Extent>30000</Extent>
+				<Direction>1 1 0</Direction>
+				<Level>C</Level>
+			</Cone>
+	</Sensor>
+		<Sensor>
+		<Name>BlueThrottle</Name>
+		<Attribute>Throttle</Attribute>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>5000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>A</Level>
+		</Cone>
+		<Cone>
+			<Spread>360</Spread>
+			<Extent>10000</Extent>
+			<Direction>1 1 0</Direction>
+			<Level>B</Level>
+		</Cone>
+			<Cone>
+				<Spread>360</Spread>
+				<Extent>30000</Extent>
+				<Direction>1 1 0</Direction>
+				<Level>C</Level>
+			</Cone>
+	</Sensor>
+	
+	<Genus>
+		<Name>AirObject</Name>
+	</Genus>
+	<Species>
+		<Name>GenericAir</Name>
+		<Base>AirObject</Base>
+		<FullyFunctional>
+			<Icon>ImageLib.Unknown.png</Icon>
+		</FullyFunctional>
+		<DefineState>
+			<State>Inoperable</State>
+		</DefineState>
+	</Species>
+
+	<Species>
+		<Name>MQ-1</Name>
+		<Base>GenericAir</Base>
+		<RemoveOnDestruction>true</RemoveOnDestruction>
+		<FullyFunctional>
+			<Icon>ImageLib.mq1_predator_small.png</Icon>
+			<StateParameters>
+				<MaximumSpeed>1245.8</MaximumSpeed>
+				<FuelCapacity>10000</FuelCapacity>
+				<InitialFuelLoad>9999</InitialFuelLoad>
+				<FuelConsumptionRate>.25</FuelConsumptionRate>
+				<FuelDepletionState>Inoperable</FuelDepletionState>
+				<Sense>BlueState</Sense>
+				<Sense>BlueClass</Sense>
+				<Sense>BlueLocation</Sense>
+				<Sense>BlueThrottle</Sense>
+				<Emitter>
+					<Attribute>Default</Attribute>
+				</Emitter>
+			</StateParameters>
+		</FullyFunctional>
+	</Species>
+
+	<Species>
+		<Name>F16-C</Name>
+		<Base>GenericAir</Base>
+		<RemoveOnDestruction>true</RemoveOnDestruction>
+		<FullyFunctional>
+			<Icon>ImageLib.f16_small.png</Icon>
+			<StateParameters>
+				<MaximumSpeed>1604.2</MaximumSpeed>
+				<FuelCapacity>3333</FuelCapacity>
+				<InitialFuelLoad>2222</InitialFuelLoad>
+				<FuelConsumptionRate>.25</FuelConsumptionRate>
+				<FuelDepletionState>Inoperable</FuelDepletionState>
+				<Sense>S-10</Sense>
+				<Emitter>
+					<Attribute>Location</Attribute>
+					<NormalEmitter>
+						<Level>A</Level>
+						<Variance>1</Variance>
+						<Level>B</Level>
+						<Variance>10</Variance>
+						<Level>C</Level>
+						<Variance>20</Variance>
+					</NormalEmitter>
+				</Emitter>
+				<Emitter>
+					<Attribute>ClassName</Attribute>
+					<NormalEmitter>
+						<Level>A</Level>
+						<Percent>.08</Percent>
+						<Level>B</Level>
+						<Percent>.31</Percent>
+						<Level>C</Level>
+						<Percent>.81</Percent>
+					</NormalEmitter>
+				</Emitter>
+				<Emitter>
+					<Attribute>State</Attribute>
+					<NormalEmitter>
+						<Level>A</Level>
+						<Percent>.08</Percent>
+						<Level>B</Level>
+						<Percent>.50</Percent>
+						<Level>C</Level>
+						<Percent>.81</Percent>
+					</NormalEmitter>
+				</Emitter>
+				<Emitter>
+					<Attribute>Throttle</Attribute>
+					<NormalEmitter>
+						<Level>A</Level>
+						<Variance>1</Variance>
+						<Level>B</Level>
+						<Variance>10</Variance>
+						<Level>C</Level>
+						<Variance>20</Variance>
+					</NormalEmitter>
+				</Emitter>
+			</StateParameters>
+		</FullyFunctional>
+	</Species>
+
+	<Create_Event>
+		<ID>RedFighter</ID>
+		<Kind>F16-C</Kind>
+		<Owner>RedPlayer01</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>BlueSensor</ID>
+		<Kind>MQ-1</Kind>
+		<Owner>BluePlayer01</Owner>
+	</Create_Event>
+
+	<Reveal_Event>
+		<ID>RedFighter</ID>
+		<Time>2</Time>
+		<InitialLocation>18000.00 5000.00 500</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>BlueSensor</ID>
+		<Time>2</Time>
+		<InitialLocation>9000.00 8000.00 500</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+
+	<Move_Event>
+		<ID>RedFighter</ID>
+		<Time>10</Time>
+		<Throttle>100</Throttle>
+		<Destination>12000 13000</Destination>
+	</Move_Event>
+	<Move_Event>
+		<ID>RedFighter</ID>
+		<Time>30</Time>
+		<Throttle>100</Throttle>
+		<Destination>500 17000</Destination>
+	</Move_Event>
+	<Move_Event>
+		<ID>RedFighter</ID>
+		<Time>45</Time>
+		<Throttle>100</Throttle>
+		<Destination>12000 13000</Destination>
+	</Move_Event>
+	<Move_Event>
+		<ID>RedFighter</ID>
+		<Time>60</Time>
+		<Throttle>100</Throttle>
+		<Destination>18000 5000</Destination>
+	</Move_Event>
+</Scenario>
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Danny Lecours (Aptima) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Root">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DecisionMaker" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="LinkType" type="xs:string" use="required" fixed="DecisionMakerReportsTo"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DecisionMaker">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DecisionMaker" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+		<xs:unique name="DecisionMakerReportsToConstraint">
+			<xs:selector xpath="./DecisionMaker | ."/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+	</xs:element>
+</xs:schema>

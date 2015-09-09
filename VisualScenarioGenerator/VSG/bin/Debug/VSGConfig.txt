@@ -1,0 +1,3 @@
+MapDir; 
+IconDir; 
+OpenSaveDir; 

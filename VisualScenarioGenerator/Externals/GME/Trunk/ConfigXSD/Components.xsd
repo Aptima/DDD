@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Danny Lecours (Aptima, Inc.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Components">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Component" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ComponentParameters">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Parameter" minOccurs="0"/>
+				<xs:element ref="Enums" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="defaultParameter" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LinkParameters">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Parameter" minOccurs="0"/>
+				<xs:element ref="Enums" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="defaultParameter" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Value"/>
+	<xs:element name="Enum">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Value" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="enumName" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Enums">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Enum" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Constraint">
+		<xs:complexType>
+			<xs:attribute name="constraintName" type="xs:string" use="required"/>
+			<xs:attribute name="constraintValue" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Constraints">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Parameter">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Parameter" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="propertyName" type="xs:string" use="optional"/>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+			<xs:attribute name="displayedName" type="xs:string" use="optional"/>
+			<xs:attribute name="value" type="xs:string" use="optional"/>
+			<xs:attribute name="category" type="xs:string" use="required"/>
+			<xs:attribute name="description" type="xs:string" use="optional"/>
+			<xs:attribute name="readOnly" type="xs:boolean" use="optional"/>
+			<xs:attribute name="browsable" type="xs:boolean" use="optional"/>
+			<xs:attribute name="classOnly" type="xs:boolean" use="optional"/>
+			<xs:attribute name="editor" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Parameters">
+		<xs:complexType>
+			<xs:sequence/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Component">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ComponentParameters" minOccurs="0"/>
+				<xs:element ref="LinkParameters" minOccurs="0"/>
+				<xs:element ref="Functions" minOccurs="0"/>
+				<xs:element ref="Component" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Include" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Component" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute name="isDynamic" type="xs:boolean" use="required"/>
+						<xs:attribute name="linkType" type="xs:string" use="required"/>
+						<xs:attribute name="componentType" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Subclass"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Type" type="xs:string" use="required"/>
+			<xs:attribute name="BaseType" type="xs:string" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="ID" type="xs:int" use="required"/>
+			<xs:attribute name="Description" type="xs:string" use="optional"/>
+			<xs:attribute name="LinkID" type="xs:string" use="optional"/>
+			<xs:attribute name="ClassID" type="xs:int" use="optional"/>
+			<xs:attribute name="SubclassID" type="xs:int" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Functions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Function" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Argument" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute name="Name" type="xs:string" use="required"/>
+						<xs:attribute name="Action" type="xs:string" use="required"/>
+						<xs:attribute name="Visible" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

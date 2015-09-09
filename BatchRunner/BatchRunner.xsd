@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Danny Lecours (Aptima) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="BatchRunner">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="RunInfo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RunName" type="xs:string"/>
+							<xs:element name="RunScenarioPath" type="xs:string"/>
+							<xs:element name="RunLogDirectoryPath" type="xs:string"/>
+							<xs:element name="RunDataTag" type="xs:string"/>
+							<xs:element name="RunDuration" type="xs:int"/>
+							<xs:element name="ExternalSetupCommand" type="xs:string"/>
+							<xs:element name="ExternalSetupArguments"/>
+							<xs:element name="ExternalSetupWorkingDirectory"/>
+							<xs:element name="ExternalSetupDelay" type="xs:int"/>
+							<xs:element name="ExternalTeardownCommand" type="xs:string"/>
+							<xs:element name="ExternalTeardownArguments"/>
+							<xs:element name="ExternalTeardownWorkingDirectory"/>
+							<xs:element name="ExternalTeardownDelay" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

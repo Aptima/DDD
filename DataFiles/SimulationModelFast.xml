@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SimulationModelRoot xmlns="SimulationModel.xsd">
+  <ObjectModel>
+    <ObjectType Name="BaseObject" Instantiatable="false">
+      <Attribute Name="ID" DataType="StringType"/>
+      <ObjectType Name="PhysicalObject"  Instantiatable="true">
+        <Attribute Name="ObjectName" DataType="StringType"/>
+        <Attribute Name="ObjectState" DataType="StringType"/>
+        <Attribute Name="ClassName" DataType="StringType"/>
+        <Attribute Name="Location" DataType="LocationType"/>
+        <Attribute Name="Velocity" DataType="VelocityType"/>
+        <Attribute Name="MaximumSpeed" DataType="DoubleType"/>
+        <Attribute Name="Throttle" DataType="DoubleType"/>
+        <Attribute Name="DestinationLocation" DataType="LocationType"/>
+      </ObjectType>
+    </ObjectType>
+  </ObjectModel>
+  <EventModel>
+    <EventType Name="BaseEvent">
+      <Parameter Name="Time" DataType="IntegerType"/>
+      <EventType Name="TimeTick">
+      </EventType>
+      <EventType Name="NewObject">
+        <Parameter Name="ObjectType" DataType="StringType"/>
+        <Parameter Name="Attributes" DataType="AttributeCollectionType"/>
+      </EventType>
+      <EventType Name="MoveObject">
+        <Parameter Name="ObjectID" DataType="StringType"/>
+        <Parameter Name="DestinationLocation" DataType="LocationType"/>
+        <Parameter Name="Throttle" DataType="DoubleType"/>
+      </EventType>
+      <EventType Name="MoveDone">
+        <Parameter Name="ObjectID" DataType="StringType"/>
+      </EventType>
+      <EventType Name="ViewProUpdate">
+        <Parameter Name="ObjectID" DataType="StringType"/>
+        <Parameter Name="Location" DataType="LocationType"/>
+        <Parameter Name="Velocity" DataType="VelocityType"/>
+      </EventType>
+    </EventType>
+  </EventModel>
+  <SimulatorModel>
+    <Simulator Name="Motion">
+      <ObjectName Name="PhysicalObject">
+        <AttributeName Name="ID" Subscribe="true" Publish="false"> </AttributeName>
+        <AttributeName Name="Location" Subscribe="true" Publish="true"></AttributeName>
+        <AttributeName Name="Velocity" Subscribe="true" Publish="true"></AttributeName>
+        <AttributeName Name="MaximumSpeed" Subscribe="true" Publish="true"></AttributeName>
+        <AttributeName Name="Throttle" Subscribe="true" Publish="true"></AttributeName>
+        <AttributeName Name="DestinationLocation" Subscribe="true" Publish="true"></AttributeName>
+      </ObjectName>
+      <EventName Name="NewObject" Publish="false" Subscribe="true"></EventName>
+      <EventName Name="MoveObject" Publish="false" Subscribe="true"></EventName>
+      <EventName Name="MoveDone" Publish="true" Subscribe="false"></EventName>
+      <EventName Name="TimeTick" Publish="false" Subscribe="true"></EventName>
+      <Description>
+        The motion simulator owns all the attributes except the ID.
+        It initializes the attributes based on the NewObject event.
+        It modifies the location and velocity based on the
+        maximum speed, throttle, and destination.
+        As each time tick comes in, it updates the location.
+      </Description>
+    </Simulator>
+    <Simulator Name="BlackboardManager">
+      <ObjectName Name="PhysicalObject">
+        <AttributeName Name="ID" Publish="true" Subscribe="true"></AttributeName>
+      </ObjectName>
+      <EventName Name="NewObject" Publish="false" Subscribe="true"></EventName>
+      <Description>
+        The blackboard manager listens for new object events.  When it gets one,
+        it adds a new object to the blackboard and owns its ID attribute.
+      </Description>
+    </Simulator>
+    <Simulator Name="ViewPro">
+      <ObjectName Name="PhysicalEntity">
+        <AttributeName Name="ID" Subscribe="true" Publish="false"> </AttributeName>
+        <AttributeName Name="Location" Subscribe="true" Publish="false"></AttributeName>
+        <AttributeName Name="Velocity" Subscribe="true" Publish="false"></AttributeName>
+        <AttributeName Name="MaximumSpeed" Subscribe="true" Publish="false"></AttributeName>
+        <AttributeName Name="Throttle" Subscribe="true" Publish="false"></AttributeName>
+        <AttributeName Name="DestinationLocation" Subscribe="true" Publish="false"></AttributeName>
+      </ObjectName>
+      <EventName Name="ViewProUpdate" Subscribe="false" Publish="true"></EventName>
+      <EventName Name="TimeTick" Publish="false" Subscribe="true"></EventName>
+      <Description>
+        The ViewPro watches all the attributes and sends ViewProUpdate
+        events whenever an attribute changes.
+      </Description>
+    </Simulator>
+  </SimulatorModel>
+  <SimulationExecutionModel UpdateFrequency="50">
+    <Simulator>
+      <SimulatorName>BlackboardManager</SimulatorName>
+      <DLLName>Foo.dll</DLLName>
+    </Simulator>
+    <Simulator>
+      <SimulatorName>Motion</SimulatorName>
+      <DLLName>Foo.dll</DLLName>
+    </Simulator>
+    <Simulator>
+      <SimulatorName>ViewPro</SimulatorName>
+      <DLLName>Foo.dll</DLLName>
+    </Simulator>
+  </SimulationExecutionModel>
+</SimulationModelRoot>

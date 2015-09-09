@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HPML ID="CoVE_Execution" xmlns="http://schemas.aptima.com/hpml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<SupportObjects>
+		<Configuration>
+			<DataSource ID="DDD"/>
+		</Configuration>
+	</SupportObjects>
+	<Measurements>
+		<MeasurementComponents>
+			<!--Weapons used/docked components-->
+			<MeasurementComponent ID="WeaponsDockedByAsset" Type="Entity" DataSourceSubcriptionsType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="DockedWeapons" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WeaponsDockedByAssetActive" Type="Entity" DataSourceSubcriptionsType="Active">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="DockedWeapons" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<!-- Attack events -->
+			<MeasurementComponent ID="AttackSucceededObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="AttackSucceeded"/>
+			</MeasurementComponent>
+			<!-- Move events-->
+			<MeasurementComponent ID="MovedObjectObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="MoveObject"/>
+			</MeasurementComponent>
+			<!--BaseObject-->
+		<MeasurementComponent ID="BaseObjectOwnerID" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="OwnerID" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+		</MeasurementComponents>
+		<!--Weapons Used-->
+		<Measurement ID="WeaponsRemainingByAsset" Continuity="Continuous">
+			<Parameter Name="ObjectID" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComponentRef Ref="WeaponsDockedByAsset">
+					<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="ObjectID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="WeaponsInitialByAsset" Continuity="Continuous">
+			<Parameter Name="ObjectID" Type="String"/>
+			<Constant Name="TwoThousand" Type="Int32" Value="2000"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComponentRef Ref="WeaponsDockedByAssetActive">
+					<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="ObjectID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="LessThan">
+					<Timing Type="totalrunningtime"/>
+					<ConstantRef Name="TwoThousand"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!--Targets Engaged-->
+		<Measurement ID="Execution_Count_Targets Engaged" Continuity="Continuous">
+			<Parameter Name="Operator" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="BooleanToInt">
+					<MeasurementComputation Operator="Equals">
+						<ParameterRef Name="Operator"/>
+						<MeasurementComponentRef Ref="BaseObjectOwnerID">
+							<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+								<MeasurementComponentRef Ref="AttackSucceededObjectID"/>
+							</ParameterValue>
+						</MeasurementComponentRef>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<!--Assetts Deployed-->
+		<Measurement ID="Execution_Count_Assets Deployed" Continuity="Continuous">
+			<Parameter Name="Operator" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="BooleanToInt">
+					<MeasurementComputation Operator="Equals">
+						<MeasurementComponentRef Ref="BaseObjectOwnerID">
+							<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+								<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+							</ParameterValue>
+						</MeasurementComponentRef>
+						<ParameterRef Name="Operator"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+			<!--Utility-->
+		<Measurement ID="Difference" Continuity="Continuous">
+			<Parameter Name="Operand1" Type="Int32"/>
+			<Parameter Name="Operand2" Type="Int32"/>
+			<MeasurementComputation Operator="subtract">
+				<ParameterRef Name="Operand1"/>
+				<ParameterRef Name="Operand2"/>
+			</MeasurementComputation>
+		</Measurement>		
+		<Measurement ID="SumInt1" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt2" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt3" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt4" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt5" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<Parameter Name="Value5" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+				<ParameterRef Name="Value5"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt6" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<Parameter Name="Value5" Type="Int32"/>
+			<Parameter Name="Value6" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+				<ParameterRef Name="Value5"/>
+				<ParameterRef Name="Value6"/>
+			</MeasurementComputation>
+		</Measurement>
+		
+	</Measurements>
+
+
+</HPML>

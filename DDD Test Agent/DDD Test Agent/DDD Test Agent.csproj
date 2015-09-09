@@ -1,0 +1,67 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6C792BA-88F9-4E16-8D83-C7D7D4F46501}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDD_Test_Agent</RootNamespace>
+    <AssemblyName>DDD Test Agent</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.DataTypeTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Aptima\DDD 4.0\Server\Aptima.Asim.DDD.CommonComponents.DataTypeTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.NetworkTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Aptima\DDD 4.0\Server\Aptima.Asim.DDD.CommonComponents.NetworkTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationEventTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Aptima\DDD 4.0\Server\Aptima.Asim.DDD.CommonComponents.SimulationEventTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationModelTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Aptima\DDD 4.0\Server\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionManager.cs" />
+    <Compile Include="EventGetter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScudLauncher.cs" />
+    <Compile Include="Target.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

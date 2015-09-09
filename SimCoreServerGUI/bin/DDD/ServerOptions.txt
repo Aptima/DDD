@@ -1,0 +1,24 @@
+HostName; zzuzack
+PortNumber; 9999
+SimulationModelPath; \\ZZUZACK\DDDClient\SimulationModel.xml
+ScenarioSchemaPath; \\ZZUZACK\DDDClient\DDDSchema_4_2.xsd
+EventLogDirectory; \\ZZUZACK\DDDClient\
+EventLogType; LIMITED
+DefaultScenarioPath; C:\Users\Public\DDDClient\DDD_4_2_Scenario.xml
+UseStrongPasswords; False
+UseObjectLog; False
+UsePerformanceLog; False
+ShowScoreSummary; False
+HLAExport; False
+HLAFederationExecutionName; 
+HLAFederationFilePath; 
+HLA XML FilePath; 
+Enable Voice Server; False
+Voice Server Hostname; localhost
+Voice Server Port; 10300
+Voice Server Admin Username; admin
+Voice Server Admin Password; admin
+Voice Server User Password; user
+Voice Server Record Channel Traffic; False
+Voice Server Audio Log Directory; C:\DDDVoiceRecordings
+ForkReplaySpeed; 20

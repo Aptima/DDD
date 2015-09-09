@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8484B18-9289-4336-907C-5F44D9B2DE24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aptima.Asim.DDD.Client</RootNamespace>
+    <AssemblyName>DDDClient</AssemblyName>
+    <ManifestCertificateThumbprint>E77962C10DB3B92A30978B5434631EFB5C9B350D</ManifestCertificateThumbprint>
+    <ManifestKeyFile>DDDClient_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationIcon>ddd_48.ico</ApplicationIcon>
+    <ExcludedPermissions>
+    </ExcludedPermissions>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Work\SVN\DDD\fresh phoenix\src\DDDClient_WF\Publish\05-17\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>4.2.0.9</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.DataTypeTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.CommonComponents.DataTypeTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.NetworkTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.CommonComponents.NetworkTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.PasswordHashing">
+      <HintPath>..\..\CommonComponents\PasswordHashing\bin\Debug\Aptima.Asim.DDD.CommonComponents.PasswordHashing.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationEventTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.CommonComponents.SimulationEventTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationModelTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.UserTools, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.CommonComponents.UserTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.Direct3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2906.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2906.0\Microsoft.DirectX.Direct3DX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ControllerException.cs" />
+    <Compile Include="Controller\ServerDisconnectException.cs" />
+    <Compile Include="Controller\GUIController.cs" />
+    <Compile Include="Controller\GUIControllerCommands.cs" />
+    <Compile Include="Controller\ICommand.cs" />
+    <Compile Include="Controller\IController.cs" />
+    <Compile Include="Controller\UTM_Mapping.cs" />
+    <Compile Include="Controls\ModifiableAttributePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ModifiableAttributePanel.Designer.cs">
+      <DependentUpon>ModifiableAttributePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DDD_RangeRings.cs" />
+    <Compile Include="Dialogs\AuthenticationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AuthenticationDialog.Designer.cs">
+      <DependentUpon>AuthenticationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ChatDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ChatDialog.Designer.cs">
+      <DependentUpon>ChatDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ClassificationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ClassificationDialog.Designer.cs">
+      <DependentUpon>ClassificationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ColorPalette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ColorPalette.Designer.cs">
+      <DependentUpon>ColorPalette.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CustomAttributesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CustomAttributesDialog.Designer.cs">
+      <DependentUpon>CustomAttributesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DM_Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DM_Dialog.Designer.cs">
+      <DependentUpon>DM_Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ChatWindowProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ChatWindowProperties.Designer.cs">
+      <DependentUpon>ChatWindowProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DropdownDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DropdownDialog.Designer.cs">
+      <DependentUpon>DropdownDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FatalException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FatalException.Designer.cs">
+      <DependentUpon>FatalException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\OptionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\OptionsDialog.Designer.cs">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ScrollWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ScrollWindow.Designer.cs">
+      <DependentUpon>ScrollWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TextboxDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TextboxDialog.Designer.cs">
+      <DependentUpon>TextboxDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WhiteboardDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WhiteboardDialog.Designer.cs">
+      <DependentUpon>WhiteboardDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\WhiteboardWindowProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WhiteboardWindowProperties.Designer.cs">
+      <DependentUpon>WhiteboardWindowProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voice\IVoiceClientController.cs" />
+    <Compile Include="Voice\IVoiceClientEventCommunicator.cs" />
+    <Compile Include="MessageFilter.cs" />
+    <Compile Include="Voice\VoiceChannel.cs" />
+    <Compile Include="Voice\VoIPClientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Voice\VoIPClientControl.Designer.cs">
+      <DependentUpon>VoIPClientControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voice\VoIPClientDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voice\VoIPClientDialog.Designer.cs">
+      <DependentUpon>VoIPClientDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Whiteboard\Polygon.cs" />
+    <Compile Include="Whiteboard\Vector.cs" />
+    <Compile Include="Whiteboard\WhiteboardRoom.cs" />
+    <Compile Include="WinForm_Splash.cs" />
+    <Compile Include="IMapUpdate.cs" />
+    <Compile Include="MapPlayfieldContainer.cs" />
+    <Compile Include="DDD_Global.cs" />
+    <Compile Include="DDD_MainWinFormInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DDD_MainWinFormInterface.Designer.cs">
+      <DependentUpon>DDD_MainWinFormInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ConnectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ConnectDialog.Designer.cs">
+      <DependentUpon>ConnectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapObjects.cs" />
+    <Compile Include="MapPlayfield.cs" />
+    <Compile Include="MapPlayfieldRender.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="app.config" />
+    <None Include="DDDClient_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Dialogs\SplashDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SplashDialog.Designer.cs">
+      <DependentUpon>SplashDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ConnectDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConnectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DDD_MainWinFormInterface.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DDD_MainWinFormInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SplashDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ModifiableAttributePanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModifiableAttributePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AuthenticationDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AuthenticationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChatDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChatDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ClassificationDialog.resx">
+      <DependentUpon>ClassificationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ColorPalette.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ColorPalette.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CustomAttributesDialog.resx">
+      <DependentUpon>CustomAttributesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DM_Dialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DM_Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ChatWindowProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChatWindowProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DropdownDialog.resx">
+      <DependentUpon>DropdownDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FatalException.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FatalException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\OptionsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ScrollWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScrollWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TestForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TextboxDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextboxDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WhiteboardDialog.resx">
+      <DependentUpon>WhiteboardDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WhiteboardWindowProperties.resx">
+      <DependentUpon>WhiteboardWindowProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="images\Find.bmp" />
+    <Content Include="ddd_48.ico" />
+    <Content Include="images\arrow.ico" />
+    <Content Include="images\circle.ico" />
+    <Content Include="images\CompanyLogo.gif" />
+    <Content Include="images\Edit_UndoHS.png" />
+    <Content Include="images\FontDialogHS.png" />
+    <Content Include="images\line.ico" />
+    <Content Include="images\PointerHS.png" />
+    <Content Include="images\Splash.jpg" />
+    <Content Include="images\voice1.ico" />
+    <Content Include="images\voice2.ico" />
+    <Content Include="images\voice3.ico" />
+    <Content Include="images\voice4.ico" />
+    <Content Include="images\voice5.ico" />
+    <Content Include="images\voice6.ico" />
+    <EmbeddedResource Include="SimulationModel.xml" />
+    <None Include="Resources\ZoomHS.png" />
+    <EmbeddedResource Include="images\Zoom.bmp" />
+    <EmbeddedResource Include="Voice\VoIPClientControl.resx">
+      <DependentUpon>VoIPClientControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voice\VoIPClientDialog.resx">
+      <DependentUpon>VoIPClientDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GLCore\GLCore\GLCore.csproj">
+      <Project>{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}</Project>
+      <Name>GLCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ConaitoLib">
+      <Guid>{3374BF40-50E3-48E0-9281-CF3016E44632}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

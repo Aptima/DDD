@@ -1,0 +1,4 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\EventStreamViewer\bin\Debug\EventStreamViewer.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\EventStreamViewer\bin\Debug\EventStreamViewer.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\EventStreamViewer\obj\Debug\EventStreamViewer.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\EventStreamViewer\obj\Debug\EventStreamViewer.pdb

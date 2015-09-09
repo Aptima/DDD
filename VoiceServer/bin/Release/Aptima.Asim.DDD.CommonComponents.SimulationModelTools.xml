@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aptima.Asim.DDD.CommonComponents.SimulationModelTools</name>
+    </assembly>
+    <members>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.ObjectModelInfo">
+            <summary>
+            Used for keeping track of the object model, a subset of the simulation model.
+            Will be built  as part of SimulationModelInfo object by 
+            the SimulationModelReader.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.ObjectModelInfo.IsDerivedFrom(System.String,System.String)">
+            <summary>
+            Is the child object type derrived from the parent object type?
+            </summary>
+            <param name="child"></param>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.AttributeInfo">
+            <summary>
+            Used for keeping track of what attributes can be part of a simulation object.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.ObjectInfo">
+            <summary>
+            Used for keeping track of the types of objects that are possible in the simulation
+            based on the simulation model.
+            Contains a dictionary of AttributeInfo objects.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.ParameterInfo">
+            <summary>
+            Used for keeping track of what parameters can be part of a simulation event.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.EventInfo">
+            <summary>
+            Used for keeping track of the types of events that are possible in the simulation
+            based on the simulation model.
+            Contains a dictionary of ParameterInfo objects.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.EventModelInfo">
+            <summary>
+            Used for keeping track of the event model, a subset of the simulation model.
+            Will be built as part of SimulationModelInfo object by 
+            the SimulationModelReader.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.SimulationModelInfo">
+            <summary>
+            Contains the ObjectModelInfo, EventModelInfo, and SimulationExecutionModelInfo objects.
+            This is build by the SimulationModelReader.readModel() method.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.SimulatorExecutionInfo">
+            <summary>
+            Used to keep track of individual simulator info in the simulation model.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.SimulationExecutionModelInfo">
+            <summary>
+            Used to keep track of the order that simulators are executed in the DDD Server.
+            Allows access to the updateFrequency, which governs the time-resolution of the DDD Simulation.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulationModelRoot">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulationModelRoot.ObjectModel">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulationModelRoot.EventModel">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulationModelRoot.SimulatorModel">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulationModelRoot.SimulationExecutionModel">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ObjectTypeInfo">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ObjectTypeInfo.Attribute">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ObjectTypeInfo.ObjectType">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ObjectTypeInfo.Name">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ObjectTypeInfo.Instantiatable">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeInfo">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeInfo.Name">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeInfo.DataType">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeInfo.OwnerObservable">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeInfo.OtherObservable">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeInfo.ExcludeFromScenario">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.StringType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.DoubleType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.IntegerType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.BooleanType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.LocationType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.VelocityType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.AttributeCollectionType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.StateTableType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.CapabilityType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.VulnerabilityType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.StringListType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.PolygonType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.SensorArrayType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.SensorType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.ConeType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.EmitterType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.CustomAttributesType">
+            <remarks/>
+        </member>
+        <member name="F:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.DataTypeNames.RangeRingDisplayType">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulatorExecution">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulatorExecution.SimulatorName">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulatorExecution.DLLName">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulationExecutionModelType">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulationExecutionModelType.Simulator">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulationExecutionModelType.UpdateFrequency">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulationExecutionModelType.UpdateFrequencySpecified">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventSubscription">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventSubscription.Name">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventSubscription.Publish">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventSubscription.Subscribe">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventSubscription.Value">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeSubscription">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeSubscription.Name">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeSubscription.Publish">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeSubscription.Subscribe">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.AttributeSubscription.Value">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ObjectInfo">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ObjectInfo.AttributeName">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ObjectInfo.Name">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulatorInfo">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulatorInfo.ObjectName">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulatorInfo.EventName">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulatorInfo.Description">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.SimulatorInfo.Name">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ParameterInfo">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ParameterInfo.Name">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ParameterInfo.DataType">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.ParameterInfo.Value">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventTypeInfo">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventTypeInfo.Description">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventTypeInfo.Parameter">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventTypeInfo.EventType">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventTypeInfo.Name">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventTypeInfo.Log">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventTypeInfo.Replay">
+            <remarks/>
+        </member>
+        <member name="P:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.GeneratedCode.EventTypeInfo.SimCoreSubscribe">
+            <remarks/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.SimulationModelReader">
+            <summary>
+            The main object used for reading in the simulation model file and building
+            a SimulationModelInfo object.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.SimulationModelTools.SimulationModelReader.readModel(System.String)">
+            <summary>
+            This method reads in a simulation model xml file and builds a SimulationModelInfo object.
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

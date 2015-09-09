@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- For those not familiar with XML, this is a comment! Each field in -->
+<!-- this XML file has a description of its purpose. Note the encoding -->
+<!-- used in is UTF-8 so make sure you use an UTF-8 aware editor when -->
+<!-- changing this file if you're using non-English characters. -->
+<evovoip version="3.5">
+    <hosting>
+        <!-- The name of the server which will be displayed on -->
+        <!-- the root channel -->
+        <server-name>VoIP EVO Server</server-name>
+        <!-- The password which users must specify to join the -->
+        <!-- server -->
+        <server-password>user</server-password>
+        <!-- The message of the day. The MOTD can contain the following -->
+        <!-- variables: %users% - the number of users. %uptime% - the -->
+        <!-- duration the server has been online. %lastuser% - the name of -->
+        <!-- the last user to join the server. %admins% - the number of -->
+        <!-- admins connected. %voicetx% - the number of KBytes sent. -->
+        <!-- %voicerx% - the number of KBytes received -->
+        <motd></motd>
+        <!-- Maximum login attempts before a user's IP-address -->
+        <!-- will be banned from the server. 0 = disabled -->
+        <login-attempts>0</login-attempts>
+        <!-- The TCP port to use -->
+        <hostport>10300</hostport>
+        <!-- The UDP port to use -->
+        <soundport>10301</soundport>
+        <!-- The IP to bind to. On Linux boxes with multiple interfaces -->
+        <!-- the bind-ip must be specified -->
+        <bind-ip />
+        <!-- The maximum users allowed on the server. The -->
+        <!-- maximum number of users a TeamTalk server -->
+        <!-- supports is 1000 -->
+        <max-users>1000</max-users>
+        <!-- Allow clients to see users in other channels -->
+        <show-all-users>true</show-all-users>
+        <!-- Channel creation allowed? -->
+        <allow-channel-creation>true</allow-channel-creation>
+        <!-- Should users be allowed to become channel operators? -->
+        <allow-operators>true</allow-operators>
+        <!-- Users should be allowed to use channel commands, e.g. /help -->
+        <allow-channel-commands>true</allow-channel-commands>
+        <!-- Clients should be allowed to broadcast messages (not supported -->
+        <!-- in TeamTalk application) -->
+        <allow-client-broadcast>false</allow-client-broadcast>
+        <!-- Whether clients and admins are allowed to use subscriptions. -->
+        <!-- Note that subscriptions greatly decrease the performance of the -->
+        <!-- server. -->
+        <allow-subscriptions>true</allow-subscriptions>
+        <!-- Number of seconds before a user should be dropped after no activity. -->
+        <user-timeout>60</user-timeout>
+        <!-- Allow remote access? -->
+        <admin-enabled>true</admin-enabled>
+        <!-- Username and password to use for remote acccess -->
+        <admin-username>admin</admin-username>
+        <admin-password>admin</admin-password>
+        <!-- The list of IPs which are allowed to connect as -->
+        <!-- administrators. If none are specified all IPs can -->
+        <!-- connect. -->
+        <admin-access>
+            <!-- <ip>127.0.0.1</ip> -->
+            <!-- <ip>192.168.0.1</ip> -->
+        </admin-access>
+        <!-- Password to automatically become channel -->
+        <!-- operator. Empty means disabled. -->
+        <op-me-password></op-me-password>
+        <!-- Log user events? -->
+        <server-logging>false</server-logging>
+        <!-- The file path of where files should be stored. -->
+        <!-- Empty means disabled. -->
+        <files-root></files-root>
+        <!-- The number of bytes available to a user created -->
+        <!-- channel -->
+        <channel-diskquota>0</channel-diskquota>
+        <!-- The maximum number of bytes available for the -->
+        <!-- server to store files -->
+        <max-diskusage>0</max-diskusage>
+        <!-- The topic of the root channel -->
+        <root-topic></root-topic>
+        <!-- the operator password for the roo channel -->
+        <root-oppassword></root-oppassword>
+        <!-- The number of bytes available for file sharing in -->
+        <!-- root channel. 0 means disabled. -->
+        <root-diskquota>0</root-diskquota>
+        <!-- The channels that should exist once the server starts -->
+        <static-channels>
+            <channel>
+                <name>DDD</name>
+                <password></password>
+                <topic></topic>
+                <diskquota>20000</diskquota>
+                <op-password></op-password>
+                <max-users>100</max-users>
+            </channel>
+        </static-channels>
+        <serverbans />
+        <auto-save>true</auto-save>
+        <root-max-users>128</root-max-users>
+    </hosting>
+</evovoip>

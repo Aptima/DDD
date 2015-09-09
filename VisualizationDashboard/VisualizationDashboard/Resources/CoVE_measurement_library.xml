@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HPML ID="M1" xmlns="http://schemas.aptima.com/hpml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<SupportObjects>
+		<Configuration>
+			<DataSource ID="DDD"/>
+		</Configuration>
+	</SupportObjects>
+	<Measurements>
+		<MeasurementComponents>
+			<!--Chat Communication Components-->
+			<MeasurementComponent ID="TextChatChatRoomID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="TargetUserID" From="TextChat"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="TextChatChatSender" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="TextChat" Select="UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="TextChatChatTime" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="TextChat" Select="Time"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="Chat" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="TextChat" Select="1"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="BeginTextChatRequestSender" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="BeginTextChatRequest" Select="UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="BeginTextChatRequestTime" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="BeginTextChatRequest" Select="Time"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="BeginTextChatRequestRoomID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="BeginTextChatRequest" Select="RoomName"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="UsersInTextChatRoom" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="ChatRoomID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" From="CommunicationChannel.ChatRoom" Select="MembershipList" Where="%P%ChatRoomID == RoomName"/>
+			</MeasurementComponent>
+			<!--Whiteboard Communication Components-->
+			<MeasurementComponent ID="WhiteboardLineRoomID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="TargetUserID" From="WhiteboardLine"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WhiteboardLineSender" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="WhiteboardLine" Select="UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WhiteboardLine" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="WhiteboardLine" Select="1"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WhiteboardLineTime" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="WhiteboardLine" Select="Time"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="BeginWhiteboardLineRoomID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="BeginWhiteboardLineRequest" Select="TargetUserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="BeginWhiteboardLineSender" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="BeginWhiteboardLineRequest" Select="UserID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="BeginWhiteboardLineTime" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="BeginWhiteboardLineRequest" Select="Time"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="UsersInWhiteboardRoom" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="WhiteBoardRoomID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" From="CommunicationChannel.WhiteboardRoom" Select="MembershipList" Where="%P%WhiteBoardRoomID == RoomName"/>
+			</MeasurementComponent>
+			<!--Voice Communication Components-->
+			<MeasurementComponent ID="VoiceChannelID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ChannelName" From="StartedTalking"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="VoiceCommunicationSender" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="StartedTalking" Select="Speaker"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="StartedTalking" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="StartedTalking" Select="1"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="StartedTalkingChannelName" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="StartedTalking" Select="ChannelName"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="StartedTalkingTime" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="StartedTalking" Select="Time"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="StoppedTalkingSender" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="StoppedTalking" Select="Speaker"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="StoppedTalkingChannelName" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="StoppedTalking" Select="ChannelName"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="StoppedTalkingTime" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" From="StoppedTalking" Select="Time"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="UsersOnVoiceChannelRoom" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="VoiceChannelID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" From="CommunicationChannel.VoiceChannel" Select="MembershipList" Where="%P%VoiceChannelID == ChannelName"/>
+			</MeasurementComponent>
+			<!-- Attack events -->
+			<MeasurementComponent ID="AttackObjectObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="AttackObject"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackObjectTargetObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="TargetObjectID" From="AttackObject"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackSucceededTargetIDByObjectID" Type="Interaction">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="TargetID" From="AttackSucceeded" Where="%P%ObjectID == ObjectID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackSucceededObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="AttackSucceeded"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackSucceededTargetID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="TargetID" From="AttackSucceeded"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackObjectDecisionMakerID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="DecisionMakerID" From="AttackObject"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WeaponLaunchObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="WeaponLaunch"/>
+			</MeasurementComponent>
+			<!--Base Object Components -->
+			<MeasurementComponent ID="BaseObjectOwnerID" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="OwnerID" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="BaseObjectIDByOwnerIDandOwnerID" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="OwnerID" Type="String"/>
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="SimObject" Where="(%P%ObjectID == ID) &amp;&amp; (%P%OwnerID == OwnerID)"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="BaseObjectState" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="State" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<!--Fuel Components-->
+			<MeasurementComponent ID="FuelRemainingByAsset" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="FuelAmount" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="FuelCapacityByAsset" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="FuelCapacity" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<!--Weapons used/docked components-->
+			<MeasurementComponent ID="WeaponsDockedByAsset" Type="Entity" DataSourceSubcriptionsType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="DockedWeapons" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WeaponsDockedByAssetActive" Type="Entity" DataSourceSubcriptionsType="Active">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="DockedWeapons" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<!-- Team Components -->
+			<MeasurementComponent ID="DecisionMakerTeamName" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" From="Organization.DecisionMaker" Select="TeamMember" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<!-- this doesn't seem to exist 
+			<MeasurementComponent ID="TeamMembers" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="TeamName" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" From="Organization.Team" Select="MembershipList" Where="%P%TeamName == TeamName"/>
+			</MeasurementComponent>
+-->
+			<!--Move Object components-->
+			<MeasurementComponent ID="MovedObjectByID" Type="Interaction">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="MoveObject" Where="%p%ObjectID == ObjectID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="MovedObjectObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="MoveObject"/>
+			</MeasurementComponent>
+		</MeasurementComponents>
+		<!--++++++++++++++++++++++++++++-->
+		<!-- Chat Communication measures -->
+		<!--IncomingChatForUserCount-->
+		<Measurement ID="Communication_Count_Incoming_Chat_All" Continuity="Continuous">
+			<Description>Counts the incoming chats for a user</Description>
+			<Parameter Name="Operator" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="BooleanToInt">
+					<MeasurementComputation Operator="AND">
+						<MeasurementComputation Operator="IsIn">
+							<ParameterRef Name="Operator"/>
+							<MeasurementComponentRef Ref="UsersInTextChatRoom">
+								<ParameterValue Name="ChatRoomID" Type="MeasurementComponentRef">
+									<MeasurementComponentRef Ref="TextChatChatRoomID"/>
+								</ParameterValue>
+							</MeasurementComponentRef>
+						</MeasurementComputation>
+						<MeasurementComputation Operator="NotEquals">
+							<ParameterRef Name="Operator"/>
+							<MeasurementComponentRef Ref="TextChatChatSender"/>
+						</MeasurementComputation>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Communication_StartTime_Incoming_Chat_User" Continuity="Continuous">
+			<Description>Counts the incoming chats for a user</Description>
+			<Parameter Name="To" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="BeginTextChatRequestTime">
+					<ParameterValue Name="" Type="ParameterRef" Ref="To"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="And">
+					<MeasurementComputation Operator="IsIn">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="UsersInTextChatRoom">
+							<ParameterValue Name="ChatRoomID" Type="MeasurementComponentRef">
+								<MeasurementComponentRef Ref="BeginTextChatRequestRoomID"/>
+							</ParameterValue>
+						</MeasurementComponentRef>
+					</MeasurementComputation>
+					<MeasurementComputation Operator="NotEquals">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="BeginTextChatRequestSender"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="Communication_Duration_Incoming_Chat_By_User" Continuit="Continuous">
+			<Description>Counts the outgoing chats for a user</Description>
+			<Parameter Name="To" Type="String"/>
+			<Parameter Name="StartTime" Type="Double"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="Subtract">
+					<MeasurementComponentRef Ref="TextChatChatTime">
+						<ParameterValue Name="" Type="ParameterRef" Ref="To"/>
+					</MeasurementComponentRef>
+					<ParameterRef Name="StartTime"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="And">
+					<MeasurementComputation Operator="IsIn">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="UsersInTextChatRoom">
+							<ParameterValue Name="ChatRoomID" Type="MeasurementComponentRef">
+								<MeasurementComponentRef Ref="TextChatChatRoomID"/>
+							</ParameterValue>
+						</MeasurementComponentRef>
+					</MeasurementComputation>
+					<MeasurementComputation Operator="NotEquals">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="TextChatChatSender"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!--OutgoingChatForUserCount-->
+		<Measurement ID="Communication_Count_Outgoing_Chat_All" Continuity="Continuous">
+			<Description>Counts the outgoing chats for a user</Description>
+			<Parameter Name="Operator" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="BooleanToInt">
+					<MeasurementComputation Operator="Equals">
+						<ParameterRef Name="Operator"/>
+						<MeasurementComponentRef Ref="TextChatChatSender"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Communication_StartTime_Outgoing_Chat_By_User" Continuity="Continuous">
+			<Description>Counts the outgoing chats for a user</Description>
+			<Parameter Name="From" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="BeginTextChatRequestTime">
+					<ParameterValue Name="" Type="ParameterRef" Ref="From"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<ParameterRef Name="From"/>
+					<MeasurementComponentRef Ref="BeginTextChatRequestSender"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="Communication_Duration_Outgoing_Chat_By_User" Continuit="Continuous">
+			<Description>Counts the outgoing chats for a user</Description>
+			<Parameter Name="From" Type="String"/>
+			<Parameter Name="StartTime" Type="Double"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="Subtract">
+					<MeasurementComponentRef Ref="TextChatChatTime">
+						<ParameterValue Name="" Type="ParameterRef" Ref="From"/>
+					</MeasurementComponentRef>
+					<ParameterRef Name="StartTime"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<ParameterRef Name="From"/>
+					<MeasurementComponentRef Ref="TextChatChatSender"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!--++++++++++++++++++++++++++++-->
+		<!-- Whiteboard Communication measures -->
+		<!--IncomingWhiteboardForUserCount-->
+		<Measurement ID="Communication_Count_Incoming_Whiteboard" Continuity="Continuous">
+			<Description>Counts the incoming wihteboard messages for a user</Description>
+			<Parameter Name="Operator" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="BooleanToInt">
+					<MeasurementComputation Operator="AND">
+						<MeasurementComputation Operator="IsIn">
+							<ParameterRef Name="Operator"/>
+							<MeasurementComponentRef Ref="UsersInWhiteboardRoom">
+								<ParameterValue Name="WhiteBoardRoomID" Type="MeasurementComponentRef">
+									<MeasurementComponentRef Ref="WhiteboardLineRoomID"/>
+								</ParameterValue>
+							</MeasurementComponentRef>
+						</MeasurementComputation>
+						<MeasurementComputation Operator="NotEquals">
+							<ParameterRef Name="Operator"/>
+							<MeasurementComponentRef Ref="WhiteboardLineSender"/>
+						</MeasurementComputation>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Communication_StartTime_Incoming_Whiteboard" Continuity="Continuous">
+			<Description>Gets the time that the last whiteboard messages for a user was begun</Description>
+			<Parameter Name="To" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="BeginWhiteboardLineTime">
+					<ParameterValue Name="" Type="ParameterRef" Ref="To"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="And">
+					<MeasurementComputation Operator="IsIn">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="UsersInWhiteboardRoom">
+							<ParameterValue Name="WhiteBoardRoomID" Type="MeasurementComponentRef">
+								<MeasurementComponentRef Ref="BeginWhiteboardLineRoomID"/>
+							</ParameterValue>
+						</MeasurementComponentRef>
+					</MeasurementComputation>
+					<MeasurementComputation Operator="NotEquals">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="BeginWhiteboardLineSender"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="Communication_Duration_Incoming_Whiteboard_By_User" Continuit="Continuous">
+			<Description>Counts the outgoing chats for a user</Description>
+			<Parameter Name="To" Type="String"/>
+			<Parameter Name="StartTime" Type="Double"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="Subtract">
+					<MeasurementComponentRef Ref="WhiteboardLineTime">
+						<ParameterValue Name="" Type="ParameterRef" Ref="To"/>
+					</MeasurementComponentRef>
+					<ParameterRef Name="StartTime"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="And">
+					<MeasurementComputation Operator="IsIn">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="UsersInWhiteboardRoom">
+							<ParameterValue Name="WhiteBoardRoomID" Type="MeasurementComponentRef">
+								<MeasurementComponentRef Ref="WhiteboardLineRoomID"/>
+							</ParameterValue>
+						</MeasurementComponentRef>
+					</MeasurementComputation>
+					<MeasurementComputation Operator="NotEquals">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="WhiteboardLineSender"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!--OutgoingChatForUserCount-->
+		<Measurement ID="Communication_Count_Outgoing_Whiteboard" Continuity="Continuous">
+			<Description>Counts the outgoing whiteboard messages for a user</Description>
+			<Parameter Name="Operator" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="BooleanToInt">
+					<MeasurementComputation Operator="Equals">
+						<ParameterRef Name="Operator"/>
+						<MeasurementComponentRef Ref="WhiteboardLineSender"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Communication_StartTime_Outgoing_Whiteboard_By_User" Continuity="Continuous">
+			<Description>Gets the start time of the last incoming whiteboard for a user</Description>
+			<Parameter Name="From" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="BeginWhiteboardLineTime">
+					<ParameterValue Name="" Type="ParameterRef" Ref="From"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<ParameterRef Name="From"/>
+					<MeasurementComponentRef Ref="BeginWhiteboardLineSender"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="Communication_Duration_Outgoing_Whiteboard_By_User" Continuit="Continuous">
+			<Description>Aggregates the duration of incoming whiteboard communications</Description>
+			<Parameter Name="From" Type="String"/>
+			<Parameter Name="StartTime" Type="Double"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="Subtract">
+					<MeasurementComponentRef Ref="WhiteboardLineTime">
+						<ParameterValue Name="" Type="ParameterRef" Ref="From"/>
+					</MeasurementComponentRef>
+					<ParameterRef Name="StartTime"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<ParameterRef Name="From"/>
+					<MeasurementComponentRef Ref="WhiteboardLineSender"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!--++++++++++++++++++++++++++++-->
+		<!-- Voice Communication measures -->
+		<!--IncomingVoiceForUserCount-->
+		<Measurement ID="Communication_Count_Incoming_VoIP" Continuity="Continuous">
+			<Description>Counts the incoming voice communications for a user</Description>
+			<Parameter Name="Operator" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="BooleanToInt">
+					<MeasurementComputation Operator="AND">
+						<MeasurementComputation Operator="IsIn">
+							<ParameterRef Name="Operator"/>
+							<MeasurementComponentRef Ref="UsersOnVoiceChannelRoom">
+								<ParameterValue Name="VoiceChannelID" Type="MeasurementComponentRef">
+									<MeasurementComponentRef Ref="VoiceChannelID"/>
+								</ParameterValue>
+							</MeasurementComponentRef>
+						</MeasurementComputation>
+						<MeasurementComputation Operator="NotEquals">
+							<ParameterRef Name="Operator"/>
+							<MeasurementComponentRef Ref="VoiceCommunicationSender"/>
+						</MeasurementComputation>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Communication_StartTime_Incoming_Voice_By_User" Continuity="Continuous">
+			<Description>Gets the time that the last a voice message for a user was begun</Description>
+			<Parameter Name="To" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="StartedTalkingTime">
+					<ParameterValue Name="" Type="ParameterRef" Ref="To"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="And">
+					<MeasurementComputation Operator="IsIn">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="UsersOnVoiceChannelRoom">
+							<ParameterValue Name="VoiceChannelID" Type="MeasurementComponentRef">
+								<MeasurementComponentRef Ref="StartedTalkingChannelName"/>
+							</ParameterValue>
+						</MeasurementComponentRef>
+					</MeasurementComputation>
+					<MeasurementComputation Operator="NotEquals">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="StartedTalkingSender"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="Communication_Duration_Incoming_Voice_By_User" Continuit="Continuous">
+			<Description>aggregates the duration of incoming voice communications for a user</Description>
+			<Parameter Name="To" Type="String"/>
+			<Parameter Name="StartTime" Type="Double"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="Subtract">
+					<MeasurementComponentRef Ref="StoppedtalkingTime">
+						<ParameterValue Name="" Type="ParameterRef" Ref="To"/>
+					</MeasurementComponentRef>
+					<ParameterRef Name="StartTime"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="And">
+					<MeasurementComputation Operator="IsIn">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="UsersOnVoiceChannelRoom">
+							<ParameterValue Name="VoiceChannelID" Type="MeasurementComponentRef">
+								<MeasurementComponentRef Ref="StoppedTalkingChannelName"/>
+							</ParameterValue>
+						</MeasurementComponentRef>
+					</MeasurementComputation>
+					<MeasurementComputation Operator="NotEquals">
+						<ParameterRef Name="To"/>
+						<MeasurementComponentRef Ref="StartedTalkingSender"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+				
+<!--OutgoingVoiceForUserCount-->
+		<Measurement ID="Communication_Count_Outgoing_Voice" Continuity="Continuous">
+			<Description>Counts the outgoing voice communications for a user</Description>
+			<Parameter Name="Operator" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="BooleanToInt">
+					<MeasurementComputation Operator="Equals">
+						<ParameterRef Name="Operator"/>
+						<MeasurementComponentRef Ref="VoiceCommunicationSender"/>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Communication_StartTime_Outgoing_Voice_Chat_By_User" Continuity="Continuous">
+			<Description>Gets the start time of the last incoming whiteboard for a user</Description>
+			<Parameter Name="From" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="StartedTalkingTime">
+					<ParameterValue Name="" Type="ParameterRef" Ref="From"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<ParameterRef Name="From"/>
+					<MeasurementComponentRef Ref="StartedTalkingSender"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="Communication_Duration_Incoming_Voice_Chat_By_User" Continuit="Continuous">
+			<Description>Aggregates the duration of incoming whiteboard communications</Description>
+			<Parameter Name="From" Type="String"/>
+			<Parameter Name="StartTime" Type="Double"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="Subtract">
+					<MeasurementComponentRef Ref="StoppedTalkingSender">
+						<ParameterValue Name="" Type="ParameterRef" Ref="From"/>
+					</MeasurementComponentRef>
+					<ParameterRef Name="StartTime"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<ParameterRef Name="From"/>
+					<MeasurementComponentRef Ref="StoppedTalkingSender"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!-- -->
+		<!--AttackEventForUser-->
+		<Measurement ID="AttackEventForUser" Continuity="Discrete">
+			<Description>Sends a result for each attack originating from the specified desicion maker</Description>
+			<Parameter Name="DecisionMaker" Type="String"/>
+			<MeasurementComputation Operator="Equals">
+				<ParameterRef Name="DecisionMaker"/>
+				<MeasurementComponentRef Ref="BaseObjectOwnerID">
+					<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+						<MeasurementComponentRef Ref="AttackObjectObjectID"/>
+					</ParameterValue>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<!--WeaponLaunchForUser-->
+		<Measurement ID="WeaponLaunchEventForUser" Continuity="Discrete">
+			<Description>Sends a result for each weapon launch originating from the specified desicion maker</Description>
+			<Parameter Name="DecisionMaker" Type="String"/>
+			<MeasurementComputation Operator="Equals">
+				<ParameterRef Name="DecisionMaker"/>
+				<MeasurementComponentRef Ref="BaseObjectOwnerID">
+					<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+						<MeasurementComponentRef Ref="WeaponLaunchObjectID"/>
+					</ParameterValue>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<!--AssetDeployedForUser-->
+		<Measurement ID="AssetDeployedEventForUser" Continuity="Discrete">
+			<Description>Sends a result for each Asset deployment originating from the specified desicion maker</Description>
+			<Parameter Name="DecisionMaker" Type="String"/>
+			<MeasurementComputation Operator="Equals">
+				<ParameterRef Name="DecisionMaker"/>
+				<MeasurementComponentRef Ref="BaseObjectOwnerID">
+					<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+						<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+					</ParameterValue>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<!--TargetsEngagedForDecisionMakerAndAsset-->
+		<Measurement ID="TargetsEngagedForDecisionMakerAndAsset" Continuity="Continuous">
+			<Description>Counts the targets engaged for the asset if the desicion maker owns it</Description>
+			<Parameter Name="DecisionMakerID" Type="String"/>
+			<Parameter Name="AssetID" Type="String"/>
+			<MeasurementComputation Operator="FunctionCall" Value="Total">
+				<MeasurementComputation Operator="BooleanToInt">
+					<MeasurementComputation Operator="AND">
+						<MeasurementComputation Operator="Equals">
+							<ParameterRef Name="DecisionMakerID"/>
+							<MeasurementComponentRef Ref="BaseObjectOwnerID">
+								<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+									<MeasurementComponentRef Ref="AttackObjectObjectID"/>
+								</ParameterValue>
+							</MeasurementComponentRef>
+						</MeasurementComputation>
+						<MeasurementComputation Operator="Equals">
+							<ParameterRef Name="AssetID"/>
+							<MeasurementComponentRef Ref="AttackObjectObjectID"/>
+						</MeasurementComputation>
+					</MeasurementComputation>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<!-- Move Object Measures -->
+		<Measurement ID="HasObjectBeenMoved" Continuity="Continuous">
+			<Parameter Name="ObjectID" Type="String"/>
+			<Constant Name="One" Type="Int32" Value="1"/>
+			<MeasurementComputation Operator="Equals">
+				<ConstantRef Name="One"/>
+				<MeasurementComponentRef Ref="MovedObjectByID">
+					<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="ObjectID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<!--++++++++++++++++++++++++++++++++++-->
+		<!--Utility Measures-->
+		<Measurement ID="Ratio" Continuity="Continuous">
+			<Parameter Name="Dividend" Type="Int32"/>
+			<Parameter Name="Divisor" Type="Int32"/>
+			<MeasurementComputation Operator="Divide">
+				<ParameterRef Name="Dividend"/>
+				<ParameterRef Name="Divisor"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="IntTotal2" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<MeasurementComputation Operator="Add">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="MaxInt2" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<MeasurementComputation Operator="Max">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt2" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt3" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt4" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt5" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<Parameter Name="Value5" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+				<ParameterRef Name="Value5"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt6" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<Parameter Name="Value5" Type="Int32"/>
+			<Parameter Name="Value6" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+				<ParameterRef Name="Value5"/>
+				<ParameterRef Name="Value6"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Difference" Continuity="Continuous">
+			<Parameter Name="Operand1" Type="Int32"/>
+			<Parameter Name="Operand2" Type="Int32"/>
+			<MeasurementComputation Operator="subtract">
+				<ParameterRef Name="Operand1"/>
+				<ParameterRef Name="Operand2"/>
+			</MeasurementComputation>
+		</Measurement>
+		<!--OUTCOME MEASURES-->
+		<Measurement ID="Outcome_Weapons left" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComponentRef Ref="WeaponsDockedByAsset">
+					<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="Asset"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Outcome_Weapons initial" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<Constant Name="OneThousand" Type="Int32" Value="1000"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComponentRef Ref="WeaponsDockedByAssetActive">
+					<ParameterValue Name="Asset" Type="ParameterRef" Ref="Asset"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<Timing Type="totalrunningtime"/>
+					<ConstantRef Name="OneThousand"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!--Fuel Measures-->
+		<Measurement ID="Outcome_Fuel left" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="FuelRemainingByAsset">
+					<ParameterValue Name="Asset" Type="ParameterRef" Ref="Asset"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="FuelCapacityByAsset" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="FuelCapacityByAsset">
+					<ParameterValue Name="Asset" Type="ParameterRef" Ref="Asset"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Outcome_Fuel initial" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<Constant Name="OneThousand" Type="Int32" Value="1000"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="FuelRemainingByAsset">
+					<ParameterValue Name="Asset" Type="ParameterRef" Ref="Asset"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<Timing Type="totalrunningtime"/>
+					<ConstantRef Name="OneThousand"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!--Health Measures-->
+		<!-- 1 if Fully Functional, 0 if not -->
+		<Measurement ID="Outcome_Health" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<Constant Name="FullyFunctional" Type="String" Value="Fully Functional"/>
+			<MeasurementComputation Operator="BoolToInt">
+				<MeasurementComputation Operator="Equals">
+					<ConstantRef Name="FullyFunctional"/>
+					<MeasurementComponentRef Ref="BaseObjectState">
+						<ParameterValue Name="Asset" Type="ParameterRef" Ref="Asset"/>
+					</MeasurementComponentRef>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<!--Targets Engaged Measures-->
+		<Measurement ID="Outcome_Targets engaged" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="AttackSucceededTargetIDByObjectID">
+						<ParameterValue Name="Asset" Type="ParameterRef" Ref="Asset"/>
+					</MeasurementComponentRef>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="TargetsEngagedCountByDecisionMakerID" Continuity="Continuous">
+			<Parameter Name="DecisionMakerID" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="AttackSucceededTargetID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<ParameterRef Name="DecisionMakerID"/>
+					<MeasurementComponentRef Ref="BaseObjectOwnerID">
+						<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+							<MeasurementComponentRef Ref="AttackSucceededObjectID"/>
+						</ParameterValue>
+					</MeasurementComponentRef>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="TargetsEngagedCountByTeam" Continuity="Continuous">
+			<Parameter Name="TeamName" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="AttackSucceededTargetID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<MeasurementComponentRef Ref="DecisionMakerTeamName">
+						<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+							<MeasurementComponentRef Ref="BaseObjectOwnerID">
+								<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+									<MeasurementComponentRef Ref="AttackSucceededObjectID"/>
+								</ParameterValue>
+							</MeasurementComponentRef>
+						</ParameterValue>
+					</MeasurementComponentRef>
+					<ParameterRef Name="TeamName"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="TargetsEngagedCountAll" Continuity="Continuous">
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="AttackSucceededTargetID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<!--Assets deployed-->
+		<Measurement ID="AssetsDeployedCountByDecisionMakerID" Continuity="Continuous">
+			<Parameter Name="DecisionMakerID" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<MeasurementComponentRef Ref="BaseObjectOwnerID">
+						<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+							<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+						</ParameterValue>
+					</MeasurementComponentRef>
+					<ParameterRef Name="DecisionMakerID"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="AssetsDeployedCountByTeam" Continuity="Continuous">
+			<Parameter Name="TeamName" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<MeasurementComponentRef Ref="DecisionMakerTeamName">
+						<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+							<MeasurementComponentRef Ref="BaseObjectOwnerID">
+								<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+									<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+								</ParameterValue>
+							</MeasurementComponentRef>
+						</ParameterValue>
+					</MeasurementComponentRef>
+					<ParameterRef Name="TeamName"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="AssetsDeployedCountAll" Continuity="Continuous">
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Outcome_Assets deployed" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+					<ParameterRef Name="Asset"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+	</Measurements>
+</HPML>

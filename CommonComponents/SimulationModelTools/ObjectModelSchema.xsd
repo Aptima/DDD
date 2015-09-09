@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<xs:schema id="SimulationModel" targetNamespace="SimulationModel.xsd"
+	xmlns:mstns="SimulationModel.xsd" xmlns="SimulationModel.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:include id="DataTypesSchema" schemaLocation="DataTypesSchema.xsd"></xs:include>
+	<xs:complexType name="AttributeInfo">
+		<xs:attribute name="Name" type="xs:string" use="required"></xs:attribute>
+		<xs:attribute name="DataType" type="DataTypeNames" use="required"></xs:attribute>
+    <xs:attribute name="OwnerObservable" type="xs:boolean" default="false"></xs:attribute>
+    <xs:attribute name="OtherObservable" type="xs:boolean" default="false"></xs:attribute>
+    <xs:attribute name="ExcludeFromScenario" type="xs:boolean" default="false"></xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ObjectTypeInfo">
+		<xs:sequence>
+			<xs:element name="Attribute" type="AttributeInfo" maxOccurs="unbounded" minOccurs="0"></xs:element>
+			<xs:element name="ObjectType" type="ObjectTypeInfo" maxOccurs="unbounded" minOccurs="0"></xs:element>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" use="required"></xs:attribute>
+		<xs:attribute name="Instantiatable" type="xs:boolean" default="false"></xs:attribute>
+	</xs:complexType>
+  <xs:complexType name="ObjectModelType">
+		<xs:sequence> 
+			<xs:element name="ObjectType" type="ObjectTypeInfo" maxOccurs="unbounded" minOccurs="0"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,7 @@
+9.0
+5
+1       SQLCHAR       0       12      "\t"     2     parentId                   ""
+2       SQLCHAR       0       80      "\t"     3     parentType                 SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR       0       80      "\t"     4     name                       SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR       0       0       "\t"     5     value                      SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR       0       255     "\r\n"   6     description                SQL_Latin1_General_CP1_CI_AS

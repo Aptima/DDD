@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xs:schema id="SimulationModel" targetNamespace="SimulationModel.xsd" xmlns:mstns="SimulationModel.xsd" xmlns="SimulationModel.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:include id="DataTypesSchema" schemaLocation="DataTypesSchema.xsd">
+  </xs:include>
+  <xs:complexType name="SimulatorExecution">
+    <xs:sequence>
+      <xs:element name="SimulatorName" type="xs:string">
+      </xs:element>
+      <xs:element name="DLLName" type="xs:string">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SimulationExecutionModelType">
+    <xs:sequence>
+      <xs:element name="Simulator" type="SimulatorExecution" minOccurs="0" maxOccurs="unbounded">
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="UpdateFrequency" type="xs:int" />
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,4 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\NetworkConnectionViewer\bin\Debug\NetworkConnectionViewer.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\NetworkConnectionViewer\bin\Debug\NetworkConnectionViewer.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\NetworkConnectionViewer\obj\Debug\NetworkConnectionViewer.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\NetworkConnectionViewer\obj\Debug\NetworkConnectionViewer.pdb

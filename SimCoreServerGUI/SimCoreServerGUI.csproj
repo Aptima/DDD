@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D095829-8260-4F76-A61E-E8862220109D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aptima.Asim.DDD.SimCoreGUI</RootNamespace>
+    <AssemblyName>SimCoreServerGUI</AssemblyName>
+    <ApplicationIcon>ddd_48.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/SimCoreServerGUI/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>4.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\DDD\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ENABLE_PASSWORDS|AnyCPU' ">
+    <OutputPath>bin\DDD\</OutputPath>
+    <DefineConstants>ENABLE_PASSWORD</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '!ENABLE_PASSWORDS|AnyCPU' ">
+    <OutputPath>bin\!ENABLE_PASSWORDS\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DDD\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ENABLE_PASSWORDS|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ENABLE_PASSWORDS\</OutputPath>
+    <DefineConstants>ENABLE_PASSWORD</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '!ENABLE_PASSWORDS|x86' ">
+    <OutputPath>bin\DDD\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyErrorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyErrorDlg.Designer.cs">
+      <DependentUpon>KeyErrorDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyErrorDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KeyErrorDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerConfigDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAdministration.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserAdministration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDialogue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserDialogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServerConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerConfigDialog.Designer.cs">
+      <DependentUpon>ServerConfigDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdministration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAdministration.Designer.cs">
+      <DependentUpon>UserAdministration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDialogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDialogue.Designer.cs">
+      <DependentUpon>UserDialogue.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonComponents\DataTypeTools\DataTypeTools.csproj">
+      <Project>{B31CF76A-8F86-438C-B33D-0440A46A7515}</Project>
+      <Name>DataTypeTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\ErrorLogTools\ErrorLogTools.csproj">
+      <Project>{BBC8DB46-80B7-495D-84D6-B826F958BEAA}</Project>
+      <Name>ErrorLogTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\HandshakeManager\HandshakeManager.csproj">
+      <Project>{CC524B0E-23CD-46F0-BBED-C5875D5E1C8B}</Project>
+      <Name>HandshakeManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\NetworkTools\NetworkTools.csproj">
+      <Project>{D5EF4CF2-CFEE-4AF2-9DC5-C79B8D19760B}</Project>
+      <Name>NetworkTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\ObjectsAttributeCollection\ObjectsAttributeCollection.csproj">
+      <Project>{837C6353-9802-4579-ABF9-0DA5B338CF8F}</Project>
+      <Name>ObjectsAttributeCollection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\PasswordHashing\PasswordHashing.csproj">
+      <Project>{3CB302F8-A83F-47F4-B357-4F8BCFEA2480}</Project>
+      <Name>PasswordHashing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\ServerOptionsTools\ServerOptionsTools.csproj">
+      <Project>{E6ECFFC2-6F1F-4A12-BBC2-87994A4BB1BB}</Project>
+      <Name>ServerOptionsTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimCoreTools\SimCoreTools.csproj">
+      <Project>{E8D570F0-BE4E-4348-8BA6-D5ACF3EDCF88}</Project>
+      <Name>SimCoreTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimulationEventTools\SimulationEventTools.csproj">
+      <Project>{8155AED6-09DC-4993-AD12-B6306F44E99C}</Project>
+      <Name>SimulationEventTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimulationObjectTools\SimulationObjectTools.csproj">
+      <Project>{A8E7A3AE-A909-47DC-83F1-1BE125A04C85}</Project>
+      <Name>SimulationObjectTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\UserTools\UserTools.csproj">
+      <Project>{63612134-CD3F-4EAB-9847-B7DADA4ECDC4}</Project>
+      <Name>UserTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimCoreServer\SimCoreServer.csproj">
+      <Project>{45D871CF-3D30-49EF-98D7-BC4B0355772F}</Project>
+      <Name>SimCoreServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimEngine\SimulationEngine.csproj">
+      <Project>{3B26D537-A467-4E52-AF1F-97A61BE9C791}</Project>
+      <Name>SimulationEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Resources\AptimaHead_trans.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ddd_48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy /y "$(SolutionDir)DataFiles\evoserver.exe"
+copy /y "$(SolutionDir)CommonComponents\SimCoreTools\bin\Debug\*.Simulators.*.dll"
+copy /y "$(SolutionDir)CommonComponents\SimCoreTools\bin\Debug\*.CommonComponents.*.dll"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

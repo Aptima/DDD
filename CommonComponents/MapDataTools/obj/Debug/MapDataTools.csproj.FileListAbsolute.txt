@@ -1,0 +1,5 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\MapDataTools\bin\Debug\Aptima.Asim.DDD.CommonComponents.MapDataTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\MapDataTools\bin\Debug\Aptima.Asim.DDD.CommonComponents.MapDataTools.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\MapDataTools\obj\Debug\MapDataTools.csprojResolveAssemblyReference.cache
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\MapDataTools\obj\Debug\Aptima.Asim.DDD.CommonComponents.MapDataTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\MapDataTools\obj\Debug\Aptima.Asim.DDD.CommonComponents.MapDataTools.pdb

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ca0f47ff-653f-45dc-aed9-5fe70a1cf066" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:8000/Aptima/RTPMEngine/MEX" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Aptima.RTPMEngine.wsdl" MetadataType="Wsdl" ID="bc5c54a9-f2a0-48e3-82f4-fd5903b44648" SourceId="1" SourceUrl="net.tcp://localhost:8000/Aptima/RTPMEngine/MEX" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="6e3a11f9-8c16-4721-b9dc-1999b853d36d" SourceId="1" SourceUrl="net.tcp://localhost:8000/Aptima/RTPMEngine/MEX" />
+    <MetadataFile FileName="Aptima.RTPMEngine.xsd" MetadataType="Schema" ID="db133289-0ca7-46f1-b9ca-3ed4e411ad40" SourceId="1" SourceUrl="net.tcp://localhost:8000/Aptima/RTPMEngine/MEX" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="71b47dae-81a8-4fef-8e90-1ffe72d2c439" SourceId="1" SourceUrl="net.tcp://localhost:8000/Aptima/RTPMEngine/MEX" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="e1db468a-a269-4ccb-927a-b6eabed9bb4d" SourceId="1" SourceUrl="net.tcp://localhost:8000/Aptima/RTPMEngine/MEX" />
+    <MetadataFile FileName="Aptima.PMEngine.Services.xsd" MetadataType="Schema" ID="6a2d8a5e-c002-42e6-aaac-ab6b194d5d77" SourceId="1" SourceUrl="net.tcp://localhost:8000/Aptima/RTPMEngine/MEX" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

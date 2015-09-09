@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5BFCB4C-B342-4A4B-8576-2C3B4851953E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aptima.Asim.DDD.Simulators</RootNamespace>
+    <AssemblyName>Aptima.Asim.DDD.Simulators.SeamateSimulator</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="SeamateSim.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.DataTypeTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Aptima.Asim.DDD.CommonComponents.DataTypeTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.ErrorLogTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Aptima.Asim.DDD.CommonComponents.ErrorLogTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.ServerOptionsTools, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Aptima.Asim.DDD.CommonComponents.ServerOptionsTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimMathTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Aptima.Asim.DDD.CommonComponents.SimMathTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationEventTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Aptima.Asim.DDD.CommonComponents.SimulationEventTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationModelTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationObjectTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Aptima.Asim.DDD.CommonComponents.SimulationObjectTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulatorTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Aptima.Asim.DDD.CommonComponents.SimulatorTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.ScenarioUnitsData, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Aptima.Asim.DDD.ScenarioUnitsData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)*.dll"  "$(SolutionDir)SimCoreServerGUI\bin\DDD"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

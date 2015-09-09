@@ -1,0 +1,9 @@
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\Database\Trunk\src\bin\Debug\Database.exe
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\Database\Trunk\src\bin\Debug\Database.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\Database\Trunk\src\bin\Debug\MySql.Data.dll
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\Database\Trunk\src\obj\Debug\Database.csprojResolveAssemblyReference.cache
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\Database\Trunk\src\obj\Debug\Database.MySQLSetupForm.resources
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\Database\Trunk\src\obj\Debug\Database.WarningForm.resources
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\Database\Trunk\src\obj\Debug\Database.csproj.GenerateResource.Cache
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\Database\Trunk\src\obj\Debug\Database.exe
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\Database\Trunk\src\obj\Debug\Database.pdb

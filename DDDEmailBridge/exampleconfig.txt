@@ -1,0 +1,9 @@
+DDDServerHostname=foo
+DDDServerPortNumber=9999
+EmailServerHostname=mail.foo.com
+EmailServerPortNumber=143
+EmailServerUseSSL=false
+EmailCheckFrequency=30
+EmailUsername=foo
+EmailPassword=foo
+AttachmentBaseDirectory=.

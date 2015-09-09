@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Charles Kapopoulos (Aptima, Inc.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Configuration">
+		<xs:annotation>
+			<xs:documentation>Model Configuration</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Directories">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Model" type="Directory"/>
+							<xs:element name="Output" type="Directory"/>
+							<xs:element name="Data" type="Directory"/>
+							<xs:element name="Xml" type="Directory"/>
+							<xs:element name="Documentation" type="Directory"/>
+							<xs:element name="License" type="Directory"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Database">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Import" type="Directory"/>
+							<xs:element name="Format" type="Directory"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="configurationNamespace" type="xs:string" use="required"/>
+			<xs:attribute name="xsdNamespace" type="xs:string" use="required"/>
+			<xs:attribute name="xslNamespace" type="xs:string" use="required"/>
+			<xs:attribute name="imgNamespace" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Directory">
+		<xs:sequence>
+			<xs:element name="Path" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="relative" type="xs:boolean" use="required"/>
+	</xs:complexType>
+</xs:schema>

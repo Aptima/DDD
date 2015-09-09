@@ -1,0 +1,6 @@
+9.0
+4
+1       SQLCHAR       0       12      "\t"     2     fromComponentId                    ""
+2       SQLCHAR       0       12      "\t"     3     toComponentId                      ""
+3       SQLCHAR       0       80      "\t"     4     type                               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR       0       255     "\r\n"   5     description                        SQL_Latin1_General_CP1_CI_AS

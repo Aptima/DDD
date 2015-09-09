@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Aptima.RTPMEngine" elementFormDefault="qualified" targetNamespace="http://Aptima.RTPMEngine" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Aptima.PMEngine.Services" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="InitializeSession">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitializeSessionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminateSession">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadMeasurementFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="measurementLibrary" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadMeasurementFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoadMeasurementFileResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadMeasureInstance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="measureInstance" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadMeasureInstanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoadMeasureInstanceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResults">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetResultsResult" nillable="true" type="q1:ArrayOfKeyValueOfstringArrayOfMeasureResultMrailTHo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfMeasureResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MeasureResult" nillable="true" type="tns:MeasureResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMeasureResult" nillable="true" type="tns:ArrayOfMeasureResult" />
+  <xs:complexType name="MeasureResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MeasurementID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Aptima.PMEngine.Services" minOccurs="0" name="MeasurementStatus" type="q2:MeasureStatus" />
+      <xs:element minOccurs="0" name="MeasurementTime" type="xs:double" />
+      <xs:element minOccurs="0" name="MeasurementType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MeasurementValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MeasureResult" nillable="true" type="tns:MeasureResult" />
+  <xs:element name="SubscribeToData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubscribeToDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

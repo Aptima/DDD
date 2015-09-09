@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aptima.Asim.DDD.CommonComponents.NetworkTools</name>
+    </assembly>
+    <members>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.NetworkTools.NetworkClient.#ctor">
+            <summary>
+            The NetworkClient should be instantiated once per client application.
+            It is used to subscribe to and receive events from the DDD Server.
+            It is also used to send events to the DDD Server.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.NetworkTools.NetworkClient.IsConnected">
+            <summary>
+            This method should be called to determine if the NetworkClient object is connected
+            to the DDD Server.  If for some reason the connection is lost, this will return false.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.NetworkTools.NetworkClient.Disconnect">
+            <summary>
+            Disconnect from the DDD Server.
+            This should always be called before a client application closes 
+            in order to gracefully disconnect from the server.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.NetworkTools.NetworkClient.Connect(System.String,System.Int32)">
+            <summary>
+            This method is used to connect to the DDD Server.
+            </summary>
+            <param name="servername">The hostname of the machine the DDD Server is running on</param>
+            <param name="port">The port number that the DDD Server is listening on</param>
+            <returns>boolean connect success</returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.NetworkTools.NetworkClient.PutEvent(Aptima.Asim.DDD.CommonComponents.SimulationEventTools.SimulationEvent)">
+            <summary>
+            This method is used to send an event to the DDD Server.
+            </summary>
+            <param name="e">The event</param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.NetworkTools.NetworkClient.GetEvents">
+            <summary>
+            The method is used to get all waiting events from the DDD Server.
+            This should be called periodically to see if any events are waiting.
+            </summary>
+            <returns>A list of events</returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.NetworkTools.NetworkClient.Subscribe(System.String)">
+            <summary>
+            This method is used to subscribe to event types.
+            GetEvents will only return events that have been subscribed to with this method.
+            </summary>
+            <param name="eventName">The name of an event type that is defined in the simulation model</param>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.NetworkTools.NetworkServer">
+            <summary>
+            The main DDD Server class.
+            </summary>
+            <exclude/>
+            
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.NetworkTools.NetworkServer.#ctor(System.Int32,Aptima.Asim.DDD.CommonComponents.SimulationEventTools.SimulationEventDistributor@)">
+            <summary>
+            The NetworkServer will be instantiated once in the DDD Server.
+            External applications such as agents and custom GUIs should ignore this class.
+            </summary>
+            <param name="port"></param>
+            <param name="dist"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,5 @@
+
+
+NET SHARE DDDClient /DELETE
+
+NET SHARE DDDClient="%~dp1" /UNLIMITED

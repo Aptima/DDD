@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Visual Scenario Generator - Decision Maker</title>
+
+<style type="text/css">
+h1 {
+border-bottom-color: #339999;
+border-bottom-style: solid;
+font-family: Arial;
+color: #339999;
+font-size: large;
+}
+p {
+font-family: Tahoma;
+font-size: small;
+}
+ol {
+font-family: tahoma;
+font-size: small;
+}
+ul {
+font-family: tahoma;
+font-size: small;
+}
+</style></head>
+<body>
+<h1>Introduction to Decision Makers</h1>
+<p>A <span style="font-weight: bold;">Decision Maker</span>
+is a scenario entity that owns
+and&nbsp;controls&nbsp;"<a href="Species%20Definition.html">Units</a>". &nbsp;A "unit" is a
+controllable
+onscreen asset, such as a plane or tank. &nbsp; In general a Decision
+Maker is a human player, however, this need not always be
+the case.</p>
+<p>A Decision Maker
+has five basic components:</p>
+<ol>
+<li>A Role, a brief description of the Decision Maker's purpose.</li>
+<li>An Identifier, a unique name for the Decision
+Maker.&nbsp;</li>
+<li>A Color denoting ownership. &nbsp;All onscreen assets
+owned by a Decision Maker will appear in the same color.</li>
+<li>A collection of communication and control management options which determine who a Decision Maker can communicate with, and who they report to.</li>
+<li>A Briefing that lays out the Decision Maker's mission or
+objective.</li>
+</ol>
+<p></p>
+<h1>How to Define a Decision Maker</h1>
+<ol>
+<li>Right click on the "Decision Makers" entry on the Object
+Types tree to the left.</</li>
+<li>Select Create Decision Maker. &nbsp;Enter a Decision Maker name
+in the resulting dialog.</</li>
+<li>Follow the onscreen instructions for defining a Decision
+Maker.</li>
+</ol>
+<p>
+<h1>Notes About Communication and Control Options</h1>
+<ol>
+<li>Reports To - This selector allows you to choose a single Decision Maker that this Decision Maker 'reports' to.  If the Can Force Asset Transfers checkbox is selected, then this Decision Maker's superior is allowed to transfer this Decision Maker's assets.</li>
+<li>Can Share Whiteboard With - This selector defines which other Decision Makers this DM is able to be in a whiteboard room with.  Both DMs need to be able to be in the same whiteboard room in order for the room to be created.</li>
+<li>Can Chat With - This selector defines which other Decision Makers this DM is able to be in a text chat room with.  Both DMs need to be able to be in the same text chat room in order for the room to be created.</li>
+<li>Can Speak With - This selector defines which other Decision Makers this DM is able to be in a voice channel with.  Both DMs need to be able to be in the same voice channel in order for the channel to be created.</li>
+</ol>
+</p>
+<p>
+Additionally, you can determine whether or not a decision maker is able to transfer its assets during the simulation.
+<ul>
+<li>Can Transfer Assets - When checked, this Decision Maker is able to transfer their assets to other DMs in a simulation.</li>
+<li>Can Force Asset Transfers - When checked, this Decision Maker is able to transfer assets which belong to Decision Makers that Report To this DM.</li>
+</ul>
+</p>
+<span style="font-family: Tahoma;"></span>
+<p> </p>
+</body></html>

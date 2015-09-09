@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Danny Lecours (Aptima) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Root">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RevealEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="MoveEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="CompletionEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LaunchEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="WeaponLaunchEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="StateChangeEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="TransferEvent" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="FlushEvent" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="LinkType" type="xs:string" use="required" fixed="EventID"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateEvent">
+		<xs:complexType>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RevealEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateEvent"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MoveEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateEvent"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CompletionEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateEvent"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LaunchEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateEvent"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WeaponLaunchEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateEvent"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TransferEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateEvent"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StateChangeEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateEvent"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FlushEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateEvent"/>
+			</xs:sequence>
+			<xs:attribute name="eType" use="required" fixed="Component">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+						<xs:enumeration value="Instance"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ID" type="xs:int" use="optional"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

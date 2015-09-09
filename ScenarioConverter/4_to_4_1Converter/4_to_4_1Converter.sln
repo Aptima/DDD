@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_to_4_1Converter", "4_to_4_1Converter\4_to_4_1Converter.csproj", "{A1EEDE9E-5ED7-46D1-8086-5B472BE523D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0B33CDB-DBA3-4B4F-B80C-A41C29BFEC8A}"
+	ProjectSection(SolutionItems) = preProject
+		4_to_4_1.xslt = 4_to_4_1.xslt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1EEDE9E-5ED7-46D1-8086-5B472BE523D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1EEDE9E-5ED7-46D1-8086-5B472BE523D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1EEDE9E-5ED7-46D1-8086-5B472BE523D5}.Debug|x86.ActiveCfg = Debug|x86
+		{A1EEDE9E-5ED7-46D1-8086-5B472BE523D5}.Debug|x86.Build.0 = Debug|x86
+		{A1EEDE9E-5ED7-46D1-8086-5B472BE523D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1EEDE9E-5ED7-46D1-8086-5B472BE523D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1EEDE9E-5ED7-46D1-8086-5B472BE523D5}.Release|x86.ActiveCfg = Release|x86
+		{A1EEDE9E-5ED7-46D1-8086-5B472BE523D5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

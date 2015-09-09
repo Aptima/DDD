@@ -1,0 +1,5 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\CompareDDDObjectLog\bin\Debug\CompareDDDState.exe
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\CompareDDDObjectLog\bin\Debug\CompareDDDState.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\CompareDDDObjectLog\obj\Debug\CompareDDDObjectLog.csprojResolveAssemblyReference.cache
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\CompareDDDObjectLog\obj\Debug\CompareDDDState.exe
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\CompareDDDObjectLog\obj\Debug\CompareDDDState.pdb

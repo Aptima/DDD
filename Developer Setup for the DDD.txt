@@ -1,0 +1,30 @@
+Developer Setup for the DDD
+Nick Caler
+11-4-08
+
+Updated by Adam Dziki, 5-7-2009
+
+Install the latest version of the DDD on your machine.  At the time of this writing the latest version was 4.0 SP5 and was located:
+\\Nas-ma\directories\Projects\DDD Product Development\Releases\DDD 4.0 - SP 5 - FULL - 8-14-2008\
+
+Download the DDD source from subversion at the following location:
+https://svn.aptima.com/repositories/phoenix/src
+
+Once you have downloaded the source go to the command prompt and navigate to the location you checked out the source to.  Go to the DLL directory and enter the following two commands to register the VoIP libraries with COM:
+regsvr32.exe EvoVoIP.dll
+regsvr32.exe EvoVoIPAdmin.dll
+
+You'll need to set up a directory as your Shared directory.  If you have the Commercial DDD installed, this is at \\[ComputerName]\DDDClient.  If not, I suggest making the DataFiles directory shared as "DDDClient", and then adding the following files and directories (directory names are in square brackets).
+The client directory should be set up as follows (Directory names in square brackets)
+
+    * [DDDClient]
+          o ImageLib.dll  (located in src\DDDClient_WF\ImageLib\Latest_Dll)
+          o SimulationModel.xml (located in datafiles)
+          o DDDSchema_4_0.xsd  (located in datafiles)
+          o [MapLib]
+                + Map.jpg   (located in src\DDDClient_WF\MapLib)
+
+
+You should know be able to open the DDDSimulation.sln and \DDDClient_WF\DDDClient.sln solution files which are the main files for working on the DDD.
+
+Enjoy!

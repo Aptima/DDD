@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GME xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/configuration.xsd">
+	<Configurations>
+		<Configuration name="Project" root="Scenario" controller="RootController" linkType="Scenario"/>
+		<Configuration name="VSG" root="Scenario" controller="VSG.Controllers.VSGController" linkType="Scenario"/>
+	</Configurations>
+	<Global>
+		<Components>
+			<Component name="Scenario" bitmap="Folder.ico">
+				<CreateComponents>
+					<CreateComponent component="Playfield" name="Playfield" configuration="VSG" eType="Component">
+						<CreateLinks>
+							<CreateLink name="Scenario" configuration="VSG" schemaRoot="Root" from="Parent" to="Self"/>
+						</CreateLinks>
+					</CreateComponent>
+				</CreateComponents>
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="ScenarioName" type="System.String" displayedName="Scenario Name" value="" category="Scenario" description="Name of Scenario"/>
+						<Parameter propertyName="Description" type="System.String" displayedName="Description" value="" category="Scenario" description="Description of scenario"/>
+						<Parameter propertyName="TimeToAttack" type="System.Int32" displayedName="Time To Attack" value="10" category="Scenario" description="Time To Attack"/>
+						<Parameter propertyName="AssetTransfer" type="System.Boolean" displayedName="Allow Asset Transfers" value="false" category="Scenario" description="Enables or disables the ability for Decision Makers to be able to transfer assets between each other."/>
+						<Parameter propertyName="RangeRingDisplayType" type="RangeRingDisplayEnum" displayedName="Range Ring Display Type" value="Full" category="Scenario" description="Range Ring Client Display Value" />
+					</Parameters>
+					<Enums>
+					<Enum enumName="RangeRingDisplayEnum">
+						<Value>Full</Value>
+						<Value>Shared Sensor Network</Value>
+						<Value>Personal</Value>
+						<Value>Disabled</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="Playfield">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="MapFileName" type="System.String" displayedName="Map Filename" value="" category="Playfield" description="Map Filename"/>
+						<Parameter propertyName="IconLibrary" type="System.String" displayedName="Icon Library" value="" category="Playfield" description="Icon Library"/>
+						<Parameter propertyName="UtmZone" type="System.String" displayedName="UTM Zone" value="None" category="Playfield" description="UTM Zone"/>
+						<Parameter propertyName="VerticalScale" type="System.Decimal" displayedName="Vertical Scale" value="1.0" category="Playfield" description="Vertical Scale">
+							<Constraints>
+								<Constraint constraintName="min" constraintValue="0.001"/>
+								<Constraint constraintName="max" constraintValue="5000"/>
+							</Constraints>
+						</Parameter>
+						<Parameter propertyName="HorizontalScale" type="System.Decimal" displayedName="Horizontal Scale" value="1.0" category="Playfield" description="Horizontal Scale">
+							<Constraints>
+								<Constraint constraintName="min" constraintValue="0.001"/>
+								<Constraint constraintName="max" constraintValue="5000"/>
+							</Constraints>
+						</Parameter>
+						<Parameter propertyName="Northing" type="System.Decimal" displayedName="Northing" value="0.0" category="Playfield" description="Northing"/>
+						<Parameter propertyName="Easting" type="System.Decimal" displayedName="Easting" value="0.0" category="Playfield" description="Easting"/>
+						<Parameter propertyName="DefaultDisplayLabels" type="System.String" displayedName="Display Labels" value="" category="Playfield" description="If labels are displayed by default, or disabled"/>
+						<Parameter propertyName="DefaultDisplayTags" type="System.String" displayedName="Display Tags" value="" category="Playfield" description="If tags are displayed by default, or disabled."/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="LandRegion">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="PolygonPoints" type="System.String" displayedName="Polygon Points" value="" category="Location" description="Location of the Land Region"/>
+						<Parameter propertyName="Color" type="System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" displayedName="Color" value="Brown" category="Color" description="Color"/>
+						<Parameter propertyName="Alpha" type="System.String" displayedName="Alpha" value="" category="Color" description="Alpha"/>
+					</Parameters>
+					<Enums>
+						<Enum enumName="Colors">
+							<Value>AliceBlue</Value>
+							<Value>Aqua</Value>
+							<Value>Blue</Value>
+							<Value>BlueViolet</Value>
+							<Value>Brown</Value>
+							<Value>CornflowerBlue</Value>
+							<Value>Crimson</Value>
+							<Value>Cyan</Value>
+							<Value>DarkBlue</Value>
+							<Value>DarkGray</Value>
+							<Value>DarkGreen</Value>
+							<Value>DarkKhaki</Value>
+							<Value>DarkOliveGreen</Value>
+							<Value>DarkRed</Value>
+							<Value>DarkSlateGray</Value>
+							<Value>DodgerBlue</Value>
+							<Value>Fuchsia</Value>
+							<Value>Gray</Value>
+							<Value>Green</Value>
+							<Value>GreenYellow</Value>
+							<Value>HotPink</Value>
+							<Value>Khaki</Value>
+							<Value>Lavender</Value>
+							<Value>LimeGreen</Value>
+							<Value>Magenta</Value>
+							<Value>Maroon</Value>
+							<Value>Navy</Value>
+							<Value>Olive</Value>
+							<Value>OliveDrab</Value>
+							<Value>Orange</Value>
+							<Value>OrangeRed</Value>
+							<Value>Plum</Value>
+							<Value>PowderBlue</Value>
+							<Value>Purple</Value>
+							<Value>Red</Value>
+							<Value>RosyBrown</Value>
+							<Value>RoyalBlue</Value>
+							<Value>SandyBrown</Value>
+							<Value>SeaGreen</Value>
+							<Value>Silver</Value>
+							<Value>SkyBlue</Value>
+							<Value>SlateBlue</Value>
+							<Value>SlateGray</Value>
+							<Value>Tan</Value>
+							<Value>Teal</Value>
+							<Value>Transparent</Value>
+							<Value>Turquoise</Value>
+							<Value>Violet</Value>
+							<Value>Yellow</Value>
+							<Value>YellowGreen</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="ActiveRegion">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="PolygonPoints" type="System.String" displayedName="Polygon Points" value="" category="Location" description="Location of the Land Region"/>
+						<Parameter propertyName="Color" type="System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" displayedName="Color" value="DarkGreen" category="Color" description="Color"/>
+						<Parameter propertyName="Alpha" type="System.String" displayedName="Alpha" value="" category="Color" description="Alpha"/>
+						<Parameter propertyName="Start" type="System.Decimal" displayedName="Start" value="0.0" category="Active Region" description="Start"/>
+						<Parameter propertyName="End" type="System.Decimal" displayedName="End" value="0.0" category="Active Region" description="End"/>
+						<Parameter propertyName="SpeedMultiplier" type="System.Decimal" displayedName="Speed Multiplier" value="1.0" category="Active Region" description="Speed Multiplier"/>
+						<Parameter propertyName="BlocksMovement" type="System.Boolean" displayedName="Blocks Movement" value="false" category="Active Region" description="Blocks Movement"/>
+						<Parameter propertyName="SensorsBlocked" type="System.String" displayedName="Sensors Blocked" value="" category="Active Region" description="Sensors Blocked"/>
+						<Parameter propertyName="IsVisible" type="System.Boolean" displayedName="Is Visible" value="true" category="Active Region" description="Is Visible"/>
+						<Parameter propertyName="ReferencePoint" type="System.String" displayedName="ReferencePoint" value="" category="Location" description="Reference point of the Active Region"/>
+						
+						<Parameter propertyName="IsDynamicRegion" type="System.Boolean" displayedName="Is this a Dynamic Region" value="false" category="Active Region" description="Is this object a dynamic region, tied to an instantiation of an object"/>
+						<Parameter propertyName="RelativePolygonPoints" type="System.String" displayedName="Relative Polygon Points" value="" category="Location" description="Relative Location of the Active Region"/>
+						
+					</Parameters>
+					<Enums>
+						<Enum enumName="Colors">
+							<Value>AliceBlue</Value>
+							<Value>Aqua</Value>
+							<Value>Blue</Value>
+							<Value>BlueViolet</Value>
+							<Value>Brown</Value>
+							<Value>CornflowerBlue</Value>
+							<Value>Crimson</Value>
+							<Value>Cyan</Value>
+							<Value>DarkBlue</Value>
+							<Value>DarkGray</Value>
+							<Value>DarkGreen</Value>
+							<Value>DarkKhaki</Value>
+							<Value>DarkOliveGreen</Value>
+							<Value>DarkRed</Value>
+							<Value>DarkSlateGray</Value>
+							<Value>DodgerBlue</Value>
+							<Value>Fuchsia</Value>
+							<Value>Gray</Value>
+							<Value>Green</Value>
+							<Value>GreenYellow</Value>
+							<Value>HotPink</Value>
+							<Value>Khaki</Value>
+							<Value>Lavender</Value>
+							<Value>LimeGreen</Value>
+							<Value>Magenta</Value>
+							<Value>Maroon</Value>
+							<Value>Navy</Value>
+							<Value>Olive</Value>
+							<Value>OliveDrab</Value>
+							<Value>Orange</Value>
+							<Value>OrangeRed</Value>
+							<Value>Plum</Value>
+							<Value>PowderBlue</Value>
+							<Value>Purple</Value>
+							<Value>Red</Value>
+							<Value>RosyBrown</Value>
+							<Value>RoyalBlue</Value>
+							<Value>SandyBrown</Value>
+							<Value>SeaGreen</Value>
+							<Value>Silver</Value>
+							<Value>SkyBlue</Value>
+							<Value>SlateBlue</Value>
+							<Value>SlateGray</Value>
+							<Value>Tan</Value>
+							<Value>Teal</Value>
+							<Value>Transparent</Value>
+							<Value>Turquoise</Value>
+							<Value>Violet</Value>
+							<Value>Yellow</Value>
+							<Value>YellowGreen</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="Team"/>
+			<Component name="DecisionMaker">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Role" type="System.String" displayedName="Role" value="" category="DecisionMaker" description="Decision Maker role"/>
+						<Parameter propertyName="Color" type="System.Drawing.Color, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" displayedName="Color" value="AliceBlue" category="DecisionMaker" description="Decision Maker color"/>
+						<Parameter propertyName="Briefing" type="System.String" displayedName="Briefing" value="" category="DecisionMaker" description="Decision Maker briefing"/>
+						<Parameter propertyName="CanTransferAssets" type="System.Boolean" displayedName="CanTransferAssets" value="false" category="DecisionMaker" description="Defines whether or not a decision maker is allowed to transfer its assets."/>
+						<Parameter propertyName="CanForceAssetTransfers" type="System.Boolean" displayedName="CanForceAssetTransfers" value="false" category="DecisionMaker" description="Defines whether or not a decision maker is allowed to force asset transfer for its subordinates."/>
+						<Parameter propertyName="IsObserver" type="System.Boolean" displayedName="IsObserver" value="false" category="DecisionMaker" description="Defines whether or not a decision maker is allowed to interect with objects in the DDD Client"/>
+					</Parameters>
+					<Enums>
+						<Enum enumName="Colors">
+							<Value>AliceBlue</Value>
+							<Value>Aqua</Value>
+							<Value>Blue</Value>
+							<Value>BlueViolet</Value>
+							<Value>Brown</Value>
+							<Value>CornflowerBlue</Value>
+							<Value>Crimson</Value>
+							<Value>Cyan</Value>
+							<Value>DarkBlue</Value>
+							<Value>DarkGray</Value>
+							<Value>DarkGreen</Value>
+							<Value>DarkKhaki</Value>
+							<Value>DarkOliveGreen</Value>
+							<Value>DarkRed</Value>
+							<Value>DarkSlateGray</Value>
+							<Value>DodgerBlue</Value>
+							<Value>Fuchsia</Value>
+							<Value>Gray</Value>
+							<Value>Green</Value>
+							<Value>GreenYellow</Value>
+							<Value>HotPink</Value>
+							<Value>Khaki</Value>
+							<Value>Lavender</Value>
+							<Value>LimeGreen</Value>
+							<Value>Magenta</Value>
+							<Value>Maroon</Value>
+							<Value>Navy</Value>
+							<Value>Olive</Value>
+							<Value>OliveDrab</Value>
+							<Value>Orange</Value>
+							<Value>OrangeRed</Value>
+							<Value>Plum</Value>
+							<Value>PowderBlue</Value>
+							<Value>Purple</Value>
+							<Value>Red</Value>
+							<Value>RosyBrown</Value>
+							<Value>RoyalBlue</Value>
+							<Value>SandyBrown</Value>
+							<Value>SeaGreen</Value>
+							<Value>Silver</Value>
+							<Value>SkyBlue</Value>
+							<Value>SlateBlue</Value>
+							<Value>SlateGray</Value>
+							<Value>Tan</Value>
+							<Value>Teal</Value>
+							<Value>Transparent</Value>
+							<Value>Turquoise</Value>
+							<Value>Violet</Value>
+							<Value>Yellow</Value>
+							<Value>YellowGreen</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="Network"/>
+			<Component name="Classification"/>
+			<Component name="Rule">
+				<CreateComponents>
+					<CreateComponent component="Actor" name="Unit" configuration="VSG" eType="Component">
+						<CreateLinks>
+							<CreateLink name="RuleUnit" configuration="VSG" schemaRoot="Parent" from="Parent" to="Self"/>
+						</CreateLinks>
+					</CreateComponent>
+				</CreateComponents>
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Increment" type="System.Decimal" displayedName="Increment" value="0.0" category="Rule" description="Increment"/>
+						<Parameter propertyName="RuleType" type="System.String" displayedName="RuleType" value="Object_1_Exists" category="Rule" description=""/>
+						<Parameter propertyName="FromState" type="System.String" displayedName="FromState" value="" category="Rule" description=""/>
+						<Parameter propertyName="NewState" type="System.String" displayedName="NewState" value="" category="Rule" description=""/>
+					</Parameters>
+					<Enums>
+						<Enum enumName="RuleTypes">
+							<Value>Object_1_Exists</Value>
+							<Value>Object_2_State_Transition</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="Actor">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Who" type="System.String" displayedName="Who" value="Myself" category="Actor" description=""/>
+						<Parameter propertyName="What" type="System.String" displayedName="What" value="Any" category="Actor" description=""/>
+						<Parameter propertyName="Where" type="System.String" displayedName="Where" value="Anywhere" category="Actor" description=""/>
+					</Parameters>
+					<Enums>
+						<Enum enumName="WhoEnum">
+							<Value>Myself</Value>
+							<Value>Friendly</Value>
+							<Value>Hostile</Value>
+						</Enum>
+						<Enum enumName="WhatEnum">
+							<Value>Any</Value>
+							<Value>Of_Species</Value>
+							<Value>Unit</Value>
+						</Enum>
+						<Enum enumName="WhereEnum">
+							<Value>Anywhere</Value>
+							<Value>In_Region</Value>
+							<Value>Not_In_Region</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="Region">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Zone" type="System.String" displayedName="Zone" value="" category="Region" description="Zone"/>
+						<Parameter propertyName="Relationship" type="System.String" displayedName="Relationship" value="" category="Region" description="Relationship"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Score">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Initial" type="System.Decimal" displayedName="Initial" value="0.0" category="Score" description="Initial"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Engram">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="InitialValue" type="System.String" displayedName="Initial Value" value="" category="Engram" description="Initial value for associated engram"/>
+						<Parameter propertyName="Type" type="EngramTypeEnum" displayedName="Type" value="String" category="Engram" description="Data type of the engram"/>
+					</Parameters>
+					<Enums>
+						<Enum enumName="EngramTypeEnum">
+							<Value>String</Value>
+							<Value>Double</Value>
+							<Value>Logical</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="EngramRange">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Name" type="System.String" displayedName="Name" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="Unit" type="System.String" displayedName="Unit" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="Included" type="System.String" displayedName="Included" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="Excluded" type="System.String" displayedName="Excluded" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="Condition" type="System.Boolean" displayedName="ConditionalComparison" value="True" category="EngramRange" description=""/>
+						<Parameter propertyName="StringCompare" type="System.Boolean" displayedName="StringComparison" value="False" category="EngramRange" description=""/>
+						<Parameter propertyName="ComparisonValue" type="System.String" displayedName="ComparisonValue" value="" category="EngramRange" description=""/>
+					</Parameters>
+					<Enums>
+						<Enum enumName="DyadicCondition">
+							<Value>GT</Value>
+							<Value>LT</Value>
+							<Value>GE</Value>
+							<Value>LE</Value>
+							<Value>EQ</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="Sensor">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="nndRange" type="System.Double" displayedName="Range" value="0" category="Sensor" description="Range of detection"/>
+						<Parameter propertyName="customRadioButton1" type="System.Boolean" displayedName="Global_Sensor" value="true" category="Sensor" description="Sense all attributes"/>
+						<Parameter propertyName="customRadioButton2" type="System.Boolean" displayedName="Attribute_Sensor" value="false" category="Sensor" description="Sense a single attribute"/>
+						<Parameter propertyName="customRadioButton3" type="System.Boolean" displayedName="Custom_Attribute_Sensor" value="false" category="Sensor" description="Sense a single custom attribute"/>
+						<Parameter propertyName="customParameterEnumBox1" type="System.String" displayedName="Attribute" value="Default" category="Sensor" description="Attribute to sense"/>
+						<Parameter propertyName="listBoxCustomAttributes" type="System.String" displayedName="Custom_Attribute" value="Default" category="Sensor" description="Custom Attribute to sense"/>
+					</Parameters>
+					<Enums>
+						<Enum enumName="Attributes">
+							<Value>ID</Value>
+							<Value>State</Value>
+							<Value>Location</Value>
+							<Value>Velocity</Value>
+							<Value>Throttle</Value>
+							<Value>ObjectName</Value>
+							<Value>OwnerID</Value>
+							<Value>ClassName</Value>
+							<Value>TeamName</Value>
+							<Value>Size</Value>
+							<Value>Vulnerability</Value>
+							<Value>IconName</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="SensorRange">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="txtRange" type="System.Double" displayedName="Range" value="0" category="SensorRange" description="Range of this sensor"/>
+						<Parameter propertyName="comboBox1" type="System.String" displayedName="Level" value="" category="SensorRange" description="Level of this sensor"/>
+						<Parameter propertyName="txtSpread" type="System.Double" displayedName="Spread" value="360" category="SensorRange" description="Spread of this sensor"/>
+						<Parameter propertyName="txtXpos" type="System.Double" displayedName="X" value="1" category="SensorRange" description="X component of the direction vector"/>
+						<Parameter propertyName="txtYpos" type="System.Double" displayedName="Y" value="0" category="SensorRange" description="Y component of the direction vector"/>
+						<Parameter propertyName="txtZpos" type="System.Double" displayedName="Z" value="0" category="SensorRange" description="Z component of the direction vector"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Emitter">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="customRadioButton2" type="System.Boolean" displayedName="Attribute_Emitter" value="true" category="Emitter" description="Emits standard attributes"/>
+						<Parameter propertyName="customRadioButton1" type="System.Boolean" displayedName="Custom_Attribute_Emitter" value="false" category="Emitter" description="Emits custom attribute"/>
+						<Parameter propertyName="customParameterEnumBox1" type="System.String" displayedName="Attribute" value="Default" category="Emitter" description="Attribute emitted"/>
+						<Parameter propertyName="listBoxCustomAttribute" type="System.String" displayedName="Custom_Attribute" value="Default" category="Emitter" description="Custom Attribute emitted"/>
+					</Parameters>
+					<Enums>
+						<Enum enumName="Attributes">
+							<Value>Default</Value>
+							<Value>Invisible</Value>
+							<Value>ID</Value>
+							<Value>State</Value>
+							<Value>Location</Value>
+							<Value>Velocity</Value>
+							<Value>Throttle</Value>
+							<Value>ObjectName</Value>
+							<Value>OwnerID</Value>
+							<Value>ClassName</Value>
+							<Value>TeamName</Value>
+							<Value>Size</Value>
+							<Value>Vulnerability</Value>
+							<Value>IconName</Value>
+						</Enum>
+					</Enums>
+				</ComplexParameters>
+			</Component>
+			<Component name="Level">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Variance" type="System.Boolean" displayedName="Variance" value="true" category="Level" description="Determines which of the following to use, probability or variance"/>
+						<Parameter propertyName="Probability" type="System.Boolean" displayedName="Probability" value="false" category="Level" description="Magnitude of emitter variance"/>
+						<Parameter propertyName="Percentage" type="System.Double" displayedName="Percentage" value="0" category="Level" description="Probability of this emitter"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Capability"/>
+			<Component name="Proximity">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Range" type="System.Decimal" displayedName="Range" value="0" category="Proximity" description="Magnitude of effect"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Effect">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Intensity" type="System.Int32" displayedName="Intensity" value="0" category="Effect" description="Magnitude of effect"/>
+						<Parameter propertyName="Probability" type="System.Decimal" displayedName="Probability" value="100.0" category="Effect" description="Probability of this effect at this range"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Singleton">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Capability" type="System.String" displayedName="Capability" value="" category="Singleton" description="Capability of Singletont"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Combo">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Sate" type="System.String" displayedName="State" value="" category="Combo" description="State of Combo"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Transition">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="NndRange" type="System.Double" displayedName="Range" value="0" category="Transition" description="Range of effect"/>
+						<Parameter propertyName="NudIntensity" type="System.Int32" displayedName="Intensity" value="0" category="Transition" description="Magnitude of effect"/>
+						<Parameter propertyName="NudProbability" type="System.Decimal" displayedName="Probability" value="100" category="Transition" description="Probability of this effect at this range"/>
+						<Parameter propertyName="Sate" type="System.String" displayedName="State" value="" category="Transition" description="State of transition"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Contribution">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="NndRange" type="System.Double" displayedName="Range" value="0" category="Contribution" description="Range of effect"/>
+						<Parameter propertyName="NudIntensity" type="System.Int32" displayedName="Intensity" value="0" category="Contribution" description="Magnitude of effect"/>
+						<Parameter propertyName="NudProbability" type="System.Decimal" displayedName="Probability" value="100" category="Contribution" description="Probability of this effect at this range"/>
+						<Parameter propertyName="Capability" type="System.String" displayedName="Capability" value="" category="Contribution" description="Capability of Singleton"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="State">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="OverrideStealable" type="System.Boolean" displayedName="OverrideStealable" value="false" category="State" description="Is this unit stealable"/>
+						<Parameter propertyName="OverrideLaunchDuration" type="System.Boolean" displayedName="OverrideLaunchDuration" value="false" category="State" description="Launch Duration"/>
+						<Parameter propertyName="OverrideDockingDuration" type="System.Boolean" displayedName="OverrideDockingDuration" value="false" category="State" description="Launch Duration"/>
+						<Parameter propertyName="OverrideTimeToAttack" type="System.Boolean" displayedName="OverrideTimeToAttack" value="false" category="State" description="Launch Duration"/>
+						<Parameter propertyName="OverrideEngagementDuration" type="System.Boolean" displayedName="OverrideEngagementDuration" value="false" category="State" description="Engagement Duration"/>
+						<Parameter propertyName="OverrideMaxSpeed" type="System.Boolean" displayedName="OverrideMaxSpeed" value="false" category="State" description="Launch Duration"/>
+						<Parameter propertyName="OverrideFuelCapacity" type="System.Boolean" displayedName="OverrideFuelCapacity" value="false" category="State" description="Launch Duration"/>
+						<Parameter propertyName="OverrideInitialFuel" type="System.Boolean" displayedName="OverrideInitialFuel" value="false" category="State" description="Launch Duration"/>
+						<Parameter propertyName="OverrideFuelConsumption" type="System.Boolean" displayedName="OverrideFuelConsumption" value="false" category="State" description="Launch Duration"/>
+						<Parameter propertyName="OverrideIcon" type="System.Boolean" displayedName="OverrideIcon" value="false" category="State" description="Image library key name of the icon."/>
+						<Parameter propertyName="OverrideFuelDepletionState" type="System.Boolean" displayedName="OverrideFuelDepletionState" value="false" category="State" description="Image library key name of the icon."/>
+						<Parameter propertyName="ChkbxStealable" type="System.Boolean" displayedName="Stealable" value="false" category="State" description="Is this unit stealable"/>
+						<Parameter propertyName="txtbxLaunchDuration" type="System.Double" displayedName="LaunchDuration" value="0" category="State" description="Launch Duration"/>
+						<Parameter propertyName="txtbxDockingDuration" type="System.Double" displayedName="DockingDuration" value="0" category="State" description="Launch Duration"/>
+						<Parameter propertyName="txtbxTimeToAttack" type="System.Double" displayedName="TimeToAttack" value="0" category="State" description="Launch Duration"/>
+						<Parameter propertyName="txtbxEngagementDuration" type="System.Double" displayedName="EngagementDuration" value="0" category="State" description="Engagement Duration"/>
+						<Parameter propertyName="txtbxMaxSpeed" type="System.Double" displayedName="MaxSpeed" value="0" category="State" description="Launch Duration"/>
+						<Parameter propertyName="txtbxFuelCapacity" type="System.Double" displayedName="FuelCapacity" value="0" category="State" description="Launch Duration"/>
+						<Parameter propertyName="txtbxInitialFuel" type="System.Double" displayedName="InitialFuel" value="0" category="State" description="Launch Duration"/>
+						<Parameter propertyName="txtbxFuelConsumption" type="System.Double" displayedName="FuelConsumption" value="0" category="State" description="Launch Duration"/>
+						<Parameter propertyName="FuelDepletionState" type="System.String" displayedName="FuelDepletionState" value="Dead" category="State" description="Fuel Depletion State"/>
+						<Parameter propertyName="Icon" type="System.String" displayedName="Icon" value="ImageLib.Unknown.png" category="Image" description="Image library key name of the icon."/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="Species">
+				<CreateComponents>
+					<CreateComponent component="State" name="FullyFunctional" configuration="VSG" eType="Component">
+						<CreateLinks>
+							<CreateLink name="SpeciesFullyFunctional" configuration="VSG" schemaRoot="Parent" from="Parent" to="Self"/>
+							<CreateLink name="Scenario" configuration="VSG" schemaRoot="Root" from="Parent" to="Self"/>
+						</CreateLinks>
+					</CreateComponent>
+					<CreateComponent component="State" name="Dead" configuration="VSG" eType="Component">
+						<CreateLinks>
+							<CreateLink name="Scenario" configuration="VSG" schemaRoot="Root" from="Parent" to="Self"/>
+						</CreateLinks>
+					</CreateComponent>
+				</CreateComponents>
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="CkbxIsWeapon" type="System.Boolean" displayedName="IsWeapon" value="false" category="Species" description="Is this a weapon?"/>
+						<Parameter propertyName="CkbxRemoveOnDestruction" type="System.Boolean" displayedName="RemoveOnDestruction" value="true" category="Species" description="Does this get removed from game after death?"/>
+						<Parameter propertyName="txtbxDefaultClassification" type="System.String" displayedName="DefaultClassification" value="" category="Species" description="Default classification tag."/>
+						<Parameter propertyName="customClassificationDisplayRules" type="System.String" displayedName="ClassificationDisplayRules" value="" category="Species" description="Classification string to be de-serialized"/>
+						<Parameter propertyName="NndCollisionRadius" type="System.Double" displayedName="CollisionRadius" value="0" category="Species" description="IWhen an object gets this close there's a collision"/>
+						<Parameter propertyName="RbLand" type="System.Boolean" displayedName="LandObject" value="true" category="Species" description="Base upon generic land object"/>
+						<Parameter propertyName="RbAir" type="System.Boolean" displayedName="AirObject" value="false" category="Species" description="Base upon generic air object"/>
+						<Parameter propertyName="RbSea" type="System.Boolean" displayedName="SeaObject" value="false" category="Species" description="Base upon generic sea object"/>
+						<Parameter propertyName="RbExistingSpecies" type="System.Boolean" displayedName="ExistingSpecies" value="false" category="Species" description="Base upon existing species"/>
+						<Parameter propertyName="LaunchedByOwner" type="System.Boolean" displayedName="LaunchedByOwner" value="false" category="Species" description="If true, this species can be launched (as a subplatform or weapon) ONLY by the subplatform's owner.  If false, this species can ONLY be launched by it's platform's owner."/>
+					</Parameters>
+				</ComplexParameters>
+				<CreateLinks>
+					<CreateLink name="SpeciesType" configuration="VSG" schemaRoot="Root" from="Parent" to="Self"/>
+				</CreateLinks>
+			</Component>
+			<Component name="Genus"/>
+			<Component name="CreateEvent"/>
+			<Component name="RevealEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="RevealEvent" description="Time of reveal"/>
+						<Parameter propertyName="X" type="System.Double" displayedName="X" value="0" category="InitialLocation" description="">
+							<Constraints>
+								<Constraint constraintName="max" constraintValue="9999999"/>
+							</Constraints>
+						</Parameter>
+						<Parameter propertyName="Y" type="System.Double" displayedName="Y" value="0" category="InitialLocation" description="">
+							<Constraints>
+								<Constraint constraintName="max" constraintValue="9999999"/>
+							</Constraints>
+						</Parameter>
+						<Parameter propertyName="Z" type="System.Double" displayedName="Z" value="0" category="InitialLocation" description=""/>
+						<Parameter propertyName="EngramName" type="System.String" displayedName="Engram Name" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramUnitSelected" type="System.Boolean" displayedName="Engram Unit Selected" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramPerformingUnit" type="System.Boolean" displayedName="Engram Performing Unit" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeInclude" type="System.String" displayedName="Engram Range Include" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeExclude" type="System.String" displayedName="Engram Range Exclude" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareInequality" type="System.String" displayedName="Engram Compare Inequality" value="EQ" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareValue" type="System.String" displayedName="Engram Compare Value" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="SelectedEngramType" type="System.String" displayedName="Selected Engram Type" value="Include" category="EngramRange" description="Compare, Include, Exclude"/>
+						<Parameter propertyName="InitialState" type="System.String" displayedName="InitialState" value="FullyFunctional" category="RevealEvent" description=""/>
+						<Parameter propertyName="InitialTag" type="System.String" displayedName="InitialTag" value="" category="StartupParameters" description="The initial tag for the object"/>
+						<Parameter propertyName="RevealEventUnit" type="System.Boolean" displayedName="Unit" value="false" category="SpeciesCompletion" description=""/>
+						<Parameter propertyName="OverrideStealable" type="System.Boolean" displayedName="OverrideStealable" value="false" category="StartupParameters" description="Is this unit stealable"/>
+						<Parameter propertyName="OverrideLaunchDuration" type="System.Boolean" displayedName="OverrideLaunchDuration" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideDockingDuration" type="System.Boolean" displayedName="OverrideDockingDuration" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideTimeToAttack" type="System.Boolean" displayedName="OverrideTimeToAttack" value="false" category="StartupParameters" description="Attack Duration"/>
+						<Parameter propertyName="OverrideEngagementDuration" type="System.Boolean" displayedName="OverrideEngagementDuration" value="false" category="StartupParameters" description="Engagement Duration"/>
+						<Parameter propertyName="OverrideMaxSpeed" type="System.Boolean" displayedName="OverrideMaxSpeed" value="false" category="StartupParameters" description="Maximum Speed"/>
+						<Parameter propertyName="OverrideFuelCapacity" type="System.Boolean" displayedName="OverrideFuelCapacity" value="false" category="StartupParameters" description="Fuel Capacity"/>
+						<Parameter propertyName="OverrideInitialFuel" type="System.Boolean" displayedName="OverrideInitialFuel" value="false" category="StartupParameters" description="Initial Fuel"/>
+						<Parameter propertyName="OverrideFuelConsumption" type="System.Boolean" displayedName="OverrideFuelConsumption" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideIcon" type="System.Boolean" displayedName="OverrideIcon" value="false" category="StartupParameters" description="Image library key name of the icon."/>
+						<Parameter propertyName="OverrideObjectName" type="System.Boolean" displayedName="OverrideObjectName" value="false" category="StartupParameters" description="Name of the object"/>
+						<Parameter propertyName="OverrideFuelDepletionState" type="System.Boolean" displayedName="OverrideFuelDepletionState" value="false" category="StartupParameters" description="Image library key name of the icon."/>
+						<Parameter propertyName="OverrideLinkedRegion" type="System.Boolean" displayedName="OverrideLinkedRegion" value="false" category="StartupParameters" description="This object will be used to move a dynamic active region along the playfield"/>
+						<Parameter propertyName="LinkedRegion" type="System.String" displayedName="LinkedRegion" value="" category="StartupParameters" description="Region that is linked to this object"/>
+						<Parameter propertyName="Stealable" type="System.Boolean" displayedName="Stealable" value="false" category="StartupParameters" description="Is this unit stealable"/>
+						<Parameter propertyName="LaunchDuration" type="System.Double" displayedName="LaunchDuration" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="DockingDuration" type="System.Double" displayedName="DockingDuration" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="TimeToAttack" type="System.Double" displayedName="TimeToAttack" value="0" category="StartupParameters" description="Attack Duration"/>
+						<Parameter propertyName="EngagementDuration" type="System.Double" displayedName="EngagementDuration" value="0" category="StartupParameters" description="Engagement Duration"/>
+						<Parameter propertyName="MaxSpeed" type="System.Double" displayedName="MaxSpeed" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="FuelCapacity" type="System.Double" displayedName="FuelCapacity" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="InitialFuel" type="System.Double" displayedName="InitialFuel" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="FuelConsumption" type="System.Double" displayedName="FuelConsumption" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="Icon" type="System.String" displayedName="Icon" value="" category="StartupParameters" description="Image library key name of the icon."/>
+						<Parameter propertyName="ObjectName" type="System.String" displayedName="ObjectName" value="" category="StartupParameters" description="Name of the object"/>
+						<Parameter propertyName="FuelDepletionState" type="System.String" displayedName="FuelDepletionState" value="Dead" category="RevealEvent" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="MoveEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="MoveEvent" description="Time of move"/>
+						<Parameter propertyName="Throttle" type="System.Decimal" displayedName="Throttle" value="100" category="MoveEvent" description="Time of move"/>
+						<Parameter propertyName="X" type="System.Double" displayedName="X" value="0" category="DestinationLocation" description="">
+							<Constraints>
+								<Constraint constraintName="max" constraintValue="9999999"/>
+							</Constraints>
+						</Parameter>
+						<Parameter propertyName="Y" type="System.Double" displayedName="Y" value="0" category="DestinationLocation" description="">
+							<Constraints>
+								<Constraint constraintName="max" constraintValue="9999999"/>
+							</Constraints>
+						</Parameter>
+						<Parameter propertyName="Z" type="System.Double" displayedName="Z" value="0" category="DestinationLocation" description=""/>
+						<Parameter propertyName="EngramName" type="System.String" displayedName="Engram Name" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramUnitSelected" type="System.Boolean" displayedName="Engram Unit Selected" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramPerformingUnit" type="System.Boolean" displayedName="Engram Performing Unit" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeInclude" type="System.String" displayedName="Engram Range Include" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeExclude" type="System.String" displayedName="Engram Range Exclude" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareInequality" type="System.String" displayedName="Engram Compare Inequality" value="EQ" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareValue" type="System.String" displayedName="Engram Compare Value" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="SelectedEngramType" type="System.String" displayedName="Selected Engram Type" value="Include" category="EngramRange" description="Compare, Include, Exclude"/>
+						<Parameter propertyName="MoveEventUnit" type="System.Boolean" displayedName="Unit" value="false" category="SpeciesCompletion" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="CompletionEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Action" type="System.String" displayedName="Action" value="" category="CompletionEvent" description="Type of action that triggers the completion."/>
+						<Parameter propertyName="EngramName" type="System.String" displayedName="Engram Name" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramUnitSelected" type="System.Boolean" displayedName="Engram Unit Selected" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramPerformingUnit" type="System.Boolean" displayedName="Engram Performing Unit" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeInclude" type="System.String" displayedName="Engram Range Include" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeExclude" type="System.String" displayedName="Engram Range Exclude" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareInequality" type="System.String" displayedName="Engram Compare Inequality" value="EQ" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareValue" type="System.String" displayedName="Engram Compare Value" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="SelectedEngramType" type="System.String" displayedName="Selected Engram Type" value="Include" category="EngramRange" description="Compare, Include, Exclude"/>
+						<Parameter propertyName="CompletionEventUnit" type="System.Boolean" displayedName="Unit" value="false" category="SpeciesCompletion" description=""/>
+						<Parameter propertyName="State" type="System.String" displayedName="State" value="" category="CompletionEvent" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="LaunchEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="LaunchEvent" description="Time of move"/>
+						<Parameter propertyName="X" type="System.Double" displayedName="X" value="0" category="RelativeLocation" description="">
+							<Constraints>
+								<Constraint constraintName="max" constraintValue="9999999"/>
+							</Constraints>
+						</Parameter>
+						<Parameter propertyName="Y" type="System.Double" displayedName="Y" value="0" category="RelativeLocation" description="">
+							<Constraints>
+								<Constraint constraintName="max" constraintValue="9999999"/>
+							</Constraints>
+						</Parameter>
+						<Parameter propertyName="Z" type="System.Double" displayedName="Z" value="0" category="RelativeLocation" description=""/>
+						<Parameter propertyName="EngramName" type="System.String" displayedName="Engram Name" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramUnitSelected" type="System.Boolean" displayedName="Engram Unit Selected" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramPerformingUnit" type="System.Boolean" displayedName="Engram Performing Unit" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeInclude" type="System.String" displayedName="Engram Range Include" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeExclude" type="System.String" displayedName="Engram Range Exclude" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareInequality" type="System.String" displayedName="Engram Compare Inequality" value="EQ" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareValue" type="System.String" displayedName="Engram Compare Value" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="SelectedEngramType" type="System.String" displayedName="Selected Engram Type" value="Include" category="EngramRange" description="Compare, Include, Exclude"/>
+						<Parameter propertyName="LaunchEventUnit" type="System.Boolean" displayedName="Unit" value="false" category="SpeciesCompletion" description=""/>
+						<Parameter propertyName="InitialState" type="System.String" displayedName="InitialState" value="FullyFunctional" category="LaunchEvent" description=""/>
+						<Parameter propertyName="OverrideStealable" type="System.Boolean" displayedName="OverrideStealable" value="false" category="StartupParameters" description="Is this unit stealable"/>
+						<Parameter propertyName="OverrideLaunchDuration" type="System.Boolean" displayedName="OverrideLaunchDuration" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideDockingDuration" type="System.Boolean" displayedName="OverrideDockingDuration" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideTimeToAttack" type="System.Boolean" displayedName="OverrideTimeToAttack" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideEngagementDuration" type="System.Boolean" displayedName="OverrideEngagementDuration" value="false" category="StartupParameters" description="Engagement Duration"/>
+						<Parameter propertyName="OverrideMaxSpeed" type="System.Boolean" displayedName="OverrideMaxSpeed" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideFuelCapacity" type="System.Boolean" displayedName="OverrideFuelCapacity" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideInitialFuel" type="System.Boolean" displayedName="OverrideInitialFuel" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideFuelConsumption" type="System.Boolean" displayedName="OverrideFuelConsumption" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideIcon" type="System.Boolean" displayedName="OverrideIcon" value="false" category="StartupParameters" description="Image library key name of the icon."/>
+						<Parameter propertyName="OverrideFuelDepletionState" type="System.Boolean" displayedName="OverrideFuelDepletionState" value="false" category="StartupParameters" description="Image library key name of the icon."/>
+						<Parameter propertyName="OverrideLinkedRegion" type="System.Boolean" displayedName="OverrideLinkedRegion" value="false" category="StartupParameters" description="This object will be used to move a dynamic active region along the playfield"/>
+						<Parameter propertyName="LinkedRegion" type="System.String" displayedName="LinkedRegion" value="" category="StartupParameters" description="Region that is linked to this object"/>
+						<Parameter propertyName="Stealable" type="System.Boolean" displayedName="Stealable" value="false" category="StartupParameters" description="Is this unit stealable"/>
+						<Parameter propertyName="LaunchDuration" type="System.Double" displayedName="LaunchDuration" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="DockingDuration" type="System.Double" displayedName="DockingDuration" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="EngagementDuration" type="System.Double" displayedName="EngagementDuration" value="0" category="StartupParameters" description="Engagement Duration"/>
+						<Parameter propertyName="MaxSpeed" type="System.Double" displayedName="MaxSpeed" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="FuelCapacity" type="System.Double" displayedName="FuelCapacity" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="InitialFuel" type="System.Double" displayedName="InitialFuel" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="FuelConsumption" type="System.Double" displayedName="FuelConsumption" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="Icon" type="System.String" displayedName="Icon" value="" category="StartupParameters" description="Image library key name of the icon."/>
+						<Parameter propertyName="FuelDepletionState" type="System.String" displayedName="FuelDepletionState" value="Dead" category="LaunchEvent" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="WeaponLaunchEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="WeaponLaunchEvent" description="Time of move"/>
+						<Parameter propertyName="EngramName" type="System.String" displayedName="Engram Name" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramUnitSelected" type="System.Boolean" displayedName="Engram Unit Selected" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramPerformingUnit" type="System.Boolean" displayedName="Engram Performing Unit" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeInclude" type="System.String" displayedName="Engram Range Include" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeExclude" type="System.String" displayedName="Engram Range Exclude" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareInequality" type="System.String" displayedName="Engram Compare Inequality" value="EQ" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareValue" type="System.String" displayedName="Engram Compare Value" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="SelectedEngramType" type="System.String" displayedName="Selected Engram Type" value="Include" category="EngramRange" description="Compare, Include, Exclude"/>
+						<Parameter propertyName="LaunchEventUnit" type="System.Boolean" displayedName="Unit" value="false" category="SpeciesCompletion" description=""/>
+						<Parameter propertyName="InitialState" type="System.String" displayedName="InitialState" value="FullyFunctional" category="WeaponLaunchEvent" description=""/>
+						<Parameter propertyName="OverrideStealable" type="System.Boolean" displayedName="OverrideStealable" value="false" category="StartupParameters" description="Is this unit stealable"/>
+						<Parameter propertyName="OverrideLaunchDuration" type="System.Boolean" displayedName="OverrideLaunchDuration" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideDockingDuration" type="System.Boolean" displayedName="OverrideDockingDuration" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideTimeToAttack" type="System.Boolean" displayedName="OverrideTimeToAttack" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideEngagementDuration" type="System.Boolean" displayedName="OverrideEngagementDuration" value="false" category="StartupParameters" description="Engagement Duration"/>
+						<Parameter propertyName="OverrideMaxSpeed" type="System.Boolean" displayedName="OverrideMaxSpeed" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideFuelCapacity" type="System.Boolean" displayedName="OverrideFuelCapacity" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideInitialFuel" type="System.Boolean" displayedName="OverrideInitialFuel" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideFuelConsumption" type="System.Boolean" displayedName="OverrideFuelConsumption" value="false" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="OverrideIcon" type="System.Boolean" displayedName="OverrideIcon" value="false" category="StartupParameters" description="Image library key name of the icon."/>
+						<Parameter propertyName="OverrideFuelDepletionState" type="System.Boolean" displayedName="OverrideFuelDepletionState" value="false" category="StartupParameters" description="Image library key name of the icon."/>
+						<Parameter propertyName="Stealable" type="System.Boolean" displayedName="Stealable" value="false" category="StartupParameters" description="Is this unit stealable"/>
+						<Parameter propertyName="LaunchDuration" type="System.Double" displayedName="LaunchDuration" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="DockingDuration" type="System.Double" displayedName="DockingDuration" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="EngagementDuration" type="System.Double" displayedName="EngagementDuration" value="0" category="StartupParameters" description="Engagement Duration"/>
+						<Parameter propertyName="MaxSpeed" type="System.Double" displayedName="MaxSpeed" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="FuelCapacity" type="System.Double" displayedName="FuelCapacity" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="InitialFuel" type="System.Double" displayedName="InitialFuel" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="FuelConsumption" type="System.Double" displayedName="FuelConsumption" value="0" category="StartupParameters" description="Launch Duration"/>
+						<Parameter propertyName="Icon" type="System.String" displayedName="Icon" value="" category="StartupParameters" description="Image library key name of the icon."/>
+						<Parameter propertyName="FuelDepletionState" type="System.String" displayedName="FuelDepletionState" value="Dead" category="WeaponLaunchEvent" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="TransferEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="TransferEvent" description="Time of move"/>
+						<Parameter propertyName="EngramName" type="System.String" displayedName="Engram Name" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramUnitSelected" type="System.Boolean" displayedName="Engram Unit Selected" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramPerformingUnit" type="System.Boolean" displayedName="Engram Performing Unit" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeInclude" type="System.String" displayedName="Engram Range Include" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeExclude" type="System.String" displayedName="Engram Range Exclude" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareInequality" type="System.String" displayedName="Engram Compare Inequality" value="EQ" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareValue" type="System.String" displayedName="Engram Compare Value" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="SelectedEngramType" type="System.String" displayedName="Selected Engram Type" value="Include" category="EngramRange" description="Compare, Include, Exclude"/>
+						<Parameter propertyName="TransferEventUnit" type="System.Boolean" displayedName="Unit" value="false" category="SpeciesCompletion" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="StateChangeEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="StateChangeEvent" description=""/>
+						<Parameter propertyName="StateChangeEventUnit" type="System.Boolean" displayedName="Unit" value="false" category="SpeciesCompletion" description=""/>
+						<Parameter propertyName="State" type="System.String" displayedName="State" value="" category="StateChangeEvent" description=""/>
+						<Parameter propertyName="FromState" type="System.String" displayedName="FromState" value="" category="StateChangeEvent" description=""/>
+						<Parameter propertyName="ExceptState" type="System.String" displayedName="ExceptState" value="" category="StateChangeEvent" description=""/>
+						<Parameter propertyName="EngramName" type="System.String" displayedName="Engram Name" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramUnitSelected" type="System.Boolean" displayedName="Engram Unit Selected" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramPerformingUnit" type="System.Boolean" displayedName="Engram Performing Unit" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeInclude" type="System.String" displayedName="Engram Range Include" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeExclude" type="System.String" displayedName="Engram Range Exclude" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareInequality" type="System.String" displayedName="Engram Compare Inequality" value="EQ" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareValue" type="System.String" displayedName="Engram Compare Value" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="SelectedEngramType" type="System.String" displayedName="Selected Engram Type" value="Include" category="EngramRange" description="Compare, Include, Exclude"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="ReiterateEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="ReiterateEvent" description="Time of reiterate"/>
+						<Parameter propertyName="EngramName" type="System.String" displayedName="Engram Name" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramUnitSelected" type="System.Boolean" displayedName="Engram Unit Selected" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramPerformingUnit" type="System.Boolean" displayedName="Engram Performing Unit" value="false" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeInclude" type="System.String" displayedName="Engram Range Include" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramRangeExclude" type="System.String" displayedName="Engram Range Exclude" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareInequality" type="System.String" displayedName="Engram Compare Inequality" value="EQ" category="EngramRange" description=""/>
+						<Parameter propertyName="EngramCompareValue" type="System.String" displayedName="Engram Compare Value" value="" category="EngramRange" description=""/>
+						<Parameter propertyName="SelectedEngramType" type="System.String" displayedName="Selected Engram Type" value="Include" category="EngramRange" description="Compare, Include, Exclude"/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="OpenChatRoomEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="OpenChatRoom" description=""/>
+						<Parameter propertyName="Name" type="System.String" displayedName="Name" value="" category="OpenChatRoom" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="CloseChatRoomEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="CloseChatRoom" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="SendChatMessageEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="SendChatMessage" description=""/>
+						<Parameter propertyName="Message" type="System.String" displayedName="Message" value="" category="SendChatMessage" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="OpenVoiceChannelEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Name" type="System.String" displayedName="Name" value="" category="OpenVoiceChannel" description="The name of the voice channel"/>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="OpenVoiceChannel" description="The time at which the voice channel is opened."/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="CloseVoiceChannelEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Name" type="System.String" displayedName="Name" value="" category="CloseVoiceChannel" description="The name of the voice channel"/>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="CloseVoiceChannel" description="The time at which the voice channel is closed."/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="SendVoiceMessageEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="SendVoiceMessage" description=""/>
+						<Parameter propertyName="FilePath" type="System.String" displayedName="FilePath" value="" category="SendVoiceMessage" description=""/>
+						<Parameter propertyName="Channel" type="System.String" displayedName="Channel" value="" category="SendVoiceMessage" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="SendVoiceMessageToUserEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="SendVoiceMessageToUser" description=""/>
+						<Parameter propertyName="FilePath" type="System.String" displayedName="FilePath" value="" category="SendVoiceMessageToUser" description=""/>
+						<Parameter propertyName="DecisionMakerID" type="System.String" displayedName="DecisionMakerID" value="" category="SendVoiceMessageToUser" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="ChangeEngramEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="ChangeEngram" description=""/>
+						<Parameter propertyName="Value" type="System.String" displayedName="Value" value="" category="ChangeEngram" description=""/>
+						<Parameter propertyName="UnitSpecified" type="System.Boolean" displayedName="Unit Specified" value="false" category="ChangeEngram" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="RemoveEngramEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.Decimal" displayedName="Time" value="1" category="RemoveEngram" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="SpeciesCompletionEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Action" type="System.String" displayedName="Action" value="" category="SpeciesCompletionEvent" description="Type of action that triggers the completion."/>
+						<Parameter propertyName="State" type="System.String" displayedName="State" value="" category="SpeciesCompletionEvent" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+			<Component name="FlushEvent">
+				<ComplexParameters>
+					<Parameters>
+						<Parameter propertyName="Time" type="System.UInt32" displayedName="Time" value="1" category="Flush" description=""/>
+						<Parameter propertyName="FlushEventUnit" type="System.Boolean" displayedName="Unit" value="false" category="SpeciesCompletion" description=""/>
+					</Parameters>
+				</ComplexParameters>
+			</Component>
+		</Components>
+		<Links>
+			<Link type="ActiveRegionSensor" schemaFilename="VSG_ActiveRegionSensor.xsd" name="None given" description="None given">
+				<Connect from="Root" to="ActiveRegion"/>
+				<Connect from="ActiveRegion" to="Sensor"/>
+			</Link>
+			<Link type="ActorKind" schemaFilename="VSG_ActorKind.xsd" name="Actor Kind" description="None given">
+				<Connect from="Root" to="Actor"/>
+				<Connect from="Actor" to="Species"/>
+			</Link>
+			<Link type="ActorRegion" schemaFilename="VSG_ActorRegion.xsd" name="Actor Region" description="Region for this Actor">
+				<Connect from="Root" to="Actor"/>
+				<Connect from="Actor" to="ActiveRegion"/>
+			</Link>
+			<Link type="ActorUnit" schemaFilename="VSG_ActorUnit.xsd" name="Actor Unit" description="None given">
+				<Connect from="Root" to="Actor"/>
+				<Connect from="Actor" to="CreateEvent"/>
+			</Link>
+			<Link type="CloseChatRoom" schemaFilename="VSG_CloseChatRoom.xsd" name="None given" description="None given">
+				<Connect from="Root" to="CloseChatRoomEvent"/>
+				<Connect from="CloseChatRoomEvent" to="OpenChatRoomEvent"/>
+			</Link>
+			<Link type="SendChatMessageRoom" schemaFilename="VSG_SendChatMessageRoom.xsd" name="None given" description="None given">
+				<Connect from="Root" to="SendChatMessageEvent"/>
+				<Connect from="SendChatMessageEvent" to="OpenChatRoomEvent"/>
+			</Link>
+			<Link type="SendChatMessageSenderDM" schemaFilename="VSG_SendChatMessageSenderDM.xsd" name="None given" description="None given">
+				<Connect from="Root" to="SendChatMessageEvent"/>
+				<Connect from="SendChatMessageEvent" to="DecisionMaker"/>
+			</Link>
+			<Link type="SendVoiceMessageChannel" schemaFilename="VSG_SendVoiceMessageChannel.xsd" name="None given" description="None given">
+				<Connect from="Root" to="SendVoiceMessageEvent"/>
+				<Connect from="SendVoiceMessageEvent" to="OpenVoiceChannelEvent"/>
+			</Link>
+			<Link type="SendVoiceMessageToUserChannel" schemaFilename="VSG_SendVoiceMessageToUser.xsd" name="None given" description="None given">
+				<Connect from="Root" to="SendVoiceMessageToUserEvent"/>
+				<Connect from="SendVoiceMessageToUserEvent" to="DecisionMaker"/>
+			</Link>
+			<Link type="CloseVoiceChannel" schemaFilename="VSG_CloseVoiceChannel.xsd" name="None given" description="None given">
+				<Connect from="Root" to="CloseVoiceChannelEvent"/>
+				<Connect from="CloseVoiceChannelEvent" to="OpenVoiceChannelEvent"/>
+			</Link>
+			<Link type="CreateEventKind" schemaFilename="VSG_CreateEventKind.xsd" name="CreateEvent Kind" description="Species of this CreateEvent">
+				<Connect from="Root" to="CreateEvent"/>
+				<Connect from="CreateEvent" to="Species"/>
+			</Link>
+			<Link type="DecisionMakerCanChat" schemaFilename="VSG_DecisionMakerCanChat.xsd" name="Decision Maker Can Chat" description="Chat permissions for this Decision Maker">
+				<Connect from="Root" to="DecisionMaker"/>
+				<Connect from="DecisionMaker" to="DecisionMaker"/>
+			</Link>
+			<Link type="DecisionMakerCanSpeak" schemaFilename="VSG_DecisionMakerCanSpeak.xsd" name="Decision Maker Can Speak" description="Voice chat permissions for this Decision Maker">
+				<Connect from="Root" to="DecisionMaker"/>
+				<Connect from="DecisionMaker" to="DecisionMaker"/>
+			</Link>
+			<Link type="DecisionMakerCanWhiteboard" schemaFilename="VSG_DecisionMakerCanWhiteboard.xsd" name="Decision Maker Can Whiteboard" description="Whiteboard permissions for this Decision Maker">
+				<Connect from="Root" to="DecisionMaker"/>
+				<Connect from="DecisionMaker" to="DecisionMaker"/>
+			</Link>
+			<Link type="DecisionMakerReportsTo" schemaFilename="VSG_DecisionMakerReportsTo.xsd" name="Decision Maker Reports To" description="Define this Decision Maker's commanding officer">
+				<Connect from="Root" to="DecisionMaker"/>
+				<Connect from="DecisionMaker" to="DecisionMaker"/>
+			</Link>
+			<Link type="DecisionMakerTeam" schemaFilename="VSG_DecisionMakerTeam.xsd" name="Decision Maker Team" description="Team name for this Decision Maker">
+				<Connect from="Root" to="DecisionMaker"/>
+				<Connect from="DecisionMaker" to="Team"/>
+			</Link>
+			<Link type="EngramID" schemaFilename="VSG_EngramID.xsd" name="Engram ID" description="None given">
+				<Connect from="Root" to="ChangeEngramEvent"/>
+				<Connect from="Root" to="RemoveEngramEvent"/>
+				<Connect from="RemoveEngramEvent" to="Engram"/>
+				<Connect from="ChangeEngramEvent" to="Engram"/>
+			</Link>
+			<Link type="EngramUnitID" schemaFilename="VSG_EngramUnitID.xsd" name="Engram Unit ID" description="None given">
+				<Connect from="Root" to="MoveEvent"/>
+				<Connect from="Root" to="CompletionEvent"/>
+				<Connect from="Root" to="LaunchEvent"/>
+				<Connect from="Root" to="WeaponLaunchEvent"/>
+				<Connect from="Root" to="ReiterateEvent"/>
+				<Connect from="Root" to="RevealEvent"/>
+				<Connect from="Root" to="StateChangeEvent"/>
+				<Connect from="Root" to="TransferEvent"/>
+				<Connect from="Root" to="ChangeEngramEvent"/>
+				<Connect from="MoveEvent" to="CreateEvent"/>
+				<Connect from="ChangeEngramEvent" to="CreateEvent"/>
+				<Connect from="CompletionEvent" to="CreateEvent"/>
+				<Connect from="LaunchEvent" to="CreateEvent"/>
+				<Connect from="WeaponLaunchEvent" to="CreateEvent"/>
+				<Connect from="ReiterateEvent" to="CreateEvent"/>
+				<Connect from="RevealEvent" to="CreateEvent"/>
+				<Connect from="StateChangeEvent" to="CreateEvent"/>
+				<Connect from="TransferEvent" to="CreateEvent"/>
+			</Link>
+			<Link type="EventEngram" schemaFilename="VSG_EventEngram.xsd" name="None given" description="None given">
+				<Connect from="Root" to="MoveEvent"/>
+				<Connect from="Root" to="CompletionEvent"/>
+				<Connect from="Root" to="LaunchEvent"/>
+				<Connect from="Root" to="LaunchLaunchEvent"/>
+				<Connect from="Root" to="ReiterateEvent"/>
+				<Connect from="Root" to="RevealEvent"/>
+				<Connect from="Root" to="StateChangeEvent"/>
+				<Connect from="Root" to="TransferEvent"/>
+				<Connect from="MoveEvent" to="Engram"/>
+				<Connect from="CompletionEvent" to="Engram"/>
+				<Connect from="LaunchEvent" to="Engram"/>
+				<Connect from="WeaponLaunchEvent" to="Engram"/>
+				<Connect from="ReiterateEvent" to="Engram"/>
+				<Connect from="RevealEvent" to="Engram"/>
+				<Connect from="StateChangeEvent" to="Engram"/>
+				<Connect from="TransferEvent" to="Engram"/>
+			</Link>
+			<Link type="EventID" schemaFilename="VSG_EventID.xsd" name="Event ID" description="None given">
+				<Connect from="Root" to="RevealEvent"/>
+				<Connect from="Root" to="MoveEvent"/>
+				<Connect from="Root" to="CompletionEvent"/>
+				<Connect from="Root" to="LaunchEvent"/>
+				<Connect from="Root" to="WeaponLaunchEvent"/>
+				<Connect from="Root" to="StateChangeEvent"/>
+				<Connect from="Root" to="TransferEvent"/>
+				<Connect from="Root" to="FlushEvent"/>
+				<Connect from="RevealEvent" to="CreateEvent"/>
+				<Connect from="MoveEvent" to="CreateEvent"/>
+				<Connect from="CompletionEvent" to="CreateEvent"/>
+				<Connect from="LaunchEvent" to="CreateEvent"/>
+				<Connect from="WeaponLaunchEvent" to="CreateEvent"/>
+				<Connect from="TransferEvent" to="CreateEvent"/>
+				<Connect from="StateChangeEvent" to="CreateEvent"/>
+				<Connect from="FlushEvent" to="CreateEvent"/>
+			</Link>
+			<Link type="LaunchEventSubplatform" schemaFilename="VSG_LaunchEventSubplatform.xsd" name="None given" description="None given">
+				<Connect from="Root" to="LaunchEvent"/>
+				<Connect from="LaunchEvent" to="CreateEvent"/>
+			</Link>
+			<Link type="WeaponLaunchEventSubplatform" schemaFilename="VSG_WeaponLaunchEventSubplatform.xsd" name="None given" description="None given">
+				<Connect from="Root" to="WeaponLaunchEvent"/>
+				<Connect from="WeaponLaunchEvent" to="CreateEvent"/>
+			</Link>
+			<Link type="WeaponLaunchEventTarget" schemaFilename="VSG_WeaponLaunchEventTarget.xsd" name="None given" description="None given">
+				<Connect from="Root" to="WeaponLaunchEvent"/>
+				<Connect from="WeaponLaunchEvent" to="CreateEvent"/>
+			</Link>
+			<Link type="NetworkMembers" schemaFilename="VSG_NetworkMembers.xsd" name="Network Members" description="List of Decision Makers in this Network">
+				<Connect from="Root" to="Network"/>
+				<Connect from="Network" to="DecisionMaker"/>
+			</Link>
+			<Link type="LinkObjectToRegion" schemaFilename="VSG_LinkObjectToRegion.xsd" name="Linked Object To Region" description="None given">
+				<Connect from="Root" to="RevealEvent"/>
+				<Connect from="RevealEvent" to="ActiveRegion"/>
+			</Link>
+			<Link type="OpenChatRoomEventMember" schemaFilename="VSG_OpenChatRoomEventMember.xsd" name="OpenChatRoomEvent Member" description="None given">
+				<Connect from="Root" to="OpenChatRoomEvent"/>
+				<Connect from="OpenChatRoomEvent" to="DecisionMaker"/>
+			</Link>
+			<Link type="OpenVoiceChannelEventAccess" schemaFilename="VSG_OpenVoiceChannelEventAccess.xsd" name="OpenVoiceChannelEvent Access" description="None given">
+				<Connect from="Root" to="OpenVoiceChannelEvent"/>
+				<Connect from="OpenVoiceChannelEvent" to="DecisionMaker"/>
+			</Link>
+			<Link type="RuleObject" schemaFilename="VSG_RuleObject.xsd" name="Rule Object" description="Object for this Rule">
+				<Connect from="Root" to="Rule"/>
+				<Connect from="Rule" to="Actor"/>
+			</Link>
+			<Link type="RuleUnit" schemaFilename="VSG_RuleUnit.xsd" name="Rule Unit" description="Unit for this Rule">
+				<Connect from="Root" to="Rule"/>
+				<Connect from="Rule" to="Actor"/>
+			</Link>
+			<Link type="Scenario" schemaFilename="VSG_Scenario.xsd" name="Unit Map" description="Unit placements for the current scenario.">
+				<Connect from="Root" to="Scenario"/>
+				<Connect from="Scenario" to="Playfield"/>
+				<Connect from="Scenario" to="Team"/>
+				<Connect from="Scenario" to="Classification"/>
+				<Connect from="Scenario" to="LandRegion"/>
+				<Connect from="Scenario" to="ActiveRegion"/>
+				<Connect from="Scenario" to="DecisionMaker"/>
+				<Connect from="Scenario" to="Network"/>
+				<Connect from="Scenario" to="OpenVoiceChannelEvent"/>
+				<Connect from="Scenario" to="CloseVoiceChannelEvent"/>
+				<Connect from="Scenario" to="SendChatMessageEvent"/>
+				<Connect from="Scenario" to="SendVoiceMessageEvent"/>
+				<Connect from="Scenario" to="SendVoiceMessageToUserEvent"/>
+				<Connect from="Scenario" to="Engram"/>
+				<Connect from="Scenario" to="Sensor"/>
+				<Connect from="Scenario" to="Singleton"/>
+				<Connect from="Scenario" to="Rule"/>
+				<Connect from="Scenario" to="Score"/>
+				<Connect from="Scenario" to="Genus"/>
+				<Connect from="Scenario" to="Species"/>
+				<Connect from="Scenario" to="CreateEvent"/>
+				<Connect from="Scenario" to="ChangeEngramEvent"/>
+				<Connect from="Scenario" to="RemoveEngramEvent"/>
+				<Connect from="Scenario" to="OpenChatRoomEvent"/>
+				<Connect from="Scenario" to="CloseChatRoomEvent"/>
+				<Connect from="Scenario" to="SpeciesCompletionEvent"/>
+				<Connect from="Scenario" to="FlushEvent"/>
+				<Connect from="Scenario" to="ReiterateEvent"/>
+				<Connect from="Emitter" to="Level"/>
+				<Connect from="Sensor" to="SensorRange"/>
+				<Connect from="Capability" to="Proximity"/>
+				<Connect from="State" to="Emitter"/>
+				<Connect from="State" to="Combo"/>
+				<Connect from="State" to="Singleton"/>
+				<Connect from="State" to="Capability"/>
+				<Connect from="Singleton" to="Transition"/>
+				<Connect from="Combo" to="Contribution"/>
+				<Connect from="Species" to="State"/>
+				<Connect from="CreateEvent" to="RevealEvent"/>
+				<Connect from="CreateEvent" to="MoveEvent"/>
+				<Connect from="CreateEvent" to="CompletionEvent"/>
+				<Connect from="CreateEvent" to="LaunchEvent"/>
+				<Connect from="CreateEvent" to="WeaponLaunchEvent"/>
+				<Connect from="CreateEvent" to="StateChangeEvent"/>
+				<Connect from="CreateEvent" to="TransferEvent"/>
+				<Connect from="CreateEvent" to="DecisionMaker"/>
+				<Connect from="SpeciesCompletionEvent" to="RevealEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="MoveEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="CompletionEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="TransferEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="StateChangeEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="LaunchEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="WeaponLaunchEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="ChangeEngramEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="RemoveEngramEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="FlushEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="SpeciesCompletionEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="ReiterateEvent"/>
+				<Connect from="CompletionEvent" to="RevealEvent"/>
+				<Connect from="CompletionEvent" to="MoveEvent"/>
+				<Connect from="CompletionEvent" to="CompletionEvent"/>
+				<Connect from="CompletionEvent" to="TransferEvent"/>
+				<Connect from="CompletionEvent" to="StateChangeEvent"/>
+				<Connect from="CompletionEvent" to="LaunchEvent"/>
+				<Connect from="CompletionEvent" to="WeaponLaunchEvent"/>
+				<Connect from="CompletionEvent" to="ReiterateEvent"/>
+				<Connect from="CompletionEvent" to="ChangeEngramEvent"/>
+				<Connect from="CompletionEvent" to="RemoveEngramEvent"/>
+				<Connect from="CompletionEvent" to="FlushEvent"/>
+				<Connect from="CompletionEvent" to="SpeciesCompletionEvent"/>
+				<Connect from="ReiterateEvent" to="MoveEvent"/>
+				<Connect from="Proximity" to="Effect"/>
+			</Link>
+			<Link type="ScenarioRegions" schemaFilename="VSG_ScenarioRegions.xsd" name="Scenario Regions" description="Drag region to map. Left-click to specify point locations. Hit Enter to complete region editing.">
+				<Connect from="Root" to="Scenario"/>
+				<Connect from="Scenario" to="LandRegion"/>
+				<Connect from="Scenario" to="ActiveRegion"/>
+			</Link>
+			<Link type="ScoreApplies" schemaFilename="VSG_ScoreApplies.xsd" name="Score Applies" description="Applies to Decision Makers for this Score">
+				<Connect from="Root" to="Score"/>
+				<Connect from="Score" to="DecisionMaker"/>
+			</Link>
+			<Link type="ScoreRules" schemaFilename="VSG_ScoreRules.xsd" name="Score Rules" description="Rules for this Score">
+				<Connect from="Root" to="Score"/>
+				<Connect from="Score" to="Rule"/>
+			</Link>
+			<Link type="ScoreViewers" schemaFilename="VSG_ScoreViewers.xsd" name="Score Viewers" description="Decision Maker Viewers for this Score">
+				<Connect from="Root" to="Score"/>
+				<Connect from="Score" to="DecisionMaker"/>
+			</Link>
+			<Link type="SingletonCapability" schemaFilename="VSG_SingletonCapability.xsd" name="Singleton Capability" description="Capabilities available for singletons in this state">
+				<Connect from="Root" to="Singleton"/>
+				<Connect from="Singleton" to="Capability"/>
+			</Link>
+			<Link type="SpeciesCompletionEventSpecies" schemaFilename="VSG_SpeciesCompletionEventSpecies.xsd" name="None given" description="None given">
+				<Connect from="Root" to="SpeciesCompletionEvent"/>
+				<Connect from="SpeciesCompletionEvent" to="Species"/>
+			</Link>
+			<Link type="SpeciesDMCanOwn" schemaFilename="VSG_SpeciesDMCanOwn.xsd" name="SpeciesDMCanOwn" description="Used to define what species a DM is allowed to own." deepCopy="true">
+				<Connect from="Root" to="Species"/>
+				<Connect from="Species" to="DecisionMaker"/>
+			</Link>
+			<Link type="SpeciesFullyFunctional" schemaFilename="VSG_SpeciesFullyFunctional.xsd" name="None given" description="None given">
+				<Connect from="Root" to="Species"/>
+				<Connect from="Species" to="State"/>
+			</Link>
+			<Link type="SpeciesType" schemaFilename="VSG_SpeciesType.xsd" name="Species Type" deepCopy="true" description="None given">
+				<Connect from="Root" to="Scenario"/>
+				<Connect from="Scenario" to="Species"/>
+				<Connect from="Species" to="Species"/>
+			</Link>
+			<Link type="SpeciesSubplatformCapacity" schemaFilename="VSG_SpeciesSubplatformCapacity.xsd" name="Species Subplatform Capacity" deepCopy="true" description="None given">
+				<Connect from="Root" to="Species"/>
+				<Connect from="Species" to="Species">
+					<ComplexParameters>
+						<Parameters>
+							<Parameter displayedName="Count" type="System.Int32" value="0" category="Capacity"/>
+						</Parameters>
+					</ComplexParameters>
+				</Connect>
+			</Link>
+			<Link type="StateSensor" schemaFilename="VSG_StateSensor.xsd" name="State Sensor" description="Sensors available for this state">
+				<Connect from="Root" to="State"/>
+				<Connect from="State" to="Sensor"/>
+			</Link>
+			<Link type="StateState" schemaFilename="VSG_StateState.xsd" name="State State" description="None given">
+				<Connect from="Root" to="State"/>
+				<Connect from="State" to="State"/>
+			</Link>
+			<Link type="CreateEventSubplatform" schemaFilename="VSG_CreateEventSubplatform.xsd" name="CreateEvent Subplatform" description="None given">
+				<Connect from="Root" to="CreateEvent"/>
+				<Connect from="CreateEvent" to="CreateEvent"/>
+			</Link>
+			<Link type="TeamAgainst" schemaFilename="VSG_TeamAgainst.xsd" name="Team Against" description="List of opposing team names">
+				<Connect from="Root" to="Team"/>
+				<Connect from="Team" to="Team"/>
+			</Link>
+			<Link type="TransferEventFromDM" schemaFilename="VSG_TransferEventFromDM.xsd" name="TransferEvent From DM" description="None given">
+				<Connect from="Root" to="TransferEvent"/>
+				<Connect from="TransferEvent" to="DecisionMaker"/>
+			</Link>
+			<Link type="TransferEventToDM" schemaFilename="VSG_TransferEventToDM.xsd" name="TransferEvent To DM" description="None given">
+				<Connect from="Root" to="TransferEvent"/>
+				<Connect from="TransferEvent" to="DecisionMaker"/>
+			</Link>
+			<Link type="WeaponKind" schemaFilename="VSG_WeaponKind.xsd" name="Weapon Kind" description="None given">
+				<Connect from="Root" to="Armament"/>
+				<Connect from="Armament" to="Species"/>
+			</Link>
+		</Links>
+	</Global>
+</GME>

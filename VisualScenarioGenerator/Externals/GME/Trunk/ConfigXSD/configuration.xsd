@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Danny Lecours (Aptima, Inc.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Constraint">
+		<xs:complexType>
+			<xs:attribute name="constraintName" type="xs:string" use="required"/>
+			<xs:attribute name="constraintValue" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Value"/>
+	<xs:element name="Enum">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Value" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="enumName" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Enums">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Enum" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Constraints">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Constraint" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="firstCapital">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z].*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Parameter">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="Constraints" minOccurs="0"/>
+				<xs:element name="Parameters" minOccurs="0">
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="Parameter">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="Constraints" minOccurs="0"/>
+									</xs:sequence>
+									<xs:attribute name="type" type="xs:string" use="required"/>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+									<xs:attribute name="value" type="xs:string" use="optional"/>
+									<xs:attribute name="description" type="xs:string" use="optional"/>
+									<xs:attribute name="editor" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+			<xs:attribute name="displayedName" type="xs:string" use="required"/>
+			<xs:attribute name="value" type="xs:string" use="optional"/>
+			<xs:attribute name="category" type="xs:string" use="required"/>
+			<xs:attribute name="description" type="xs:string" use="optional"/>
+			<xs:attribute name="readOnly" type="xs:boolean" use="optional"/>
+			<xs:attribute name="browsable" type="xs:boolean" use="optional"/>
+			<xs:attribute name="classOnly" type="xs:boolean" use="optional"/>
+			<xs:attribute name="editor" type="xs:string" use="optional"/>
+			<xs:attribute name="propertyName" type="xs:string" use="optional"/>
+			<xs:attribute name="isOutput" type="xs:boolean" use="optional"/>
+			<xs:attribute name="typeconverter" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ComplexParameters">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Parameters"/>
+				<xs:element ref="Enums" minOccurs="0"/>
+			</xs:all>
+			<xs:attribute name="defaultParameter" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GME">
+		<xs:annotation>
+			<xs:documentation>Configuration file</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Configurations">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Configuration" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Components" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="Component" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+											<xs:unique name="unique_component_name">
+												<xs:selector xpath="Component"/>
+												<xs:field xpath="@name"/>
+											</xs:unique>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+									<xs:attribute name="root" type="xs:string" use="optional"/>
+									<xs:attribute name="controller" type="xs:string" use="required"/>
+									<xs:attribute name="linkType" type="xs:string" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+					<xs:unique name="unique_configuration_name">
+						<xs:selector xpath="Configuration"/>
+						<xs:field xpath="@name"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="Global">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="4">
+							<xs:element name="Components" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Component" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:all>
+													<xs:element ref="CreateComponents" minOccurs="0"/>
+													<xs:element ref="CreateLinks" minOccurs="0"/>
+													<xs:element ref="ComplexParameters" minOccurs="0"/>
+													<xs:element name="EngineModel" minOccurs="0">
+														<xs:complexType>
+															<xs:complexContent>
+																<xs:extension base="EngineModelType">
+																	<xs:attribute name="link" type="xs:string" use="required"/>
+																</xs:extension>
+															</xs:complexContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Inputs" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Input" minOccurs="0" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Links" minOccurs="0">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="Link" minOccurs="0" maxOccurs="unbounded">
+																							<xs:complexType>
+																								<xs:attribute name="type" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="name" type="xs:string" use="required"/>
+																		<xs:attribute name="link" type="xs:string" use="required"/>
+																		<xs:attribute name="selectable" type="xs:boolean" use="required"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:all>
+												<xs:attribute name="type" type="xs:string" use="optional"/>
+												<xs:attribute name="name" type="xs:string" use="required"/>
+												<xs:attribute name="base" type="xs:string" use="optional"/>
+												<xs:attribute name="bitmap" type="xs:string" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+								<xs:unique name="ComponentNameKey">
+									<xs:selector xpath="Component"/>
+									<xs:field xpath="@name"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element ref="Links" minOccurs="0"/>
+							<xs:element ref="Enums" minOccurs="0"/>
+							<xs:element ref="Adapters" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Parameters">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Parameter" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Component">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="SubComponents" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Component" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+			<xs:attribute name="type" type="xs:string" use="optional"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="bitmap" type="xs:string" use="optional"/>
+			<xs:attribute name="displayName" type="xs:string" use="optional"/>
+			<xs:attribute name="graphType" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Link">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Connect" maxOccurs="unbounded"/>
+				<xs:element name="Dynamic" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="component" type="xs:string" use="optional"/>
+						<xs:attribute name="refLinkType" type="xs:string" use="optional"/>
+						<xs:attribute name="refLinkTypeDynamic" type="xs:boolean" use="optional" default="true"/>
+						<xs:attribute name="isRoot" type="xs:string" use="required"/>
+						<xs:attribute name="appCode" type="xs:string" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BridgeDynamic" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="component" type="xs:string" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+			<xs:attribute name="description" type="xs:string" use="required"/>
+			<xs:attribute name="dynamicType" type="xs:string" use="optional"/>
+			<xs:attribute name="deepCopy" type="xs:boolean" use="optional"/>
+			<xs:attribute name="schemaFilename" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Connect">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ComplexParameters" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="from" type="xs:string" use="required"/>
+			<xs:attribute name="to" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateComponents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateComponent" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateLinks">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CreateLink" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CreateParameter" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+									<xs:attribute name="value" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="name" type="xs:string" use="required"/>
+						<xs:attribute name="configuration" type="xs:string" use="required"/>
+						<xs:attribute name="schemaRoot" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Root"/>
+									<xs:enumeration value="Parent"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="from" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Root"/>
+									<xs:enumeration value="Parent"/>
+									<xs:enumeration value="Self"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="to" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Parent"/>
+									<xs:enumeration value="Self"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Links">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Link" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="UniqueTypes">
+			<xs:selector xpath="Link"/>
+			<xs:field xpath="@type"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="CreateComponent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CreateLinks" minOccurs="0"/>
+				<xs:element name="CreateParameters" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CreateParameter" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+									<xs:attribute name="value" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="CreateComponent" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="component" type="xs:string" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="configuration" type="xs:string" use="required"/>
+			<xs:attribute name="eType" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Component"/>
+						<xs:enumeration value="Class"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="uid" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="EngineModelType">
+		<xs:sequence>
+			<xs:element name="Adapters" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Adapter" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="type" type="xs:string" use="required"/>
+								<xs:attribute name="name" type="xs:string" use="required"/>
+								<xs:attribute name="fullname" type="xs:string" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Inputs" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Input" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Links" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Link" minOccurs="0" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="Include" minOccurs="0" maxOccurs="unbounded">
+																<xs:complexType>
+																	<xs:attribute name="componentType" type="xs:string" use="required"/>
+																	<xs:attribute name="isDynamic" type="xs:boolean" use="required"/>
+																	<xs:attribute name="linkType" type="xs:string" use="required"/>
+																	<xs:attribute name="level" type="xs:int" use="optional"/>
+																	<xs:attribute name="includeParameters" type="xs:boolean" use="optional"/>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+														<xs:attribute name="type" type="xs:string" use="required"/>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+								<xs:attribute name="name" type="xs:string" use="required"/>
+								<xs:attribute name="link" type="xs:string" use="required"/>
+								<xs:attribute name="selectable" type="xs:boolean" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+				<xs:unique name="InputNameKey">
+					<xs:selector xpath="Input"/>
+					<xs:field xpath="@name"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="Outputs" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Output" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="type" type="xs:string" use="required"/>
+								<xs:attribute name="name" type="xs:string" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="assembly" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:element name="Adapters">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Adapter" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Name">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="display" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:string"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Type">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Assembly" type="xs:string"/>
+										<xs:element name="Namespace" type="xs:string"/>
+										<xs:element name="Name" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="kind" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Import"/>
+									<xs:enumeration value="Export"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

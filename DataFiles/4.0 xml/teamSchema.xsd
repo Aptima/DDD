@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:annotation>
+    <xsd:documentation>This is the schema for spiral 4 scenario files</xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="Scenario">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="ScenarioName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="Description" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="Playfield" />
+        <xsd:element ref="Region" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="Team" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="DecisionMaker" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element ref="Network" />
+        </xsd:choice>
+
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element ref="Genus"/>
+          <xsd:element ref="Species"/>
+        </xsd:choice>
+        <xsd:element ref="Sensor" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element ref="Create_Event" />
+          <xsd:element ref="Reveal_Event"/>
+          <xsd:element ref="Move_Event" />
+          <xsd:element ref="Completion_Event" />
+        </xsd:choice>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:annotation>
+    <xsd:documentation> Playfield command and elements</xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="Playfield">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="MapFileName" type="xsd:string"/>
+        <xsd:element  name="UtmZone" type="xsd:string" />
+        <xsd:element name="Northing" type="xsd:decimal" />
+        <xsd:element name="Easting" type="xsd:decimal"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:annotation>
+  <xsd:documentation> Region command and elements</xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="Region">
+  <xsd:complexType>
+    <xsd:sequence>
+      <xsd:element name="ID" type="xsd:string"/>
+      <xsd:element name="Vertex" type="PointType" minOccurs="3" maxOccurs="unbounded"/>
+      <xsd:element name="Upper" type="xsd:decimal" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Lower" type="xsd:decimal" minOccurs="0" maxOccurs="1"/>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="Attribute" type="xsd:string"/>
+        <xsd:element name="Interference" type="xsd:decimal"/>
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+    <xsd:annotation>
+    <xsd:documentation> Team and Network command and elements</xsd:documentation>
+    </xsd:annotation>
+  <xsd:element name="Team">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Name" type="xsd:string" />
+        <xsd:element name="Against" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element> 
+
+  <xsd:element name="DecisionMaker">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="DmRole" />
+        <xsd:element ref="DmIdentifier" />
+        <xsd:element ref="DmTeam" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="DmRole" type="xsd:string" />
+  <xsd:element name="DmIdentifier" type="xsd:string" />
+  <xsd:element name="DmTeam" type ="xsd:string"/>
+  
+  
+  <xsd:complexType name="DmList" >
+    <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+      <xsd:element name="Member" type="xsd:string"  />
+    </xsd:sequence>    
+  </xsd:complexType>
+  
+  <xsd:element name="Network" >
+    <xsd:complexType>
+      <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+        <xsd:element name="Name" type="xsd:string"/>
+  
+          <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+            <xsd:element name="Member" type="xsd:string"  />
+          </xsd:sequence>
+ 
+      </xsd:sequence>
+    </xsd:complexType>  
+  </xsd:element>
+  
+
+
+  <xsd:complexType name="PointType">
+    <xsd:sequence>
+      <xsd:element name="X" type="xsd:decimal"/>
+      <xsd:element name="Y" type="xsd:decimal"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:annotation>
+    <xsd:documentation>
+      Below: Directions are not the same as Locations, but
+      a vector is a vector
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="Cone">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Spread" type="xsd:decimal"/>
+        <xsd:element name="Extent" type="xsd:decimal"></xsd:element>
+        <xsd:element name="Direction" type="LocationType"/>
+        <xsd:element name="Level" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Sensor">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Name" type="xsd:string"/>
+        <xsd:element name="Attribute" type="xsd:string"/>
+        <xsd:element ref="Cone"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="EffectType">
+    <xsd:sequence>
+      <xsd:element name="Intensity" type="xsd:integer"/>
+      <xsd:element name="Probability" type="xsd:decimal"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ProximityType">
+    <xsd:sequence>
+      <xsd:element name="Radius" type="xsd:decimal"/>
+      <xsd:element name="Effect" type="EffectType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CapabilityType">
+    <xsd:sequence>
+      <xsd:element name="Name" type="xsd:string" />
+      <xsd:element name="Proximity" type="ProximityType"  minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="TransitionType">
+    <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+      <xsd:element name="Effect" type="xsd:integer"/>
+      <xsd:element name="State" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VulnerabilityType">
+    <xsd:sequence>
+      <xsd:element name="Capability" type="xsd:string"/>
+      <xsd:element name="Transitions" type ="TransitionType" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="ContributionType">
+    <xsd:sequence>
+      <xsd:element name="Capability" type="xsd:string"/>
+      <xsd:element name="Effect" type="xsd:integer" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ComboVulnerabilityType">
+    <xsd:sequence>
+      <xsd:element name="Contribution" type="ContributionType"  minOccurs="1" maxOccurs="unbounded"/>
+      <xsd:element name="NewState" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="EmitterType">
+    <xsd:sequence>
+      <xsd:element name="Attribute" type="xsd:string"/>
+      <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+        <xsd:element name="Level" type="xsd:string"/>
+        <xsd:choice>
+          <xsd:element name="Variance" type="xsd:decimal"/>
+          <xsd:element name="Percent" type="xsd:decimal"/>
+        </xsd:choice>
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="Genus">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Name" type="xsd:string" />
+        <xsd:element name="DefineState" type="StateType" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Species">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Name" type="xsd:string" />
+        <xsd:element name="Base" type="xsd:string" />
+        <xsd:element name="DefineState" type="StateType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="StateType">
+    <xsd:sequence>
+      <xsd:element name="State" type="xsd:string"/>
+      <xsd:element name="Icon" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Sense" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="Capability" type="CapabilityType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="SingletonVulnerability" type="VulnerabilityType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="ComboVulnerability" type="ComboVulnerabilityType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="Parameters" type="Parameters" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="Emitter" type="EmitterType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="Parameters">
+    <xsd:sequence maxOccurs="unbounded">
+      <xsd:element name="Parameter" type="xsd:string" />
+      <xsd:element name="Setting" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:annotation>
+    <xsd:documentation>
+      Technically speaking, the Setting value of Parameter should not
+      be described as a string. It should be a string or a LocationType or a VelocityType
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:complexType name="LocationType">
+    <xsd:sequence>
+      <xsd:element name="X" type="xsd:decimal" />
+      <xsd:element name="Y" type="xsd:decimal" />
+      <xsd:element name="Z" type="xsd:decimal" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VelocityType">
+    <xsd:sequence>
+      <xsd:element name="VX" type="xsd:decimal" />
+      <xsd:element name="VY" type="xsd:decimal" />
+      <xsd:element name="VZ" type="xsd:decimal" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:annotation>
+    <xsd:documentation> ID is left as a defined type because it appears in many places</xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:element name="ID" type="xsd:string" />
+
+  <xsd:element name="Create_Event">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ID" />
+        <xsd:element name="Kind" type="xsd:string"/>
+        <xsd:element name="Owner" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+
+  <xsd:element name="Reveal_Event">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ID" />
+        <xsd:element name="Time" type="xsd:integer"/>
+        <xsd:element name="InitialLocation" type="LocationType"/>
+        <xsd:element name="InitialState" type="xsd:string"/>
+        <xsd:element name="StartUpParameters" type="Parameters"  minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="Move_Event">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ID" />
+        <xsd:element name="Timer" type="xsd:integer" />
+        <xsd:element name="Throttle" type="xsd:integer" />
+        <xsd:element name="Destination" type="LocationType" />
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+
+
+
+  <xsd:element name="Completion_Event">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ID" />
+        <xsd:element ref="Action" />
+        <xsd:element ref="DoThis" />
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Action" type="xsd:string" />
+
+  <xsd:element name="DoThis">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Move_Event" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+
+
+</xsd:schema>

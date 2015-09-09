@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Charles Kapopoulos (Aptima, Inc.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Timeline">
+		<xs:annotation>
+			<xs:documentation>master element, start and end of timeline</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="TimelineRow" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>one row in the timeline, can have child rows</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="TimelineMilestone" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>a milestone occuring at a single point in time along the timeline</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="FilterConfiguration" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>working on an XML configuration that is part of the timeline and will drive a flexible filter pane</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AndFilters" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="AndFilter" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>use childType to go find items of that type to build FilterItems?</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="type" type="xs:string" use="required"/>
+												<xs:attribute name="name" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element ref="FilteredIDs" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="OrFilters" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="OrFilter" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="type" type="xs:string" use="required"/>
+												<xs:attribute name="name" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element ref="FilteredIDs" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Legend" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LegendColumn" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="LegendItem" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="id" type="xs:int" use="required"/>
+												<xs:attribute name="name" type="xs:string" use="required"/>
+												<xs:attribute name="type" type="xs:string" use="required"/>
+												<xs:attribute name="color" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:string"/>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="type" type="xs:string" use="required"/>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="start" type="xs:dateTime" use="required"/>
+			<xs:attribute name="end" type="xs:dateTime" use="required"/>
+			<xs:attribute name="currentTime" type="xs:dateTime" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TimelineRow">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="TimelineRow" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="TimelineBlock" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>a block of time on the timeline, occurs within a TimelineRow.  Has start and end</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:int" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+			<xs:attribute name="color" type="xs:string" use="optional" default="FFFFFF"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TimelineBlock">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="TimelineFilter" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Optional relationships for TimelineBlocks - this allows a filtering system to identify TimelineBlocks that have certain relationships</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="TimelineBlockDataGroup" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attribute name="id" type="xs:int" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+			<xs:attribute name="start" type="xs:dateTime" use="required"/>
+			<xs:attribute name="end" type="xs:dateTime" use="required"/>
+			<xs:attribute name="color" type="xs:string" use="optional" default="00FF00"/>
+			<xs:attribute name="value" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TimelineMilestone">
+		<xs:complexType>
+			<xs:attribute name="id" type="xs:int" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+			<xs:attribute name="time" type="xs:dateTime" use="required"/>
+			<xs:attribute name="color" type="xs:string" use="optional" default="0000FF"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TimelineFilter">
+		<xs:complexType>
+			<xs:attribute name="id" type="xs:int" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+			<xs:attribute name="color" type="xs:string" use="optional" default="00FF00"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FilterConfiguration"/>
+	<xs:element name="FilterItem">
+		<xs:complexType>
+			<xs:attribute name="id" type="xs:int" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FilteredIDs">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ID"/>
+	<xs:element name="TimelineBlockDataGroup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TimelineBlockData" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="groupName" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TimelineBlockData">
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="id" type="xs:string" use="required"/>
+			<xs:attribute name="value" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

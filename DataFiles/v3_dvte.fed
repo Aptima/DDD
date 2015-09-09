@@ -1,0 +1,2730 @@
+(FED
+(Federation FederationName)
+(FEDversion v1.3)
+ (spaces 
+ (space HyperSpace
+    (dimension subspace)
+    (dimension one)
+    (dimension two)
+ )
+ )
+ (objects 
+    (class ObjectRoot 
+       (attribute privilegeToDelete  reliable timestamp)
+       (class RTIprivate)
+ (class Atmosphere
+ (class Atmosphere_0D
+     (attribute EAC_Air_Temperature minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Dewpoint_Depression minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Extinction_Coefficient_Visible minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Visibility_Distance minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wind_Speed_U_Component minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wind_Speed_V_Component minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Precipitation_Accumulated minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Cover_Fraction_Total minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Base_Height minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Top_Height minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Thickness minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Type minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Phase minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Liquid_Water_Content minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Drop_Diameter_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Duct_Surface_Height minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Duct_Surface_Intensity minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Evaporation_Duct_Refractivity_Height minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Evaporation_Duct_Intensity minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Fog_Cover minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Fog_Thickness minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Freezing_Height minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Haze_Type minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Air_Stability_Lifted_Index minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Precipitation_Rate minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Precipitation_Type minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Precipitation_Phase minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Pressure_Mean_Sea_Level minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Relative_Humidity minimum_rate_fast receive HyperSpace)
+ (class Atmospheric_Observation_Local
+     (attribute Station_Name minimum_rate_fast receive HyperSpace)
+     (attribute Observation_Time minimum_rate_fast receive HyperSpace)
+     (attribute Station_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Station_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute Station_Elevation minimum_rate_fast receive HyperSpace)
+ )
+ (class Uniform_Atmosphere
+ )
+ )
+ (class Atmosphere_1D
+     (attribute EAC_Air_Temperature minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Dewpoint_Depression minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wind_Speed_U_Component minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wind_Speed_V_Component minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Relative_Humidity minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Pressure minimum_rate_fast receive HyperSpace)
+ (class Vertical_Profile
+     (attribute Station_Name minimum_rate_fast receive HyperSpace)
+     (attribute Station_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Station_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute Vertical_Grid minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class Atmosphere_2D
+ (class Air_Stability_Lifted_Index_GDC
+     (attribute EAC_Air_Stability_Lifted_Index minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Cloud_Layer
+     (attribute EAC_Cloud_Cover_Fraction_Total minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Base_Height minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Top_Height minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Thickness minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Type minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Phase minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Liquid_Water_Content minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Cloud_Drop_Diameter_Mean minimum_rate_fast receive HyperSpace)
+ (class Cloud_Layer_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Cloud_Layer_UTM
+     (attribute Origin_Northing minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Easting minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Zone minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_X_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Y_Value minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class Fog
+     (attribute EAC_Fog_Cover minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Fog_Thickness minimum_rate_fast receive HyperSpace)
+ (class Fog_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Fog_UTM
+     (attribute Origin_Northing minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Easting minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Zone minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_X_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Y_Value minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class Freezing_Height_GDC
+     (attribute EAC_Freezing_Height minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Precipitation
+     (attribute EAC_Precipitation_Accumulated minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Precipitation_Rate minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Precipitation_Type minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Precipitation_Phase minimum_rate_fast receive HyperSpace)
+ (class Precipitation_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Precipitation_UTM
+     (attribute Origin_Northing minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Easting minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Zone minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_X_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Y_Value minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class Radar_Duct
+     (attribute EAC_Duct_Surface_Height minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Duct_Surface_Intensity minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Evaporation_Duct_Refractivity_Height minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Evaporation_Duct_Intensity minimum_rate_fast receive HyperSpace)
+ (class Radar_Duct_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Radar_Duct_UTM
+     (attribute Origin_Northing minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Easting minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Zone minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_X_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Y_Value minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class Surface_Haze
+     (attribute EAC_Haze_Type minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Visibility_Distance minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Extinction_Coefficient_Visible minimum_rate_fast receive HyperSpace)
+     (attribute Reference_Height minimum_rate_fast receive HyperSpace)
+ (class Surface_Haze_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Surface_Haze_UTM
+     (attribute Origin_Northing minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Easting minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Zone minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_X_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Y_Value minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class Surface_Weather
+     (attribute EAC_Pressure_Mean_Sea_Level minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Relative_Humidity minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Air_Temperature minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wind_Speed_U_Component minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wind_Speed_V_Component minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wind_Speed minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Vapor_Pressure minimum_rate_fast receive HyperSpace)
+     (attribute Reference_Height minimum_rate_fast receive HyperSpace)
+ (class Surface_Weather_Arb
+     (attribute Horizontal_Grid minimum_rate_fast receive HyperSpace)
+ )
+ (class Surface_Weather_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Surface_Weather_UTM
+     (attribute Origin_Northing minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Easting minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Zone minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_X_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Y_Value minimum_rate_fast receive HyperSpace)
+ )
+ )
+ )
+ (class Atmosphere_3D
+ (class Haze
+     (attribute EAC_Extinction_Coefficient minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Visibility_Distance minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Haze_Type minimum_rate_fast receive HyperSpace)
+ (class Haze_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Elevation minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Elevation minimum_rate_fast receive HyperSpace)
+ )
+ (class Haze_UTM
+     (attribute Origin_Northing minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Easting minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Elevation minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Zone minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_X_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Y_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Elevation minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class Weather
+     (attribute EAC_Air_Temperature minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Dewpoint_Depression minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wind_Speed_U_Component minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wind_Speed_V_Component minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Relative_Humidity minimum_rate_fast receive HyperSpace)
+ (class Weather_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Elevation minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Elevation minimum_rate_fast receive HyperSpace)
+ )
+ (class Weather_UTM
+     (attribute Origin_Northing minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Easting minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Elevation minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Zone minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_X_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Y_Value minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Elevation minimum_rate_fast receive HyperSpace)
+ )
+ )
+ )
+ (class Localized_Ephemeral
+     (attribute Location_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Location_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute Location_Elevation minimum_rate_fast receive HyperSpace)
+     (attribute bounding_sphere_radius minimum_rate_fast receive HyperSpace)
+     (attribute plume_length minimum_rate_fast receive HyperSpace)
+     (attribute sigma_y minimum_rate_fast receive HyperSpace)
+     (attribute sigma_z minimum_rate_fast receive HyperSpace)
+     (attribute horz_velocity minimum_rate_fast receive HyperSpace)
+     (attribute vert_velocity minimum_rate_fast receive HyperSpace)
+     (attribute d_sigma_y_dt minimum_rate_fast receive HyperSpace)
+     (attribute d_sigma_z_dt minimum_rate_fast receive HyperSpace)
+ (class Dust
+ (class Munition_Dust
+ )
+ (class Vehicular_Dust
+ )
+ )
+ (class Smoke
+ (class Munition_Smoke
+ )
+ (class Signal_Smoke
+ )
+ (class Vehicular_Smoke
+ )
+ )
+ )
+ )
+ (class BaseEntity
+     (attribute AccelerationVector minimum_rate_fast receive HyperSpace)
+     (attribute AngularVelocityVector minimum_rate_fast receive HyperSpace)
+     (attribute DeadReckoningAlgorithm minimum_rate_fast receive HyperSpace)
+     (attribute EntityType minimum_rate_fast receive HyperSpace)
+     (attribute EntityIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute IsFrozen minimum_rate_fast receive HyperSpace)
+     (attribute Orientation minimum_rate_fast receive HyperSpace)
+     (attribute WorldLocation minimum_rate_fast receive HyperSpace)
+     (attribute VelocityVector minimum_rate_fast receive HyperSpace)
+     (attribute dr_road best_effort receive HyperSpace)
+     (attribute dr_enter best_effort receive HyperSpace)
+     (attribute dr_exit best_effort receive HyperSpace)
+     (attribute dr_block best_effort receive HyperSpace)
+ (class Aggregate
+     (attribute ForceIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute Marking minimum_rate_fast receive HyperSpace)
+     (attribute country minimum_rate_fast receive HyperSpace)
+     (attribute service minimum_rate_fast receive HyperSpace)
+     (attribute top_unit_marking minimum_rate_fast receive HyperSpace)
+     (attribute aggregate_state minimum_rate_fast receive HyperSpace)
+     (attribute aggregate_formation minimum_rate_fast receive HyperSpace)
+     (attribute agg_ids minimum_rate_fast receive HyperSpace)
+     (attribute ent_ids minimum_rate_fast receive HyperSpace)
+     (attribute detached_ent_ids minimum_rate_fast receive HyperSpace)
+     (attribute aggregate_extent minimum_rate_fast receive HyperSpace)
+ )
+ (class Blip
+     (attribute force minimum_rate_fast receive HyperSpace)
+     (attribute marking minimum_rate_fast receive HyperSpace)
+     (attribute source_platform_marking minimum_rate_fast receive HyperSpace)
+     (attribute source_platform_service minimum_rate_fast receive HyperSpace)
+     (attribute sensor_mode minimum_rate_fast receive HyperSpace)
+     (attribute sensor_emitter_function minimum_rate_fast receive HyperSpace)
+     (attribute sensor_emitter_type minimum_rate_fast receive HyperSpace)
+     (attribute sensor_emitter_index minimum_rate_fast receive HyperSpace)
+     (attribute report_time minimum_rate_fast receive HyperSpace)
+     (attribute detection_time minimum_rate_fast receive HyperSpace)
+     (attribute assoc_entity_id minimum_rate_fast receive HyperSpace)
+     (attribute target_probable_guise minimum_rate_fast receive HyperSpace)
+     (attribute target_probable_force minimum_rate_fast receive HyperSpace)
+     (attribute target_position minimum_rate_fast receive HyperSpace)
+     (attribute target_velocity minimum_rate_fast receive HyperSpace)
+     (attribute target_position_error minimum_rate_fast receive HyperSpace)
+     (attribute target_emitter_function minimum_rate_fast receive HyperSpace)
+     (attribute target_emitter_type minimum_rate_fast receive HyperSpace)
+     (attribute target_emitter_index minimum_rate_fast receive HyperSpace)
+     (attribute target_bearing minimum_rate_fast receive HyperSpace)
+     (attribute target_bearing_error minimum_rate_fast receive HyperSpace)
+     (attribute target_top_unit_marking minimum_rate_fast receive HyperSpace)
+ )
+ (class DataLinkTrk
+     (attribute force minimum_rate_fast receive HyperSpace)
+     (attribute marking minimum_rate_fast receive HyperSpace)
+     (attribute net minimum_rate_fast receive HyperSpace)
+     (attribute sec minimum_rate_fast receive HyperSpace)
+     (attribute ltn minimum_rate_fast receive HyperSpace)
+     (attribute track_quality minimum_rate_fast receive HyperSpace)
+     (attribute iff minimum_rate_fast receive HyperSpace)
+     (attribute ltnLive minimum_rate_fast receive HyperSpace)
+     (attribute state minimum_rate_fast receive HyperSpace)
+     (attribute assoc_entity_id minimum_rate_fast receive HyperSpace)
+     (attribute source minimum_rate_fast receive HyperSpace)
+     (attribute reporting_ru minimum_rate_fast receive HyperSpace)
+     (attribute creator_ru minimum_rate_fast receive HyperSpace)
+ )
+ (class EnvironmentalEntity
+     (attribute OpacityCode minimum_rate_fast receive HyperSpace)
+ )
+ (class MissionStatRep
+     (attribute vehicle_id minimum_rate_fast receive HyperSpace)
+     (attribute force minimum_rate_fast receive HyperSpace)
+     (attribute marking minimum_rate_fast receive HyperSpace)
+     (attribute appearance minimum_rate_fast receive HyperSpace)
+     (attribute mission_status minimum_rate_fast receive HyperSpace)
+     (attribute station_name minimum_rate_fast receive HyperSpace)
+     (attribute unit_name minimum_rate_fast receive HyperSpace)
+     (attribute mission_priority minimum_rate_fast receive HyperSpace)
+     (attribute time_left_on_station minimum_rate_fast receive HyperSpace)
+     (attribute time_to_target minimum_rate_fast receive HyperSpace)
+     (attribute track_id minimum_rate_fast receive HyperSpace)
+     (attribute num_weapons minimum_rate_fast receive HyperSpace)
+     (attribute weapons minimum_rate_fast receive HyperSpace)
+     (attribute num_sensors minimum_rate_fast receive HyperSpace)
+     (attribute sensors minimum_rate_fast receive HyperSpace)
+     (attribute num_flightpath_points minimum_rate_fast receive HyperSpace)
+     (attribute flightpath minimum_rate_fast receive HyperSpace)
+     (attribute ugs_count minimum_rate_fast receive HyperSpace)
+     (attribute slime_count minimum_rate_fast receive HyperSpace)
+ )
+ (class PhysicalEntity
+     (attribute AlternateEntityType minimum_rate_fast receive HyperSpace)
+     (attribute ArticulatedParametersArray best_effort receive HyperSpace)
+     (attribute CamouflageType minimum_rate_fast receive HyperSpace)
+     (attribute DamageState minimum_rate_fast receive HyperSpace)
+     (attribute EngineSmokeOn minimum_rate_fast receive HyperSpace)
+     (attribute FirePowerDisabled minimum_rate_fast receive HyperSpace)
+     (attribute FlamesPresent minimum_rate_fast receive HyperSpace)
+     (attribute ForceIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute HasAmmunitionSupplyCap minimum_rate_fast receive HyperSpace)
+     (attribute HasFuelSupplyCap minimum_rate_fast receive HyperSpace)
+     (attribute HasRecoveryCap minimum_rate_fast receive HyperSpace)
+     (attribute HasRepairCap minimum_rate_fast receive HyperSpace)
+     (attribute Immobilized minimum_rate_fast receive HyperSpace)
+     (attribute IsConcealed minimum_rate_fast receive HyperSpace)
+     (attribute Marking minimum_rate_fast receive HyperSpace)
+     (attribute PowerPlantOn minimum_rate_fast receive HyperSpace)
+     (attribute SmokePlumePresent minimum_rate_fast receive HyperSpace)
+     (attribute TentDeployed minimum_rate_fast receive HyperSpace)
+     (attribute TrailingEffectsCode minimum_rate_fast receive HyperSpace)
+     (attribute comment minimum_rate_fast receive HyperSpace)
+     (attribute periodicity minimum_rate_fast receive HyperSpace)
+     (attribute expiration minimum_rate_fast receive HyperSpace)
+     (attribute country minimum_rate_fast receive HyperSpace)
+     (attribute service minimum_rate_fast receive HyperSpace)
+     (attribute top_unit_marking minimum_rate_fast receive HyperSpace)
+     (attribute comms_channel minimum_rate_fast receive HyperSpace)
+     (attribute event best_effort receive HyperSpace)
+     (attribute mission best_effort receive HyperSpace)
+     (attribute mission_phase best_effort receive HyperSpace)
+     (attribute traits best_effort receive HyperSpace)
+ (class CulturalFeature
+     (attribute ExternalLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute InternalHeatSourceOn minimum_rate_fast receive HyperSpace)
+     (attribute InternalLightsOn minimum_rate_fast receive HyperSpace)
+ )
+ (class Lifeform
+     (attribute FlashLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute StanceCode minimum_rate_fast receive HyperSpace)
+     (attribute PrimaryWeaponState minimum_rate_fast receive HyperSpace)
+     (attribute SecondaryWeaponState minimum_rate_fast receive HyperSpace)
+ (class Human
+ )
+ )
+ (class Munition
+     (attribute LauncherFlashPresent minimum_rate_fast receive HyperSpace)
+ )
+ (class Platform
+     (attribute AfterburnerOn minimum_rate_fast receive HyperSpace)
+     (attribute AntiCollisionLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute BlackOutBrakeLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute BlackOutLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute BrakeLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute FormationLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute HatchState minimum_rate_fast receive HyperSpace)
+     (attribute HeadLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute InteriorLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute LandingLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute LauncherRaised minimum_rate_fast receive HyperSpace)
+     (attribute NavigationLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute RampDeployed minimum_rate_fast receive HyperSpace)
+     (attribute RunningLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute SpotLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute TailLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute MissilePresent minimum_rate_fast receive HyperSpace)
+     (attribute is_clutter best_effort receive HyperSpace)
+     (attribute convoy_id best_effort receive HyperSpace)
+     (attribute aggressive_driver best_effort receive HyperSpace)
+ (class Aircraft
+ )
+ (class AmphibiousVehicle
+ )
+ (class GroundVehicle
+ (class Howitzer
+     (attribute AssociatedVehicleId best_effort receive HyperSpace)
+     (attribute MyMarking best_effort receive HyperSpace)
+     (attribute TopUnitMarking best_effort receive HyperSpace)
+     (attribute GatewayOwned best_effort receive HyperSpace)
+     (attribute GunNumber best_effort receive HyperSpace)
+     (attribute GunState best_effort receive HyperSpace)
+     (attribute GunAcknowledge best_effort receive HyperSpace)
+     (attribute GunMission best_effort receive HyperSpace)
+     (attribute GunRing best_effort receive HyperSpace)
+ )
+ )
+ (class MultiDomainPlatform
+ )
+ (class Spacecraft
+ )
+ (class SubmersibleVessel
+ )
+ (class SurfaceVessel
+ )
+ )
+ (class Radio
+ )
+ (class Sensor
+     (attribute AntennaRaised minimum_rate_fast receive HyperSpace)
+     (attribute BlackoutLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute LightsOn minimum_rate_fast receive HyperSpace)
+     (attribute InteriorLightsOn minimum_rate_fast receive HyperSpace)
+     (attribute MissionKill minimum_rate_fast receive HyperSpace)
+ )
+ (class Supplies
+ )
+ )
+ (class TADILA
+     (attribute associated_entity_id minimum_rate_fast receive HyperSpace)
+     (attribute location_entity minimum_rate_fast receive HyperSpace)
+     (attribute power minimum_rate_fast receive HyperSpace)
+     (attribute frequency minimum_rate_fast receive HyperSpace)
+     (attribute frequency_bandwidth minimum_rate_fast receive HyperSpace)
+     (attribute transmission_time minimum_rate_fast receive HyperSpace)
+     (attribute using_hopset minimum_rate_fast receive HyperSpace)
+     (attribute crypto_system minimum_rate_fast receive HyperSpace)
+     (attribute crypto_key_id minimum_rate_fast receive HyperSpace)
+     (attribute modulate_params_struct minimum_rate_fast receive HyperSpace)
+     (attribute antenna_pattern_params_struct minimum_rate_fast receive HyperSpace)
+     (attribute length_antenna minimum_rate_fast receive HyperSpace)
+     (attribute length_modulate minimum_rate_fast receive HyperSpace)
+     (attribute aspid minimum_rate_fast receive HyperSpace)
+     (attribute msg_length minimum_rate_fast receive HyperSpace)
+     (attribute message minimum_rate_fast receive HyperSpace)
+     (attribute force minimum_rate_fast receive HyperSpace)
+     (attribute marking minimum_rate_fast receive HyperSpace)
+     (attribute pu_id minimum_rate_fast receive HyperSpace)
+ )
+ (class TADILJ
+     (attribute associated_entity_id minimum_rate_fast receive HyperSpace)
+     (attribute location_entity minimum_rate_fast receive HyperSpace)
+     (attribute power minimum_rate_fast receive HyperSpace)
+     (attribute frequency minimum_rate_fast receive HyperSpace)
+     (attribute frequency_bandwidth minimum_rate_fast receive HyperSpace)
+     (attribute transmission_time minimum_rate_fast receive HyperSpace)
+     (attribute using_hopset minimum_rate_fast receive HyperSpace)
+     (attribute crypto_system minimum_rate_fast receive HyperSpace)
+     (attribute crypto_key_id minimum_rate_fast receive HyperSpace)
+     (attribute modulate_params_struct minimum_rate_fast receive HyperSpace)
+     (attribute antenna_pattern_params_struct minimum_rate_fast receive HyperSpace)
+     (attribute length_antenna minimum_rate_fast receive HyperSpace)
+     (attribute length_modulate minimum_rate_fast receive HyperSpace)
+     (attribute aspid minimum_rate_fast receive HyperSpace)
+     (attribute msg_length minimum_rate_fast receive HyperSpace)
+     (attribute message minimum_rate_fast receive HyperSpace)
+     (attribute force minimum_rate_fast receive HyperSpace)
+     (attribute marking minimum_rate_fast receive HyperSpace)
+     (attribute ju_id minimum_rate_fast receive HyperSpace)
+     (attribute nets minimum_rate_fast receive HyperSpace)
+     (attribute msec minimum_rate_fast receive HyperSpace)
+     (attribute tsec minimum_rate_fast receive HyperSpace)
+     (attribute relay minimum_rate_fast receive HyperSpace)
+     (attribute ppli minimum_rate_fast receive HyperSpace)
+     (attribute activity minimum_rate_fast receive HyperSpace)
+     (attribute fuel minimum_rate_fast receive HyperSpace)
+     (attribute iff minimum_rate_fast receive HyperSpace)
+ )
+ (class Track
+     (attribute force minimum_rate_fast receive HyperSpace)
+     (attribute marking minimum_rate_fast receive HyperSpace)
+     (attribute assoc_entity_id minimum_rate_fast receive HyperSpace)
+     (attribute owning_force minimum_rate_fast receive HyperSpace)
+     (attribute track_state minimum_rate_fast receive HyperSpace)
+     (attribute ctp_name minimum_rate_fast receive HyperSpace)
+     (attribute location_error minimum_rate_fast receive HyperSpace)
+     (attribute comment_string minimum_rate_fast receive HyperSpace)
+     (attribute num_hits minimum_rate_fast receive HyperSpace)
+     (attribute num_hits_updating_bayes minimum_rate_fast receive HyperSpace)
+     (attribute attack_priority minimum_rate_fast receive HyperSpace)
+     (attribute attacker_id minimum_rate_fast receive HyperSpace)
+     (attribute time_on_target minimum_rate_fast receive HyperSpace)
+     (attribute dwell_time minimum_rate_fast receive HyperSpace)
+     (attribute munition_assigned minimum_rate_fast receive HyperSpace)
+     (attribute sensor_assigned minimum_rate_fast receive HyperSpace)
+     (attribute net_time minimum_rate_fast receive HyperSpace)
+     (attribute nlt_time minimum_rate_fast receive HyperSpace)
+     (attribute sat_time minimum_rate_fast receive HyperSpace)
+     (attribute creation_time minimum_rate_fast receive HyperSpace)
+     (attribute collateral_damage minimum_rate_fast receive HyperSpace)
+     (attribute desired_effect minimum_rate_fast receive HyperSpace)
+     (attribute last_update_time minimum_rate_fast receive HyperSpace)
+     (attribute target_type minimum_rate_fast receive HyperSpace)
+     (attribute classification minimum_rate_fast receive HyperSpace)
+     (attribute identification minimum_rate_fast receive HyperSpace)
+     (attribute moving minimum_rate_fast receive HyperSpace)
+     (attribute team minimum_rate_fast receive HyperSpace)
+     (attribute blips minimum_rate_fast receive HyperSpace)
+     (attribute num_probabilities minimum_rate_fast receive HyperSpace)
+     (attribute probabilities minimum_rate_fast receive HyperSpace)
+     (attribute host_name minimum_rate_fast receive HyperSpace)
+     (attribute level minimum_rate_fast receive HyperSpace)
+     (attribute track_quality minimum_rate_fast receive HyperSpace)
+     (attribute attached_id minimum_rate_fast receive HyperSpace)
+     (attribute slimed minimum_rate_fast receive HyperSpace)
+     (attribute num_attached_files minimum_rate_fast receive HyperSpace)
+     (attribute attached_files minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class ClutterForbid
+     (attribute cell minimum_rate_fast receive HyperSpace)
+     (attribute convoy minimum_rate_fast receive HyperSpace)
+     (attribute affected minimum_rate_fast receive HyperSpace)
+     (attribute conn minimum_rate_fast receive HyperSpace)
+     (attribute vert minimum_rate_fast receive HyperSpace)
+     (attribute mask minimum_rate_fast receive HyperSpace)
+     (attribute action minimum_rate_fast receive HyperSpace)
+     (attribute delete_sync_time minimum_rate_fast receive HyperSpace)
+ )
+ (class ClutterLoad
+     (attribute load_factor minimum_rate_fast receive HyperSpace)
+     (attribute n_static minimum_rate_fast receive HyperSpace)
+     (attribute run_ip minimum_rate_fast receive HyperSpace)
+     (attribute run_hostname minimum_rate_fast receive HyperSpace)
+     (attribute n_deleted minimum_rate_fast receive HyperSpace)
+     (attribute n_spawned minimum_rate_fast receive HyperSpace)
+     (attribute n_total minimum_rate_fast receive HyperSpace)
+     (attribute scenario minimum_rate_fast receive HyperSpace)
+     (attribute profile_stopped minimum_rate_fast receive HyperSpace)
+     (attribute profile_parked minimum_rate_fast receive HyperSpace)
+     (attribute profile_moving minimum_rate_fast receive HyperSpace)
+     (attribute mobile_stopped minimum_rate_fast receive HyperSpace)
+     (attribute mobile_parked minimum_rate_fast receive HyperSpace)
+     (attribute mobile_moving minimum_rate_fast receive HyperSpace)
+     (attribute source_stopped minimum_rate_fast receive HyperSpace)
+     (attribute source_parked minimum_rate_fast receive HyperSpace)
+     (attribute source_moving minimum_rate_fast receive HyperSpace)
+     (attribute n_air minimum_rate_fast receive HyperSpace)
+     (attribute n_water minimum_rate_fast receive HyperSpace)
+     (attribute n_ground minimum_rate_fast receive HyperSpace)
+     (attribute n_ped minimum_rate_fast receive HyperSpace)
+     (attribute dist_only minimum_rate_fast receive HyperSpace)
+     (attribute distmaster_id minimum_rate_fast receive HyperSpace)
+     (attribute lots minimum_rate_fast receive HyperSpace)
+     (attribute n_remote_veh minimum_rate_fast receive HyperSpace)
+ )
+ (class EmbeddedSystem
+     (attribute EntityIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute HostObjectIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute WorldLocation minimum_rate_fast receive HyperSpace)
+     (attribute VelocityVector minimum_rate_fast receive HyperSpace)
+     (attribute RelativePosition minimum_rate_fast receive HyperSpace)
+ (class Designator
+     (attribute CodeName minimum_rate_fast receive HyperSpace)
+     (attribute DesignatedObjectIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute DesignatorCode minimum_rate_fast receive HyperSpace)
+     (attribute DesignatorEmissionWavelength minimum_rate_fast receive HyperSpace)
+     (attribute DesignatorOutputPower minimum_rate_fast receive HyperSpace)
+     (attribute DesignatorSpotLocation minimum_rate_fast receive HyperSpace)
+     (attribute DeadReckoningAlgorithm minimum_rate_fast receive HyperSpace)
+     (attribute RelativeSpotLocation minimum_rate_fast receive HyperSpace)
+     (attribute SpotLinearAccelerationVector minimum_rate_fast receive HyperSpace)
+ )
+ (class EmitterSystem
+     (attribute EmitterFunctionCode minimum_rate_fast receive HyperSpace)
+     (attribute EmitterType minimum_rate_fast receive HyperSpace)
+     (attribute EmitterIndex minimum_rate_fast receive HyperSpace)
+     (attribute EventIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute frequency minimum_rate_fast receive HyperSpace)
+ (class Radar     
+     (attribute emitter_system minimum_rate_fast receive HyperSpace)
+ )
+ (class Jammer
+ )
+ )
+ (class IFF
+     (attribute SystemType minimum_rate_fast receive HyperSpace)
+     (attribute SystemName minimum_rate_fast receive HyperSpace)
+     (attribute SystemMode minimum_rate_fast receive HyperSpace)
+     (attribute Options minimum_rate_fast receive HyperSpace)
+     (attribute SystemState minimum_rate_fast receive HyperSpace)
+     (attribute AltMode4 minimum_rate_fast receive HyperSpace)
+     (attribute Modifier minimum_rate_fast receive HyperSpace)
+     (attribute Mode1 minimum_rate_fast receive HyperSpace)
+     (attribute Mode2 minimum_rate_fast receive HyperSpace)
+     (attribute Mode3a minimum_rate_fast receive HyperSpace)
+     (attribute ModeC minimum_rate_fast receive HyperSpace)
+     (attribute Mode4 minimum_rate_fast receive HyperSpace)
+ )
+ (class RadioTransmitter
+     (attribute AntennaPatternData best_effort receive HyperSpace)
+     (attribute CryptographicMode best_effort receive HyperSpace)
+     (attribute CryptoSystem best_effort receive HyperSpace)
+     (attribute EncryptionKeyIdentifier best_effort receive HyperSpace)
+     (attribute Frequency best_effort receive HyperSpace)
+     (attribute FrequencyBandwidth best_effort receive HyperSpace)
+     (attribute FrequencyHopInUse best_effort receive HyperSpace)
+     (attribute ModulationParameters best_effort receive HyperSpace)
+     (attribute PsuedoNoiseSpectrumInUse best_effort receive HyperSpace)
+     (attribute RadioIndex best_effort receive HyperSpace)
+     (attribute RadioInputSource best_effort receive HyperSpace)
+     (attribute RadioSystemType best_effort receive HyperSpace)
+     (attribute RFModulationSystemType best_effort receive HyperSpace)
+     (attribute RFModulationType best_effort receive HyperSpace)
+     (attribute TimeHopInUse best_effort receive HyperSpace)
+     (attribute TransmittedPower best_effort receive HyperSpace)
+     (attribute TransmitterOperationalStatus best_effort receive HyperSpace)
+     (attribute transmit_state best_effort receive HyperSpace)
+     (attribute input_source best_effort receive HyperSpace)
+     (attribute location best_effort receive HyperSpace)
+     (attribute antenna_pattern_type best_effort receive HyperSpace)
+     (attribute high_order_freq best_effort receive HyperSpace)
+     (attribute spread_spectrum best_effort receive HyperSpace)
+     (attribute mod_major best_effort receive HyperSpace)
+     (attribute mod_detail best_effort receive HyperSpace)
+     (attribute mod_system best_effort receive HyperSpace)
+ )
+ )
+ (class EmitterBeam
+     (attribute BeamAzimuthCenter minimum_rate_fast receive HyperSpace)
+     (attribute BeamAzimuthSweep minimum_rate_fast receive HyperSpace)
+     (attribute BeamElevationCenter minimum_rate_fast receive HyperSpace)
+     (attribute BeamElevationSweep minimum_rate_fast receive HyperSpace)
+     (attribute BeamFunctionCode minimum_rate_fast receive HyperSpace)
+     (attribute BeamIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute BeamParameterIndex minimum_rate_fast receive HyperSpace)
+     (attribute EffectiveRadiatedPower minimum_rate_fast receive HyperSpace)
+     (attribute EmissionFrequency minimum_rate_fast receive HyperSpace)
+     (attribute EmitterSystemIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute EventIdentifier minimum_rate_fast receive HyperSpace)
+     (attribute FrequencyRange minimum_rate_fast receive HyperSpace)
+     (attribute PulseRepetitionFrequency minimum_rate_fast receive HyperSpace)
+     (attribute PulseWidth minimum_rate_fast receive HyperSpace)
+     (attribute SweepSynch minimum_rate_fast receive HyperSpace)
+ (class JammerBeam
+     (attribute JammingModeSequence minimum_rate_fast receive HyperSpace)
+     (attribute JammedObjectIdentifiers minimum_rate_fast receive HyperSpace)
+     (attribute HighDensityJam minimum_rate_fast receive HyperSpace)
+ )
+ (class RadarBeam
+     (attribute HighDensityTrack minimum_rate_fast receive HyperSpace)
+     (attribute TrackObjectIdentifiers minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class Engineering
+     (attribute force minimum_rate_fast receive HyperSpace)
+     (attribute guise minimum_rate_fast receive HyperSpace)
+     (attribute geometry minimum_rate_fast receive HyperSpace)
+     (attribute marking minimum_rate_fast receive HyperSpace)
+ (class Lanes
+     (attribute width minimum_rate_fast receive HyperSpace)
+     (attribute appearance minimum_rate_fast receive HyperSpace)
+ )
+ (class Markers
+     (attribute num_markers minimum_rate_fast receive HyperSpace)
+     (attribute flag_orientations minimum_rate_fast receive HyperSpace)
+     (attribute appearance minimum_rate_fast receive HyperSpace)
+ )
+ (class Minefields
+     (attribute MinefieldAppearanceType minimum_rate_fast receive HyperSpace)
+     (attribute ActiveStatus minimum_rate_fast receive HyperSpace)
+     (attribute Lane minimum_rate_fast receive HyperSpace)
+ )
+ (class Mines
+     (attribute fuze minimum_rate_fast receive HyperSpace)
+     (attribute classification minimum_rate_fast receive HyperSpace)
+     (attribute mine_ids minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class FederateState
+     (attribute software_name minimum_rate_fast receive HyperSpace)
+     (attribute build_date minimum_rate_fast receive HyperSpace)
+     (attribute build_OS_name minimum_rate_fast receive HyperSpace)
+     (attribute build_OS_version minimum_rate_fast receive HyperSpace)
+     (attribute build_host minimum_rate_fast receive HyperSpace)
+     (attribute build_ip minimum_rate_fast receive HyperSpace)
+     (attribute build_version minimum_rate_fast receive HyperSpace)
+     (attribute image_size minimum_rate_fast receive HyperSpace)
+     (attribute RTI_version minimum_rate_fast receive HyperSpace)
+     (attribute run_hostname minimum_rate_fast receive HyperSpace)
+     (attribute run_ip minimum_rate_fast receive HyperSpace)
+     (attribute run_OS_name minimum_rate_fast receive HyperSpace)
+     (attribute run_OS_version minimum_rate_fast receive HyperSpace)
+     (attribute run_arch minimum_rate_fast receive HyperSpace)
+     (attribute run_processor_name minimum_rate_fast receive HyperSpace)
+     (attribute run_processor_speed minimum_rate_fast receive HyperSpace)
+     (attribute run_ram_total minimum_rate_fast receive HyperSpace)
+     (attribute run_swap_total minimum_rate_fast receive HyperSpace)
+     (attribute run_cmdline minimum_rate_fast receive HyperSpace)
+     (attribute run_terrain_name minimum_rate_fast receive HyperSpace)
+     (attribute load_factor minimum_rate_fast receive HyperSpace)
+     (attribute load minimum_rate_fast receive HyperSpace)
+     (attribute run_ram_used minimum_rate_fast receive HyperSpace)
+     (attribute local_vehicle_count minimum_rate_fast receive HyperSpace)
+     (attribute remote_vehicle_count minimum_rate_fast receive HyperSpace)
+     (attribute rmem_max minimum_rate_fast receive HyperSpace)
+     (attribute wmem_max minimum_rate_fast receive HyperSpace)
+     (attribute optmem_max minimum_rate_fast receive HyperSpace)
+     (attribute igmp_max_memberships minimum_rate_fast receive HyperSpace)
+ )
+ (class Man_Made_Illumination
+     (attribute Location_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Location_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute Location_Elevation minimum_rate_fast receive HyperSpace)
+     (attribute Light_Range_Luminous minimum_rate_fast receive HyperSpace)
+ (class Fires
+ )
+ (class Flares
+ (class Flares_Signal
+ )
+ )
+ )
+ (class NetEnvironment
+     (attribute guise minimum_rate_fast receive HyperSpace)
+     (attribute model minimum_rate_fast receive HyperSpace)
+ (class Combic
+     (attribute cloud_type minimum_rate_fast receive HyperSpace)
+     (attribute time_since_detonation minimum_rate_fast receive HyperSpace)
+     (attribute number_of_sources minimum_rate_fast receive HyperSpace)
+     (attribute source_type minimum_rate_fast receive HyperSpace)
+     (attribute barrage_rate minimum_rate_fast receive HyperSpace)
+     (attribute barrage_duration minimum_rate_fast receive HyperSpace)
+     (attribute crosswind_length minimum_rate_fast receive HyperSpace)
+     (attribute downwind_length minimum_rate_fast receive HyperSpace)
+     (attribute detonate_velocity minimum_rate_fast receive HyperSpace)
+     (attribute cell minimum_rate_fast receive HyperSpace)
+     (attribute location minimum_rate_fast receive HyperSpace)
+     (attribute origination_location minimum_rate_fast receive HyperSpace)
+     (attribute sigma_x minimum_rate_fast receive HyperSpace)
+     (attribute sigma_y minimum_rate_fast receive HyperSpace)
+     (attribute sigma_z minimum_rate_fast receive HyperSpace)
+     (attribute d_sigma_x_dt minimum_rate_fast receive HyperSpace)
+     (attribute d_sigma_y_dt minimum_rate_fast receive HyperSpace)
+     (attribute d_sigma_z_dt minimum_rate_fast receive HyperSpace)
+     (attribute orientation minimum_rate_fast receive HyperSpace)
+     (attribute velocity minimum_rate_fast receive HyperSpace)
+     (attribute angular_velocity minimum_rate_fast receive HyperSpace)
+     (attribute centroid_height minimum_rate_fast receive HyperSpace)
+     (attribute length minimum_rate_fast receive HyperSpace)
+     (attribute width minimum_rate_fast receive HyperSpace)
+     (attribute height minimum_rate_fast receive HyperSpace)
+     (attribute d_length_dt minimum_rate_fast receive HyperSpace)
+     (attribute d_width_dt minimum_rate_fast receive HyperSpace)
+     (attribute d_height_dt minimum_rate_fast receive HyperSpace)
+     (attribute leading_edge_vel minimum_rate_fast receive HyperSpace)
+ )
+ (class Dust
+     (attribute cell minimum_rate_fast receive HyperSpace)
+     (attribute time_since_creation minimum_rate_fast receive HyperSpace)
+     (attribute attached_vehicle_id minimum_rate_fast receive HyperSpace)
+     (attribute vehicle_velocity minimum_rate_fast receive HyperSpace)
+     (attribute location minimum_rate_fast receive HyperSpace)
+     (attribute bounding_sphere_center minimum_rate_fast receive HyperSpace)
+     (attribute bounding_sphere_radius minimum_rate_fast receive HyperSpace)
+     (attribute plume_length minimum_rate_fast receive HyperSpace)
+     (attribute sigma_y minimum_rate_fast receive HyperSpace)
+     (attribute sigma_z minimum_rate_fast receive HyperSpace)
+     (attribute horz_velocity minimum_rate_fast receive HyperSpace)
+     (attribute vert_velocity minimum_rate_fast receive HyperSpace)
+     (attribute d_sigma_y_dt minimum_rate_fast receive HyperSpace)
+     (attribute d_sigma_z_dt minimum_rate_fast receive HyperSpace)
+     (attribute vehicle_type minimum_rate_fast receive HyperSpace)
+     (attribute plume_nodes minimum_rate_fast receive HyperSpace)
+ )
+ (class Sea
+     (attribute sea_state minimum_rate_fast receive)
+     (attribute num_waves minimum_rate_fast receive)
+     (attribute num_frequencies minimum_rate_fast receive)
+     (attribute salinity minimum_rate_fast receive)
+     (attribute tide_level minimum_rate_fast receive)
+     (attribute sea_surface_temp minimum_rate_fast receive)
+     (attribute sea_wave_height minimum_rate_fast receive)
+     (attribute sea_wave_direction minimum_rate_fast receive)
+     (attribute sea_wave_period minimum_rate_fast receive)
+     (attribute sea_current_velocity minimum_rate_fast receive HyperSpace)
+     (attribute surf_surface_temp minimum_rate_fast receive)
+     (attribute surf_wave_height minimum_rate_fast receive)
+     (attribute surf_wave_direction minimum_rate_fast receive)
+     (attribute surf_wave_period minimum_rate_fast receive)
+     (attribute surf_current_velocity minimum_rate_fast receive HyperSpace)
+     (attribute surf_angle_to_beach minimum_rate_fast receive)
+     (attribute surf_breaker_type minimum_rate_fast receive)
+     (attribute sea_spectra minimum_rate_fast receive)
+     (attribute surf_spectra minimum_rate_fast receive)
+ )
+ (class SeaWake
+     (attribute associated_entity_id minimum_rate_fast receive HyperSpace)
+     (attribute generated minimum_rate_fast receive)
+     (attribute num_segments minimum_rate_fast receive)
+     (attribute segments minimum_rate_fast receive)
+     (attribute position minimum_rate_fast receive)
+     (attribute radius minimum_rate_fast receive)
+ )
+ (class Time
+     (attribute simulation_time minimum_rate_fast receive)
+ )
+ (class Weather
+     (attribute precipitation_type minimum_rate_fast receive)
+     (attribute precipitation_rate minimum_rate_fast receive)
+     (attribute extinction_type minimum_rate_fast receive)
+     (attribute extinction_amount minimum_rate_fast receive)
+     (attribute temperature minimum_rate_fast receive)
+     (attribute dewpoint minimum_rate_fast receive)
+     (attribute relative_humidity minimum_rate_fast receive)
+     (attribute barometric_pressure minimum_rate_fast receive)
+     (attribute ambient_light minimum_rate_fast receive)
+     (attribute wind_velocity minimum_rate_fast receive)
+     (attribute cloud_cover minimum_rate_fast receive)
+     (attribute cloud_top minimum_rate_fast receive)
+     (attribute cloud_base minimum_rate_fast receive)
+     (attribute extinction_records minimum_rate_fast receive)
+     (attribute cloud_type minimum_rate_fast receive)
+     (attribute total_precip_last_hr minimum_rate_fast receive)
+     (attribute last_rain_time minimum_rate_fast receive)
+     (attribute sub_soil_saturation minimum_rate_fast receive)
+     (attribute surface_duct_height minimum_rate_fast receive)
+     (attribute surface_duct_intensity minimum_rate_fast receive)
+     (attribute evapor_duct_intensity minimum_rate_fast receive)
+     (attribute evapor_duct_height minimum_rate_fast receive)
+     (attribute k_factor minimum_rate_fast receive)
+     (attribute surface_refrac minimum_rate_fast receive)
+ (class ObservedWeather
+     (attribute name minimum_rate_fast receive)
+     (attribute observation_time minimum_rate_fast receive)
+     (attribute location minimum_rate_fast receive HyperSpace)
+ )
+ (class UniformWeather
+ )
+ )
+ (class Flare
+     (attribute cell minimum_rate_fast receive HyperSpace)
+     (attribute time_since_detonation minimum_rate_fast receive HyperSpace)
+     (attribute source_intensity minimum_rate_fast receive HyperSpace)
+     (attribute number_of_sources minimum_rate_fast receive HyperSpace)
+     (attribute location minimum_rate_fast receive HyperSpace)
+     (attribute orientation minimum_rate_fast receive HyperSpace)
+     (attribute velocity minimum_rate_fast receive HyperSpace)
+     (attribute angular_velocity minimum_rate_fast receive HyperSpace)
+     (attribute height minimum_rate_fast receive HyperSpace)
+     (attribute d_height_dt minimum_rate_fast receive HyperSpace)
+     (attribute peak_angle minimum_rate_fast receive HyperSpace)
+     (attribute d_peak_angle_dt minimum_rate_fast receive HyperSpace)
+ )
+ )
+ (class Ocean
+ (class Ocean_0D
+ (class Ocean_Surface_Observer
+     (attribute EAC_Wave_Direction_Primary minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Period_Primary_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Height_Significant minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Sea_Temperature minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Salinity minimum_rate_fast receive HyperSpace)
+     (attribute Station_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Station_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ (class Littoral_Observer
+     (attribute EAC_Tide_Level minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Breaker_Type_Dominant minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Alongshore_Current minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Breaker_Direction minimum_rate_fast receive HyperSpace)
+ )
+ (class Open_Ocean_Observer
+     (attribute EAC_Wave_Sea_State_Category minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Current_U_Ocean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Current_V_Ocean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Height_Maximum minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Direction_Secondary minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Period_Secondary_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Direction_Swell_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Height_Swell_Significant minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Period_Swell_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Height_Wind_Induced_Significant minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Direction_Wind_Induced_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Period_Wind_Induced_Mean minimum_rate_fast receive HyperSpace)
+ )
+ )
+ )
+ (class Ocean_2D
+ (class Mixing_Layer_Depth_GDC
+     (attribute EAC_Mixing_Layer_Depth minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Ocean_Surface_Layer_GDC
+     (attribute EAC_Sea_Temperature minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Salinity minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Current_U_Ocean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Current_V_Ocean minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ (class Tide_Level_Curvilinear
+     (attribute EAC_Tide_Level minimum_rate_fast receive HyperSpace)
+     (attribute Horizontal_Grid minimum_rate_fast receive HyperSpace)
+ )
+ (class Wave_Spectrum
+     (attribute EAC_Wave_Height_Maximum minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Direction_Primary minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Period_Primary_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Sea_State_Category minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Direction_Secondary minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Period_Secondary_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Height_Significant minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Direction_Swell_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Height_Swell_Significant minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Period_Swell_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Height_Wind_Induced_Significant minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Direction_Wind_Induced_Mean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Wave_Period_Wind_Induced_Mean minimum_rate_fast receive HyperSpace)
+ (class Wave_Spectrum_Curvilinear
+     (attribute Horizontal_Grid minimum_rate_fast receive HyperSpace)
+ )
+ (class Wave_Spectrum_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+ )
+ )
+ )
+ (class Ocean_3D
+ (class Water_Column
+     (attribute EAC_Salinity minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Sound_Speed_Water minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Sea_Temperature minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Current_U_Ocean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Current_V_Ocean minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Current_W_Ocean minimum_rate_fast receive HyperSpace)
+ (class Water_Column_Curvilinear
+     (attribute Horizontal_Grid minimum_rate_fast receive HyperSpace)
+     (attribute Vertical_Grid minimum_rate_fast receive HyperSpace)
+     (attribute Bathymetry minimum_rate_fast receive HyperSpace)
+ )
+ (class Water_Column_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Elevation minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Elevation minimum_rate_fast receive HyperSpace)
+ )
+ )
+ )
+ )
+ (class Space
+ (class Space_3D
+ (class Electron_Density_GDC
+     (attribute Origin_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute Origin_Elevation minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Longitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Geodetic_Latitude minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Spatial_Elevation minimum_rate_fast receive HyperSpace)
+     (attribute EAC_Electron_Density minimum_rate_fast receive HyperSpace)
+ )
+ )
+ )
+ (class Terrain_State
+     (attribute Scribe_ID minimum_rate_fast receive HyperSpace)
+     (attribute Spatial_Domain minimum_rate_fast receive HyperSpace)
+     (attribute Primary minimum_rate_fast receive HyperSpace)
+     (attribute Start_ID_Vector minimum_rate_fast receive HyperSpace)
+     (attribute Current_ID_Vector minimum_rate_fast receive HyperSpace)
+ )
+ (class Time
+     (attribute epoch_time minimum_rate_fast receive HyperSpace)
+ (class Ephemeris_Time
+ )
+ (class Historical_Time
+ )
+ )
+ (class DistMaster
+     (attribute system_id best_effort receive HyperSpace)
+     (attribute master best_effort receive HyperSpace)
+     (attribute priority best_effort receive HyperSpace)
+     (attribute hostname best_effort receive HyperSpace)
+ )
+ (class ClutterNode
+     (attribute cell best_effort receive HyperSpace)
+     (attribute node best_effort receive HyperSpace)
+     (attribute timing best_effort receive HyperSpace)
+ )
+ (class TraitDesc
+     (attribute name best_effort receive HyperSpace)
+     (attribute distmaster_id best_effort receive HyperSpace)
+     (attribute bit_offset best_effort receive HyperSpace)
+     (attribute states best_effort receive HyperSpace)
+ )
+ (class PowerState
+     (attribute power_on best_effort receive HyperSpace)
+     (attribute distmaster_id best_effort receive HyperSpace)
+ )
+ (class CDMTS
+ (class Entity
+     (attribute ObjectId best_effort receive)
+     (attribute ProxyName best_effort receive)
+     (attribute SimProxyName best_effort receive)
+ (class Mission
+     (attribute EntityId best_effort receive)
+     (attribute NumberOfTasks best_effort receive)
+     (attribute Tasks best_effort receive)
+ )
+ (class OverlayEntity
+     (attribute Name best_effort receive)
+     (attribute Data best_effort receive)
+ (class Circle
+ )
+ (class Ellipse
+ )
+ (class Polygon
+ )
+ (class Line
+ )
+ (class Point
+ )
+ )
+ (class PhysicalEntity
+     (attribute Data best_effort receive)
+ )
+ )
+ (class Proxy
+     (attribute ProxyName best_effort receive)
+     (attribute Status best_effort receive)
+ )
+ (class SimProxy
+     (attribute SimProxyName best_effort receive)
+     (attribute Status best_effort receive)
+ )
+ )
+ (class FSCM
+     (attribute type best_effort receive)
+     (attribute num_points best_effort receive)
+     (attribute points best_effort receive)
+     (attribute closed best_effort receive)
+     (attribute min_altitude best_effort receive)
+     (attribute max_altitude best_effort receive)
+     (attribute radius best_effort receive)
+ )
+ (class EntityControlState
+     (attribute EntityID best_effort receive)
+     (attribute StationType best_effort receive)
+     (attribute NumDiscreteControls best_effort receive)
+     (attribute DiscreteControls best_effort receive)
+     (attribute NumContinuousControls best_effort receive)
+     (attribute ContinuousControls best_effort receive)
+ )
+ (class Portal
+     (attribute name best_effort receive HyperSpace)
+     (attribute attached_to best_effort receive)
+     (attribute open best_effort receive)
+ (class TransportPortal
+     (attribute Capacity best_effort receive)
+     (attribute Load best_effort receive)
+     (attribute AssignedSeats best_effort receive)
+ )
+ )
+ (class Manager
+ (class Federation
+     (attribute FederationName reliable receive)
+     (attribute FederatesInFederation reliable receive)
+     (attribute RTIversion reliable receive)
+     (attribute FEDid reliable receive)
+     (attribute LastSaveName reliable receive)
+     (attribute LastSaveTime reliable receive)
+     (attribute NextSaveName reliable receive)
+     (attribute NextSaveTime reliable receive)
+ )
+ (class Federate
+     (attribute FederateHandle reliable receive)
+     (attribute FederateType reliable receive)
+     (attribute FederateHost reliable receive)
+     (attribute RTIversion reliable receive)
+     (attribute FEDid reliable receive)
+     (attribute TimeConstrained reliable receive)
+     (attribute TimeRegulating reliable receive)
+     (attribute AsynchronousDelivery reliable receive)
+     (attribute FederateState reliable receive)
+     (attribute TimeManagerState reliable receive)
+     (attribute FederateTime reliable receive)
+     (attribute Lookahead reliable receive)
+     (attribute LBTS reliable receive)
+     (attribute MinNextEventTime reliable receive)
+     (attribute ROlength reliable receive)
+     (attribute TSOlength reliable receive)
+     (attribute ReflectionsReceived reliable receive)
+     (attribute UpdatesSent reliable receive)
+     (attribute InteractionsReceived reliable receive)
+     (attribute InteractionsSent reliable receive)
+     (attribute ObjectsOwned reliable receive)
+     (attribute ObjectsUpdated reliable receive)
+     (attribute ObjectsReflected reliable receive)
+ )
+ )
+    )
+)
+ (interactions 
+    (class InteractionRoot  reliable timestamp
+       (class RTIprivate  reliable timestamp)
+  (class AAR best_effort receive HyperSpace
+     (parameter type)
+      (parameter id)
+      (parameter munition_id)
+      (parameter location)
+      (parameter hostname)
+      (parameter comment)
+      (parameter synchronized_time)
+      (parameter ephemeris_time)
+  )
+
+  (class AssetManagerRequest best_effort receive HyperSpace
+     (parameter request_type)
+      (parameter asset_team)
+      (parameter asset_id)
+  )
+
+  (class AttackOrder best_effort receive HyperSpace
+     (parameter type)
+      (parameter asset_id)
+      (parameter force)
+      (parameter track_id)
+      (parameter recce_track_id)
+      (parameter num_recce_types)
+      (parameter recce_types)
+      (parameter mission_priority)
+      (parameter munition)
+      (parameter num_munition)
+      (parameter nlt_time)
+      (parameter net_time)
+      (parameter sat_time)
+      (parameter target_is_track)
+      (parameter ingress_route)
+      (parameter egress_route)
+      (parameter target_position)
+      (parameter comms_source)
+  )
+
+  (class Battlemaster best_effort receive HyperSpace
+     (parameter entity_id)
+      (parameter appearance)
+      (parameter fuel_level)
+      (parameter ammo_level)
+  )
+
+  (class Clutter best_effort receive HyperSpace
+     (parameter type)
+      (parameter vehicle_id)
+      (parameter doubles)
+      (parameter ints)
+      (parameter pos)
+      (parameter munition)
+      (parameter string_array)
+  )
+
+  (class ClutterBlock best_effort receive HyperSpace
+     (parameter sim_enum)
+      (parameter vehicle_id)
+      (parameter sequence)
+      (parameter lane)
+      (parameter block)
+      (parameter exit_dist)
+      (parameter parking_pos)
+      (parameter parking_dir)
+      (parameter should_replan)
+      (parameter arrival_cap)
+  )
+
+  (class ClutterExternalCrowdCreate best_effort receive HyperSpace
+     (parameter crowd_identifier)
+      (parameter n_entity)
+      (parameter position)
+      (parameter anger_level)
+  )
+
+  (class ClutterTemplate best_effort receive HyperSpace
+     (parameter vehicle_type)
+      (parameter control)
+      (parameter scenario)
+      (parameter dest_id)
+      (parameter build)
+      (parameter build_cat)
+      (parameter profile)
+      (parameter profile_action)
+      (parameter forbid)
+  )
+
+  (class Collision best_effort receive HyperSpace
+     (parameter CollidingObjectIdentifier)
+      (parameter IssuingObjectMass)
+      (parameter IssuingObjectVelocityVector)
+      (parameter CollisionType)
+      (parameter CollisionLocation)
+      (parameter EventIdentifier)
+      (parameter IssuingObjectIdentifier)
+  )
+
+  (class CommsMessage best_effort receive HyperSpace
+     (parameter MsgId)
+      (parameter SensorMode)
+      (parameter SourceId)
+      (parameter DestinationId)
+      (parameter Status)
+      (parameter MsgDelay)
+  )
+
+  (class DamageAssessment best_effort receive HyperSpace
+     (parameter SimulationName)
+      (parameter SimulationVersion)
+      (parameter EventIdentifier)
+      (parameter FiringObjectIdentifier)
+      (parameter FiringObjectGuise)
+      (parameter FiringObjectForce)
+      (parameter FiringObjectLocation)
+      (parameter FiringObjectVelocity)
+      (parameter FiringObjectOrientation)
+      (parameter FiringObjectMarking)
+      (parameter TargetFromDetonation)
+      (parameter TargetObjectIdentifier)
+      (parameter TargetObjectGuise)
+      (parameter TargetObjectForce)
+      (parameter TargetObjectLocation)
+      (parameter TargetObjectVelocity)
+      (parameter TargetObjectOrientation)
+      (parameter TargetObjectMarking)
+      (parameter MunitionObjectIdentifier)
+      (parameter MunitionType)
+      (parameter MunitionName)
+      (parameter SubstituteMunitionType)
+      (parameter SubstituteMunitionName)
+      (parameter FuseType)
+      (parameter WarheadType)
+      (parameter QuantityFired)
+      (parameter RateOfFire)
+      (parameter DetonationLocation)
+      (parameter FinalVelocityVector)
+      (parameter DetonationResultCode)
+      (parameter RelativeDetonationLocation)
+      (parameter Range)
+      (parameter Error)
+      (parameter PCatastrophic)
+      (parameter PMobilityAndFirepower)
+      (parameter PMobilityOnly)
+      (parameter PFirePowerOnly)
+      (parameter PNoKill)
+      (parameter ComputedDamageResult)
+      (parameter DamageResultReason)
+      (parameter PreviousDamageState)
+      (parameter NewDamageState)
+  )
+
+  (class DistributedSensor best_effort receive HyperSpace
+     (parameter platform_id)
+      (parameter federate)
+      (parameter sensor_id)
+      (parameter sensor_plan_mode)
+      (parameter batch_flag)
+      (parameter FOPEN_depth)
+      (parameter collection_tag)
+      (parameter frame_id)
+      (parameter owning_force)
+      (parameter platform_type)
+      (parameter sensor_location)
+      (parameter platform_velocity)
+      (parameter sensor_mode)
+      (parameter camera_mode)
+      (parameter comment)
+   (class ContactReport best_effort receive HyperSpace
+     (parameter intended_receiver)
+      (parameter detection_id)
+      (parameter entity_id)
+      (parameter building_id)
+      (parameter time_old)
+      (parameter perceived_location)
+      (parameter perceived_velocity)
+      (parameter perceived_orientation)
+      (parameter location_error)
+      (parameter detection_status)
+      (parameter detected_type)
+      (parameter num_probabilities)
+      (parameter probabilities)
+      (parameter comms_source)
+  )
+
+  (class SensorDetection best_effort_hipri receive HyperSpace
+     (parameter entity_id)
+      (parameter location)
+      (parameter velocity)
+      (parameter appearance)
+      (parameter building_id)
+      (parameter num_building_attributes)
+      (parameter building_attributes)
+      (parameter detection_status)
+      (parameter detected_type)
+      (parameter Orientation)
+      (parameter mission_phase)
+      (parameter trait_strings)
+  )
+
+  (class SensorFootprint best_effort_hipri receive HyperSpace
+     (parameter num_verts)
+      (parameter footprint_verts)
+      (parameter dwell_time)
+      (parameter revisit_rate)
+      (parameter active)
+      (parameter do_entity_impainted)
+      (parameter do_building_detections)
+      (parameter do_line_of_sight)
+      (parameter do_entity_los_blockage)
+      (parameter do_enviro_line_of_sight)
+      (parameter enviro_line_of_sight_band)
+      (parameter do_velocity)
+      (parameter do_detection)
+      (parameter do_classification)
+      (parameter do_bda)
+      (parameter do_traits)
+      (parameter line_of_sight_thresh)
+      (parameter velocity_min_thresh)
+      (parameter velocity_max_thresh)
+      (parameter detection_thresh)
+      (parameter classification_thresh)
+      (parameter azimuth_angle)
+      (parameter azimuth_sweep)
+      (parameter elevation_angle)
+      (parameter elevation_sweep)
+      (parameter magnification)
+      (parameter comms_dwell_time)
+      (parameter traits)
+      (parameter aim_point)
+  )
+
+ )
+
+  (class DTBLDGDamageAssessment best_effort receive HyperSpace
+     (parameter position)
+      (parameter BFC)
+      (parameter UID)
+      (parameter Damage_Percent)
+  )
+
+  (class DynamicTerrain best_effort receive HyperSpace
+     (parameter DTSpace)
+   (class Candidate_Change best_effort receive HyperSpace
+     (parameter Sender_ID)
+      (parameter Basis_ID_Vector)
+      (parameter Craters)
+      (parameter Boulder_or_Rockdrops)
+      (parameter Breaches)
+      (parameter Embankment_or_Fills)
+      (parameter Ditches_and_or_Berms)
+      (parameter Wire_Obstacle)
+      (parameter Dragon_Teeth)
+      (parameter Infantry_Trenches)
+      (parameter Fighting_Positions)
+      (parameter Fences)
+      (parameter Pipeline_or_Pipes)
+      (parameter Treelines)
+      (parameter Bridge_or_Overpass_or_Viaducts)
+      (parameter Cart_Tracks)
+      (parameter Railroads)
+      (parameter Roads)
+      (parameter Dam_or_Weirs)
+      (parameter Locks)
+      (parameter Power_Transmission_Pylons)
+      (parameter MICLICs)
+      (parameter Pier_or_Wharf_or_Quays)
+      (parameter Platforms)
+      (parameter Buildings)
+      (parameter Power_Plants)
+      (parameter Storage_Bunker_or_Storage_Mounds)
+      (parameter Cranes)
+      (parameter Pumping_Stations)
+      (parameter Rig_or_Superstructures)
+      (parameter Tanks)
+      (parameter Communication_Buildings)
+      (parameter Communication_Towers)
+      (parameter Disk_or_Dishes)
+      (parameter Flare_Pipes)
+      (parameter Helicopter_Landing_Pads)
+      (parameter Cooling_Towers)
+      (parameter Substation_or_Transformer_Yards)
+      (parameter Water_Towers)
+      (parameter ESMB_Nets)
+      (parameter Gradient_or_Slopes)
+      (parameter Disturbed_Soil)
+      (parameter Scorched_Soil)
+      (parameter Canopies)
+      (parameter Built_Up_Areas)
+      (parameter FAT_Updates)
+      (parameter Reset_Areas)
+      (parameter Conformal_Polygons)
+      (parameter Terrain_Polygons)
+      (parameter Vertical_Linear_Polygons)
+      (parameter Polygonal_Set)
+      (parameter X3D_MES_Polygons)
+      (parameter XML_Floorplan_Polygons)
+      (parameter Rubble)
+  )
+
+  (class DT_Engineering_Request best_effort receive HyperSpace
+  (class Crater_Engineering_Request best_effort receive HyperSpace
+     (parameter Depth)
+      (parameter Width)
+      (parameter Impact_Location)
+      (parameter Impact_Vector)
+      (parameter Num_Rings)
+      (parameter Num_Outline_Points)
+      (parameter Raggedy_Factor)
+      (parameter Deform_Type)
+      (parameter Spoil_Factor)
+      (parameter Spoil_Depth_Ratio)
+      (parameter Spoil_Slope)
+  )
+
+  (class Ditch_or_Berm_Engineering_Request best_effort receive HyperSpace
+     (parameter Attributes)
+      (parameter Reference_Point)
+      (parameter Offset_Points)
+  )
+
+  (class DragonTeeth_Engineering_Request best_effort receive HyperSpace
+     (parameter Tooth_Type)
+      (parameter Tooth_Spacing)
+      (parameter Row_Spacing)
+      (parameter Num_Rows)
+      (parameter Pointlist)
+  )
+
+  (class FightingPosition_Engineering_Request best_effort receive HyperSpace
+     (parameter EAC_GTRS_GEOTILE_IDENTIFICATION)
+      (parameter Reference_Point)
+      (parameter Position_Attributes)
+      (parameter EAC_MILITARY_FORCE_ALIGNMENT)
+      (parameter Turret_depth)
+      (parameter Hull_depth)
+  )
+
+  (class Land_Use_or_Land_Cover_Vegetation_Engineering_Request best_effort receive HyperSpace
+     (parameter LandUseCover_Eng_Request_Feature)
+  )
+
+  (class LinearBarrier_Engineering_Request best_effort receive HyperSpace
+     (parameter Linear_Barrier_Type)
+      (parameter Pointlist)
+  )
+
+  (class Model_Placement_Request best_effort receive HyperSpace
+     (parameter Model_Name)
+      (parameter EAC_GTRS_GEOTILE_IDENTIFICATION)
+      (parameter Position)
+      (parameter Rotation)
+  )
+
+  (class Road_Engineering_Request best_effort receive HyperSpace
+     (parameter Road_Eng_Request_Feature)
+  )
+
+ )
+
+  (class Rejection best_effort receive HyperSpace
+     (parameter Scribe_ID)
+      (parameter Sender_ID)
+  )
+
+  (class Repoly_Request best_effort receive HyperSpace
+     (parameter Requesting_Sim_ID)
+      (parameter Basis_Poly_Count)
+      (parameter Basis_Polys)
+   (class Crater_Request best_effort receive HyperSpace
+     (parameter Crater_Type)
+      (parameter Deform_Type)
+      (parameter Depth)
+      (parameter Impact_Location)
+      (parameter Impact_Vector)
+      (parameter Num_Rings)
+      (parameter Raggedy_Factor)
+      (parameter SFC_Norm)
+      (parameter Width)
+      (parameter Spoil_Depth_Ratio)
+      (parameter Spoil_Factor)
+      (parameter Spoil_Slope)
+      (parameter Tex_ID)
+      (parameter Pointlist)
+  )
+
+  (class Ditch_and_or_Berm_Request best_effort receive HyperSpace
+     (parameter Berm_Slope_Width)
+      (parameter Berm_Width)
+      (parameter Ditch_Depth)
+      (parameter Ditch_Slope_Width)
+      (parameter Ditch_Width)
+      (parameter Height)
+      (parameter Tex_ID)
+      (parameter Pointlist)
+  )
+
+  (class Fighting_Position_Request best_effort receive HyperSpace
+     (parameter Head_Pt)
+      (parameter EAC_GTRS_GEOTILE_IDENTIFICATION)
+      (parameter forward_vector)
+      (parameter Hull_depth)
+      (parameter Length)
+      (parameter Turret_depth)
+      (parameter Width)
+      (parameter Angle)
+      (parameter Tex_ID)
+  )
+
+  (class Land_Use_or_Land_Cover_Vegetation_Request best_effort receive HyperSpace
+     (parameter LandUse_CoverType)
+      (parameter Top_TEX_ID)
+      (parameter Top_PAT_ID)
+      (parameter Top_Height)
+      (parameter Side_Tex_ID)
+      (parameter Side_PAT_ID)
+      (parameter Side_Height)
+      (parameter Pointlist)
+  )
+
+  (class Road_Request best_effort receive HyperSpace
+     (parameter Soil_type)
+      (parameter Width)
+      (parameter Tex_ID)
+      (parameter PAT_ID)
+      (parameter EAC_GTRS_GEOTILE_IDENTIFICATION)
+      (parameter Transition_PAT_ID)
+      (parameter Transition_Tex_ID)
+      (parameter Replication)
+      (parameter Flatten)
+      (parameter Pointlist)
+  )
+
+ )
+
+  (class Repoly_Return best_effort receive HyperSpace
+     (parameter ReplyTo_ID)
+      (parameter RepolyReturnData)
+  )
+
+  (class Retransmit_Request best_effort receive HyperSpace
+     (parameter Scribe_ID)
+      (parameter New_Subscriber)
+      (parameter Begin_ID_Vector)
+      (parameter End_ID_Vector)
+  )
+
+  (class ScribeHeartbeat best_effort receive HyperSpace
+     (parameter Unique_ID)
+  )
+
+  (class Validated_Change best_effort receive HyperSpace
+     (parameter Sender_ID)
+      (parameter Scribe_ID)
+   (class FAT_Update_Category best_effort receive HyperSpace
+  (class FAT_Update best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class Feature_Change best_effort receive HyperSpace
+     (parameter CC)
+   (class Battlefield_Element_Category best_effort receive HyperSpace
+  (class Breach best_effort receive HyperSpace
+  (class ECC_Breach_Point_or_Lane best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Embankment_or_Fill best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class ECC_Barrier best_effort receive HyperSpace
+  (class EAC_Obstacle_Type_Category__Emplaced_Boulder best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class ECC_Cross_Country_Barrier best_effort receive HyperSpace
+  (class ECC_Ditch_and_or_Berm_Engineered best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Dragon_Teeth best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Wire_Obstacle best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class ECC_Infantry_Trench best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Prepared_Defensive_Position best_effort receive HyperSpace
+  (class EAC_Defensive_Position_Type__Deliberate_Veh_Def_Pos_With_Full_Hide best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class ECC_Terrain_Crater best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class Hydrography_Category best_effort receive HyperSpace
+  (class ECC_Dam_or_Weir best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Lock best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class Linear_Connectivity_Category best_effort receive HyperSpace
+  (class ECC_Power_Transmission_Pylon best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class LC_Mobile_Munition best_effort receive HyperSpace
+  (class ECC_Explosive_Charge__Line best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+ )
+
+  (class Maritime_Trafficability_Category best_effort receive HyperSpace
+  (class ECC_Pier_or_Wharf_or_Quay best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Platform best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class Point_Cultural_Category best_effort receive HyperSpace
+  (class ECC_Building best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Power_Plant best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Storage_Bunker_or_Storage_Mound best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class PCC_Similar_Attribute_Grouping_1 best_effort receive HyperSpace
+     (parameter Feature)
+   (class ECC_Crane best_effort receive HyperSpace
+ )
+
+  (class ECC_Pumping_Station best_effort receive HyperSpace
+ )
+
+  (class ECC_Rig_or_Superstructure best_effort receive HyperSpace
+ )
+
+  (class ECC_Tank best_effort receive HyperSpace
+ )
+
+ )
+
+  (class PCC_Similar_Attribute_Grouping_2 best_effort receive HyperSpace
+     (parameter Feature)
+   (class ECC_Communication_Building best_effort receive HyperSpace
+ )
+
+  (class ECC_Communication_Tower best_effort receive HyperSpace
+ )
+
+  (class ECC_Cooling_Tower best_effort receive HyperSpace
+ )
+
+  (class ECC_Disk_or_Dish best_effort receive HyperSpace
+ )
+
+  (class ECC_Flare_Pipe best_effort receive HyperSpace
+ )
+
+  (class ECC_Helicopter_Landing_Pad best_effort receive HyperSpace
+ )
+
+  (class ECC_Substation_or_Transformer_Yard best_effort receive HyperSpace
+ )
+
+  (class ECC_Water_Tower best_effort receive HyperSpace
+ )
+
+ )
+
+ )
+
+  (class Surface_Areals_Category best_effort receive HyperSpace
+  (class ECC_Ground_Surface_Element best_effort receive HyperSpace
+  (class EAC_Terrain_Surface_Marks__Generally_Disturbed best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class EAC_Terrain_Surface_Marks__Scorched_or_Charred best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Gradient_or_Slope best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class SA_Mobile_Munition best_effort receive HyperSpace
+  (class ECC_Explosive_Charge__Area best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class Tree_Canopy best_effort receive HyperSpace
+  (class ECC_Trees best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class Urban_Area best_effort receive HyperSpace
+  (class ECC_Built_Up_Area best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+ )
+
+  (class Terrain_Obstacles_Category best_effort receive HyperSpace
+  (class ECC_Fence best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Pipeline_or_Pipe best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Rubble best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Treeline best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class Transportation_Category best_effort receive HyperSpace
+  (class ECC_Bridge_or_Overpass_or_Viaduct best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Cart_Track best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Railroad best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class ECC_Road best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+ )
+
+  (class Polygonal_Change best_effort receive HyperSpace
+     (parameter Sequence_ID)
+   (class Conformal_Polygons best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class Polygonal_Set best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class Terrain_Polygons best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class Vertical_Linear_Polygons best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class X3D_Model_Polygons best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+  (class XML_Floorplan_Polygons best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+  (class Reset_Area best_effort receive HyperSpace
+     (parameter Feature)
+  )
+
+ )
+
+ )
+
+  (class MunitionDetonation semireliable receive HyperSpace
+     (parameter DetonationLocation)
+      (parameter DetonationResultCode)
+      (parameter EventIdentifier)
+      (parameter FiringObjectIdentifier)
+      (parameter FinalVelocityVector)
+      (parameter FuseType)
+      (parameter MunitionObjectIdentifier)
+      (parameter MunitionType)
+      (parameter QuantityFired)
+      (parameter RateOfFire)
+      (parameter RelativeDetonationLocation)
+      (parameter TargetObjectIdentifier)
+      (parameter WarheadType)
+  )
+
+  (class PO best_effort receive HyperSpace
+     (parameter Version)
+      (parameter Database)
+      (parameter Kind)
+      (parameter Size)
+      (parameter VariantSize)
+      (parameter Variant)
+  )
+
+  (class RadioSignal best_effort receive HyperSpace
+     (parameter receiver)
+      (parameter encoding_scheme)
+      (parameter sample_rate)
+      (parameter samples)
+      (parameter Frequency)
+      (parameter FrequencySubscriptionRange)
+   (class ApplicationSpecificRadioSignal best_effort receive HyperSpace
+     (parameter HostRadioIndex)
+      (parameter DataRate)
+      (parameter SignalDataLength)
+      (parameter SignalData)
+      (parameter TacticalDataLinkType)
+      (parameter TDLMessageCount)
+      (parameter UserProtocolID)
+  )
+
+  (class DatabaseIndexRadioSignal best_effort receive HyperSpace
+     (parameter HostRadioIndex)
+      (parameter DatabaseIndex)
+      (parameter Duration)
+      (parameter StartOffset)
+      (parameter TacticalDataLinkType)
+      (parameter TDLMessageCount)
+  )
+
+ )
+
+  (class RepairComplete best_effort receive HyperSpace
+     (parameter ReceivingObject)
+      (parameter RepairingObject)
+      (parameter RepairType)
+  )
+
+  (class RepairResponse best_effort receive HyperSpace
+     (parameter ReceivingObject)
+      (parameter RepairingObject)
+      (parameter RepairResultCode)
+  )
+
+  (class ResupplyCancel best_effort receive HyperSpace
+     (parameter ReceivingObject)
+      (parameter SupplyingObject)
+  )
+
+  (class ResupplyOffer best_effort receive HyperSpace
+     (parameter ReceivingObject)
+      (parameter SupplyingObject)
+      (parameter SuppliesData)
+  )
+
+  (class ResupplyReceived best_effort receive HyperSpace
+     (parameter ReceivingObject)
+      (parameter SupplyingObject)
+      (parameter SuppliesData)
+  )
+
+  (class ServiceRequest best_effort receive HyperSpace
+     (parameter RequestingObject)
+      (parameter ServicingObject)
+      (parameter ServiceType)
+      (parameter SuppliesData)
+  )
+
+  (class SetComment semireliable receive HyperSpace
+     (parameter entity_id)
+      (parameter comment)
+      (parameter periodicity)
+      (parameter expiration)
+      (parameter surv_order_id)
+  )
+
+  (class Stealth best_effort receive HyperSpace
+     (parameter StealthID)
+   (class StealthAttachment semireliable receive HyperSpace
+     (parameter AttachedID)
+      (parameter AttachCommand)
+      (parameter AttachMode)
+      (parameter RelativeLocation)
+      (parameter RelativeOrientation)
+  )
+
+  (class StealthFOV best_effort receive HyperSpace
+     (parameter Horizontal)
+      (parameter Vertical)
+  )
+
+  (class StealthLocation best_effort receive HyperSpace
+     (parameter Location)
+  )
+
+  (class StealthOrientation best_effort receive HyperSpace
+     (parameter Orientation)
+  )
+
+  (class StealthSpectrum best_effort receive HyperSpace
+     (parameter Spectrum)
+      (parameter Invert)
+      (parameter NoiseWeight)
+      (parameter NoiseSize)
+  )
+
+  (class StealthSubview best_effort receive HyperSpace
+     (parameter Mode)
+      (parameter AttenuationScale)
+  )
+
+  (class StealthVelocity best_effort receive HyperSpace
+     (parameter Translation)
+      (parameter Orientation)
+      (parameter IgnorePitch)
+  )
+
+ )
+
+  (class SurveillanceOrder best_effort receive HyperSpace
+     (parameter order_id)
+      (parameter requested_asset_id)
+      (parameter force)
+      (parameter status)
+      (parameter rejected_reason)
+      (parameter generic_platform)
+      (parameter requested_sensor_mode)
+      (parameter requested_camera_mode)
+      (parameter target_id)
+      (parameter target_position)
+      (parameter target_velocity)
+      (parameter target_radius)
+      (parameter assoc_entity_id)
+      (parameter priority)
+      (parameter desired_effect)
+      (parameter dwell_time)
+      (parameter task_type)
+      (parameter requesting_operator)
+      (parameter route_id)
+      (parameter num_flightpath_points)
+      (parameter flightpath)
+      (parameter create_type)
+      (parameter create_marking)
+      (parameter zoom_level)
+      (parameter altitude)
+      (parameter azimuth_angle)
+      (parameter vertical_elevation_angle)
+      (parameter pan_direction)
+  )
+
+  (class Time best_effort receive HyperSpace
+     (parameter sender)
+   (class TimeQuery best_effort receive HyperSpace
+     (parameter query_xmit_realtime)
+  )
+
+  (class TimeValue best_effort receive HyperSpace
+     (parameter query_xmit_realtime)
+      (parameter query_recv_realtime)
+      (parameter value_xmit_realtime)
+      (parameter value_xmit_synctime)
+      (parameter simulation_rate)
+      (parameter paused)
+      (parameter distmaster_id)
+  )
+
+ )
+
+  (class TrackModReq best_effort_hipri receive HyperSpace
+     (parameter type)
+      (parameter track_id)
+      (parameter host_name)
+      (parameter marking)
+      (parameter track_state)
+      (parameter num_hits)
+      (parameter num_hits_updating_bayes)
+      (parameter num_add_blips)
+      (parameter blip_add_array)
+      (parameter num_remove_blips)
+      (parameter blip_remove_array)
+      (parameter velocity)
+      (parameter track_quality)
+      (parameter assoc_entity_id)
+      (parameter location)
+      (parameter location_error)
+      (parameter Orientation)
+      (parameter num_probabilities)
+      (parameter probabilities)
+      (parameter location_age)
+      (parameter team)
+      (parameter ctp_name)
+      (parameter target_type)
+      (parameter classification)
+      (parameter identification)
+      (parameter moving)
+      (parameter owning_force)
+      (parameter suspected_force)
+      (parameter attacker_id)
+      (parameter munition_assigned)
+      (parameter sensor_assigned)
+      (parameter time_on_target)
+      (parameter net_time)
+      (parameter nlt_time)
+      (parameter sat_time)
+      (parameter dwell_time)
+      (parameter collateral_damage)
+      (parameter desired_effect)
+      (parameter attack_priority)
+      (parameter level)
+      (parameter attached_id)
+      (parameter comment_string)
+      (parameter slimed)
+      (parameter num_attached_files)
+      (parameter attached_files)
+  )
+
+  (class TrkCorr best_effort receive HyperSpace
+     (parameter trk)
+      (parameter ju)
+      (parameter ltnLive)
+  )
+
+  (class WeaponFire best_effort receive HyperSpace
+     (parameter EventIdentifier)
+      (parameter FireControlSolutionRange)
+      (parameter FireMissionIndex)
+      (parameter FiringLocation)
+      (parameter FiringObjectIdentifier)
+      (parameter FuseType)
+      (parameter InitialVelocityVector)
+      (parameter MunitionObjectIdentifier)
+      (parameter MunitionType)
+      (parameter QuantityFired)
+      (parameter RateOfFire)
+      (parameter TargetObjectIdentifier)
+      (parameter WarheadType)
+  )
+
+  (class MunitionArming semireliable receive HyperSpace
+     (parameter receiverID)
+      (parameter force)
+      (parameter detonate)
+      (parameter arming_state)
+  )
+
+  (class ClutterLane best_effort receive HyperSpace
+     (parameter cell)
+      (parameter conn)
+      (parameter lane)
+      (parameter wait)
+      (parameter space)
+  )
+
+  (class IedCounterMeasures best_effort receive HyperSpace
+     (parameter type)
+      (parameter vehicle_id)
+      (parameter area_code)
+      (parameter jamming_frequency)
+      (parameter coverage_area)
+      (parameter position)
+      (parameter countermeasures_state)
+  )
+
+  (class IedCMCommand best_effort receive HyperSpace
+     (parameter type)
+      (parameter vehicle_id)
+      (parameter area_code)
+      (parameter jamming_freq)
+      (parameter coverage_area)
+      (parameter state)
+  )
+
+  (class CDMTSInteraction best_effort receive
+     (parameter AcknowledgementProtocol)
+      (parameter RequestId)
+      (parameter ProxyName)
+      (parameter SimProxyName)
+   (class GenericResponse best_effort receive
+     (parameter Result)
+      (parameter Data)
+  )
+
+  (class SIMAN best_effort receive
+     (parameter ActionType)
+      (parameter RealWorldTime)
+      (parameter SimulationTime)
+  )
+
+  (class RemoveObject best_effort receive
+     (parameter ObjectId)
+  )
+
+  (class GenericNotification best_effort receive
+     (parameter data)
+  )
+
+ )
+
+  (class FSCMMessage best_effort receive
+     (parameter fscm_id)
+      (parameter vehicle_id)
+  )
+
+  (class LoadScenario best_effort receive
+     (parameter OriginatingEntity)
+      (parameter ReceivingEntity)
+      (parameter RequestIdentifier)
+      (parameter ScenarioFileName)
+   (class LoadScenarioR best_effort receive
+     (parameter AcknowledgmentProtocol)
+  )
+
+ )
+
+  (class NewScenario best_effort receive
+     (parameter OriginatingEntity)
+      (parameter ReceivingEntity)
+      (parameter RequestIdentifier)
+   (class NewScenarioR best_effort receive
+     (parameter AcknowledgmentProtocol)
+  )
+
+ )
+
+  (class SaveScenario best_effort receive
+     (parameter OriginatingEntity)
+      (parameter ReceivingEntity)
+      (parameter RequestIdentifier)
+      (parameter ScenarioFileName)
+   (class SaveScenarioR best_effort receive
+     (parameter AcknowledgmentProtocol)
+  )
+
+ )
+
+  (class StartResume best_effort receive
+     (parameter OriginatingEntity)
+      (parameter RealWorldTime)
+      (parameter ReceivingEntity)
+      (parameter RequestIdentifier)
+      (parameter SimulationTime)
+   (class StartResumeR best_effort receive
+     (parameter AcknowledgementProtocol)
+  )
+
+ )
+
+  (class StopFreeze best_effort receive HyperSpace
+     (parameter OriginatingEntity)
+      (parameter RealWorldTime)
+      (parameter Reason)
+      (parameter ReceivingEntity)
+      (parameter ReflectValues)
+      (parameter RequestIdentifier)
+      (parameter RunInternalSimulationClock)
+      (parameter UpdateAttributes)
+   (class StopFreezeR best_effort receive
+     (parameter AcknowledgementProtocol)
+  )
+
+ )
+
+  (class RemoveEntity best_effort receive
+     (parameter OriginatingEntity)
+      (parameter ReceivingEntity)
+      (parameter RequestIdentifier)
+   (class RemoveEntityR best_effort receive
+     (parameter AcknowledgementProtocol)
+  )
+
+ )
+
+  (class InputEvent best_effort receive
+     (parameter Time)
+      (parameter Event)
+      (parameter PlayerName)
+      (parameter ApplicationName)
+      (parameter Marking)
+  )
+
+  (class FO_Startup best_effort receive
+     (parameter StartDate)
+      (parameter StartTime)
+      (parameter playerName)
+      (parameter ScenarioFilename)
+      (parameter ScenarioName)
+      (parameter machineName)
+      (parameter FOLocation)
+  )
+
+  (class FO_TargetCreated best_effort receive
+     (parameter TargetID)
+      (parameter TargetDescription)
+      (parameter StartLoc)
+  )
+
+  (class FO_ExperimentMission best_effort receive
+     (parameter Time)
+      (parameter MissionNumber)
+      (parameter SelectedTargetID)
+      (parameter SelectedTargetType)
+      (parameter SelectedAmmoType)
+      (parameter EnteredPolarDir)
+      (parameter EnteredPolarDist)
+      (parameter ActualTargetType)
+      (parameter ActualPolarDist)
+      (parameter ActualPolarDir)
+  )
+
+  (class FO_Environment best_effort receive
+     (parameter Time)
+      (parameter TargetID)
+      (parameter TargetLocation)
+      (parameter TargetDist)
+      (parameter TargetDir)
+      (parameter TargetDisabled)
+      (parameter TargetMoving)
+      (parameter TargetEngaging)
+      (parameter TargetPriority)
+  )
+
+  (class FO_Assessment best_effort receive
+     (parameter Time)
+      (parameter MissionNumber)
+      (parameter Priority)
+      (parameter ID)
+      (parameter munition)
+      (parameter targeting)
+      (parameter tle)
+  )
+
+  (class FO_InputEvent best_effort receive
+     (parameter Time)
+      (parameter Event)
+  )
+
+  (class ObserverMsg best_effort receive
+     (parameter SenderID)
+      (parameter ReceiverID)
+      (parameter ObserverType)
+      (parameter observerMsgType)
+      (parameter MissionID)
+      (parameter posrepGridX)
+      (parameter posrepGridY)
+      (parameter WarningOrder)
+      (parameter LocationMethod)
+      (parameter KnownPoint)
+      (parameter LocationGridX)
+      (parameter LocationGridY)
+      (parameter PolarDistance)
+      (parameter PolarDirection)
+      (parameter ShiftDirection)
+      (parameter ShiftRightLeft)
+      (parameter ShiftAddDrop)
+      (parameter ShiftUpDown)
+      (parameter PolarUpDown)
+      (parameter TargetNumber)
+      (parameter TargetDescription)
+      (parameter TargetDOP)
+      (parameter MethodEngage)
+      (parameter MethodControl)
+      (parameter DangerClose)
+      (parameter Trajectory)
+      (parameter Splash)
+      (parameter VolumeOfFire)
+      (parameter TargetID)
+      (parameter Sheaf)
+      (parameter MaxOrd)
+      (parameter MTODir)
+      (parameter MTORounds)
+      (parameter MTOTargetNumber)
+      (parameter MTOMunition)
+      (parameter MTOTimeOfFlight)
+      (parameter MTOMunitionChange)
+      (parameter Repeat)
+      (parameter SubAdjLeftRight)
+      (parameter SubAdjUpDown)
+      (parameter SubAdjAddDrop)
+      (parameter SubAdjDir)
+      (parameter AuxMessageType)
+      (parameter EoMRat)
+      (parameter EoMLeftRight)
+      (parameter EoMAddDrop)
+      (parameter EoMUpDown)
+      (parameter EoMSize)
+      (parameter EoMTargetDescription)
+      (parameter EoMbda)
+      (parameter EoMcas)
+      (parameter TargetLocation)
+  )
+
+  (class DVTEVehicleEmbark best_effort receive
+     (parameter portal)
+      (parameter myself)
+   (class DVTEDisembarkRequest best_effort receive
+     (parameter open_portal_if_closed)
+  )
+
+  (class DVTEDisembarkResponse best_effort receive
+     (parameter request_granted)
+      (parameter relative_position)
+      (parameter relative_orientation)
+  )
+
+  (class DVTEEmbarkRequest best_effort receive
+     (parameter weight)
+      (parameter volume)
+      (parameter length)
+      (parameter width)
+      (parameter height)
+      (parameter number_seat_positions)
+      (parameter open_portal_if_closed)
+  )
+
+  (class DVTEEmbarkResponse best_effort receive
+     (parameter welcome_aboard)
+      (parameter relative_position)
+      (parameter relative_orientation)
+      (parameter seat_name)
+  )
+
+ )
+
+  (class CaptExecutionRequest best_effort receive
+     (parameter Time)
+      (parameter CaptData)
+      (parameter PlayerName)
+      (parameter ApplicationName)
+      (parameter Marking)
+  )
+
+  (class CharacterControl best_effort receive
+     (parameter ActionType)
+     (parameter PlatformID)
+  )
+
+  (class Manager reliable receive
+  (class Federate reliable receive
+     (parameter Federate)
+   (class Request reliable receive
+  (class RequestPublications reliable receive
+ )
+
+  (class RequestSubscriptions reliable receive
+ )
+
+  (class RequestObjectsOwned reliable receive
+ )
+
+  (class RequestObjectsUpdated reliable receive
+ )
+
+  (class RequestObjectsReflected reliable receive
+ )
+
+  (class RequestUpdatesSent reliable receive
+ )
+
+  (class RequestInteractionsSent reliable receive
+ )
+
+  (class RequestReflectionsReceived reliable receive
+ )
+
+  (class RequestInteractionsReceived reliable receive
+ )
+
+  (class RequestObjectInformation reliable receive
+     (parameter ObjectInstance)
+  )
+
+ )
+
+  (class Report reliable receive
+  (class ReportObjectPublication reliable receive
+     (parameter NumberOfClasses)
+      (parameter ObjectClass)
+      (parameter AttributeList)
+  )
+
+  (class ReportObjectSubscription reliable receive
+     (parameter NumberOfClasses)
+      (parameter ObjectClass)
+      (parameter Active)
+      (parameter AttributeList)
+  )
+
+  (class ReportInteractionPublication reliable receive
+     (parameter InteractionClassList)
+  )
+
+  (class ReportInteractionSubscription reliable receive
+     (parameter InteractionClassList)
+  )
+
+  (class ReportObjectsOwned reliable receive
+     (parameter ObjectCounts)
+  )
+
+  (class ReportObjectsUpdated reliable receive
+     (parameter ObjectCounts)
+  )
+
+  (class ReportObjectsReflected reliable receive
+     (parameter ObjectCounts)
+  )
+
+  (class ReportUpdatesSent reliable receive
+     (parameter TransportationType)
+      (parameter UpdateCounts)
+  )
+
+  (class ReportReflectionsReceived reliable receive
+     (parameter TransportationType)
+      (parameter ReflectCounts)
+  )
+
+  (class ReportInteractionsSent reliable receive
+     (parameter TransportationType)
+      (parameter InteractionCounts)
+  )
+
+  (class ReportInteractionsReceived reliable receive
+     (parameter TransportationType)
+      (parameter InteractionCounts)
+  )
+
+  (class ReportObjectInformation reliable receive
+     (parameter ObjectInstance)
+      (parameter OwnedAttributeList)
+      (parameter RegisteredClass)
+      (parameter KnownClass)
+  )
+
+  (class Alert reliable receive
+     (parameter AlertSeverity)
+      (parameter AlertDescription)
+      (parameter AlertID)
+  )
+
+  (class ReportServiceInvocation reliable receive
+     (parameter Service)
+      (parameter Initiator)
+      (parameter SuccessIndicator)
+      (parameter SuppliedArgument1)
+      (parameter SuppliedArgument2)
+      (parameter SuppliedArgument3)
+      (parameter SuppliedArgument4)
+      (parameter SuppliedArgument5)
+      (parameter ReturnedArgument)
+      (parameter ExceptionDescription)
+      (parameter ExceptionID)
+  )
+
+ )
+
+  (class Adjust reliable receive
+  (class SetTiming reliable receive
+     (parameter ReportPeriod)
+  )
+
+  (class ModifyAttributeState reliable receive
+     (parameter ObjectInstance)
+      (parameter Attribute)
+      (parameter AttributeState)
+  )
+
+  (class SetServiceReporting reliable receive
+     (parameter ReportingState)
+  )
+
+  (class SetExceptionLogging reliable receive
+     (parameter LoggingState)
+  )
+
+ )
+
+  (class Service reliable receive
+  (class ResignFederationExecution reliable receive
+     (parameter ResignAction)
+  )
+
+  (class SynchronizationPointAchieved reliable receive
+     (parameter Label)
+  )
+
+  (class FederateSaveBegun reliable receive
+ )
+
+  (class FederateSaveComplete reliable receive
+     (parameter SuccessIndicator)
+  )
+
+  (class FederateRestoreComplete reliable receive
+     (parameter SuccessIndicator)
+  )
+
+  (class PublishObjectClass reliable receive
+     (parameter ObjectClass)
+      (parameter AttributeList)
+  )
+
+  (class UnpublishObjectClass reliable receive
+     (parameter ObjectClass)
+  )
+
+  (class PublishInteractionClass reliable receive
+     (parameter InteractionClass)
+  )
+
+  (class UnpublishInteractionClass reliable receive
+     (parameter InteractionClass)
+  )
+
+  (class SubscribeObjectClassAttributes reliable receive
+     (parameter ObjectClass)
+      (parameter AttributeList)
+      (parameter Active)
+  )
+
+  (class UnsubscribeObjectClass reliable receive
+     (parameter ObjectClass)
+  )
+
+  (class SubscribeInteractionClass reliable receive
+     (parameter InteractionClass)
+      (parameter Active)
+  )
+
+  (class UnsubscribeInteractionClass reliable receive
+     (parameter InteractionClass)
+  )
+
+  (class DeleteObjectInstance reliable receive
+     (parameter ObjectInstance)
+      (parameter Tag)
+      (parameter FederationTime)
+  )
+
+  (class LocalDeleteObjectInstance reliable receive
+     (parameter ObjectInstance)
+  )
+
+  (class ChangeAttributeTransportationType reliable receive
+     (parameter ObjectInstance)
+      (parameter AttributeList)
+      (parameter TransportationType)
+  )
+
+  (class ChangeAttributeOrderType reliable receive
+     (parameter ObjectInstance)
+      (parameter AttributeList)
+      (parameter OrderingType)
+  )
+
+  (class ChangeInteractionTransportationType reliable receive
+     (parameter InteractionClass)
+      (parameter TransportationType)
+  )
+
+  (class ChangeInteractionOrderType reliable receive
+     (parameter InteractionClass)
+      (parameter OrderingType)
+  )
+
+  (class UnconditionalAttributeOwnershipDivestiture reliable receive
+     (parameter ObjectInstance)
+      (parameter AttributeList)
+  )
+
+  (class EnableTimeRegulation reliable receive
+     (parameter FederationTime)
+      (parameter Lookahead)
+  )
+
+  (class DisableTimeRegulation reliable receive
+ )
+
+  (class EnableTimeConstrained reliable receive
+ )
+
+  (class DisableTimeConstrained reliable receive
+ )
+
+  (class EnableAsynchronousDelivery reliable receive
+ )
+
+  (class DisableAsynchronousDelivery reliable receive
+ )
+
+  (class ModifyLookahead reliable receive
+     (parameter Lookahead)
+  )
+
+  (class TimeAdvanceRequest reliable receive
+     (parameter FederationTime)
+  )
+
+  (class TimeAdvanceRequestAvailable reliable receive
+     (parameter FederationTime)
+  )
+
+  (class NextEventRequest reliable receive
+     (parameter FederationTime)
+  )
+
+  (class NextEventRequestAvailable reliable receive
+     (parameter FederationTime)
+  )
+
+  (class FlushQueueRequest reliable receive
+     (parameter FederationTime)
+  )
+
+ )
+
+ )
+
+ )
+
+    )
+ )
+)

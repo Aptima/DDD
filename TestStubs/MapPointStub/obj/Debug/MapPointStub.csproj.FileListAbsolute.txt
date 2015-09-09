@@ -1,0 +1,7 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\MapPointStub\bin\Debug\MapPointStub.exe
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\MapPointStub\bin\Debug\MapPointStub.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\MapPointStub\bin\Debug\Aptima.Asim.DDD.CommonComponents.MapDataTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\MapPointStub\bin\Debug\Aptima.Asim.DDD.CommonComponents.MapDataTools.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\MapPointStub\obj\Debug\MapPointStub.csprojResolveAssemblyReference.cache
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\MapPointStub\obj\Debug\MapPointStub.exe
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\TestStubs\MapPointStub\obj\Debug\MapPointStub.pdb

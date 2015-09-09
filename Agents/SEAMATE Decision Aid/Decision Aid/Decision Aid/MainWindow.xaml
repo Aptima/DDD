@@ -1,0 +1,84 @@
+﻿<Window x:Class="Decision_Aid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SEAMATE Decision Aid" Height="541" Width="508" Closing="Window_Closing">
+	<Window.Resources>
+		<Style x:Key="AlertStyle" TargetType="{x:Type TextBlock}">
+			<Setter Property="TextWrapping" Value="Wrap"/>
+			<Setter Property="TextTrimming" Value="None"/>
+			<Setter Property="Height" Value="Auto"/>
+			<Setter Property="Padding" Value="10,5,10,5"/>
+			<Setter Property="Background">
+				<Setter.Value>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFE0D4D4" Offset="0" />
+						<GradientStop Color="#FFF2eCEC" Offset="1" />
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="NewAlertStyle" TargetType="{x:Type TextBlock}">
+			<Setter Property="TextWrapping" Value="Wrap"/>
+			<Setter Property="TextTrimming" Value="None"/>
+			<Setter Property="Height" Value="Auto"/>
+			<Setter Property="Padding" Value="10,5,10,5"/>
+			<Setter Property="Background">
+				<Setter.Value>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFA1783D" Offset="0" />
+						<GradientStop Color="#FFF7D28F" Offset="1" />
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Window.Resources>
+    <Grid>
+        <GroupBox Header="Tracked Assets" Height="218" Margin="12,29,12,0" Name="groupBox1" VerticalAlignment="Top">
+            <Grid Height="189">
+                <DataGrid AutoGenerateColumns="False" Height="152" Name="dataGrid1" VerticalAlignment="Top" SelectionUnit="FullRow" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path=ID}"  CanUserReorder="False" CanUserSort="False" Header="ID" HeaderStringFormat="ID" />
+                        <DataGridTextColumn Binding="{Binding Path=Name}" CanUserReorder="False" CanUserSort="False" Header="Name" />
+                        <DataGridTextColumn Binding="{Binding Path=Type}" CanUserReorder="False" CanUserSort="False" Header="Type" />
+                        <DataGridTextColumn Binding="{Binding Path=Classification}" CanUserReorder="False" CanUserSort="False" Header="ISR Classification" />
+                        <DataGridTextColumn Binding="{Binding Path=IFF}" CanUserReorder="False" CanUserSort="False" Header="IFF" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Content="Add new Track" Height="23" HorizontalAlignment="Left" Margin="4,158,0,0" Name="button1" VerticalAlignment="Top" Width="137" Click="button1_Click" />
+                <Button Content="Remove Selected Track" Height="23" Margin="147,158,0,0" Name="button2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="137" Click="button2_Click" />
+            </Grid>
+        </GroupBox>
+        <Border BorderBrush="Silver" BorderThickness="1" Name="border1" Margin="18,451,12,0">
+        	<ScrollViewer Height="Auto">
+        		     <StackPanel Name="stackPanelUpdates" Background="WhiteSmoke" Height="Auto">
+                
+				
+                </StackPanel>	
+			</ScrollViewer>            
+        </Border>
+        <Menu Height="31" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="486" >
+            <Button Click="Button_Click" Padding="0">
+                <StackPanel Orientation="Horizontal">
+                    <Canvas Margin="5,0,0,0">
+                        <Ellipse Width="15" Height="15" Fill="Red" Name="statusEllipse"/>
+                    </Canvas>
+                  <Label Padding="0" VerticalContentAlignment="Center" Margin="25,0,10,0" Name="btnConnectToDDD">Connect to DDD</Label>  
+                </StackPanel>                
+            </Button>
+            <MenuItem HorizontalAlignment="Left" VerticalAlignment="Stretch" Header="About..." Padding="5" Click="MenuItem_Click">
+
+            </MenuItem>
+        </Menu>
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="165,0,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" Visibility="Hidden" />
+        <GroupBox Header="Scores" Height="192" HorizontalAlignment="Left" Margin="14,253,0,0" Name="groupBox2" VerticalAlignment="Top" Width="460">
+            <Grid>
+                <DataGrid AutoGenerateColumns="False" Margin="6" Name="dataGrid2">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path=Name,Mode=OneWay}" IsReadOnly="True"  Header="Score Name" MinWidth="75" />
+                        <DataGridTextColumn Binding="{Binding Path=Value,Mode=OneWay}" IsReadOnly="True" Header="Score Value" MinWidth="75"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

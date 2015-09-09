@@ -1,0 +1,1164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38FC99FB-7273-4DA8-B50A-636492ACC49C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VSG</RootNamespace>
+    <AssemblyName>VSG</AssemblyName>
+    <ApplicationIcon>vsg_48.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/VSG/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>4.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.DataTypeTools">
+      <HintPath>..\..\DDDAgentFramework\DLL\Aptima.Asim.DDD.CommonComponents.DataTypeTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimMathTools">
+      <HintPath>..\..\DDDAgentFramework\DLL\Aptima.Asim.DDD.CommonComponents.SimMathTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SQLDMO, Version=8.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Interop.SQLDMO.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2910.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Mvp.Xml, Version=2.0.2158.1055, Culture=neutral, PublicKeyToken=dd92544dc05f5671, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Mvp.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=1.0.7.30072, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="netchartdir, Version=4.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\netchartdir.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go">
+      <HintPath>..\DLL\Northwoods.Go.DLL</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go.Layout, Version=2.6.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Northwoods.Go.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="saxon8, Version=8.9.0.1, Culture=neutral, PublicKeyToken=e1fdd002d5083fe6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\saxon8.dll</HintPath>
+    </Reference>
+    <Reference Include="saxon8api, Version=8.9.0.1, Culture=neutral, PublicKeyToken=e1fdd002d5083fe6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\saxon8api.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\DDD4_2_Importer.cs" />
+    <Compile Include="Adapters\DDD_4_2_Exporter.cs" />
+    <Compile Include="Adapters\DDD4_0_2_Importer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Adapters\DDD4_1_Importer.cs" />
+    <Compile Include="Adapters\DDD4_0_Importer.cs" />
+    <Compile Include="Adapters\DDD_4_0_2_Exporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Adapters\DDD_4_0_Exporter.cs" />
+    <Compile Include="Adapters\DDD_4_1_Exporter.cs" />
+    <Compile Include="Adapters\ValidationHelper.cs" />
+    <Compile Include="Controllers\VSGController.cs" />
+    <Compile Include="CoordinateTransform\PartialUTMTransform.cs" />
+    <Compile Include="CoordinateTransform\RegionMath.cs" />
+    <Compile Include="CustomDiagramNodes\SensorNode.cs" />
+    <Compile Include="CustomTreeNodes\CreateInstanceTreeNode.cs" />
+    <Compile Include="CustomTreeNodes\EventTreeNode.cs" />
+    <Compile Include="CustomTreeNodes\PlayerObjectTypesTreeNode.cs" />
+    <Compile Include="CustomTreeNodes\PolygonToolTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateLibraryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreateLibraryDialog.Designer.cs">
+      <DependentUpon>CreateLibraryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateScenarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreateScenarioForm.Designer.cs">
+      <DependentUpon>CreateScenarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditClassificationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditClassificationDialog.Designer.cs">
+      <DependentUpon>EditClassificationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SingleFloatInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SingleFloatInputDialog.Designer.cs">
+      <DependentUpon>SingleFloatInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SingleIntegerInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SingleIntegerInputDialog.Designer.cs">
+      <DependentUpon>SingleIntegerInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ClassificationDisplayRules.cs" />
+    <Compile Include="Helpers\PolygonHelper.cs" />
+    <Compile Include="Libraries\ImageLibrary.cs" />
+    <Compile Include="Models\vsg\configuration.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>configuration.xml</DependentUpon>
+    </Compile>
+    <Compile Include="PreviewSimulator\AbstractPreviewEvent.cs" />
+    <Compile Include="PreviewSimulator\MoveEvent.cs" />
+    <Compile Include="PreviewSimulator\PreviewSimulator.cs" />
+    <Compile Include="PreviewSimulator\ReiterateEvent.cs" />
+    <Compile Include="PreviewSimulator\RevealEvent.cs" />
+    <Compile Include="PreviewSimulator\TripSchedule.cs" />
+    <Compile Include="PreviewSimulator\TripSegment.cs" />
+    <Compile Include="ViewComponentPanels\ObjectTypesViewComponentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponentPanels\ObjectTypesViewComponentPanel.Designer.cs">
+      <DependentUpon>ObjectTypesViewComponentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponentPanels\PreviewViewComponentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponentPanels\PreviewViewComponentPanel.Designer.cs">
+      <DependentUpon>PreviewViewComponentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponentPanels\ScenarioPlayfieldViewComponentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponentPanels\ScenarioPlayfieldViewComponentPanel.Designer.cs">
+      <DependentUpon>ScenarioPlayfieldViewComponentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponentPanels\TimelineViewComponentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponentPanels\TimelineViewComponentPanel.Designer.cs">
+      <DependentUpon>TimelineViewComponentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponentPanels\ScenarioViewComponentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponentPanels\ScenarioViewComponentPanel.Designer.cs">
+      <DependentUpon>ScenarioViewComponentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponentPanels\ScoringViewComponentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponentPanels\ScoringViewComponentPanel.Designer.cs">
+      <DependentUpon>ScoringViewComponentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Classification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Classification.Designer.cs">
+      <DependentUpon>Classification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\ClassificationRule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\ClassificationRule.Designer.cs">
+      <DependentUpon>ClassificationRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_WeaponLaunch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_WeaponLaunch.Designer.cs">
+      <DependentUpon>EvtPnl_WeaponLaunch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_SendVoiceMessageToUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_SendVoiceMessageToUser.Designer.cs">
+      <DependentUpon>EvtPnl_SendVoiceMessageToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_SendVoiceMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_SendVoiceMessage.Designer.cs">
+      <DependentUpon>EvtPnl_SendVoiceMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_SendChatMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_SendChatMessage.Designer.cs">
+      <DependentUpon>EvtPnl_SendChatMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_VoiceChannelClose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_VoiceChannelClose.designer.cs">
+      <DependentUpon>EvtPnl_VoiceChannelClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_VoiceChannelOpen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_VoiceChannelOpen.designer.cs">
+      <DependentUpon>EvtPnl_VoiceChannelOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\SimpleLinkGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\SimpleLinkGrid.Designer.cs">
+      <DependentUpon>SimpleLinkGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\VoiceChannel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\VoiceChannel.Designer.cs">
+      <DependentUpon>VoiceChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EngramUnitID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EngramUnitID.Designer.cs">
+      <DependentUpon>EngramUnitID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\CustomNumericUpDownDouble.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\CustomNumericUpDownDouble.designer.cs">
+      <DependentUpon>CustomNumericUpDownDouble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\ICommitViewComponent.cs" />
+    <Compile Include="ViewComponents\Proximity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Proximity.Designer.cs">
+      <DependentUpon>Proximity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Effect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Effect.Designer.cs">
+      <DependentUpon>Effect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Combo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Combo.Designer.cs">
+      <DependentUpon>Combo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Contribution.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Contribution.Designer.cs">
+      <DependentUpon>Contribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\CustomListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\CustomListBox.Designer.cs">
+      <DependentUpon>CustomListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EngramRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EngramRange.Designer.cs">
+      <DependentUpon>EngramRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EventID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EventID.Designer.cs">
+      <DependentUpon>EventID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_SpeciesCompletion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_SpeciesCompletion.designer.cs">
+      <DependentUpon>EvtPnl_SpeciesCompletion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\IconListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\IconListView.Designer.cs">
+      <DependentUpon>IconListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Level.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Level.Designer.cs">
+      <DependentUpon>Level.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\StateComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\StateComboBox.Designer.cs">
+      <DependentUpon>StateComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\SensorRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\SensorRange.Designer.cs">
+      <DependentUpon>SensorRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\SubplatformDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\SubplatformDialog.Designer.cs">
+      <DependentUpon>SubplatformDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Transition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Transition.Designer.cs">
+      <DependentUpon>Transition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Create.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Create.designer.cs">
+      <DependentUpon>EvtPnl_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Network.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Network.Designer.cs">
+      <DependentUpon>Network.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\CustomBlockTimeline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\CustomBlockTimeline.designer.cs">
+      <DependentUpon>CustomBlockTimeline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\CustomBlockTimelineCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\CustomBlockTimelineCell.designer.cs">
+      <DependentUpon>CustomBlockTimelineCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\CustomCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\CustomCheckBox.Designer.cs">
+      <DependentUpon>CustomCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\CustomNonnegativeDouble.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\CustomNonnegativeDouble.Designer.cs">
+      <DependentUpon>CustomNonnegativeDouble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\CustomRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\CustomRadioButton.Designer.cs">
+      <DependentUpon>CustomRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Emitter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Emitter.Designer.cs">
+      <DependentUpon>Emitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EventTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_ChatroomClose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_ChatroomClose.Designer.cs">
+      <DependentUpon>EvtPnl_ChatroomClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_ChatroomOpen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_ChatroomOpen.Designer.cs">
+      <DependentUpon>EvtPnl_ChatroomOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Completion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Completion.Designer.cs">
+      <DependentUpon>EvtPnl_Completion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_EngramChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_EngramChange.Designer.cs">
+      <DependentUpon>EvtPnl_EngramChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_EngramRemove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_EngramRemove.Designer.cs">
+      <DependentUpon>EvtPnl_EngramRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Flush.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Flush.Designer.cs">
+      <DependentUpon>EvtPnl_Flush.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Launch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Launch.Designer.cs">
+      <DependentUpon>EvtPnl_Launch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Move.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Move.Designer.cs">
+      <DependentUpon>EvtPnl_Move.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Reiterate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Reiterate.Designer.cs">
+      <DependentUpon>EvtPnl_Reiterate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Reveal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Reveal.Designer.cs">
+      <DependentUpon>EvtPnl_Reveal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_StateChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_StateChange.Designer.cs">
+      <DependentUpon>EvtPnl_StateChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Transfer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\EvtPnl_Transfer.Designer.cs">
+      <DependentUpon>EvtPnl_Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\IconLibrary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\IconLibrary.Designer.cs">
+      <DependentUpon>IconLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\MapPlayfield.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\MapPlayfield.Designer.cs">
+      <DependentUpon>MapPlayfield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\ScoringRulePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\ScoringRulePanel.Designer.cs">
+      <DependentUpon>ScoringRulePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\ScorePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\ScorePanel.Designer.cs">
+      <DependentUpon>ScorePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\CustomCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\CustomCheckedListBox.Designer.cs">
+      <DependentUpon>CustomCheckedListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\CustomNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\CustomNumericUpDown.Designer.cs">
+      <DependentUpon>CustomNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\DecisionMaker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\DecisionMaker.Designer.cs">
+      <DependentUpon>DecisionMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Engram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Engram.designer.cs">
+      <DependentUpon>Engram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\ScenarioInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\ScenarioInfo.Designer.cs">
+      <DependentUpon>ScenarioInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Species.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Species.Designer.cs">
+      <DependentUpon>Species.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\State.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\State.Designer.cs">
+      <DependentUpon>State.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Team.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Team.Designer.cs">
+      <DependentUpon>Team.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Sensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Sensor.Designer.cs">
+      <DependentUpon>Sensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\Singleton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\Singleton.Designer.cs">
+      <DependentUpon>Singleton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewComponents\XYZ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewComponents\XYZ.Designer.cs">
+      <DependentUpon>XYZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGConfig.cs" />
+    <Compile Include="VSGForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VSGForm.Designer.cs">
+      <DependentUpon>VSGForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ViewComponentPanels\ScenarioViewComponentPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScenarioViewComponentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VSGForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Models\vsg\xsd\Components.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\configuration.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\database.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\vsg\xsd\databaseConfig.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\Links.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\model.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\Parameters.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VisualizationTimeline.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsl\VSG_CreateEventDecisionMaker.mfd" />
+    <EmbeddedResource Include="Models\vsg\xsd\DDDSchema_4_0.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\DDDSchema_4_0_2.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\DDDSchema_4_1.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\defaultdatabase.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\Project.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_ActiveRegionSensor.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_ActorKind.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_ActorRegion.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_ActorUnit.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_AdoptPlatformUnit.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_CloseChatRoom.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_CloseVoiceChannel.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_CreateEventKind.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_CreateEventSubplatform.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_DecisionMakerCanChat.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_DecisionMakerCanSpeak.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_DecisionMakerReportsTo.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_DecisionMakerTeam.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_EngramID.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_EngramUnitID.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_EventEngram.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_EventID.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_LaunchEventSubplatform.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_NetworkMembers.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_OpenChatRoomEventMember.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_OpenVoiceChannelEventAccess.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_RuleObject.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_RuleUnit.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_Scenario.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_ScenarioRegions.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_ScoreApplies.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_ScoreRules.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_ScoreViewers.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SendChatMessageRoom.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SendChatMessageSenderDM.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SendVoiceMessageChannel.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SingletonCapability.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SpeciesCompletionEventSpecies.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SpeciesDMCanOwn.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SpeciesDockType.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SpeciesFullyFunctional.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SpeciesType.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_StateSensor.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_StateState.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_TeamAgainst.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_TransferEventFromDM.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_TransferEventToDM.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_WeaponKind.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SpeciesSubplatformCapacity.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_DecisionMakerCanWhiteboard.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_SendVoiceMessageToUser.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\DDDSchema_4_1_1.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_WeaponLaunchEventSubplatform.xsd" />
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_WeaponLaunchEventTarget.xsd" />
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <EmbeddedResource Include="Models\vsg\xsd\DDDSchema_4_2.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\vsg\xsd\VSG_LinkObjectToRegion.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ddd_48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Node.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Splashscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\AboutDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateLibraryDialog.resx">
+      <DependentUpon>CreateLibraryDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateScenarioForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CreateScenarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SingleFloatInputDialog.resx">
+      <DependentUpon>SingleFloatInputDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SingleIntegerInputDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SingleIntegerInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Unknown.png" />
+    <EmbeddedResource Include="ViewComponentPanels\ObjectTypesViewComponentPanel.resx">
+      <DependentUpon>ObjectTypesViewComponentPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponentPanels\PreviewViewComponentPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PreviewViewComponentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponentPanels\ScenarioPlayfieldViewComponentPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScenarioPlayfieldViewComponentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponentPanels\ScoringViewComponentPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScoringViewComponentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponentPanels\TimelineViewComponentPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimelineViewComponentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_SendVoiceMessage.resx">
+      <DependentUpon>EvtPnl_SendVoiceMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_SendChatMessage.resx">
+      <DependentUpon>EvtPnl_SendChatMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_VoiceChannelClose.resx">
+      <DependentUpon>EvtPnl_VoiceChannelClose.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_VoiceChannelOpen.resx">
+      <DependentUpon>EvtPnl_VoiceChannelOpen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\VoiceChannel.resx">
+      <DependentUpon>VoiceChannel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EngramUnitID.resx">
+      <DependentUpon>EngramUnitID.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\CustomNumericUpDownDouble.resx">
+      <DependentUpon>CustomNumericUpDownDouble.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Proximity.resx">
+      <DependentUpon>Proximity.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Effect.resx">
+      <DependentUpon>Effect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Combo.resx">
+      <DependentUpon>Combo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Contribution.resx">
+      <DependentUpon>Contribution.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EngramRange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EngramRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EventID.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EventID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_SpeciesCompletion.resx">
+      <DependentUpon>EvtPnl_SpeciesCompletion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Level.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Level.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\StateComboBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StateComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\SensorRange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SensorRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\SubplatformDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SubplatformDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\IconListView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IconListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Transition.resx">
+      <DependentUpon>Transition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_Create.resx">
+      <DependentUpon>EvtPnl_Create.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Network.resx">
+      <DependentUpon>Network.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\CustomBlockTimelineCell.resx">
+      <DependentUpon>CustomBlockTimelineCell.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\CustomCheckBox.resx">
+      <DependentUpon>CustomCheckBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\CustomNonnegativeDouble.resx">
+      <DependentUpon>CustomNonnegativeDouble.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\CustomRadioButton.resx">
+      <DependentUpon>CustomRadioButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Emitter.resx">
+      <DependentUpon>Emitter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_ChatroomClose.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_ChatroomClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_ChatroomOpen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_ChatroomOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_Completion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_Completion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_EngramChange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_EngramChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_EngramRemove.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_EngramRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_Flush.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_Flush.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_Launch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_Launch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_Move.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_Move.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_Reiterate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_Reiterate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_Reveal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_Reveal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_StateChange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_StateChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_Transfer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvtPnl_Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\IconLibrary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IconLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\MapPlayfield.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MapPlayfield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\ScoringRulePanel.resx">
+      <DependentUpon>ScoringRulePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\ScorePanel.resx">
+      <DependentUpon>ScorePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\CustomNumericUpDown.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomNumericUpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\DecisionMaker.resx">
+      <DependentUpon>DecisionMaker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Engram.resx">
+      <DependentUpon>Engram.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\ScenarioInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScenarioInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Species.resx">
+      <DependentUpon>Species.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\State.resx">
+      <DependentUpon>State.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Team.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Team.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Sensor.resx">
+      <DependentUpon>Sensor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\Singleton.resx">
+      <DependentUpon>Singleton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\XYZ.resx">
+      <DependentUpon>XYZ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ddd_48.ico" />
+    <Content Include="InlineHelp\Capabilities.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Classifications.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Combo Vulnerability.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Contributions.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Decision Makers.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Effects.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Emitters.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Engrams.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Levels.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Networks %28Sensors%29.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Proximities.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Scores.html" />
+    <Content Include="InlineHelp\Scoring Rules.html" />
+    <Content Include="InlineHelp\Sensor Ranges.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Sensors.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Singleton Vulnerability.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Species Definition.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\States.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Teams.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InlineHelp\Transitions.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Dialogs\EditClassificationDialog.resx">
+      <DependentUpon>EditClassificationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\vsg\xsl\LinkID.xsl" />
+    <EmbeddedResource Include="Models\vsg\configuration.xml">
+      <CustomToolNamespace>Config.Parameters</CustomToolNamespace>
+      <Generator>AssemblyGenerator</Generator>
+      <LastGenOutput>configuration.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\vsg\xsl\CreateEventDecisionMaker.xslt" />
+    <EmbeddedResource Include="Models\vsg\xsl\CreateInstanceTree.xsl" />
+    <EmbeddedResource Include="Models\vsg\xsl\EventTree.xsl" />
+    <EmbeddedResource Include="Models\vsg\xsl\GenerateEventTreeXSL.py" />
+    <EmbeddedResource Include="Models\vsg\xsl\ObjectTypes.xsl" />
+    <EmbeddedResource Include="Models\vsg\xsl\PlayerObjectTypes.xsl" />
+    <EmbeddedResource Include="Models\vsg\xsl\RegionsTree.xsl" />
+    <EmbeddedResource Include="Models\vsg\xsl\ResourcesObjectTypes.xsl" />
+    <EmbeddedResource Include="Models\vsg\xsl\Scoring.xsl" />
+    <EmbeddedResource Include="Models\vsg\xsl\TimelineDiagram.xsl" />
+    <EmbeddedResource Include="Models\vsg\xsl\TimelineDiagramGlobalEvents.xsl" />
+    <EmbeddedResource Include="Models\vsg\img\Folder.ico" />
+    <EmbeddedResource Include="ViewComponents\Classification.resx">
+      <DependentUpon>Classification.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\ClassificationRule.resx">
+      <DependentUpon>ClassificationRule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_WeaponLaunch.resx">
+      <DependentUpon>EvtPnl_WeaponLaunch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\EvtPnl_SendVoiceMessageToUser.resx">
+      <DependentUpon>EvtPnl_SendVoiceMessageToUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewComponents\SimpleLinkGrid.resx">
+      <DependentUpon>SimpleLinkGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\Splashscreen.bmp" />
+    <Content Include="vsg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="vsg_48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AptimaGraphicsToolkit\AptimaGraphicsToolkit\AptimaGraphicsToolkit.csproj">
+      <Project>{d6c4302b-ef23-4d1e-a642-2a31622e610d}</Project>
+      <Name>AptimaGraphicsToolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\AssemblyGenerator\Trunk\src\AssemblyGenerator.csproj">
+      <Project>{b3cd4e7b-36d4-4a49-841d-7fb60803d063}</Project>
+      <Name>AssemblyGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Database\Trunk\src\Database.csproj">
+      <Project>{62523919-26cd-4304-9a90-65eb3e54d7d7}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\GME\Trunk\src\AME.csproj">
+      <Project>{d61a4d2e-5bd0-4241-9c6a-33305f69ff16}</Project>
+      <Name>AME</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+  <Scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aprilSchema.xsd">
+  
+  <ScenarioName>SAVE Load/Unload Vignette</ScenarioName>
+  <Description>This scenario is an example of how bomb material loading/unloading will work in the SAVE RED scenario</Description>
+  <Playfield>
+    <MapFileName>Map.jpg</MapFileName>
+    <IconLibrary>ImageLib</IconLibrary>
+    <UtmZone>25 M</UtmZone>
+    <VerticalScale>8.5</VerticalScale>
+    <HorizontalScale>8.6</HorizontalScale>
+  </Playfield>
+  <LandRegion>
+    <ID>LeftSide</ID>
+    <Vertex>0 0</Vertex>
+    <Vertex>9615 0</Vertex>
+    <Vertex>9615.35 369.64523</Vertex>
+    <Vertex>17068.87 437.14914 </Vertex>
+    <Vertex>14927.89 3423.53</Vertex>
+    <Vertex>18181.06 4768.01</Vertex>
+    <Vertex>13060.21 16368.98</Vertex>
+    <Vertex>9397.73 16570.64</Vertex>
+    <Vertex>6358.70 16026.50</Vertex>
+    <Vertex>4892.77 17328.25</Vertex>
+    <Vertex>4966.35 19160.55</Vertex>
+    <Vertex>3353.11 22339.57</Vertex>
+    <Vertex>1929.79 23829.56</Vertex>
+    <Vertex>4079.24 25304.95</Vertex>
+    <Vertex>2565.09 27122.88</Vertex>
+    <Vertex>1071.78 27851.10</Vertex>
+    <Vertex>164.46437 12917.67</Vertex>
+    <Vertex>0 12917.67</Vertex>
+    <Vertex>0 100</Vertex>
+  </LandRegion>
+
+
+
+
+  <ActiveRegion>
+    <ID>WorkshopRegion</ID>
+    <Vertex>11000 10000</Vertex>
+    <Vertex>11000 12000</Vertex>
+    <Vertex>13000 12000</Vertex>
+    <Vertex>13000 10000</Vertex>
+    <Start>0</Start>
+    <End>200</End>
+    <BlocksMovement>false</BlocksMovement>
+    <IsVisible>true</IsVisible>
+    <Color>Blue</Color>
+  </ActiveRegion>
+  
+
+  <Team>
+    <Name>BadGuys</Name>
+    <Against>GoodGuys</Against>
+  </Team>
+
+  <Team>
+    <Name>GoodGuys</Name>
+    <Against>BadGuys</Against>
+  </Team>
+
+
+  <DecisionMaker>
+    <Role>Commander</Role>
+    <Identifier>Commander1</Identifier>
+    <Color>CornflowerBlue</Color>
+    <Briefing>Load the bomb material into the truck and bring it to the workshop.</Briefing>
+    <Team>BadGuys</Team>
+  </DecisionMaker>
+
+
+
+
+  
+  <Network>
+    <Name>BadGuyNet</Name>
+    <Member>Commander1</Member>
+  </Network>
+
+
+  <Genus>
+    <Name>LandObject</Name>
+  </Genus>
+  
+  <Species>
+    <Name>GenericLand</Name>
+    <Base>LandObject</Base>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+    </FullyFunctional>
+  </Species>
+  
+  <Species>
+    <Name>Workshop</Name>
+    <Base>GenericLand</Base>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+  
+  <Species>
+    <Name>Truck</Name>
+    <Base>GenericLand</Base>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+      <MaximumSpeed>1245.8</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+  
+  <Species>
+    <Name>BombMaterial</Name>
+    <Base>GenericLand</Base>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+
+  <Create_Event>
+    <ID>Truck1</ID>
+    <Kind>Truck</Kind>
+    <Owner>Commander1</Owner>
+    <Subplatform>
+      <Kind>BombMaterial</Kind>
+      <Launched>
+        <ID>BombMaterial</ID>
+        <Location>14000 4505 0</Location>
+        <InitialState>FullyFunctional</InitialState>
+      </Launched>
+    </Subplatform>
+
+  </Create_Event>  
+
+
+  <Create_Event>
+    <ID>Workshop1</ID>
+    <Kind>Workshop</Kind>
+    <Owner>Commander1</Owner>
+  </Create_Event>  
+  
+  <Reveal_Event>
+    <ID>Truck1</ID>
+    <Time>1</Time>
+    <InitialLocation>13060.00 4505.70 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+  
+  <Reveal_Event>
+    <ID>Workshop1</ID>
+    <Time>1</Time>
+    <InitialLocation>12000 11000 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+</Scenario>
+
+

@@ -1,0 +1,66 @@
+Aptima Dynamic Distributed Decision-Making Ver 4.0 
+Build Log
+
+Version 4.0.0.12 (3/1/2007):
+- Added multiple chat rooms (via tabs on client side)
+- Many bug fixes
+- Added scoring screen at end of simulation
+
+Version 4.0.0.11 (2/27/2007):
+- Fixed the replay
+- Resolved some bugs that re-appeared
+- Fixed some UI issues
+
+Version 4.0.0.10 (2/22/2007):
+- Added Windows Forms based client GUI (totally new design: mini-map, new layout)
+- Basic scoring is in place
+
+Version 4.0.0.9 (2/16/2007):
+- Fixed 2 critical bugs.
+
+Version 4.0.0.8 (2/15/2007):
+- Misc bug fixes
+- Added Error log (static file location: C:\DDDErrorLog.txt)
+
+Version 4.0.0.7 (2/8/2007):
+- Pause/resume added to replay
+- Replay speed added
+
+Version 4.0.0.6 (2/6/2007):
+- Fixed Replay
+- Consolidated log paths to a single directory, structure and file names are auto-generated
+- Implemented "Group Name" functionality, specify for unique test log names
+- Unowned vulnerabilities can now be sensed
+- More icons added to ImageLibrary
+
+Version 4.0.0.5 (2/1/2007):
+- Able to use icons from user-created image library
+- Helpful system messages sent on major events (object attacks, destruction, user join)
+- Displaying asset vulnerabilities (if known)
+- Log files now uniquely named to prevent overwriting.  Paths now defined by user, rather than specific file.
+- History messages added
+- Revised vulnerability functionality
+- Added event triggering based on AI-self defense attacks.
+
+Version 4.0.0.4 (1/25/2007):
+- Subplatforms able to be launched
+- Implement System Messages
+
+Version 4.0.0.3 (1/18/2007):
+- Attack countdowns displayed
+
+Version 4.0.0.2 (1/11/2007):
+- Decision Makers presented with list of available DMs
+- Fixes to client when Pausing/Resuming simulation
+- Auto-self-defense instituted for assets not controlled by a human decision maker
+- Include teams in the scenario language
+
+Version 4.0.0.1 (12/21/2006):
+- Basic simulator logic in place
+- Ability to move assets within a playfield
+- Basic text chatting functionality
+- Basic regions
+- Basic attack logic
+- Basic weapon launch logic
+- Remote client access via ClickOnce
+- Ability to Pause/Resume a simulation

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="SimulationModel.xsd" xmlns="SimulationModel.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" targetNamespace="SimulationModel.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified" id="SimulationModel">
+	<!-- 
+  <xs:simpleType name="StringType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="DoubleType">
+		<xs:restriction base="xs:double" />
+	</xs:simpleType>
+	<xs:simpleType name="IntegerType">
+		<xs:restriction base="xs:integer" />
+	</xs:simpleType>
+	<xs:complexType name="LocationType">
+		<xs:sequence>
+			<xs:element name="X" type="xs:double" />
+			<xs:element name="Y" type="xs:double" />
+			<xs:element name="Z" type="xs:double" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VelocityType">
+		<xs:sequence>
+			<xs:element name="VX" type="xs:double" />
+			<xs:element name="VY" type="xs:double" />
+			<xs:element name="VZ" type="xs:double" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ValueType">
+		<xs:choice maxOccurs="1" minOccurs="1">
+			<xs:element name="ObjectID" type="StringType">
+			</xs:element>
+			<xs:element name="ObjectName" type="StringType">
+			</xs:element>
+			<xs:element name="Location" type="LocationType">
+			</xs:element>
+			<xs:element name="Velocity" type="VelocityType">
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="AttributeType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Value" type="ValueType" minOccurs="1" maxOccurs="1">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AttributeCollectionType">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="Attribute" type="AttributeType">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+  -->
+	<xs:simpleType name="DataTypeNames">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="WrapperType"/>
+			<xs:enumeration value="StringType"/>
+			<xs:enumeration value="DoubleType"/>
+			<xs:enumeration value="IntegerType"/>
+			<xs:enumeration value="BooleanType"/>
+			<xs:enumeration value="LocationType"/>
+			<xs:enumeration value="VelocityType"/>
+			<xs:enumeration value="AttributeCollectionType"/>
+			<xs:enumeration value="StateTableType"/>
+			<xs:enumeration value="CapabilityType"/>
+			<xs:enumeration value="VulnerabilityType"/>
+			<xs:enumeration value="StringListType"/>
+			<xs:enumeration value="PolygonType"/>
+			<xs:enumeration value="SensorArrayType"/>
+			<xs:enumeration value="SensorType"/>
+			<xs:enumeration value="ConeType"/>
+			<xs:enumeration value="EmitterType"/>
+			<xs:enumeration value="CustomAttributesType"/>
+			<xs:enumeration value="RangeRingDisplayType"/>
+			<xs:enumeration value="AttackCollectionType"/>
+      <xs:enumeration value="ClassificationDisplayRulesType"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

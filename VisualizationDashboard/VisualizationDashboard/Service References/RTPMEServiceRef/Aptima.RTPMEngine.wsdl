@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Aptima.RTPMEngine" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Aptima.RTPMEngine" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Aptima.RTPMEngine/Imports">
+      <xsd:import namespace="http://Aptima.RTPMEngine" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Aptima.PMEngine.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPMEService_InitializeSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeSession" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_InitializeSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_TerminateSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateSession" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_LoadMeasurementFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadMeasurementFile" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_LoadMeasurementFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadMeasurementFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_LoadMeasureInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadMeasureInstance" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_LoadMeasureInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadMeasureInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_GetResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResults" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_GetResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_SubscribeToData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeToData" />
+  </wsdl:message>
+  <wsdl:message name="IPMEService_SubscribeToData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeToDataResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IPMEService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="InitializeSession">
+      <wsdl:input wsaw:Action="http://Aptima.RTPMEngine/IPMEService/InitializeSession" message="tns:IPMEService_InitializeSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://Aptima.RTPMEngine/IPMEService/InitializeSessionResponse" message="tns:IPMEService_InitializeSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="true" name="TerminateSession">
+      <wsdl:input wsaw:Action="http://Aptima.RTPMEngine/IPMEService/TerminateSession" message="tns:IPMEService_TerminateSession_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="LoadMeasurementFile">
+      <wsdl:input wsaw:Action="http://Aptima.RTPMEngine/IPMEService/LoadMeasurementFile" message="tns:IPMEService_LoadMeasurementFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://Aptima.RTPMEngine/IPMEService/LoadMeasurementFileResponse" message="tns:IPMEService_LoadMeasurementFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="LoadMeasureInstance">
+      <wsdl:input wsaw:Action="http://Aptima.RTPMEngine/IPMEService/LoadMeasureInstance" message="tns:IPMEService_LoadMeasureInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://Aptima.RTPMEngine/IPMEService/LoadMeasureInstanceResponse" message="tns:IPMEService_LoadMeasureInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="GetResults">
+      <wsdl:input wsaw:Action="http://Aptima.RTPMEngine/IPMEService/GetResults" message="tns:IPMEService_GetResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://Aptima.RTPMEngine/IPMEService/GetResultsResponse" message="tns:IPMEService_GetResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="SubscribeToData">
+      <wsdl:input wsaw:Action="http://Aptima.RTPMEngine/IPMEService/SubscribeToData" message="tns:IPMEService_SubscribeToData_InputMessage" />
+      <wsdl:output wsaw:Action="http://Aptima.RTPMEngine/IPMEService/SubscribeToDataResponse" message="tns:IPMEService_SubscribeToData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

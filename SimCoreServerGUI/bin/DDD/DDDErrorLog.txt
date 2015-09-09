@@ -1,0 +1,1039 @@
+
+20150521131803:System.BadImageFormatException: Could not load file or assembly 'AptimaLicenseKeyVerifier, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was made to load a program with an incorrect format.
+File name: 'AptimaLicenseKeyVerifier, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null'
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer.VerifyLicenseKey(String& errorMessage, Int32& numOfSeats)
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer.ValidateServer() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 197
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 175
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+
+20150521131916:System.BadImageFormatException: Could not load file or assembly 'AptimaLicenseKeyVerifier, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was made to load a program with an incorrect format.
+File name: 'AptimaLicenseKeyVerifier, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null'
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer.VerifyLicenseKey(String& errorMessage, Int32& numOfSeats)
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer.ValidateServer() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 197
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 175
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+
+20150521132157:Error loading 'BlackboardManager' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'StaticAttribute' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'DockingProcessor' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'FuelHandling' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'CollisionDetection' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'SelfDefense' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'AttackProcessor' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'Scoring' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'DynamicRegion' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132157:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521132157:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132231:System.Exception: Error initializing Simulators:
+Error loading 'BlackboardManager' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.BlackboardManager.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'StaticAttribute' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.StaticAttribute.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DockingProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DockingProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'FuelHandling' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.FuelHandling.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Motion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Motion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'CollisionDetection' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.CollisionDetection.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SelfDefense' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SelfDefense.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'AttackProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.AttackProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Scoring' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Scoring.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DynamicRegion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DynamicRegion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'ViewPro' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.ViewPro.dll' or one of its dependencies. The system cannot find the file specified.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 179
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521132338:Error loading 'BlackboardManager' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'StaticAttribute' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'DockingProcessor' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'FuelHandling' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'CollisionDetection' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'SelfDefense' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'AttackProcessor' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'Scoring' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'DynamicRegion' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132338:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521132338:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132350:System.Exception: Error initializing Simulators:
+Error loading 'BlackboardManager' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.BlackboardManager.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'StaticAttribute' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.StaticAttribute.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DockingProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DockingProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'FuelHandling' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.FuelHandling.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Motion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Motion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'CollisionDetection' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.CollisionDetection.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SelfDefense' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SelfDefense.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'AttackProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.AttackProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Scoring' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Scoring.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DynamicRegion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DynamicRegion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'ViewPro' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.ViewPro.dll' or one of its dependencies. The system cannot find the file specified.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521132857:Error loading 'BlackboardManager' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'StaticAttribute' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'DockingProcessor' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'FuelHandling' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'CollisionDetection' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'SelfDefense' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'AttackProcessor' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'Scoring' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'DynamicRegion' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132857:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521132857:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521132903:System.Exception: Error initializing Simulators:
+Error loading 'BlackboardManager' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.BlackboardManager.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'StaticAttribute' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.StaticAttribute.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DockingProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DockingProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'FuelHandling' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.FuelHandling.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Motion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Motion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'CollisionDetection' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.CollisionDetection.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SelfDefense' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SelfDefense.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'AttackProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.AttackProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Scoring' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Scoring.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DynamicRegion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DynamicRegion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'ViewPro' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.ViewPro.dll' or one of its dependencies. The system cannot find the file specified.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521135539:Error loading 'BlackboardManager' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'StaticAttribute' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'DockingProcessor' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'FuelHandling' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'CollisionDetection' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'SelfDefense' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'AttackProcessor' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'Scoring' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'DynamicRegion' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135539:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521135539:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135541:System.Exception: Error initializing Simulators:
+Error loading 'BlackboardManager' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.BlackboardManager.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'StaticAttribute' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.StaticAttribute.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DockingProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DockingProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'FuelHandling' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.FuelHandling.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Motion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Motion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'CollisionDetection' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.CollisionDetection.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SelfDefense' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SelfDefense.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'AttackProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.AttackProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Scoring' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Scoring.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DynamicRegion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DynamicRegion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'ViewPro' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.ViewPro.dll' or one of its dependencies. The system cannot find the file specified.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521135646:Error loading 'BlackboardManager' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'StaticAttribute' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'DockingProcessor' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'FuelHandling' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'CollisionDetection' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'SelfDefense' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'AttackProcessor' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'Scoring' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'DynamicRegion' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135646:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521135646:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135648:System.Exception: Error initializing Simulators:
+Error loading 'BlackboardManager' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.BlackboardManager.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'StaticAttribute' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.StaticAttribute.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DockingProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DockingProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'FuelHandling' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.FuelHandling.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Motion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Motion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'CollisionDetection' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.CollisionDetection.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SelfDefense' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SelfDefense.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'AttackProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.AttackProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Scoring' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Scoring.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DynamicRegion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DynamicRegion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'ViewPro' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.ViewPro.dll' or one of its dependencies. The system cannot find the file specified.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521135905:Error loading 'BlackboardManager' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'StaticAttribute' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'DockingProcessor' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'FuelHandling' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'CollisionDetection' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'SelfDefense' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'AttackProcessor' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'Scoring' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'DynamicRegion' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135905:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521135905:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521135908:System.Exception: Error initializing Simulators:
+Error loading 'BlackboardManager' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.BlackboardManager.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'StaticAttribute' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.StaticAttribute.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DockingProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DockingProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'FuelHandling' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.FuelHandling.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Motion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Motion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'CollisionDetection' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.CollisionDetection.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SelfDefense' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SelfDefense.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'AttackProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.AttackProcessor.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'Scoring' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.Scoring.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'DynamicRegion' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.DynamicRegion.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. The system cannot find the file specified.)
+Error loading 'ViewPro' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.ViewPro.dll' or one of its dependencies. The system cannot find the file specified.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521141413:Error loading 'StaticAttribute' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'DockingProcessor' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'FuelHandling' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'CollisionDetection' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'SelfDefense' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'AttackProcessor' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'Scoring' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'DynamicRegion' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141413:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521141413:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141503:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521141503:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141513:System.Exception: Error initializing Simulators:
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. The system cannot find the file specified.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521141651:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521141651:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141744:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521141744:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141751:System.Exception: Error initializing Simulators:
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521141925:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521141925:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521141939:System.Exception: Error initializing Simulators:
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521142001:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521142001:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521142002:System.Exception: Error initializing Simulators:
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521142100:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521142100:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521142108:System.Exception: Error initializing Simulators:
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521142219:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521142219:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142220:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521142220:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521142220:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521142220:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142242:System.Exception: Error initializing Simulators:
+Error loading 'Motion' Simulator. (Exception has been thrown by the target of an invocation.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+Error loading 'ViewPro' Simulator. (Exception has been thrown by the target of an invocation.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521142336:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521142336:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142336:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521142336:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521142336:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521142336:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142338:System.Exception: Error initializing Simulators:
+Error loading 'Motion' Simulator. (Exception has been thrown by the target of an invocation.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+Error loading 'ViewPro' Simulator. (Exception has been thrown by the target of an invocation.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521142400:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521142400:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142400:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521142400:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521142400:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521142400:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142443:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521142443:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142443:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521142443:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521142443:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521142443:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142449:System.Exception: Error initializing Simulators:
+Error loading 'Motion' Simulator. (Exception has been thrown by the target of an invocation.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+Error loading 'ViewPro' Simulator. (Exception has been thrown by the target of an invocation.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521142515:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521142515:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142515:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150521142515:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150521142515:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150521142515:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150521142517:System.Exception: Error initializing Simulators:
+Error loading 'Motion' Simulator. (Exception has been thrown by the target of an invocation.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+Error loading 'ViewPro' Simulator. (Exception has been thrown by the target of an invocation.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150521142553:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150521142553:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150529100801:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150529100801:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150529100801:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150529100801:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 294
+
+20150529100801:Error loading 'ViewPro' Simulator.  Going to continue gracefully.
+20150529100801:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150529100810:System.Exception: Error initializing Simulators:
+Error loading 'Motion' Simulator. (Exception has been thrown by the target of an invocation.)
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+Error loading 'ViewPro' Simulator. (Exception has been thrown by the target of an invocation.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 326
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150529100850:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150529100850:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 302
+
+20150529100856:System.Exception: Error initializing Simulators:
+Error loading 'Motion' Simulator. (Exception has been thrown by the target of an invocation.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 330
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150529101214:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150529101214:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 302
+
+20150529101215:System.Exception: Error initializing Simulators:
+Error loading 'Motion' Simulator. (Exception has been thrown by the target of an invocation.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 330
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150529101342:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150529101342:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 302
+
+20150529101344:System.Exception: Error initializing Simulators:
+Error loading 'Motion' Simulator. (Exception has been thrown by the target of an invocation.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 330
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150529101545:System.BadImageFormatException: Could not load file or assembly 'AptimaLicenseKeyVerifier, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was made to load a program with an incorrect format.
+File name: 'AptimaLicenseKeyVerifier, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null'
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer.VerifyLicenseKey(String& errorMessage, Int32& numOfSeats)
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 159
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+=== Pre-bind state information ===
+LOG: User = AAD\zzuzack
+LOG: DisplayName = AptimaLicenseKeyVerifier, Version=4.2.0.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///C:/Users/zzuzack/Desktop/Projects/DDD_Phoenix/src/SimCoreServerGUI/bin/DDD/
+LOG: Initial PrivatePath = NULL
+Calling assembly : Aptima.Asim.DDD.SimCoreServer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: No application configuration file found.
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v2.0.50727\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: Attempting download of new URL file:///C:/Users/zzuzack/Desktop/Projects/DDD_Phoenix/src/SimCoreServerGUI/bin/DDD/AptimaLicenseKeyVerifier.DLL.
+ERR: Failed to complete setup of assembly (hr = 0x8007000b). Probing terminated.
+
+
+20150529101718:System.TypeInitializationException: The type initializer for 'Aptima.Asim.DDD.CommonComponents.SimulatorTools.ObjectDistances' threw an exception. ---> System.BadImageFormatException: Could not load file or assembly 'Aptima.Asim.DDD.CommonComponents.SimMathTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86' or one of its dependencies. An attempt was made to load a program with an incorrect format.
+File name: 'Aptima.Asim.DDD.CommonComponents.SimMathTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86'
+   at Aptima.Asim.DDD.CommonComponents.SimulatorTools.ObjectDistances..cctor()
+
+=== Pre-bind state information ===
+LOG: User = AAD\zzuzack
+LOG: DisplayName = Aptima.Asim.DDD.CommonComponents.SimMathTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86
+ (Fully-specified)
+LOG: Appbase = file:///C:/Users/zzuzack/Desktop/Projects/DDD_Phoenix/src/SimCoreServerGUI/bin/DDD/
+LOG: Initial PrivatePath = NULL
+Calling assembly : Aptima.Asim.DDD.CommonComponents.SimulatorTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86.
+===
+LOG: This bind starts in default load context.
+LOG: No application configuration file found.
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework64\v2.0.50727\config\machine.config.
+LOG: Post-policy reference: Aptima.Asim.DDD.CommonComponents.SimMathTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86
+LOG: Attempting download of new URL file:///C:/Users/zzuzack/Desktop/Projects/DDD_Phoenix/src/SimCoreServerGUI/bin/DDD/Aptima.Asim.DDD.CommonComponents.SimMathTools.DLL.
+ERR: Failed to complete setup of assembly (hr = 0x8007000b). Probing terminated.
+
+   --- End of inner exception stack trace ---
+   at Aptima.Asim.DDD.CommonComponents.SimulatorTools.ObjectDistances.UpdateObjectSensorRange(String objID, Double maxSensorRange)
+   at Aptima.Asim.DDD.Simulators.StaticAttribute.StaticAttributeSim.RevealObject(SimulationEvent e)
+   at Aptima.Asim.DDD.Simulators.StaticAttribute.StaticAttributeSim.ProcessEvent(SimulationEvent e)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.EventLoop() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 469
+
+20150529102325:Error loading 'Motion' Simulator.  Going to continue gracefully.
+20150529102325:   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 302
+
+20150529102330:System.Exception: Error initializing Simulators:
+Error loading 'Motion' Simulator. (Exception has been thrown by the target of an invocation.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 330
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150529102856:Error loading 'SeamateProcessor' Simulator.  Going to continue gracefully.
+20150529102856:   at System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   at System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 298
+
+20150529102905:System.Exception: Error initializing Simulators:
+Error loading 'SeamateProcessor' Simulator. (Could not load file or assembly 'file:///C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\bin\DDD\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll' or one of its dependencies. An attempt was made to load a program with an incorrect format.)
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.InitializeSimulators() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 330
+   at Aptima.Asim.DDD.CommonComponents.SimCoreTools.SimCore.Start(String simModelFile, Int32 serverPort) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\SimCoreTools\SimCore.cs:line 92
+   at Aptima.Asim.DDD.SimulationEngine.SimEngine.StartSimCore() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimEngine\SimEngine.cs:line 87
+   at Aptima.Asim.DDD.SimCoreServer.SimCoreServer..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServer\SimCoreServer.cs:line 181
+   at Aptima.Asim.DDD.SimCoreGUI.Form1..ctor() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Form1.cs:line 145
+   at Aptima.Asim.DDD.SimCoreGUI.Program.Main() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\SimCoreServerGUI\Program.cs:line 21
+
+20150701124251:System.ApplicationException: Failure in ScenarioToQueues: Could not find file '\\zzuzack\DDDClient\DDDSchema_4_0.xsd'.
+   at Aptima.Asim.DDD.ScenarioController.Coordinator.Coordinate(String scenarioFile, String schemaFile, SimulationEventDistributor& distributor, String simModelName, String contextControl, String updateIncr, String lowerLevel, List`1 logTypes, String debugFile) in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\ScenCon\Coordinator.cs:line 382
+   at Aptima.Asim.DDD.ScenarioController.Coordinator.CoordinateNow() in c:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\ScenCon\Coordinator.cs:line 166

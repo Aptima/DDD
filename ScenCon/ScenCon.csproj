@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5967B718-158E-4DD5-B7A1-13B327FB057B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aptima.Asim.DDD.ScenarioController</RootNamespace>
+    <AssemblyName>Aptima.Asim.DDD.ScenarioController</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ENABLE_PASSWORDS|AnyCPU' ">
+    <OutputPath>bin\ENABLE_PASSWORDS\</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '!ENABLE_PASSWORDS|AnyCPU' ">
+    <OutputPath>bin\!ENABLE_PASSWORDS\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ENABLE_PASSWORDS|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ENABLE_PASSWORDS\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '!ENABLE_PASSWORDS|x86' ">
+    <OutputPath>bin\x86\!ENABLE_PASSWORDS\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractParser.cs" />
+    <Compile Include="Coordinator.cs" />
+    <Compile Include="Parser_4_2.cs" />
+    <Compile Include="DebugReporter.cs" />
+    <Compile Include="Engrams.cs" />
+    <Compile Include="EventCommunicator.cs" />
+    <Compile Include="EventLists.cs" />
+    <Compile Include="ForkReplayToQueues.cs" />
+    <Compile Include="Incoming.cs" />
+    <Compile Include="IncomingTypes.cs" />
+    <Compile Include="Metronome.cs" />
+    <Compile Include="Parser_4_0.cs" />
+    <Compile Include="Parser_4_0_2.cs" />
+    <Compile Include="Parser_4_1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionMath.cs" />
+    <Compile Include="ScenarioDataTypes.cs" />
+    <Compile Include="ScenarioEventTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScenarioToQueues.cs" />
+    <Compile Include="ScenConStubs.cs" />
+    <Compile Include="SchemaTypes.cs" />
+    <Compile Include="ScoringTables.cs" />
+    <Compile Include="Timer.cs" />
+    <Compile Include="UnitTables.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonComponents\DataTypeTools\DataTypeTools.csproj">
+      <Project>{B31CF76A-8F86-438C-B33D-0440A46A7515}</Project>
+      <Name>DataTypeTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\ErrorLogTools\ErrorLogTools.csproj">
+      <Project>{BBC8DB46-80B7-495D-84D6-B826F958BEAA}</Project>
+      <Name>ErrorLogTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\HandshakeManager\HandshakeManager.csproj">
+      <Project>{CC524B0E-23CD-46F0-BBED-C5875D5E1C8B}</Project>
+      <Name>HandshakeManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\NetworkTools\NetworkTools.csproj">
+      <Project>{D5EF4CF2-CFEE-4AF2-9DC5-C79B8D19760B}</Project>
+      <Name>NetworkTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\ScenarioUnitsData\ScenarioUnitsData.csproj">
+      <Project>{4976D46F-90A5-4F44-BAE1-BAA2AB3DA922}</Project>
+      <Name>ScenarioUnitsData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\ServerOptionsTools\ServerOptionsTools.csproj">
+      <Project>{E6ECFFC2-6F1F-4A12-BBC2-87994A4BB1BB}</Project>
+      <Name>ServerOptionsTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimulationEventTools\SimulationEventTools.csproj">
+      <Project>{8155AED6-09DC-4993-AD12-B6306F44E99C}</Project>
+      <Name>SimulationEventTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimulationModelTools\SimulationModelTools.csproj">
+      <Project>{A4B74663-DF80-4967-ABEF-F1DDE0E08EBC}</Project>
+      <Name>SimulationModelTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimulatorTools\SimulatorTools.csproj">
+      <Project>{746AE93D-FCE7-4B3A-89E4-71D4A9B8BF2F}</Project>
+      <Name>SimulatorTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataFiles\DataFiles.csproj">
+      <Project>{26E7E87A-F470-48AF-9B27-B420250BAA92}</Project>
+      <Name>DataFiles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Simulators\Scoring\Scoring.csproj">
+      <Project>{A0106E76-989D-43C7-9992-7A22990006B6}</Project>
+      <Name>Scoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextChatServer\TextChatServer.csproj">
+      <Project>{6B33E1FF-B20E-438D-95F6-3854C30CEDE2}</Project>
+      <Name>TextChatServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

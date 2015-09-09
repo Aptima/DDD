@@ -1,0 +1,299 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            
+//  IIIIIII SSSSSS                                                            
+//    II    SS                          InstallShield (R)                     
+//    II    SSSSSS      (c) 1996-2002, InstallShield Software Corporation     
+//    II        SS                     All rights reserved.             
+//  IIIIIII SSSSSS                  
+//                                                                            
+//                                                                            
+//  This template script provides the code necessary to build an entry-point 
+//  function to be called in an InstallScript custom action. 
+//                                                                            
+//                                                                            
+//    File Name:  Setup.rul                                                   
+//                                                                            
+//  Description:  InstallShield script                                        
+//
+////////////////////////////////////////////////////////////////////////////////
+    
+    #define VERIFIER_DLL "AptimaLicenseVerifier.dll;" 
+    #define DIRECTORYCHECK_DLL "DoesDirExist.dll"
+// Include Ifx.h for built-in InstallScript function prototypes, for Windows 
+// Installer API function prototypes and constants, and to declare code for 
+// the OnBegin and OnEnd events.
+#include "ifx.h"    
+#include "iswi.h"
+
+    // The keyword export identifies MyFunction() as an entry-point function.
+    // The argument it accepts must be a handle to the Installer database.
+    export prototype MyFunction(HWND);
+    export prototype CheckMySQLAndVSG(HWND);   
+   // prototype ValidateKey(BYVAL STRING);   
+   prototype AptimaLicenseVerifier.IsLicenseKeyValid(BYVAL STRING, BYVAL STRING, BYVAL STRING, BYVAL STRING);
+   prototype DirectoryCheck.DoesDirectoryExist(BYVAL STRING);
+    export prototype CallValidator(HWND); 
+    export prototype ValidateDirectory(HWND);
+    export prototype ValidateSDKDirectory(HWND); 
+    export prototype  OpenWebBrowser(HWND);
+    
+    // To Do:  Declare global variables, define constants, and prototype user-
+    //         defined and DLL functions here.
+ 
+
+// To Do:  Create a custom action for this entry-point function:
+// 1.  Right-click on "Custom Actions" in the Sequences/Actions view.
+// 2.  Select "Custom Action Wizard" from the context menu.
+// 3.  Proceed through the wizard and give the custom action a unique name.
+// 4.  Select "Run InstallScript code" for the custom action type, and in
+//     the next panel select "MyFunction" (or the new name of the entry-
+//     point function) for the source. 
+// 5.  Click Next, accepting the default selections until the wizard 
+//     creates the custom action.
+//
+// Once you have made a custom action, you must execute it in your setup by 
+// inserting it into a sequence or making it the result of a dialog's 
+// control event.
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  MyFunction
+//                                                                           
+//  Purpose:  This function will be called by the script engine when 
+//            Windows(TM) Installer executes your custom action (see the "To 
+//            Do," above).
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+function MyFunction(hMSI)   
+    STRING key;  
+    string keyType;                                   
+    NUMBER nvSize;
+    NUMBER rVal; 
+    NUMBER err;
+begin   
+	RegDBSetDefaultRoot ( HKEY_LOCAL_MACHINE );    
+	key = "0";  
+	//rVal = RegDBKeyExist("sfhsfh");
+	//rVal = RegDBKeyExist("SOFTWARE\Aptima");
+	//rVal = RegDBKeyExist("SOFTWARE\\Aptima");
+	//rVal = RegDBKeyExist("SOFTWARE\\Aptima\\Asim\\DDD"); 
+	//rVal = RegDBKeyExist("SOFTWARE\\Aptima\\Asim\\DDD\\LicenseKey");  
+	rVal = RegDBGetKeyValueEx("SOFTWARE\\Aptima\\Asim\\VSG","LicenseType", err, keyType, nvSize);
+	//rVal = RegDBGetKeyValueEx("SOFTWARE\\Aptima\\Asim\\DDD","LicenseKeyz", err, key, nvSize);
+	rVal = RegDBGetKeyValueEx("SOFTWARE\\Aptima\\Asim\\VSG","LicenseKey", err, key, nvSize);
+
+	if(rVal == 0) then
+		key = "1";       
+		//else
+		//SdShowMsg("Missing valid license key.  Please restart installer", TRUE);
+		endif;
+	MsiSetProperty(hMSI, "KEYISVALID", key);
+	MsiSetProperty(hMSI, "LicenseType", keyType);    
+	//rVal = 0;    
+    //err = MsiGetProperty(hMSI, "LicenseKey", key, nvSize);
+    //rVal = ValidateKey(key);
+    //nvSize = AskYesNo(key, YES); 
+   //if(rVal = 1) then
+	// err = 	MsiSetProperty(hMSI, "KeyIsValid", "1");
+    //else
+    //    MsiSetProperty(hMSI, "KeyIsValid", "0");
+    //return rVal; 
+end; 
+    function CheckMySQLAndVSG(hMSI)   
+    STRING key;                                     
+    NUMBER nvSize;
+    NUMBER regVal;
+    NUMBER msqlVal; 
+    NUMBER err;
+begin   
+	RegDBSetDefaultRoot ( HKEY_LOCAL_MACHINE );    
+	key = "0";  
+	//rVal = RegDBKeyExist("sfhsfh");
+	//rVal = RegDBKeyExist("SOFTWARE\Aptima");
+	//rVal = RegDBKeyExist("SOFTWARE\\Aptima");
+	//rVal = RegDBKeyExist("SOFTWARE\\Aptima\\Asim\\DDD"); 
+	regVal = RegDBKeyExist("SOFTWARE\\MySQL AB\\MySQL Server 10.0"); 
+	regVal = RegDBKeyExist("SOFTWARE\\MySQL AB\\MySQL Server 5.0");  
+	//rVal = RegDBGetKeyValueEx("SOFTWARE\\Aptima\\Asim\\DDD","LicenseKeyz", err, key, nvSize);
+	//regVal = RegDBGetKeyValueEx("SOFTWARE\\MySQL AB\\MySQL Server 5.0","Value", err, key, nvSize);
+    msqlVal = FeatureIsItemSelected (MEDIA,  "Features\\Server");    
+    msqlVal = FeatureIsItemSelected (MEDIA,  "Features\\Visual Scenario Generator");
+	if(regVal == 1 && msqlVal == 1) then
+		key = "1";       
+		//else
+		//SdShowMsg("Missing valid license key.  Please restart installer", TRUE);
+		endif;
+	MsiSetProperty(hMSI, "VSGinstalled", key);    
+	//rVal = 0;    
+    //err = MsiGetProperty(hMSI, "LicenseKey", key, nvSize);
+    //rVal = ValidateKey(key);
+    //nvSize = AskYesNo(key, YES); 
+   //if(rVal = 1) then
+	// err = 	MsiSetProperty(hMSI, "KeyIsValid", "1");
+    //else
+    //    MsiSetProperty(hMSI, "KeyIsValid", "0");
+    //return rVal; 
+end;
+//function NUMBER ValidateKey(key)
+//  NUMBER rVal;
+//  NUMBER err;
+//begin             
+	//rVal = RegDBKeyExist("HKEY_LOCAL_MACHINE\SOFTWARE\Aptima\Asim\DDD\LicenseKey");
+	//MsiSetProperty(hMSI, "KEYISVALID", rVal);
+	//err = ChangeDirectory(SUPPORTDIR);
+    //err = UseDLL( SUPPORTDIR ^ "AptimaInstallerApp.dll" );   
+    //err = UseDLL("AptimaInstallerApp.dll" );
+    //rVal = 1;//Mains(key); 
+     
+    //err = UnUseDLL( SUPPORTDIR ^ "AptimaInstallerApp.dll" );
+    //return rVal;
+//end;    
+
+function CallValidator(hMSI)   
+    STRING svDisplayName;  
+    STRING svProductName; 
+    STRING svProductCode; 
+    STRING svProductFamily;  
+    string svProductGUID;
+    string svIs128Bit;
+    BOOL bvIs128Bit;
+    BOOL   bvReturn;
+    string keyType;                                   
+    NUMBER nvSize;
+    NUMBER rVal; 
+    NUMBER err;  
+    NUMBER dwBuffer;
+    object ob;  
+begin          
+		 dwBuffer = 50;
+         MsiGetProperty(hMSI, "iProductDisplayName", svDisplayName, dwBuffer);
+         MsiGetProperty(hMSI, "iProductName", svProductName, dwBuffer);
+         MsiGetProperty(hMSI, "iProductCode", svProductCode, dwBuffer);
+         MsiGetProperty(hMSI, "iFamilyName", svProductFamily, dwBuffer); 
+         MsiGetProperty(hMSI, "ProductCode", svProductGUID, dwBuffer);  
+
+         keyType = SUPPORTDIR + "..\\" + svProductGUID + "\\AptimaLicenseKeyVerifier.dll";
+        // if (Is(FILE_EXISTS, SUPPORTDIR ^ "\\DDDLicenseVerifier.exe" ) = TRUE) then
+         if (Is(FILE_EXISTS, keyType ) = FALSE) then
+MessageBox("Error trying to locate license key verifier.", SEVERE);
+endif;
+          try   
+		 set ob = CoCreateObjectDotNet(keyType,"Aptima.CommonComponents.LicenseVerifier.AptimaLicenseVerifier");  
+         bvReturn = ob.IsLicenseKeyValid(svProductFamily,svProductName,svProductCode,svDisplayName);
+         catch
+         /* Exception handler. */
+    	 err = Err.Number; 
+    	 MessageBox(FormatMessage(err), SEVERE);
+
+         endcatch;  
+         
+         MyFunction(hMSI);
+         
+end;     
+
+function ValidateDirectory(hMSI)   
+    STRING svDirectoryPath;  
+    STRING svProductName; 
+    STRING svProductCode; 
+    STRING svProductFamily;  
+    string svProductGUID;
+    BOOL   bvReturn;
+    string keyType;                                   
+    NUMBER nvSize;
+    NUMBER rVal; 
+    NUMBER err;  
+    NUMBER dwBuffer;
+    object ob;  
+begin          
+		 dwBuffer = 255; 
+         MsiGetProperty(hMSI, "ProductCode", svProductGUID, dwBuffer);  
+//         MsiGetProperty(hMSI, "HASDIRECTX", dx, dwBuffer);   
+         MsiGetProperty(hMSI, "DirectXDirectory", svDirectoryPath, dwBuffer);
+         svDirectoryPath = WINDIR + svDirectoryPath;
+         keyType = SUPPORTDIR + "..\\" + svProductGUID + "\\DoesDirExist.dll";
+        if (Is(FILE_EXISTS, keyType ) = FALSE) then
+MessageBox("Error trying to locate Directory Checker dll.", SEVERE);
+endif;
+          try   
+		 set ob = CoCreateObjectDotNet(keyType,"DoesDirExist.DirectoryCheck");  
+         bvReturn = ob.DoesDirectoryExist(svDirectoryPath);
+         catch
+         /* Exception handler. */
+    	 err = Err.Number;
+         endcatch;      
+         
+             if (bvReturn = FALSE) then
+	MsiSetProperty(hMSI, "HASDIRECTX", "false");
+	else
+         	MsiSetProperty(hMSI, "HASDIRECTX", "true");	
+endif;     
+       MsiGetProperty(hMSI, "HASDIRECTX", svDirectoryPath, dwBuffer);
+
+         
+end;  
+
+function ValidateSDKDirectory(hMSI)   
+    STRING svDirectoryPath;   
+    STRING svProductFamily;  
+    string svProductGUID;
+    BOOL   bvReturn;
+    string keyType;                                   
+    NUMBER nvSize;
+    NUMBER rVal; 
+    NUMBER err;  
+    NUMBER dwBuffer;
+    object ob;  
+begin          
+		 dwBuffer = 255; 
+         MsiGetProperty(hMSI, "ProductCode", svProductGUID, dwBuffer);   
+         MsiGetProperty(hMSI, "NETSDKDirectory", svDirectoryPath, dwBuffer);
+         svDirectoryPath = WINDIR + svDirectoryPath;
+         keyType = SUPPORTDIR + "..\\" + svProductGUID + "\\DoesDirExist.dll";
+        if (Is(FILE_EXISTS, keyType ) = FALSE) then
+MessageBox("Error trying to locate Directory Checker dll.", SEVERE);
+endif;
+          try   
+		 set ob = CoCreateObjectDotNet(keyType,"DoesDirExist.DirectoryCheck");  
+         bvReturn = ob.DoesFileExist(svDirectoryPath);
+         catch
+         /* Exception handler. */
+    	 err = Err.Number;
+         endcatch;      
+         
+             if (bvReturn = FALSE) then
+	MsiSetProperty(hMSI, "HASnetSDK", "false");
+	else
+         	MsiSetProperty(hMSI, "HASnetSDK", "true");	
+endif;     
+
+
+         
+end;   
+
+function OpenWebBrowser(hMSI)   
+    STRING svDirectoryPath;   
+    STRING svProductFamily;  
+    string svProductGUID;
+    BOOL   bvReturn;
+    string keyType;                                   
+    NUMBER nvSize;
+    NUMBER rVal; 
+    NUMBER err;  
+    NUMBER dwBuffer;
+    object ob;  
+begin          
+		 dwBuffer = 255; 
+         MsiGetProperty(hMSI, "ProductCode", svProductGUID, dwBuffer);   
+         MsiGetProperty(hMSI, "NetSDKWebSite", svDirectoryPath, dwBuffer);
+         keyType = SUPPORTDIR + "..\\" + svProductGUID + "\\DoesDirExist.dll";
+        if (Is(FILE_EXISTS, keyType ) = FALSE) then
+MessageBox("Error trying to locate Directory Checker dll.", SEVERE);
+endif;
+          try   
+		 set ob = CoCreateObjectDotNet(keyType,"DoesDirExist.DirectoryCheck");  
+         ob.OpenWebBrowser(svDirectoryPath);
+         catch
+         /* Exception handler. */
+    	 err = Err.Number;
+         endcatch;               
+end;

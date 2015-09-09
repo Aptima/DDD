@@ -1,0 +1,10 @@
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\bin\Debug\AptimaGraphicsToolkit.dll
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\bin\Debug\AptimaGraphicsToolkit.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\obj\Debug\AptimaGraphicsToolkit.csprojResolveAssemblyReference.cache
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\obj\Debug\AGT.Forms.AGT_SplashDialog.resources
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\obj\Debug\AGT.Properties.Resources.resources
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\obj\Debug\AGT.Forms.AGT_CanvasControl.resources
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\obj\Debug\AGT.Forms.AGT_SceneLoadDialog.resources
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\obj\Debug\AptimaGraphicsToolkit.csproj.GenerateResource.Cache
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\obj\Debug\AptimaGraphicsToolkit.dll
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AptimaGraphicsToolkit\AptimaGraphicsToolkit\obj\Debug\AptimaGraphicsToolkit.pdb

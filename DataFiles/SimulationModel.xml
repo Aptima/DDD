@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SimulationModelRoot xmlns="SimulationModel.xsd">
+	<ObjectModel>
+		<ObjectType Name="BaseObject" Instantiatable="false">
+			<Attribute Name="ID" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+			<ObjectType Name="PhysicalObject" Instantiatable="true">
+				<Attribute Name="State" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="Location" DataType="LocationType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="Velocity" DataType="VelocityType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="Throttle" DataType="DoubleType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="DestinationLocation" DataType="LocationType" ExcludeFromScenario="true" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="ObjectName" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="OwnerID" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="ParentObjectID" DataType="StringType" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="DockedToParent" DataType="BooleanType" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="ChildObjects" DataType="StringListType" ExcludeFromScenario="true" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="DockedObjects" DataType="StringListType" ExcludeFromScenario="true" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="DockedWeapons" DataType="StringListType" ExcludeFromScenario="true" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="IsWeapon" DataType="BooleanType" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="ClassName" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="TeamName" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="MaximumSpeed" DataType="DoubleType" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="Size" DataType="DoubleType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="StateTable" DataType="StateTableType"/>
+				<Attribute Name="Capability" DataType="CapabilityType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="Vulnerability" DataType="VulnerabilityType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="AttackState" DataType="StringType" ExcludeFromScenario="true"/>
+				<Attribute Name="AttackerList" DataType="StringListType" ExcludeFromScenario="true"/>
+				<Attribute Name="TargetsInRange" DataType="StringListType" ExcludeFromScenario="true"/>
+				<Attribute Name="InActiveRegions" DataType="StringListType" ExcludeFromScenario="true"/>
+				<Attribute Name="ActiveRegionSpeedMultiplier" DataType="DoubleType" ExcludeFromScenario="true"/>
+				<Attribute Name="LaunchStarted" DataType="BooleanType" ExcludeFromScenario="true"/>
+				<Attribute Name="LaunchDone" DataType="BooleanType" ExcludeFromScenario="true"/>
+				<Attribute Name="LaunchEndTime" DataType="IntegerType" ExcludeFromScenario="true"/>
+				<Attribute Name="LaunchDestinationLocation" DataType="LocationType" ExcludeFromScenario="true"/>
+				<Attribute Name="LaunchDuration" DataType="IntegerType"/>
+				<Attribute Name="AttackDuration" DataType="IntegerType"/>
+				<Attribute Name="EngagementDuration" DataType="IntegerType"/>
+				<Attribute Name="LaunchIsWeapon" DataType="BooleanType" ExcludeFromScenario="true"/>
+				<Attribute Name="LaunchWeaponTargetID" DataType="StringType" ExcludeFromScenario="true"/>
+				<Attribute Name="DockingStarted" DataType="BooleanType" ExcludeFromScenario="true"/>
+				<Attribute Name="DockingEndTime" DataType="IntegerType" ExcludeFromScenario="true"/>
+				<Attribute Name="DockingDuration" DataType="IntegerType"/>
+				<Attribute Name="PursueStarted" DataType="BooleanType" ExcludeFromScenario="true"/>
+				<Attribute Name="PursueTargetID" DataType="StringType" ExcludeFromScenario="true"/>
+				<Attribute Name="SelfDefenseStartAttack" DataType="BooleanType" ExcludeFromScenario="true"/>
+				<Attribute Name="SelfDefenseCapability" DataType="StringType" ExcludeFromScenario="true"/>
+				<Attribute Name="SelfDefenseTargetID" OwnerObservable="true" DataType="StringType" ExcludeFromScenario="true"/>
+				<Attribute Name="Sensors" DataType="SensorArrayType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="Emitters" DataType="EmitterType"/>
+				<Attribute Name="FuelCapacity" DataType="DoubleType" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="FuelAmount" DataType="DoubleType" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="FuelConsumptionRate" DataType="DoubleType" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="FuelDepletionState" DataType="StringType"/>
+				<Attribute Name="IconName" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="RemoveOnDestruction" DataType="BooleanType"/>
+				<Attribute Name="InitialTag" DataType="StringType"/>
+				<Attribute Name="LaunchedByOwner" DataType="BooleanType"/>
+				<Attribute Name="CanOwn" DataType="StringListType"/>
+				<Attribute Name="SubplatformLimit" DataType="IntegerType"/>
+				<Attribute Name="Subplatforms" DataType="StringListType"/>
+				<Attribute Name="CustomAttributes" DataType="CustomAttributesType" OwnerObservable="true" OtherObservable="true" ExcludeFromScenario="true"/>
+				<Attribute Name="SensorRangeRings" DataType="CustomAttributesType" OwnerObservable="false" OtherObservable="false"/>
+				<Attribute Name="CapabilityRangeRings" DataType="CustomAttributesType" OwnerObservable="false" OtherObservable="false"/>
+				<Attribute Name="VulnerabilityRangeRings" DataType="CustomAttributesType" OwnerObservable="false" OtherObservable="false"/>
+				<Attribute Name="CurrentAttacks" DataType="AttackCollectionType" OwnerObservable="true" OtherObservable="false"/>
+				<Attribute Name="DefaultClassification" DataType="StringType"/>
+				<Attribute Name="CurrentClassification" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="ClassificationDisplayRules" DataType="ClassificationDisplayRulesType"/>
+				<Attribute Name="RevealTime" DataType="IntegerType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="DetectTime" DataType="IntegerType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="IdentifyTime" DataType="IntegerType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="TrackingTime" DataType="IntegerType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="DestroyedTime" DataType="IntegerType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="GroundTruthIFF" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="UserClassifiedIFF" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<Attribute Name="HostileActionTime" DataType="IntegerType" OwnerObservable="true" OtherObservable="true"/>			  
+				<Attribute Name="LinkedRegion" DataType="StringType" OwnerObservable="true"/>
+        <Attribute Name="Intent" DataType="StringType" OwnerObservable="true" OtherObservable="true"/>
+				<ObjectType Name="AirObject" Instantiatable="true"/>
+				<ObjectType Name="SeaObject" Instantiatable="true"/>
+				<ObjectType Name="LandObject" Instantiatable="true"/>
+			</ObjectType>
+			<ObjectType Name="DecisionMaker" Instantiatable="true">
+				<Attribute Name="RoleName" DataType="StringType"/>
+				<Attribute Name="TeamMember" DataType="StringType"/>
+				<Attribute Name="Color" DataType="IntegerType"/>
+				<Attribute Name="Briefing" DataType="StringType"/>
+				<Attribute Name="CanTransfer" DataType="BooleanType"/>
+				<Attribute Name="ReportsTo" DataType="StringListType"/>
+				<Attribute Name="CanForceTransfer" DataType="BooleanType"/>
+				<Attribute Name="CanChat" DataType="StringListType"/>
+				<Attribute Name="CanWhiteboard" DataType="StringListType"/>
+				<Attribute Name="CanSpeak" DataType="StringListType"/>
+				<Attribute Name="IsObserver" DataType="BooleanType"/>
+			</ObjectType>
+			<ObjectType Name="Team" Instantiatable="true">
+				<Attribute Name="TeamName" DataType="StringType"/>
+				<Attribute Name="TeamHostility" DataType="StringListType"/>
+			</ObjectType>
+			<ObjectType Name="SensorNetwork" Instantiatable="true">
+				<Attribute Name="DMMembers" DataType="StringListType"/>
+			</ObjectType>
+			<ObjectType Name="Region" Instantiatable="false">
+				<Attribute Name="Polygon" DataType="PolygonType"/>
+				<Attribute Name="CurrentAbsolutePolygon" DataType="PolygonType"/>
+				<Attribute Name="IsDynamicRegion" DataType="BooleanType"/>
+				<Attribute Name="LinkedObject" DataType="StringType"/>
+				<Attribute Name="ReferencePoint" DataType="LocationType"/> 
+				<Attribute Name="Scale" DataType="DoubleType"/>
+				<Attribute Name="Rotation" DataType="DoubleType"/>				
+				<ObjectType Name="LandRegion" Instantiatable="true">
+				</ObjectType>
+				<ObjectType Name="3DRegion" Instantiatable="false">
+					<Attribute Name="StartHeight" DataType="DoubleType"/>
+					<Attribute Name="EndHeight" DataType="DoubleType"/>
+					<Attribute Name="IsVisible" DataType="BooleanType"/>
+					<Attribute Name="IsActive" DataType="BooleanType"/>
+					<Attribute Name="DisplayColor" DataType="IntegerType"/>
+					<Attribute Name="DrawIcon" DataType="StringType"/>
+					<Attribute Name="IconOpacity" DataType="StringType"/>
+					<ObjectType Name="ScoringRegion" Instantiatable="true">
+					</ObjectType>
+					<ObjectType Name="ActiveRegion" Instantiatable="true">
+						<Attribute Name="SpeedMultiplier" DataType="DoubleType"/>
+						<Attribute Name="BlocksMovement" DataType="BooleanType"/>
+						<Attribute Name="BlocksSensorTypes" DataType="StringListType"/>
+					</ObjectType>
+				</ObjectType>
+			</ObjectType>
+		</ObjectType>
+	</ObjectModel>
+	<EventModel>
+		<EventType Name="BaseEvent">
+			<Description>
+				This is the event that all other events are derrived from.  This event will never be sent directly.
+			</Description>
+			<Parameter Name="Time" DataType="IntegerType">
+				Time is an integer specifying the number of milliseconds since
+				the start of the simulation.
+			</Parameter>
+			<EventType Name="FailedToCreateChatRoom" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					OBSOLETE: Sent by TextChatServer to report result of RequestChatRoomCreate event.
+				</Description>
+				<Parameter Name="Message" DataType="StringType">
+					The reason the room couldn't be created.
+				</Parameter>
+				<Parameter Name="SenderDM_ID" DataType="StringType">
+					The id of the decision maker that created the chat room.
+				</Parameter>
+			</EventType>
+			<EventType Name="JoinChatRoom" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					OBSOLETE:  Sent by the GUI client to the controller to request that a decision maker
+					be added to a chat room.
+				</Description>
+				<Parameter Name="RoomName" DataType="StringType">
+					The name of the chat room.
+				</Parameter>
+				<Parameter Name="TargetPlayerID" DataType="StringType">
+					The decision maker that that is trying to join the chat room.
+				</Parameter>
+			</EventType>
+			<EventType Name="TimeTick" Replay="true">
+				<Description>
+					This event is sent by the ScenCon to the simulators to tell them to update to the next simulation time.
+				</Description>
+				<Parameter Name="SimulationTime" DataType="StringType">
+					The string representation of the current simulation time in HH:mm:ss format.
+				</Parameter>
+			</EventType>
+			<EventType Name="SimulationTimeEvent" Replay="false">
+				<Parameter Name="SimulationTime" DataType="StringType">
+					The string representation of the current simulation time in HH:mm:ss format.
+				</Parameter>
+			</EventType>
+			<EventType Name="ResetSimulation">
+				<Description>
+					Deprecated
+				</Description>
+			</EventType>
+			<EventType Name="SimCoreReady" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					This event is sent from the SimCore to the ScenCon to let it know that the SimCore is 
+					done initializing.
+				</Description>
+			</EventType>
+			<EventType Name="StartupComplete" Replay="true">
+				<Description>
+					Sent by the ScenCon to announce that it is done sending out simulation initialization events.
+					All the NewObject events should have already gone out now.
+				</Description>
+			</EventType>
+			<EventType Name="RandomSeed" Replay="true" ForkReplay="true">
+				<Description>
+					Sent by ScenCon to SimCore to initialize random number generator.
+					The same random seed is used in a replay as in the original run so that attack results
+					come out the same.
+				</Description>
+				<Parameter Name="SeedValue" DataType="IntegerType">
+					The random seed that the SimCore will use for initializing its random
+					number generator.
+				</Parameter>
+			</EventType>
+			<EventType Name="NewObject" Replay="true">
+				<Description>
+					Sent by ScenCon to announce an object that will be in the simulation.  
+					The object is not on the screen yet.  It must be revealed before it can interact
+					with other objects.
+				</Description>
+				<Parameter Name="ID" DataType="StringType">
+					The unique ID of the object being created.
+				</Parameter>
+				<Parameter Name="ObjectType" DataType="StringType">
+					A string specifying the object type of the new object.
+					This object type must be one of the types described in the Object Model.
+				</Parameter>
+				<Parameter Name="StateTable" DataType="StateTableType">
+					The table of states for the new object.
+				</Parameter>
+				<Parameter Name="Attributes" DataType="AttributeCollectionType">
+					The initial values of all the attributes (specified in the object model)
+					of the new object.  The StateTable and ID attributes are excluded.
+				</Parameter>
+			</EventType>
+			<EventType Name="RevealObject" Replay="true">
+				<Description>
+					Sent by ScenCon to announce that the object is fully in the simulation world
+					and can start interacting with other objects.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object that will appear in the simulation.
+				</Parameter>
+				<Parameter Name="Attributes" DataType="AttributeCollectionType">
+					The initial values of all the attributes (specified in the object model)
+					of the revealed object.  The StateTable and ID attributes are excluded.
+				</Parameter>
+			</EventType>
+			<EventType Name="SubplatformLaunch" Replay="true">
+				<Description>
+					The ScenCon sends this event to initiate the SimCore object launch process.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object that will appear in the simulation.
+				</Parameter>
+				<Parameter Name="ParentObjectID" DataType="StringType">
+					The unique id of the parent of the object being launched.
+				</Parameter>
+				<Parameter Name="LaunchDestinationLocation" DataType="LocationType">
+					The location to which the object will be launched.
+				</Parameter>
+			</EventType>
+			<EventType Name="History_SubplatformLaunch" SimCoreSubscribe="false">
+				<Description>
+					A data logging event.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object that will appear in the simulation.
+				</Parameter>
+				<Parameter Name="ParentObjectID" DataType="StringType">
+					The unigue id of the parent object
+				</Parameter>
+				<Parameter Name="ParentObjectLocation" DataType="LocationType">
+					The location of the parent. (The child is launched to this location also.)
+				</Parameter>
+				<Parameter Name="LaunchDestinationLocation" DataType="LocationType">
+					The destination location of the launched object.
+				</Parameter>
+				<Parameter Name="IsWeaponLaunch" DataType="BooleanType">
+					Was this a launch a weapon launch or a normal subplatform launch.
+				</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">
+					If this was a weapon launch, this is the target that the weapon was launched at.
+				</Parameter>
+			</EventType>
+			<EventType Name="History_Pursue" SimCoreSubscribe="false">
+				<Description>
+					A data logging event.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object that will appear in the simulation.
+				</Parameter>
+				<Parameter Name="ObjectLocation" DataType="LocationType">
+					The location of the pursuing object
+				</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">
+					The unigue id of the target object
+				</Parameter>
+				<Parameter Name="TargetObjectLocation" DataType="LocationType">
+					The location of the target object.
+				</Parameter>
+			</EventType>
+			<EventType Name="WeaponLaunch" Replay="true">
+				<Description>
+					Sent by ScenCon to SimCore to accounce the firing of a weapon.  
+					A specialized version of SubplatformLaunch.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object that will appear in the simulation.
+				</Parameter>
+				<Parameter Name="ParentObjectID" DataType="StringType">
+					The unique id of the parent object.
+				</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">
+					The unique id of the object the weapon was launched at.
+				</Parameter>
+			</EventType>
+			<EventType Name="SubplatformDock" Replay="true">
+				<Description>
+					Sent from ScenCon to SimCore to announce that a subplatform has rejoined its parent
+					object.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the docking object.
+				</Parameter>
+				<Parameter Name="ParentObjectID" DataType="StringType">
+					The unique id of the object that is being docked to.
+				</Parameter>
+			</EventType>
+			<EventType Name="ObjectCollision">
+				<Description>
+					Sent by SimCore when two objects with non-zero size collide with each other.
+					Deprecated.
+				</Description>
+				<Parameter Name="ObjectID1" DataType="StringType">
+					The unique id of the first colliding object.
+				</Parameter>
+				<Parameter Name="ObjectID2" DataType="StringType">
+					The unique id of the second colliding object.
+				</Parameter>
+			</EventType>
+			<EventType Name="MoveObject" Replay="true">
+				<Description>
+					Sent by ScenCon to SimCore to announce that an object has 
+					changed its course and has a new destination.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object.
+				</Parameter>
+				<Parameter Name="DestinationLocation" DataType="LocationType">
+					The current X,Y,Z location in meters.
+					X = UTM Easting
+					Y = UTM Northing
+					Z = altitude in meters
+				</Parameter>
+				<Parameter Name="Throttle" DataType="DoubleType">
+					A floating point number between 0 and 1.
+				</Parameter>
+			</EventType>
+			<EventType Name="TransferObject" Replay="true">
+				<Description>
+					Sent to indicate that an asset has been transferred to a different DecisionMaker
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker receiving the asset.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the asset being transferred.
+				</Parameter>
+				<Parameter Name="DonorUserID" DataType="StringType">
+					The unique id of the decision makerlosing the asset.
+				</Parameter>
+			</EventType>
+			<EventType Name="MoveDone">
+				<Description>
+					Sent by SimCore to tell the ScenCon that an object has reached its destination.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object.
+				</Parameter>
+				<Parameter Name="Reason" DataType="StringType">
+					Why the move is done.
+				</Parameter>
+			</EventType>
+			<EventType Name="ClientAttackRequest" Replay="false" ForkReplay="true">
+				<Description>
+					Sent by a GUI client or agent request that an object attack another object.
+				</Description>
+				<Parameter Name="PlayerID" DataType="StringType">
+					The decision maker that is making the attack request.
+				</Parameter>
+				<Parameter Name="AttackingObjectID" DataType="StringType">
+					The unique id of the attacking object.
+				</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">
+					The unique id of the object that is being attacked.
+				</Parameter>
+				<Parameter Name="WeaponOrCapabilityName" DataType="StringType">
+					The name of the weopon or capability that is to be used in the attack.
+				</Parameter>
+			</EventType>
+			<EventType Name="AttackObject" Replay="true">
+				<Description>
+					Sent by the ScenCon to announce that an object has started attacking another object.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the attacking object.
+				</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">
+					The unique id of the object being attacked.
+				</Parameter>
+				<Parameter Name="CapabilityName" DataType="StringType">
+					The name of the capability used in the attack.
+				</Parameter>
+				<Parameter Name="PercentageApplied" DataType="IntegerType">
+					The Percentage of the capability used in the attack.
+				</Parameter>
+			</EventType>
+			<EventType Name="AttackSucceeded" Replay="false">
+				<Description>
+					Sent by the AttackSim after an attack is completed.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the attacking object.
+				</Parameter>
+				<Parameter Name="TargetID" DataType="StringType">
+					The unique id of the object being attacked.
+				</Parameter>
+				<Parameter Name="NewState" DataType="StringType">
+					The new state of the attacked object.
+				</Parameter>
+				<Parameter Name="Capabilities" DataType="StringListType">
+					The name of the capability used in the attack.
+				</Parameter>
+			</EventType>
+			<EventType Name="History_AttackedObjectReport" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					A data logging event.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object being attacked.
+				</Parameter>
+				<Parameter Name="ObjectLocation" DataType="LocationType">
+					The location of the object being attacked.
+				</Parameter>
+				<Parameter Name="AttackSuccess" DataType="BooleanType">
+					Was the attack successful?
+				</Parameter>
+				<Parameter Name="NewState" DataType="StringType">
+					The name of the state the object was transitioned to.
+				</Parameter>
+			</EventType>
+			<EventType Name="History_AttackerObjectReport" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					A data logging event.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the attacking object.
+				</Parameter>
+				<Parameter Name="ObjectLocation" DataType="LocationType">
+					The location of the attacking object.
+				</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">
+					The unique id of the object being attacked.
+				</Parameter>
+				<Parameter Name="TargetObjectLocation" DataType="LocationType">
+					The location of the target object.
+				</Parameter>
+				<Parameter Name="CapabilityName" DataType="StringType">
+					The capability being applied to the target.
+				</Parameter>
+				<Parameter Name="AppliedIntensity" DataType="IntegerType">
+					The capability intensity being applied to the target.
+				</Parameter>
+			</EventType>
+			<EventType Name="SelfDefenseAttackStarted" Replay="false">
+				<Description>
+					Sent by the SimCore to announce that a self-defense attack has started.
+				</Description>
+				<Parameter Name="AttackerObjectID" DataType="StringType">
+					The Unique ID of the object acting in self-defense.
+				</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">
+					The Unique Id of the object being attacked via self-defense.
+				</Parameter>
+			</EventType>
+			<EventType Name="StateChange">
+				<Description>
+					Sent by the SimCore to announce that an object has gone through a state-change.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object.
+				</Parameter>
+				<Parameter Name="NewState" DataType="StringType">
+					The name of the new state for the object.
+				</Parameter>
+			</EventType>
+			<EventType Name="ViewProAttributeUpdate" Log="false" SimCoreSubscribe="false">
+				<Description>
+				    Sent by the ViewPro to the GUI client or agent to announce that an object's sensed
+                    attribute has changed.
+				</Description>
+				<Parameter Name="TargetPlayer" DataType="StringType">
+					The player who is intended to receive this event.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The ObjectID of the object being updated.
+				</Parameter>
+				<Parameter Name="OwnerID" DataType="StringType">
+					The OwnerID of the object being updated.
+				</Parameter>
+				<Parameter Name="Attributes" DataType="AttributeCollectionType">
+					The attributes known about the object.
+				</Parameter>
+			</EventType>
+			<EventType Name="ViewProActiveRegionUpdate" Log="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the ViewPro to a client GUI or agent to alert it that an active region
+					is present.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The ObjectID of the object being updated.
+				</Parameter>
+				<Parameter Name="IsVisible" DataType="BooleanType">
+					Is the region visible on the client screen?
+				</Parameter>
+				<Parameter Name="DisplayColor" DataType="IntegerType">
+					The color to show the region.
+				</Parameter>
+				<Parameter Name="Shape" DataType="PolygonType">
+					The vertices of the region.
+				</Parameter>
+			</EventType>
+			<EventType Name="ActiveRegionSpeedMultiplierUpdate" Replay="false">
+				<Description>
+					A SimCore internal event.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The ObjectID of the object being updated.
+				</Parameter>
+			</EventType>
+			<EventType Name="ViewProInitializeObject" Log="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the ViewPro to a client GUI or agent to initialize an object.
+					This will be sent for all objects even if they haven't been sensed.
+				</Description>
+				<Parameter Name="TargetPlayer" DataType="StringType">
+					The decision maker that this event is being sent to.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object.
+				</Parameter>
+				<Parameter Name="Location" DataType="LocationType">
+					The initial location of the object.
+				</Parameter>
+				<Parameter Name="IconName" DataType="StringType">
+					The icon to use when displaying the object.
+				</Parameter>
+				<Parameter Name="OwnerID" DataType="StringType">
+					The decision maker that owns the object.
+				</Parameter>
+				<Parameter Name="IsWeapon" DataType="BooleanType">
+					Is this object a weapon?
+				</Parameter>
+				<Parameter Name="LabelColor" DataType="IntegerType">
+					The color that the icon's label should be shown in.
+				</Parameter>
+				<Parameter Name="CurrentClassification" DataType="StringType">
+					The initial classification for the object.
+				</Parameter>
+			</EventType>
+			<EventType Name="ViewProMotionUpdate" Log="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by ViewPro to a client GUI or agent to update the motion of an object.
+					This will be sent once for each object and isn't based on sensors.
+				</Description>
+				<Parameter Name="TargetPlayer" DataType="StringType">
+					With ViewProInitializeObject, this event might just become a broadcast event.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The ObjectID of the object being updated.
+				</Parameter>
+				<Parameter Name="OwnerID" DataType="StringType">
+					The OwnerID of the object being updated.
+				</Parameter>
+				<Parameter Name="Location" DataType="LocationType">
+					The current location of the object.
+				</Parameter>
+				<Parameter Name="DestinationLocation" DataType="LocationType">
+					The destination location of the object.
+				</Parameter>
+				<Parameter Name="MaximumSpeed" DataType="DoubleType">
+					The maximum speed of the object.
+				</Parameter>
+				<Parameter Name="Throttle" DataType="DoubleType">
+					The fraction of maximum speed that the object should move at.
+					Between 0 and 1.
+				</Parameter>
+				<Parameter Name="IconName" DataType="StringType">
+					To ensure that the client GUI has an icon to display for an object.
+				</Parameter>
+				<Parameter Name="IsWeapon" DataType="BooleanType">
+					If this is true, then this is a weapon, and should be displayed with a bounding box.
+				</Parameter>
+			</EventType>
+			<EventType Name="ViewProAttackUpdate" Log="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by ViewPro to alert a client GUI or agent that an attack has started.
+				</Description>
+				<Parameter Name="AttackerID" DataType="StringType">
+					Attacking object's ID
+				</Parameter>
+				<Parameter Name="TargetID" DataType="StringType">
+					Target object's ID
+				</Parameter>
+				<Parameter Name="AttackEndTime" DataType="IntegerType">
+					The time at which the attack will cease.
+				</Parameter>
+			</EventType>
+			<EventType Name="ViewProStopObjectUpdate" Log="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by ViewPro to alert a client GUI or agent that an object has stopped its motion.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The id of the object being stopped.
+				</Parameter>
+			</EventType>
+			<EventType Name="ClientMeasure_ScreenView" Log="false" SimCoreSubscribe="false">
+				<Description>This event is sent out from each connected DDD Client each time tick where the screen position, size, or zoom level has changed from the last tick.</Description>
+				<Parameter Name="Origin-X" DataType="IntegerType">
+					This parameter is the X value of the origin point of the user's current view.  This value is in meters from origin (top left corner of screen).
+				</Parameter>
+				<Parameter Name="Origin-Y" DataType="IntegerType">
+					This parameter is the Y value of the origin point of the user's current view.  This value is in meters from origin (top left corner of screen).
+				</Parameter>
+				<Parameter Name="ScreenSizeWidth" DataType="IntegerType">
+					This parameter is the Width value of the user's current view.  This value is in meters.
+				</Parameter>
+				<Parameter Name="ScreenSizeHeight" DataType="IntegerType">
+					This parameter is the Height value of the user's current view.  This value is in meters.
+				</Parameter>
+				<Parameter Name="ScreenZoom" DataType="DoubleType">
+					This parameter is the zoom level of the user's current view.  A value of 1 is 100%, of .25 is 25%, of 2 is 200%.
+				</Parameter>
+				<Parameter Name="UserID" DataType="StringType">
+					This parameter is the DM ID of the player whose screen this information is describing.
+				</Parameter>
+			</EventType>
+			<EventType Name="ClientMeasure_ObjectSelected" Log="false" SimCoreSubscribe="true">
+				<Description>This event is sent out from each connected DDD Client each time that user selects (or de-selects) an object</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The object ID of the user's newly selected object.  If this is an empty string, then they have no object selected.
+				</Parameter>
+				<Parameter Name="UserID" DataType="StringType">
+					The DM ID of the user who is selecting an object.
+				</Parameter>
+				<Parameter Name="OwnerID" DataType="StringType">
+					The DM ID of the user who owns the selected object.  
+				</Parameter>
+			</EventType>
+			<EventType Name="ClientMeasure_CapabilitySelected" Log="false" SimCoreSubscribe="false">
+				<Description>This event is sent out from each connected DDD Client each time a weapon or capability is selected.</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The DM ID of the user who is selecting the capability or weapon.
+				</Parameter>
+				<Parameter Name="ParentObjectID" DataType="StringType">
+					The object ID of the object that owns the capability or weapon (this is also the currently selected object).
+				</Parameter>
+				<Parameter Name="WeaponOrCapabilityName" DataType="StringType">
+					The name of the capability or weapon being selected.
+				</Parameter>
+			</EventType>
+			<EventType Name="ClientMeasure_ObjectTabSelected" Log="false" SimCoreSubscribe="false">
+				<Description>This event is sent out from each connected DDD Client each time a tab is selected in the user controls section.</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The currently selected object's ID.
+				</Parameter>
+				<Parameter Name="TabName" DataType="StringType">
+					The name of the tab that is currently selected.
+				</Parameter>
+				<Parameter Name="UserID" DataType="StringType">
+					This parameter is the DM ID of the player whose screen this information is describing.
+				</Parameter>
+			</EventType>
+			<EventType Name="Playfield" Replay="true">
+				<Description>
+					Sent by the ScenCon to client GUIs or agents to initialize map information.
+				</Description>
+				<Parameter Name="MapDataFile" DataType="StringType">
+					The file name for the map meta data file.
+					This file contains:
+					the image filename
+					The icon library (optional)
+					the meters per pixel
+					the UTM Zone of the bottom left corner of the map
+					the UTM Northing of the bottom left corner of the map
+					the UTM Easting of the bottom left corner of the map
+				</Parameter>
+				<Parameter Name="IconLibrary" DataType="StringType">
+					The name of the icon library to be used when finding icons for this scenario.
+				</Parameter>
+				<Parameter Name="UTMZone" DataType="StringType">
+					the UTM Zone of the bottom left corner of the map
+				</Parameter>
+				<Parameter Name="UTMNorthing" DataType="DoubleType">
+					the UTM Northing of the bottom left corner of the map
+				</Parameter>
+				<Parameter Name="UTMEasting" DataType="DoubleType">
+					the UTM Easting of the bottom left corner of the map
+				</Parameter>
+				<Parameter Name="HorizontalScale" DataType="DoubleType">
+					The map's horizontal meters per pixel ratio
+				</Parameter>
+				<Parameter Name="VerticalScale" DataType="DoubleType">
+					The map's vertical meters per pixel ratio
+				</Parameter>
+				<Parameter Name="Name" DataType="StringType">
+					Name of the scenario.
+				</Parameter>
+				<Parameter Name="Description" DataType="StringType">
+					Description of the Scenario.
+				</Parameter>
+				<Parameter Name="DefaultDisplayLabels" DataType="StringType">
+					Does the Client display asset labels by default.  true, false, disabled.
+				</Parameter>
+				<Parameter Name="DefaultDisplayTags" DataType="StringType">
+					Does the Client display asset Tags by default. true, false, top, bottom, overlay, disabled.
+				</Parameter>
+			</EventType>
+			<EventType Name="MoveObjectRequest" ForkReplay="true">
+				<Description>
+                    Sent by a client GUI or agent to the ScenCon to request that an object be moved.
+                </Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker requesting the action.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object.
+				</Parameter>
+				<Parameter Name="DestinationLocation" DataType="LocationType">
+					The destination X,Y,Z location in meters.
+					X = UTM Easting
+					Y = UTM Northing
+					Z = altitude in meters
+				</Parameter>
+				<Parameter Name="Throttle" DataType="DoubleType">
+					a floating point number between 0 and 1.
+				</Parameter>
+			</EventType>
+			<EventType Name="ObjectClassificationRequest" ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the ViewPro to request that an object gains a new classification.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker requesting the action.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the target object.
+				</Parameter>
+				<Parameter Name="ClassificationName" DataType="StringType">
+					The name of the capability used in the attack.
+				</Parameter>
+			</EventType>
+			<EventType Name="AttackObjectRequest" ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the ScenCon to request that an object attack another object.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker requesting the action.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the attacking object.
+				</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">
+					The unique id of the object being attacked.
+				</Parameter>
+				<Parameter Name="CapabilityName" DataType="StringType">
+					The name of the capability used in the attack.
+				</Parameter>
+				<Parameter Name="PercentageApplied" DataType="IntegerType">
+					The percentage of the capability used in the attack.
+				</Parameter>
+			</EventType>
+			<EventType Name="SubplatformLaunchRequest" ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the ScenCon to request that a docked object be launched from its
+					parent object.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker requesting the action.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the object being launched.
+				</Parameter>
+				<Parameter Name="ParentObjectID" DataType="StringType">
+					The unique id of the object that is launching a child
+				</Parameter>
+				<Parameter Name="LaunchDestinationLocation" DataType="LocationType">
+					The destination that the object should be launched to.
+				</Parameter>
+			</EventType>
+			<EventType Name="SubplatformDockRequest" ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the ScenCon to request that an object be docked to its parent object.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker requesting the action.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the docking object.
+				</Parameter>
+				<Parameter Name="ParentObjectID" DataType="StringType">
+					The id of the object that the docking object is being docked to.
+				</Parameter>
+			</EventType>
+			<EventType Name="WeaponLaunchRequest" ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the ScenCon to request that a weapon be fired from its parent
+					object at a target.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker requesting the action.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the attacking object.  This is the weapon being launched.
+				</Parameter>
+				<Parameter Name="ParentObjectID" DataType="StringType">
+					The unique id of the attacking object.  This is the object which is launching the weapon.
+				</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">
+					The unique id of the object being attacked.
+				</Parameter>
+			</EventType>
+			<EventType Name="WeaponLaunchFailure">
+				<Description>This event is sent out from the Server when a Weapon Launch or Weapon Launch Request fails.  It's main purpose is to alert the View Pro to re-allocate the weapon which was not launched.  This failure can be due to permissions, lack of munitions, or if the target is no longer in the simulation.</Description>
+				<Parameter Name="ObjectID" DataType="StringType">The launching platform ID.</Parameter>
+				<Parameter Name="WeaponObjectID" DataType="StringType">The ID of the weapon that was to-be launched.</Parameter>
+				<Parameter Name="Reason" DataType="StringType">A text description for either the Client's benefit, or for the Server's benefit, why did this request fail.</Parameter>
+			</EventType>
+			<EventType Name="TextChatRequest" Replay="false"  ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the TextChatServer.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the chat message.
+				</Parameter>
+				<Parameter Name="ChatBody" DataType="StringType">
+					The chat message to be sent.
+				</Parameter>
+				<Parameter Name="ChatType" DataType="StringType">
+					outdated...
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the ChatRoom;          
+					(OBSOLETE) if ChatType == P2P, this is the unique ID of the decision maker receiving the message.
+				</Parameter>
+			</EventType>
+			<EventType Name="BeginTextChatRequest" Replay="true"  ForkReplay="true">
+				<Description>
+					Sent by a client GUI to TextChatServer when user first starts typing.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the chat message.
+				</Parameter>
+				<Parameter Name="RoomName" DataType="StringType">
+					The name of the ChatRoom;          
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardLineRequest" Replay="false"  ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the WhiteboardChatServer.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the whiteboard message.
+				</Parameter>
+				<Parameter Name="Mode" DataType="IntegerType">
+					The type of line to be drawn.
+				</Parameter>
+				<Parameter Name="StartLocation" DataType="LocationType">
+					The starting location of the line.
+				</Parameter>
+				<Parameter Name="EndLocation" DataType="LocationType">
+					The end location of the line.
+				</Parameter>
+				<Parameter Name="Width" DataType="DoubleType">
+					The width of the line.
+				</Parameter>
+				<Parameter Name="OriginalScale" DataType="DoubleType">
+					The scale the map was set at when this shape was drawn.
+				</Parameter>
+				<Parameter Name="Color" DataType="IntegerType">
+					The color of the line.
+				</Parameter>
+				<Parameter Name="Text" DataType="StringType">
+					Text to include on line.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="BeginWhiteboardLineRequest" Replay="true"  ForkReplay="true">
+				<Description>
+					Sent by a client GUI when the user begins drawing a line.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the whiteboard message.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardLine" Replay="true">
+				<Description>
+					Sent by the WhiteboardServer to a client GUI or agent.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					An ID unique to this whiteboard room for this whiteboard object.
+				</Parameter>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the whiteboard message.
+				</Parameter>
+				<Parameter Name="Mode" DataType="IntegerType">
+					The type of line to be drawn.
+				</Parameter>
+				<Parameter Name="StartLocation" DataType="LocationType">
+					The starting location of the line.
+				</Parameter>
+				<Parameter Name="EndLocation" DataType="LocationType">
+					The end location of the line.
+				</Parameter>
+				<Parameter Name="Width" DataType="DoubleType">
+					The width of the line.
+				</Parameter>
+				<Parameter Name="OriginalScale" DataType="DoubleType">
+					The scale the map was set at when this shape was drawn.
+				</Parameter>
+				<Parameter Name="Color" DataType="IntegerType">
+					The color of the line.
+				</Parameter>
+				<Parameter Name="Text" DataType="StringType">
+					Text to include on line.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardClearRequest" Replay="false"  ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the WhiteboardChatServer.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the whiteboard message.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardClear" Replay="true">
+				<Description>
+					Sent by the WhiteboardServer to a client GUI or agent.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the chat message.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardClearAllRequest" Replay="false"  ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the WhiteboardChatServer.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the whiteboard message.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardClearAll" Replay="true">
+				<Description>
+					Sent by the WhiteboardServer to a client GUI or agent.
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the chat message.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardUndoRequest" Replay="false"  ForkReplay="true">
+				<Description>
+					Sent by a client GUI or agent to the WhiteboardChatServer.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					An ID unique to this whiteboard room for this whiteboard object.
+				</Parameter>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the whiteboard message.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardUndo" Replay="true">
+				<Description>
+					Sent by the WhiteboardServer to a client GUI or agent.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					An ID unique to this whiteboard room for this whiteboard object.
+				</Parameter>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the chat message.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardSyncScreenViewRequest" Replay="false"  ForkReplay="true">
+				<Description>Sent by a client GUI or agent to the WhiteboardChatServer.</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the whiteboard message.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the user to sync your view with;
+				</Parameter>
+				<Parameter Name="WhiteboardID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="WhiteboardSyncScreenView" Replay="false">
+				<Description>Sent by the WhiteboardServer to a client GUI or agent.</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the whiteboard message.
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					The name of the user to sync your view with;
+				</Parameter>
+				<Parameter Name="WhiteboardID" DataType="StringType">
+					The name of the WhiteboardRoom;
+				</Parameter>
+			</EventType>
+			<EventType Name="TransferObjectRequest"  ForkReplay="true">
+				<Description>
+					Sent to indicate that a client has requested that an asset transferred to a different DecisionMaker
+				</Description>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker making the request.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The unique id of the asset being transferred.
+				</Parameter>
+				<Parameter Name="RecipientID" DataType="StringType">
+					The unique id of the new owner.
+				</Parameter>
+				<Parameter Name="State" DataType="StringType">
+					The current state of the object.
+				</Parameter>
+			</EventType>
+			<EventType Name="TextChat" Replay="true">
+				<Description>
+					Sent by the TextChatServer to a client GUI or agent.
+				</Description>
+				<Parameter Name="ChatBody" DataType="StringType">
+					The chat message to be sent.
+				</Parameter>
+				<Parameter Name="UserID" DataType="StringType">
+					The unique id of the decision maker sending the chat message. If a System message, == "SYSTEM".
+				</Parameter>
+				<Parameter Name="TargetUserID" DataType="StringType">
+					ALL for a global message, a specific team name for a certain team, or an individual user's unique ID for only that user. Each client needs to know which to receive, and which to drop.
+				</Parameter>
+			</EventType>
+			<EventType Name="SystemMessage" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the SimCore or Controller to report a message to a client GUI or agent.
+				</Description>
+				<Parameter Name="PlayerID" DataType="StringType">
+					The decision maker the message is being sent to.
+				</Parameter>
+				<Parameter Name="Message" DataType="StringType">
+					The content of the message.
+				</Parameter>
+				<Parameter Name="TextColor" DataType="IntegerType">
+					The color that the message should be displayed as.
+				</Parameter>
+				<Parameter Name="DisplayStyle" DataType="StringType">
+					Use "DEFAULT" for whatever the client considers the default, "POP" to request a popup alert.
+				</Parameter>
+			</EventType>
+			<EventType Name="AuthenticationRequest" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Part of the client GUI initialization handshake.
+				</Description>
+				<Parameter Name="Username" DataType="StringType">
+					The username the player is logging in with.
+				</Parameter>
+				<Parameter Name="Password" DataType="StringType">
+					The hashed password.
+				</Parameter>
+				<Parameter Name="TerminalID" DataType="StringType">
+					The id of the machine that is logging in.
+				</Parameter>
+			</EventType>
+			<EventType Name="AuthenticationResponse" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Part of the client GUI initialization handshake.
+				</Description>
+				<Parameter Name="Success" DataType="BooleanType">
+					True if authentication accepted.
+				</Parameter>
+				<Parameter Name="Message" DataType="StringType">
+					Message displayed to user
+				</Parameter>
+				<Parameter Name="TerminalID" DataType="StringType">
+					The intended terminal ID.
+				</Parameter>
+			</EventType>
+			<EventType Name="HandshakeGUIRegister" Replay="false">
+				<Description>
+					Part of the client GUI initialization handshake.
+				</Description>
+				<Parameter Name="TerminalID" DataType="StringType">
+					The id of the machine that is logging in.
+				</Parameter>
+			</EventType>
+			<EventType Name="HandshakeAvailablePlayers" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Part of the client GUI initialization handshake.
+				</Description>
+				<Parameter Name="TargetTerminalID" DataType="StringType">
+					The id of the machine that this message is being sent to.
+				</Parameter>
+				<Parameter Name="AvailablePlayers" DataType="StringListType">
+					A list of decision maker ids that haven't been selected by a player yet.
+				</Parameter>
+				<Parameter Name="TakenPlayers" DataType="StringListType">
+					outdated parameter.
+				</Parameter>
+				<Parameter Name="Players" DataType="StringListType">
+					A list of all the players in the scenario.
+				</Parameter>
+			</EventType>
+			<EventType Name="HandshakeGUIRoleRequest" Replay="false">
+				<Description>
+					Part of the client GUI initialization handshake.
+				</Description>
+				<Parameter Name="PlayerID" DataType="StringType">
+					A decision maker id.
+				</Parameter>
+				<Parameter Name="TerminalID" DataType="StringType">
+					A machine id.
+				</Parameter>
+				<Parameter Name="LoginType" DataType="StringType">
+					Can be FULL or OBSERVER.
+				</Parameter>
+			</EventType>
+			<EventType Name="HandshakeInitializeGUI" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Part of the client GUI initialization handshake.
+				</Description>
+				<Parameter Name="PlayerID" DataType="StringType">
+					A decision maker id.
+				</Parameter>
+				<Parameter Name="TerminalID" DataType="StringType">
+					A machine id.
+				</Parameter>
+				<Parameter Name="ScenarioInfo" DataType="StringType">
+					PLACEHOLDER
+				</Parameter>
+				<Parameter Name="ScenarioName" DataType="StringType">
+					The Scenario's name.
+				</Parameter>
+				<Parameter Name="ScenarioDescription" DataType="StringType">
+					The Scenario's description.
+				</Parameter>
+				<Parameter Name="MapName" DataType="StringType">
+					The Map's file name. Right now, this should be Map.jpg
+				</Parameter>
+				<Parameter Name="UTMNorthing" DataType="DoubleType">
+					The map's northing value.
+				</Parameter>
+				<Parameter Name="UTMEasting" DataType="DoubleType">
+					The map's easting value.
+				</Parameter>
+				<Parameter Name="HorizontalPixelsPerMeter" DataType="DoubleType">
+					The map's Horizontal Pixels Per Meter value.
+				</Parameter>
+				<Parameter Name="VerticalPixelsPerMeter" DataType="DoubleType">
+					The map's Vertical Pixels Per Meter value.
+				</Parameter>
+				<Parameter Name="PlayerBrief" DataType="StringType">
+					Briefing for the specified player.
+				</Parameter>
+				<Parameter Name="IconLibrary" DataType="StringType">
+					The image library dll for this scenario.
+				</Parameter>
+				<Parameter Name="VoiceChatEnabled" DataType="BooleanType">
+					If this value is false, then the voice chat menu option will be disabled.
+				</Parameter>
+				<Parameter Name="VoiceChatServerName" DataType="StringType">
+					The server name of the conaito voice server.
+				</Parameter>
+				<Parameter Name="VoiceChatServerPort" DataType="IntegerType">
+					The port number of the conaito voice server.
+				</Parameter>
+				<Parameter Name="VoiceChatUserPassword" DataType="StringType">
+					The password for clients to log into the conaito voice server.
+				</Parameter>
+				<Parameter Name="IsObserver" DataType="BooleanType">
+					Is this player allowed to interact with objects on the screen.
+				</Parameter>
+				<Parameter Name="IsForkReplay" DataType="BooleanType">
+					Are we in fork replay state at the time of login.
+				</Parameter>
+				<Parameter Name="DefaultDisplayLabels" DataType="StringType">
+					Does the Client display asset labels by default.  true, false, disabled.
+				</Parameter>
+				<Parameter Name="DefaultDisplayTags" DataType="StringType">
+					Does the Client display asset Tags by default. true, false, top, bottom, overlay, disabled.
+				</Parameter>
+			</EventType>
+			<EventType Name="HandshakeInitializeGUIDone" Replay="false">
+				<Description>
+					Part of the client GUI initialization handshake.
+				</Description>
+				<Parameter Name="PlayerID" DataType="StringType">
+					A decision maker id.
+				</Parameter>
+				<Parameter Name="LoginType" DataType="StringType">
+					Can be FULL or OBSERVER.
+				</Parameter>
+			</EventType>
+			<EventType Name="ClientRemoveObject" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the ViewPro to a client GUI to announce that an object should be removed from
+					the playfield and forgotten about.
+				</Description>
+				<Parameter Name="TargetPlayer" DataType="StringType">
+					A decision maker id.
+				</Parameter>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The id of the object.
+				</Parameter>
+			</EventType>
+			<EventType Name="ExternalApp_Message" Replay="true">
+				<Description>
+					Used by an external application or agent to communicate with another external
+					application.  Has no effect on the DDD simulation.
+				</Description>
+				<Parameter Name="AppName" DataType="StringType">
+					The name of the external app.  This should always be used so
+					that two external apps don't interfere with each other.
+				</Parameter>
+				<Parameter Name="Message" DataType="AttributeCollectionType">
+					Whatever data the apps want to exchange.
+				</Parameter>
+			</EventType>
+			<EventType Name="ExternalApp_Log" Replay="true">
+				<Description>
+					Used by an external application or agent to inject data into the DDD data log.
+				</Description>
+				<Parameter Name="AppName" DataType="StringType">
+					The name of the external app.  This should always be used so
+					that two external apps don't interfere with each other.
+				</Parameter>
+				<Parameter Name="LogEntry" DataType="StringType">
+					The content of the log entry in whatever format the app wants to put it in.
+				</Parameter>
+			</EventType>
+			<EventType Name="DisconnectDecisionMaker" Replay="false">
+				<Description>
+					Sent by client GUI to Server to announce that it is disconnecting.
+				</Description>
+				<Parameter Name="DecisionMakerID" DataType="StringType">
+					The ID of the DM who is disconnecting from the system.
+				</Parameter>
+			</EventType>
+			<EventType Name="DisconnectTerminal" Replay="false">
+				<Description>
+					An internal server event to announce that a client GUI has lost a connection.
+				</Description>
+				<Parameter Name="TerminalID" DataType="StringType">
+					The TerminalID of the DM to be removed.
+				</Parameter>
+			</EventType>
+			<EventType Name="ExternalApp_SimStart" Replay="false">
+				<Description>
+					Sent to alert external applications and agents that the simulation has started.
+				</Description>
+			</EventType>
+			<EventType Name="ExternalApp_SimStop" Replay="false">
+				<Description>
+					Sent to alert external applications and agents that the simulation has stopped.
+				</Description>
+			</EventType>
+			<EventType Name="LoadScenarioRequest" Replay="false">
+				<Description>
+					Sent to request that a scenario be loaded.
+				</Description>
+				<Parameter Name="ScenarioPath" DataType="StringType">
+					The path to the scenario file on the server machine.
+				</Parameter>
+				<Parameter Name="GroupName" DataType="StringType">
+					The group name used for tagging output files.
+				</Parameter>
+				<Parameter Name="OutputLogDir" DataType="StringType">
+					That directory that the output log will be saved to.
+				</Parameter>
+			</EventType>
+			<EventType Name="StopScenarioRequest" Replay="false">
+				<Description>
+					Sent to request that the scenario be stopped.
+				</Description>
+			</EventType>
+			<EventType Name="PauseScenario" Replay="false">
+				<Description>
+					Sent to announce that the simlation has been paused.
+				</Description>
+			</EventType>
+			<EventType Name="ResumeScenario" Replay="false">
+				<Description>
+					Sent to announce that the simulation is being restarted after a pause.
+				</Description>
+			</EventType>
+			<EventType Name="PauseScenarioRequest" Replay="false">
+				<Description>
+					Sent to the server from the agent API to request a scenario pause.
+				</Description>
+			</EventType>
+			<EventType Name="ResumeScenarioRequest" Replay="false">
+				<Description>
+					Sent to the server from the agent API to request a scenario resume.
+				</Description>
+			</EventType>
+			<EventType Name="StopScenario" Replay="false">
+				<Description>
+					Sent to announce that a simulation has been stopped.
+				</Description>
+			</EventType>
+			<EventType Name="ServerState" Replay="false">
+				<Description>
+					Sent by the server to report its current state.
+				</Description>
+				<Parameter Name="MessageType" DataType="StringType">
+					The the new state of the server
+				</Parameter>
+				<Parameter Name="MessageText" DataType="StringType">
+					Any error messages or extra info
+				</Parameter>
+			</EventType>
+			<EventType Name="StopReplay" Replay="false">
+				<Description>
+					Sent to announce that a replay has been stopped.
+				</Description>
+			</EventType>
+			<EventType Name="ForkReplayStarted" Replay="false">
+				<Description>
+					Sent to announce that we are currently replaying, and all user events should be blocked in the UI.
+				</Description>
+			</EventType>
+			<EventType Name="ForkReplayFinished" Replay="false">
+				<Description>
+					Sent to announce that the replay section of a fork-replay is finished and we are now in regular play mode.
+				</Description>
+			</EventType>
+			<EventType Name="GameSpeedRequest" Replay="false">
+				<Description>
+					Sent to request that the simulation's speed factor should be changed.
+				</Description>
+				<Parameter Name="SpeedFactor" DataType="DoubleType">
+					If speed factor == 5, 1 sim second = 1/5 real seconds.
+				</Parameter>
+			</EventType>
+			<EventType Name="GameSpeed" Replay="false">
+				<Description>
+					Sent to announce that the simulation's speed factor has been changed.
+				</Description>
+				<Parameter Name="SpeedFactor" DataType="DoubleType">
+					If speed factor == 5, 1 sim second = 1/5 real seconds.
+				</Parameter>
+			</EventType>
+			<EventType Name="PlayerControl" Replay="true" ForkReplay="true">
+				<Description>
+					Sent to announce whether a decision maker is being played by a human or by the computer.
+					If the decision maker is played by the computer, self-defense will be activated for objects
+					under that decision maker's control.
+				</Description>
+				<Parameter Name="DecisionMakerID" DataType="StringType">
+					The id of the decision maker.
+				</Parameter>
+				<Parameter Name="ControlledBy" DataType="StringType">
+					Either HUMAN or COMPUTER.
+				</Parameter>
+			</EventType>
+			<EventType Name="RequestChatRoomCreate" Replay="false" SimCoreSubscribe="false"  ForkReplay="true">
+				<Description>
+					Sent by client GUI to Controller to request that a chat room be created.
+				</Description>
+				<Parameter Name="RoomName" DataType="StringType">
+					The name of the chat room.
+				</Parameter>
+				<Parameter Name="MembershipList" DataType="StringListType">
+					The decision makers that are members of the room.
+				</Parameter>
+				<Parameter Name="SenderDM_ID" DataType="StringType">
+					The id of the decision maker that created the chat room.
+				</Parameter>
+			</EventType>
+			<EventType Name="CreateChatRoom" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by Controller to Text Chat Server 
+				</Description>
+				<Parameter Name="RoomName" DataType="StringType">
+					The name of the chat room.
+				</Parameter>
+				<Parameter Name="MembershipList" DataType="StringListType">
+					The decision makers that are members of the room.
+				</Parameter>
+				<Parameter Name="SenderDM_ID" DataType="StringType">
+					The id of the decision maker that created the chat room.
+				</Parameter>
+			</EventType>
+			<EventType Name="AddToChatRoom" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the  controller to the chat server request that a decision maker
+					be added to a chat room.
+				</Description>
+				<Parameter Name="RoomName" DataType="StringType">
+					The name of the chat room.
+				</Parameter>
+				<Parameter Name="TargetPlayerID" DataType="StringType">
+					The decision maker that that is trying to join the chat room.
+				</Parameter>
+			</EventType>
+			<EventType Name="RequestCloseChatRoom" Replay="true" SimCoreSubscribe="false"  ForkReplay="true">
+				<Description>
+					Sent by Client GUI to Controller to request that a Chat Room be closed
+				</Description>
+				<Parameter Name="RoomName" DataType="StringType">
+					The name of the chat room.
+				</Parameter>
+				<Parameter Name="SenderDM_ID" DataType="StringType">
+					The id of the decision maker that wants to close the chat room.
+				</Parameter>
+			</EventType>
+			<EventType Name="CloseChatRoom" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the Controller to the TextChatServer to request that a chat room be closed.
+				</Description>
+				<Parameter Name="RoomName" DataType="StringType">
+					The name of the chat room.
+				</Parameter>
+			</EventType>
+			<EventType Name="RequestWhiteboardRoomCreate" Replay="false" SimCoreSubscribe="false"  ForkReplay="true">
+				<Description>
+					Sent by client GUI to Controller to request that a whiteboard room be created.
+				</Description>
+				<Parameter Name="RoomName" DataType="StringType">
+					The name of the whiteboard room.
+				</Parameter>
+				<Parameter Name="MembershipList" DataType="StringListType">
+					The decision makers that are members of the room.
+				</Parameter>
+				<Parameter Name="SenderDM_ID" DataType="StringType">
+					The id of the decision maker that created the whiteboard room.
+				</Parameter>
+			</EventType>
+			<EventType Name="CreateWhiteboardRoom" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by Whiteboard Server to the clients
+				</Description>
+				<Parameter Name="RoomName" DataType="StringType">
+					The name of the whiteboard room.
+				</Parameter>
+				<Parameter Name="MembershipList" DataType="StringListType">
+					The decision makers that are members of the room.
+				</Parameter>
+				<Parameter Name="SenderDM_ID" DataType="StringType">
+					The id of the decision maker that created the whiteboard room.
+				</Parameter>
+			</EventType>
+			<EventType Name="CreateVoiceChannel" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by Controller to Voice Server 
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="MembershipList" DataType="StringListType">
+					The decision makers that are members of the room.
+				</Parameter>
+			</EventType>
+			<EventType Name="JoinVoiceChannel" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Event sent from VoiceServer when a client requests to begin listening/speaking on a specific voice channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">Name of the channel the DM is now participating in</Parameter>
+				<Parameter Name="DecisionMakerID" DataType="StringType">ID of the DM that is now participating in the channel</Parameter>
+			</EventType>
+			<EventType Name="RequestJoinVoiceChannel" Replay="false" SimCoreSubscribe="false"  ForkReplay="true">
+				<Description>
+					Event sent from VoiceClient to VoiceServer when a client requests to begin listening/speaking on a specific voice channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">Name of the channel the DM wants to participate in</Parameter>
+				<Parameter Name="DecisionMakerID" DataType="StringType">ID of the DM that is now participating in the channel</Parameter>
+			</EventType>
+			<EventType Name="LeaveVoiceChannel" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Event sent from VoiceServer when a client requests to stop listening/speaking on a specific voice channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">Name of the channel the DM has stopped participating in</Parameter>
+				<Parameter Name="DecisionMakerID" DataType="StringType">ID of the DM that is no longer participating in the channel</Parameter>
+			</EventType>
+			<EventType Name="RequestLeaveVoiceChannel" Replay="false" SimCoreSubscribe="false"  ForkReplay="true">
+				<Description>
+					Event sent from VoiceClient to VoiceServer when a client requests to stop listening/speaking on a specific voice channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">Name of the channel the DM has stopped participating in</Parameter>
+				<Parameter Name="DecisionMakerID" DataType="StringType">ID of the DM that is no longer participating in the channel</Parameter>
+			</EventType>
+			<EventType Name="AddToVoiceChannel" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by the  controller to the voice server request that a decision maker
+					be added to a channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="NewAccessor" DataType="StringType">
+					The decision maker that that is trying to join the chat room.
+				</Parameter>
+			</EventType>
+			<EventType Name="RemoveFromVoiceChannel" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by the  controller to the voice server request that a decision maker
+					be added to a channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="DeletedPlayer" DataType="StringType">
+					The decision maker that that is being removed from the chat room.
+				</Parameter>
+			</EventType>
+			<EventType Name="CloseVoiceChannel" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by the Controller to the Voice Server to request that a channel be closed.
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+			</EventType>
+			<EventType Name="RequestStartedTalking" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the client GUI to the voice server to indicate that a particular DM wishes to speak on the channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="Speaker" DataType="StringType">
+				</Parameter>
+			</EventType>
+			<EventType Name="StartedTalking" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by the voice server to the client GUI to indicate that a particular DM wishes to speak on the channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="Speaker" DataType="StringType">
+				</Parameter>
+			</EventType>
+			<EventType Name="PlayVoiceMessage" Replay="true">
+				<Description>Insert a voice message from a file</Description>
+				<Parameter Name="Channel" DataType="StringType">Channel that will play the message</Parameter>
+				<Parameter Name="File" DataType="StringType">Location of the file containing the message</Parameter>
+			</EventType>
+			<EventType Name="PlayVoiceMessageToUser" Replay="true">
+				<Description>Insert a voice message from a file</Description>
+				<Parameter Name="DecisionMakerID" DataType="StringType">User that will hear the message</Parameter>
+				<Parameter Name="File" DataType="StringType">Location of the file containing the message</Parameter>
+			</EventType>
+			<EventType Name="RequestStoppedTalking" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the client GUI to the voice server to indicate that a particular DM wishes to stop speaking on the channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="Speaker" DataType="StringType">
+				</Parameter>
+			</EventType>
+			<EventType Name="StoppedTalking" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by the voice server to the client GUI to indicate that a particular DM wishes has stopped talking
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="Speaker" DataType="StringType">
+				</Parameter>
+			</EventType>
+			<EventType Name="RequestMuteUser" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the client GUI to mute a user on a particular voice channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="Speaker" DataType="StringType">
+				</Parameter>
+			</EventType>
+			<EventType Name="MuteUser" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by the voice server to the client GUI to mute a user on a particular channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="Speaker" DataType="StringType">
+				</Parameter>
+			</EventType>
+			<EventType Name="RequestUnmuteUser" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the client GUI to unmute a user on a particular voice channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="Speaker" DataType="StringType">
+				</Parameter>
+			</EventType>
+			<EventType Name="UnmuteUser" Replay="true" SimCoreSubscribe="false">
+				<Description>
+					Sent by the voice server to the client GUI to unmute a user on a particular channel
+				</Description>
+				<Parameter Name="ChannelName" DataType="StringType">
+					The name of the channel
+				</Parameter>
+				<Parameter Name="Speaker" DataType="StringType">
+				</Parameter>
+			</EventType>
+			<EventType Name="ScoreUpdate" Replay="false">
+				<Description>
+					Sent by SimCore to report a score change.
+				</Description>
+				<Parameter Name="DecisionMakerID" DataType="StringType">
+					The id of the decision maker.
+				</Parameter>
+				<Parameter Name="ScoreName" DataType="StringType">
+					The name of the score.
+				</Parameter>
+				<Parameter Name="ScoreValue" DataType="DoubleType">
+					The current value of the score.
+				</Parameter>
+			</EventType>
+			<EventType Name="ExternalEmailReceived" Replay="false" SimCoreSubscribe="false">
+				<Description>
+					Sent by the DDDEmailBridge when an email is sent to the DDD.
+					This exists for the purpose of logging.
+				</Description>
+				<Parameter Name="FromAddress" DataType="StringType">
+					The email address of the sender.
+				</Parameter>
+				<Parameter Name="ToAddresses" DataType="StringListType">
+					The list of email addresses the message was sent to.
+				</Parameter>
+				<Parameter Name="WallClockTime" DataType="StringType">
+					A DateTime string of when the email server received the email.
+				</Parameter>
+				<Parameter Name="Subject" DataType="StringType">
+					The subject of the email.
+				</Parameter>
+				<Parameter Name="Body" DataType="StringType">
+					The body of the email.
+				</Parameter>
+				<Parameter Name="Attachments" DataType="StringListType">
+					A list of paths to the attachment files.
+				</Parameter>
+			</EventType>
+			<EventType Name="ActiveRegionUpdate" Replay="true">
+				<Description>
+					Sent by ScenCon to update whether an ActiveRegion is active or visible.
+				</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The id of the region.
+				</Parameter>
+				<Parameter Name="IsVisible" DataType="BooleanType">
+					Is the region visible to players.
+				</Parameter>
+				<Parameter Name="IsActive" DataType="BooleanType">
+					Does the region modify object behavior.
+				</Parameter>
+			</EventType>
+			<EventType Name="EngramValue" Replay="true">
+				<Description>
+					Sent by ScenCon to update an engram value.
+				</Description>
+				<Parameter Name="EngramName" DataType="StringType">
+					The name of the engram.
+				</Parameter>
+				<Parameter Name="SpecificUnit" DataType="StringType">
+					If present, the one unit to which this engram value change refers
+				</Parameter>
+				<Parameter Name="EngramValue" DataType="StringType">
+					A string representation of the engram value.
+				</Parameter>
+				<Parameter Name="EngramDataType" DataType="StringType">
+					The name of the data type of the engram value.
+				</Parameter>
+			</EventType>
+			<EventType Name="ClientSideAssetTransferAllowed" Replay="true">
+				<Description>
+					Sent by ScenCon to tell client if clients can transfer their assets
+				</Description>
+				<Parameter Name="EnableAssetTransfer" DataType="BooleanType">
+					True if assets can be transferred
+				</Parameter>
+			</EventType>
+			<EventType Name="ClientSideRangeRingDisplayLevel" Replay="true">
+				<Description>
+					Sent by ScenCon to inform the SimCore about how to formulate range ring info.
+				</Description>
+				<Parameter Name="Value" DataType="StringType">Enum between Disabled, Private, SharedSensorNetwork, Full</Parameter>
+			</EventType>
+			<EventType Name="ChangeTagRequest" Replay="true"  ForkReplay="true">
+				<Description>
+					Sent from client to ScenCon to request a change on a unit's tag			
+				</Description>
+				<Parameter Name="UnitID" DataType="StringType">
+					The unit whose tag is to be changed
+				</Parameter>
+				<Parameter Name="DecisionMakerID" DataType="StringType">
+					The decision maker requesting the tag change
+				</Parameter>
+				<Parameter Name="Tag" DataType="StringType">
+					The text for the teg
+				</Parameter>
+			</EventType>
+			<EventType Name="UpdateTag">
+				<Parameter Name="UnitID" DataType="StringType">
+					The unit whose tag is being changed			
+				</Parameter>
+				<Parameter Name="Tag" DataType="StringType">
+					The new tag value			
+				</Parameter>
+				<Parameter Name="TeamMembers" DataType="StringListType">
+					All the players who will see the new tag 
+				</Parameter>
+			</EventType>
+			<EventType Name="ForceUpdateObjectAttribute" Replay="true" ForkReplay="true">
+				<Parameter Name="ObjectID" DataType="StringType">ID of the object being updated</Parameter>
+				<Parameter Name="AttributeName" DataType="StringType">Name of the attribute being updated</Parameter>
+				<Parameter Name="AttributeValue" DataType="WrapperType">This is a generic data type, which the simulators should know how to cast.</Parameter>
+				<Parameter Name="UpdateType" DataType="StringType">This is for bookkeeping, either SIMULATOR or AGENT to determine who sent the event.</Parameter>
+			</EventType>
+			<EventType Name="CancelEngagement" Replay="true" ForkReplay="true">
+				<Parameter Name="AttackingObjectID" DataType="StringType">ID of the attacking object</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">ID of the target object being engaged</Parameter>
+				<Parameter Name="CapabilityName" DataType="StringType">Capability being applied to the target</Parameter>			
+			</EventType>
+			<EventType Name="UpdateAttackTimeWindow" Replay="true" ForkReplay="true">
+				<Parameter Name="AttackingObjectID" DataType="StringType">ID of the attacking object</Parameter>
+				<Parameter Name="TargetObjectID" DataType="StringType">ID of the target object</Parameter>
+				<Parameter Name="CapabilityName" DataType="StringType">Capability being applied</Parameter>	
+				<Parameter Name="NewAttackTimeWindow" DataType="IntegerType">This 'window' of time is how long the attack should last for (in milliseconds)</Parameter>
+			</EventType>
+			<EventType Name="DynamicCreate" Replay="true" ForkReplay="true">
+				<Parameter Name="ObjectID" DataType="StringType">ID of the newly created object</Parameter>
+				<Parameter Name="Kind" DataType="StringType">The species of the object</Parameter>
+				<Parameter Name="Owner" DataType="StringType">The initial owner of the object</Parameter>	
+			</EventType>
+			<EventType Name="DynamicReveal" Replay="true" ForkReplay="true">
+				<Parameter Name="ObjectID" DataType="StringType">ID of the newly created object</Parameter>
+				<Parameter Name="RevealTime" DataType="IntegerType">The time that the object should be revealed</Parameter>
+				<Parameter Name="InitialLocation" DataType="LocationType">The location that the object starts at</Parameter>
+				<Parameter Name="InitialState" DataType="StringType">The state the object should start int</Parameter>
+			</EventType>
+			<EventType Name="InitializeClassifications" Replay="true">
+				<Parameter Name="Classifications" DataType="StringListType">The set of possible classifications within the scenario</Parameter>
+			</EventType>
+			<EventType Name="SEAMATE_TrackAdded" Log="true" SimCoreSubscribe="false">
+				<Description>A DM Using the decision aid has added an object to their Track list</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The object ID of the user's newly selected object.  If this is an empty string, then they have no object selected.
+				</Parameter>
+				<Parameter Name="UserID" DataType="StringType">
+					The DM ID of the user who is selecting an object.
+				</Parameter>
+			</EventType>
+			<EventType Name="SendTrackRemovedEvent" Log="true" SimCoreSubscribe="false">
+				<Description>A DM Using the decision aid has removed an object from their Track list</Description>
+				<Parameter Name="ObjectID" DataType="StringType">
+					The object ID of the user's selected object.  If this is an empty string, then they have no object selected.
+				</Parameter>
+				<Parameter Name="UserID" DataType="StringType">
+					The DM ID of the user who is removing an object.
+				</Parameter>
+			</EventType>
+		</EventType>
+	</EventModel>
+	<SimulatorModel>
+		<Simulator Name="Motion">
+			<ObjectName Name="PhysicalObject">
+				<AttributeName Name="ID" Subscribe="true" Publish="false"> </AttributeName>
+				<AttributeName Name="StateTable" Subscribe="true" Publish="false"> </AttributeName>
+				<AttributeName Name="Location" Subscribe="true" Publish="true"/>
+				<AttributeName Name="Velocity" Subscribe="true" Publish="true"/>
+				<AttributeName Name="MaximumSpeed" Subscribe="true" Publish="true"/>
+				<AttributeName Name="Throttle" Subscribe="true" Publish="true"/>
+				<AttributeName Name="DestinationLocation" Subscribe="true" Publish="true"/>
+			</ObjectName>
+			<EventName Name="NewObject" Publish="false" Subscribe="true"/>
+			<EventName Name="RevealObject" Publish="false" Subscribe="true"/>
+			<EventName Name="MoveObject" Publish="false" Subscribe="true"/>
+			<EventName Name="MoveDone" Publish="true" Subscribe="false"/>
+			<EventName Name="TimeTick" Publish="false" Subscribe="true"/>
+			<EventName Name="StateChange" Publish="false" Subscribe="true"/>
+			<Description>
+				It modifies the location and velocity based on the
+				maximum speed, throttle, and destination.
+				As each time tick comes in, it updates the location.
+			</Description>
+		</Simulator>
+		<Simulator Name="FuelHandling">
+			<ObjectName Name="PhysicalObject">
+				<AttributeName Name="ID" Subscribe="true" Publish="false"> </AttributeName>
+				<AttributeName Name="StateTable" Subscribe="true" Publish="false"> </AttributeName>
+				<AttributeName Name="Throttle" Subscribe="true" Publish="false"/>
+				<AttributeName Name="FuelCapacity" Subscribe="true" Publish="true"/>
+				<AttributeName Name="FuelAmount" Subscribe="true" Publish="true"/>
+				<AttributeName Name="FuelConsumptionRate" Subscribe="true" Publish="true"/>
+				<AttributeName Name="FuelDepletionState" Subscribe="true" Publish="true"/>
+			</ObjectName>
+			<EventName Name="NewObject" Publish="false" Subscribe="true"/>
+			<EventName Name="RevealObject" Publish="false" Subscribe="true"/>
+			<EventName Name="TimeTick" Publish="false" Subscribe="true"/>
+			<EventName Name="StateChange" Publish="false" Subscribe="true"/>
+			<Description>
+				This maintains an object's fuel attributes and sends a "Dead" state change
+				if the object runs out of fuel.
+			</Description>
+		</Simulator>
+		<Simulator Name="AttackProcessor">
+			<ObjectName Name="PhysicalObject">
+				<AttributeName Name="ID" Subscribe="true" Publish="false"> </AttributeName>
+				<AttributeName Name="StateTable" Subscribe="true" Publish="false"> </AttributeName>
+				<AttributeName Name="Location" Subscribe="true" Publish="false"/>
+				<AttributeName Name="Capability" Subscribe="true" Publish="true"/>
+				<AttributeName Name="Vulnerability" Subscribe="true" Publish="true"/>
+			</ObjectName>
+			<EventName Name="RandomSeed" Publish="false" Subscribe="true"/>
+			<EventName Name="NewObject" Publish="false" Subscribe="true"/>
+			<EventName Name="AttackObject" Publish="false" Subscribe="true"/>
+			<EventName Name="StateChange" Publish="true" Subscribe="true"/>
+			<Description>
+				This simulator listens for attack events, determines the result of an attack,
+				and sends out a state change if necessary.
+			</Description>
+		</Simulator>
+		<Simulator Name="StaticAttribute">
+			<ObjectName Name="BaseObject">
+				<AttributeName Name="ID" Subscribe="true" Publish="false"> </AttributeName>
+			</ObjectName>
+			<ObjectName Name="PhysicalObject">
+				<AttributeName Name="ObjectName" Subscribe="true" Publish="true"/>
+				<AttributeName Name="OwnerID" Subscribe="true" Publish="true"/>
+				<AttributeName Name="ClassName" Subscribe="true" Publish="true"/>
+				<AttributeName Name="Size" Subscribe="true" Publish="true"/>
+				<AttributeName Name="State" Subscribe="true" Publish="true"/>
+				<AttributeName Name="StateTable" Subscribe="true" Publish="true"/>
+			</ObjectName>
+			<EventName Name="NewObject" Publish="false" Subscribe="true"/>
+			<EventName Name="StateChange" Publish="false" Subscribe="true"/>
+			<Description>
+				The static attribute simulator owns all the attributes not owned by other simulators
+				and is responsible for changing them when a state change occurs.
+			</Description>
+		</Simulator>
+		<Simulator Name="BlackboardManager">
+			<ObjectName Name="PhysicalObject">
+				<AttributeName Name="ID" Publish="true" Subscribe="true"/>
+			</ObjectName>
+			<EventName Name="NewObject" Publish="false" Subscribe="true"/>
+			<Description>
+				The blackboard manager listens for new object events.  When it gets one,
+				it adds a new object to the blackboard and owns its ID attribute.
+			</Description>
+		</Simulator>
+		<Simulator Name="ViewPro">
+			<ObjectName Name="PhysicalEntity">
+				<AttributeName Name="ID" Subscribe="true" Publish="false"> </AttributeName>
+				<AttributeName Name="Location" Subscribe="true" Publish="false"/>
+				<AttributeName Name="Velocity" Subscribe="true" Publish="false"/>
+				<AttributeName Name="MaximumSpeed" Subscribe="true" Publish="false"/>
+				<AttributeName Name="Throttle" Subscribe="true" Publish="false"/>
+				<AttributeName Name="DestinationLocation" Subscribe="true" Publish="false"/>
+				<AttributeName Name="InitialTag" Subscribe="true" Publish="false"/>
+			</ObjectName>
+			<EventName Name="ViewProUpdate" Subscribe="false" Publish="true"/>
+			<EventName Name="TimeTick" Publish="false" Subscribe="true"/>
+			<EventName Name="UpdateTag" Publish="false" Subscribe="true"/>
+			<Description>
+				The ViewPro watches all the attributes and sends ViewProUpdate
+				events whenever an attribute changes.
+			</Description>
+		</Simulator>
+	</SimulatorModel>
+	<SimulationExecutionModel UpdateFrequency="1000">
+		<Simulator>
+			<SimulatorName>BlackboardManager</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.BlackboardManager.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>StaticAttribute</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.StaticAttribute.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>DockingProcessor</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.DockingProcessor.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>FuelHandling</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.FuelHandling.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>Motion</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.Motion.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>CollisionDetection</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.CollisionDetection.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>SelfDefense</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.SelfDefense.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>AttackProcessor</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.AttackProcessor.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>Scoring</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.Scoring.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>DynamicRegion</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.DynamicRegion.dll</DLLName>
+		</Simulator>
+		<Simulator>
+			<SimulatorName>ViewPro</SimulatorName>
+			<DLLName>Aptima.Asim.DDD.Simulators.ViewPro.dll</DLLName>
+		</Simulator>
+
+	</SimulationExecutionModel>
+</SimulationModelRoot>

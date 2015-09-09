@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimModelDocGen", "SimModelDocGen\SimModelDocGen.csproj", "{CC9BDE43-AA39-4B11-BA4D-BB1C1EB13EAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulationModelTools", "..\CommonComponents\SimulationModelTools\SimulationModelTools.csproj", "{A4B74663-DF80-4967-ABEF-F1DDE0E08EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulationModelCodeGen", "..\CommonComponents\SimulationModelCodeGen\SimulationModelCodeGen.csproj", "{4399EBB4-BB4B-4277-AF71-CA14264F248B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC9BDE43-AA39-4B11-BA4D-BB1C1EB13EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9BDE43-AA39-4B11-BA4D-BB1C1EB13EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9BDE43-AA39-4B11-BA4D-BB1C1EB13EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9BDE43-AA39-4B11-BA4D-BB1C1EB13EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4B74663-DF80-4967-ABEF-F1DDE0E08EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4B74663-DF80-4967-ABEF-F1DDE0E08EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4B74663-DF80-4967-ABEF-F1DDE0E08EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4B74663-DF80-4967-ABEF-F1DDE0E08EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4399EBB4-BB4B-4277-AF71-CA14264F248B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4399EBB4-BB4B-4277-AF71-CA14264F248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4399EBB4-BB4B-4277-AF71-CA14264F248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4399EBB4-BB4B-4277-AF71-CA14264F248B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

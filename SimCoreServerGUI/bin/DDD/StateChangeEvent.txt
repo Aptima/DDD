@@ -1,0 +1,1 @@
+<StateChange><Parameter><Name>ObjectID</Name><Value><StringType>Gabe</StringType></Value></Parameter><Parameter><Name>NewState</Name><Value><StringType>Dead</StringType></Value></Parameter><Parameter><Name>Time</Name><Value><IntegerType>0</IntegerType></Value></Parameter></StateChange>

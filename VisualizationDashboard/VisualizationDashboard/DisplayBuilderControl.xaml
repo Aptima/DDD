@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="VisualizationDashboard.DisplayBuilderControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lib="clr-namespace:VisualizationDashboard"
+    Height="Auto" Width="550" Background="WhiteSmoke">
+    <UserControl.Resources>
+        <Style x:Key="HeadingTextStyle" TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Name="TopLevelGrid" Height="Auto" Width="Auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Name="DisplayInfoGrid" Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MinHeight="59.213" />
+                <RowDefinition Height="Auto" MinHeight="29.991" />
+                <RowDefinition Height="Auto" MinHeight="3.845" />
+                <RowDefinition Height="Auto" MinHeight="29.991" />
+                <RowDefinition Height="Auto" MinHeight="3.845" />
+                <RowDefinition Height="Auto" MinHeight="29.991" />
+                <RowDefinition Height="Auto" MinHeight="3.845" />
+            </Grid.RowDefinitions>
+            <Grid Name="TitleInfoGrid" Grid.Row="0" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1" Margin="4" Grid.Row="0" Grid.Column="0">
+                    <Label Style="{StaticResource HeadingTextStyle}">MEASURE</Label>
+                </Border>
+                <Label Grid.Row="0" Grid.Column="1" Content="{Binding Path=CurConfigDisplay.MeasureName,TargetNullValue=Unspecified,FallbackValue=Unspecified}" VerticalAlignment="Center" />
+                <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1" Margin="4" Grid.Row="1" Grid.Column="0">
+                    <Label Style="{StaticResource HeadingTextStyle}">DISPLAY</Label>
+                </Border>
+                <Label Grid.Row="1" Grid.Column="1" Content="{Binding Path=CurConfigDisplay.Display.Name,TargetNullValue=Unspecified,FallbackValue=Unspecified}" VerticalAlignment="Center" />
+            </Grid>
+            <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1" Margin="4" Grid.Row="1" Grid.Column="0">
+                <Label Style="{StaticResource HeadingTextStyle}">Metric</Label>
+            </Border>
+            <ListBox Grid.Row="2" Width ="Auto" Height="Auto" Margin="0,1.538,0,0" Grid.RowSpan="1" VerticalAlignment="Top">
+                <ListBoxItem>
+                    <Grid Width="235">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0">Metric</Label>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Name="metricNameCB"
+                          ItemsSource="{Binding Path=MetricNames}"
+                          SelectionChanged="metricNameCB_SelectionChanged" >
+                        </ComboBox>
+                    </Grid>
+                </ListBoxItem>
+            </ListBox>
+            <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1" Margin="4" Grid.Row="3" Grid.Column="0">
+                <Label Style="{StaticResource HeadingTextStyle}">Factors</Label>
+            </Border>
+            <ListBox Grid.Row="4" Grid.Column="0" Name="factorLB" ItemsSource="{Binding ConfigFactorTable}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="235">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Content="{Binding Path=DisplayFactorLabel}"></Label>
+                            <ComboBox Grid.Row="0" Grid.Column="1" Name="factorCB"
+                              ItemsSource="{Binding Path=FactorNames}" SelectionChanged="factorCB_SelectionChanged" Loaded="factorCB_Loaded" Unloaded="factorCB_Unloaded"
+                                      Tag="{Binding Path=FactorPos}">
+                            </ComboBox>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1" Margin="4" Grid.Row="5" Grid.Column="0">                
+                <Label Style="{StaticResource HeadingTextStyle}">Blocked Factors</Label>
+            </Border>
+            <ListBox Grid.Row="6" Grid.Column="0" Name="blockedFactorLB" ItemsSource="{Binding ConfigBlockFactorTable}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="235">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Content="{Binding Path=FactorName}"></Label>
+                            <ComboBox Grid.Row="0" Grid.Column="1" Name="blockedFactorLevelCB"
+                              ItemsSource="{Binding Path=FactorLevelNames}" SelectionChanged="blockedFactorLevelCB_SelectionChanged" Loaded="blockedFactorLevelCB_Loaded"
+                                      Unloaded="blockedFactorLevelCB_Unloaded" Tag="{Binding Path=FactorName}">
+                            </ComboBox>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+            <lib:ConfigDisplayInfoControl HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" Visibility="Visible" x:Name="configDisplayInfo" >
+
+            </lib:ConfigDisplayInfoControl>
+    </Grid>
+</UserControl>

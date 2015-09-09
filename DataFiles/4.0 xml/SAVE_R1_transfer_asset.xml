@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+  <Scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aprilSchema.xsd">
+  
+  <ScenarioName>SAVE Asset Transfer Vignette</ScenarioName>
+  <Description>This scenario is an example of how asset transfer will work in the SAVE RED scenario</Description>
+  <Playfield>
+    <MapFileName>Map.jpg</MapFileName>
+    <IconLibrary>ImageLib</IconLibrary>
+    <UtmZone>25 M</UtmZone>
+    <VerticalScale>8.5</VerticalScale>
+    <HorizontalScale>8.6</HorizontalScale>
+  </Playfield>
+  <LandRegion>
+    <ID>LeftSide</ID>
+    <Vertex>0 0</Vertex>
+    <Vertex>9615 0</Vertex>
+    <Vertex>9615.35 369.64523</Vertex>
+    <Vertex>17068.87 437.14914 </Vertex>
+    <Vertex>14927.89 3423.53</Vertex>
+    <Vertex>18181.06 4768.01</Vertex>
+    <Vertex>13060.21 16368.98</Vertex>
+    <Vertex>9397.73 16570.64</Vertex>
+    <Vertex>6358.70 16026.50</Vertex>
+    <Vertex>4892.77 17328.25</Vertex>
+    <Vertex>4966.35 19160.55</Vertex>
+    <Vertex>3353.11 22339.57</Vertex>
+    <Vertex>1929.79 23829.56</Vertex>
+    <Vertex>4079.24 25304.95</Vertex>
+    <Vertex>2565.09 27122.88</Vertex>
+    <Vertex>1071.78 27851.10</Vertex>
+    <Vertex>164.46437 12917.67</Vertex>
+    <Vertex>0 12917.67</Vertex>
+    <Vertex>0 100</Vertex>
+  </LandRegion>
+
+
+  <ActiveRegion>
+    <ID>WorkshopRegion</ID>
+    <Vertex>12000 2000</Vertex>
+    <Vertex>12000 6000</Vertex>
+    <Vertex>17000 6000</Vertex>
+    <Vertex>17000 2000</Vertex>
+    <Start>0</Start>
+    <End>200</End>
+    <BlocksMovement>false</BlocksMovement>
+    <IsVisible>true</IsVisible>
+    <Color>OrangeRed</Color>
+  </ActiveRegion>
+
+
+  <Team>
+    <Name>BadGuys</Name>
+    <Against>GoodGuys</Against>
+  </Team>
+
+  <Team>
+    <Name>GoodGuys</Name>
+    <Against>BadGuys</Against>
+  </Team>
+
+
+  <DecisionMaker>
+    <Role>Commander</Role>
+    <Identifier>Commander1</Identifier>
+    <Color>CornflowerBlue</Color>
+    <Briefing>Do nothing</Briefing>
+    <Team>BadGuys</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Logistics</Role>
+    <Identifier>Logistics1</Identifier>
+    <Color>DarkBlue</Color>
+    <Briefing>Transfer your bomb material to the commander.</Briefing>
+    <Team>BadGuys</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Surveillance</Role>
+    <Identifier>Surveillance1</Identifier>
+    <Color>DarkRed</Color>
+    <Briefing>Transfer your bomb material to the commander.</Briefing>
+    <Team>BadGuys</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Bomber</Role>
+    <Identifier>Bomber1</Identifier>
+    <Color>Plum</Color>
+    <Briefing>Transfer your bomb material to the commander.</Briefing>
+    <Team>BadGuys</Team>
+  </DecisionMaker>
+
+  <Network>
+    <Name>BadGuyNet</Name>
+    <Member>Commander1,Logistics1,Surveillance1,Bomber1</Member>
+  </Network>
+
+
+  <Genus>
+    <Name>LandObject</Name>
+  </Genus>
+  
+  <Species>
+    <Name>GenericLand</Name>
+    <Base>LandObject</Base>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+    </FullyFunctional>
+  </Species>
+  
+  <Species>
+    <Name>BombWorkshop</Name>
+    <Base>GenericLand</Base>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+    </FullyFunctional>
+  </Species>
+  
+  <Species>
+    <Name>BombMaterialA</Name>
+    <Base>GenericLand</Base>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+  <Species>
+    <Name>BombMaterialB</Name>
+    <Base>GenericLand</Base>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+  <Species>
+    <Name>BombMaterialC</Name>
+    <Base>GenericLand</Base>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+
+
+  <Create_Event>
+    <ID>BombMaterialA1</ID>
+    <Kind>BombMaterialA</Kind>
+    <Owner>Logistics1</Owner>
+  </Create_Event>  
+  <Create_Event>
+    <ID>BombMaterialB1</ID>
+    <Kind>BombMaterialB</Kind>
+    <Owner>Surveillance1</Owner>
+  </Create_Event>  
+  <Create_Event>
+    <ID>BombMaterialC1</ID>
+    <Kind>BombMaterialC</Kind>
+    <Owner>Bomber1</Owner>
+  </Create_Event>  
+
+ 
+
+
+  <Reveal_Event>
+    <ID>BombMaterialA1</ID>
+    <Time>1</Time>
+    <InitialLocation>13060.00 4505.70 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+  <Reveal_Event>
+    <ID>BombMaterialB1</ID>
+    <Time>1</Time>
+    <InitialLocation>14060.00 4505.70 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+  <Reveal_Event>
+    <ID>BombMaterialC1</ID>
+    <Time>1</Time>
+    <InitialLocation>15060.00 4505.70 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+</Scenario>
+
+

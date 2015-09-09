@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8D570F0-BE4E-4348-8BA6-D5ACF3EDCF88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aptima.Asim.DDD.CommonComponents.SimCoreTools</RootNamespace>
+    <AssemblyName>Aptima.Asim.DDD.CommonComponents.SimCoreTools</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>DDDCommonComponents.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ENABLE_PASSWORDS|AnyCPU' ">
+    <OutputPath>bin\ENABLE_PASSWORDS\</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '!ENABLE_PASSWORDS|AnyCPU' ">
+    <OutputPath>bin\!ENABLE_PASSWORDS\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ENABLE_PASSWORDS|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ENABLE_PASSWORDS\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '!ENABLE_PASSWORDS|x86' ">
+    <OutputPath>bin\x86\!ENABLE_PASSWORDS\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\Simulators\AttackProcessor\AttackProcessor.csproj">
+      <Project>{2346EFA2-A123-44B1-9D03-4F52C80BF4F7}</Project>
+      <Name>AttackProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\BlackboardManager\BlackboardManager.csproj">
+      <Project>{C7CAA760-A21D-46FA-BB20-C0ABAB5FD2C2}</Project>
+      <Name>BlackboardManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\CollisionDetection\CollisionDetection.csproj">
+      <Project>{8424DF30-CA51-4341-BBB8-2DB1E27DABC0}</Project>
+      <Name>CollisionDetection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\DockingProcessor\DockingProcessor.csproj">
+      <Project>{851F5C3C-0338-4518-AF42-5E755FFE0998}</Project>
+      <Name>DockingProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\DynamicRegionSimulator\DynamicRegionSimulator.csproj">
+      <Project>{9A2B6BE1-07A8-4AF8-B7B1-E0FA5C43C88E}</Project>
+      <Name>DynamicRegionSimulator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\ExternalCommunication\ExternalComunnication.csproj">
+      <Project>{7A94A81A-33DD-45EA-BF66-5178FA251FCA}</Project>
+      <Name>ExternalComunnication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\FuelHandling\FuelHandling.csproj">
+      <Project>{0ED70016-9DE1-4E0B-A11B-4ADC14C780E8}</Project>
+      <Name>FuelHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\Motion\Motion.csproj">
+      <Project>{F33971FD-AA2C-492E-9BB4-1E26A344B757}</Project>
+      <Name>Motion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\Scoring\Scoring.csproj">
+      <Project>{A0106E76-989D-43C7-9992-7A22990006B6}</Project>
+      <Name>Scoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\SelfDefense\SelfDefense.csproj">
+      <Project>{2177E336-F1FD-448C-85A6-BFF3B1A49FFF}</Project>
+      <Name>SelfDefense</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\StaticAttribute\StaticAttribute.csproj">
+      <Project>{D7201BE2-06F5-4871-B01D-A64CB8E473DD}</Project>
+      <Name>StaticAttribute</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Simulators\ViewPro\ViewPro.csproj">
+      <Project>{B5501F30-059B-4C0F-A54D-AC9695FB7196}</Project>
+      <Name>ViewPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataTypeTools\DataTypeTools.csproj">
+      <Project>{B31CF76A-8F86-438C-B33D-0440A46A7515}</Project>
+      <Name>DataTypeTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ErrorLogTools\ErrorLogTools.csproj">
+      <Project>{BBC8DB46-80B7-495D-84D6-B826F958BEAA}</Project>
+      <Name>ErrorLogTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetworkTools\NetworkTools.csproj">
+      <Project>{D5EF4CF2-CFEE-4AF2-9DC5-C79B8D19760B}</Project>
+      <Name>NetworkTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerOptionsTools\ServerOptionsTools.csproj">
+      <Project>{E6ECFFC2-6F1F-4A12-BBC2-87994A4BB1BB}</Project>
+      <Name>ServerOptionsTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimulationEventTools\SimulationEventTools.csproj">
+      <Project>{8155AED6-09DC-4993-AD12-B6306F44E99C}</Project>
+      <Name>SimulationEventTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimulationModelTools\SimulationModelTools.csproj">
+      <Project>{A4B74663-DF80-4967-ABEF-F1DDE0E08EBC}</Project>
+      <Name>SimulationModelTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimulationObjectTools\SimulationObjectTools.csproj">
+      <Project>{A8E7A3AE-A909-47DC-83F1-1BE125A04C85}</Project>
+      <Name>SimulationObjectTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimulatorTools\SimulatorTools.csproj">
+      <Project>{746AE93D-FCE7-4B3A-89E4-71D4A9B8BF2F}</Project>
+      <Name>SimulatorTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimCore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DDDCommonComponents.snk" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy /y "$(TargetDir)Aptima.Asim.DDD.Simulators.*.dll" "$(SolutionDir)SimCoreServerGUI\bin\DDD"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

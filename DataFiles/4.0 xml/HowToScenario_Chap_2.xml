@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Scenario>
+  <ScenarioName>Sample01</ScenarioName>
+  <Description>Intercept red plane flying over Korea</Description>
+
+  <Playfield>
+    <MapFileName>KoreaMap S 52.jpg</MapFileName>
+    <UtmZone>52-S</UtmZone>
+    <VerticalScale>154.47</VerticalScale>
+    <HorizontalScale>100.17</HorizontalScale>
+  </Playfield>
+
+
+  <LandRegion>
+    <ID>Korean Peninsula</ID>
+    <Vertex>
+      <X>1305.050</X>
+      <Y>492731.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>131555.000</X>
+      <Y>495060.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>79998.600</X>
+      <Y>444510.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>86778.900</X>
+      <Y>421986.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>83456.700</X>
+      <Y>397680.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>167983.000</X>
+      <Y>234975.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>179371.000</X>
+      <Y>151747.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>167152.000</X>
+      <Y>82291.600</Y>
+    </Vertex>
+    <Vertex>
+      <X>131300.000</X>
+      <Y>40488.100</Y>
+    </Vertex>
+    <Vertex>
+      <X>74099.400</X>
+      <Y>5527.390</Y>
+    </Vertex>
+    <Vertex>
+      <X>35852.300</X>
+      <Y>41788.100</Y>
+    </Vertex>
+    <Vertex>
+      <X>57104.000</X>
+      <Y>85260.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>38919.500</X>
+      <Y>199687.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>47789.800</X>
+      <Y>258718.000</Y>
+    </Vertex>
+    <Vertex>
+      <X>1745.580</X>
+      <Y>261978.000</Y>
+    </Vertex>
+  
+  </LandRegion>
+
+  <Team>
+    <Name>BlueTeam</Name>
+  </Team>
+  <Team>
+    <Name>RedTeam</Name>
+  </Team>
+  
+  <DecisionMaker>
+    <Role>Blue Commander</Role>
+    <Identifier>Player 1</Identifier>
+    <Color>CornflowerBlue</Color>
+    <Briefing>Find, identity and destroy all RedGroup units without loss of civilian lives or property.</Briefing>
+    <Team>BlueTeam</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Red Commander</Role>
+    <Identifier>Player 2</Identifier>
+    <Color>DarkRed</Color>
+    <Briefing>Fly annoyingly over South Korea .</Briefing>
+    <Team>BlueTeam</Team>
+  </DecisionMaker>
+
+
+  <Network>
+    <Name>Buckeyes</Name>
+    <Member>Player 2</Member>
+  </Network>
+
+  <Network>
+    <Name>Wolverines</Name>
+    <Member>Player 1</Member>
+  </Network>
+
+  <Sensor>
+    <Name>Radar</Name>
+    <Extent>32000</Extent>
+  </Sensor>
+
+  <Genus>
+    <Name>AirObject</Name>
+  </Genus>
+
+  <Species>
+    <Name>Mig-15</Name>
+    <Base>AirObject</Base>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>F16</Icon>
+      <StateParameters>
+        <MaximumSpeed>298.61</MaximumSpeed>
+        <FuelCapacity>1400</FuelCapacity>
+        <InitialFuelLoad>1400</InitialFuelLoad>
+        <FuelConsumptionRate>.00117</FuelConsumptionRate>
+        <FuelDepletionState>Dead</FuelDepletionState>
+        <Sense>Radar</Sense>
+        <Capability>
+          <Name>Destroy</Name>
+          <Proximity>
+            <Radius>2000</Radius>
+            <Effect>
+              <Intensity>100</Intensity>
+              <Probability>0.7</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>Destroy</Capability>
+          <Transitions>
+            <Effect>99</Effect>
+            <State>Dead</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <Emitter>
+          <Attribute>Default</Attribute>
+        </Emitter>
+      </StateParameters>
+    </FullyFunctional> 
+  </Species>
+
+  <Create_Event>
+  <ID>BlueMig</ID>
+  <Kind>Mig-15</Kind>
+  <Owner>Player 1</Owner>
+  </Create_Event>
+  <Create_Event>
+    <ID>RedMig</ID>
+    <Kind>Mig-15</Kind>
+    <Owner>Player 2</Owner>
+  </Create_Event>
+
+ 
+  
+  <Reveal_Event>
+    <ID>BlueMig</ID>
+    <Time>1</Time>
+    <InitialLocation>
+            <X>20615.7</X>
+      <Y>376574</Y>
+      <Z>0</Z>
+    </InitialLocation>
+    </Reveal_Event>
+  <Reveal_Event>
+    <ID>RedMig</ID>
+    <Time>1</Time>
+    <InitialLocation>
+     <X>69127.7</X>
+      <Y>257080</Y>
+      <Z>0</Z>
+    </InitialLocation>
+  </Reveal_Event>
+
+  <Move_Event>
+    <ID>RedMig</ID>
+    <Timer>1</Timer>
+    <Throttle>100</Throttle>
+    <Position>
+      <X>168258.</X>
+      <Y>90971.6</Y>
+    </Position>
+  </Move_Event>
+
+  <Completion_Event>
+    <ID>RedMig</ID>
+    <Action>Move_Complete</Action>
+    <DoThis>
+      <Move_Event>
+        <ID>RedMig</ID>
+        <Timer>25</Timer>
+        <Throttle>95</Throttle>
+        <Position>
+          <X>69127.7</X>
+          <Y>257080.</Y>
+        </Position>
+      </Move_Event>
+    </DoThis>
+  </Completion_Event>
+  
+  <Completion_Event>
+    <ID>RedMig</ID>
+    <Action>Move_Complete</Action>
+    <DoThis>
+      <Move_Event>
+        <ID>RedMig</ID>
+        <Timer>1</Timer>
+        <Throttle>100</Throttle>
+        <Position>
+          <X>168258.</X>
+          <Y>90971.6</Y>
+        </Position>
+      </Move_Event>
+    </DoThis>
+  </Completion_Event>
+  <Completion_Event>
+    <ID>RedMig</ID>
+    <Action>Move_Complete</Action>
+    <DoThis>
+      <Move_Event>
+        <ID>RedMig</ID>
+        <Timer>25</Timer>
+        <Throttle>95</Throttle>
+        <Position>
+          <X>69127.7</X>
+          <Y>257080.</Y>
+        </Position>
+        </Move_Event>
+      </DoThis>
+  </Completion_Event>
+</Scenario>
+

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HPML ID="CoVE_Outcome" xmlns="http://schemas.aptima.com/hpml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<SupportObjects>
+		<Configuration>
+			<DataSource ID="DDD"/>
+		</Configuration>
+	</SupportObjects>
+	<Measurements>
+		<MeasurementComponents>
+			<!--Weapons used/docked components-->
+			<MeasurementComponent ID="WeaponsDockedByAsset" Type="Entity" DataSourceSubcriptionsType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="DockedWeapons" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WeaponsDockedByAssetActive" Type="Entity" DataSourceSubcriptionsType="Active">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="DockedWeapons" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+		<!--Fuel Components-->
+		<MeasurementComponent ID="FuelRemainingByAsset" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+			<Parameter Name="ObjectID" Type="String"/>
+			<DataSourceQuery DataSourceRef="DDD" Select="FuelAmount" From="SimObject" Where="%P%ObjectID == ID"/>
+		</MeasurementComponent>
+		<MeasurementComponent ID="FuelCapacityByAsset" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+			<Parameter Name="ObjectID" Type="String"/>
+			<DataSourceQuery DataSourceRef="DDD" Select="FuelCapacity" From="SimObject" Where="%P%ObjectID == ID"/>
+		</MeasurementComponent>
+		<!--BaseObject-->
+		<MeasurementComponent ID="BaseObjectState" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+			<Parameter Name="ObjectID" Type="String"/>
+			<DataSourceQuery DataSourceRef="DDD" Select="State" From="SimObject" Where="%P%ObjectID == ID"/>
+		</MeasurementComponent>
+		<MeasurementComponent ID="BaseObjectOwnerID" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="OwnerID" From="SimObject" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+			<!--DecisionMaker-->
+			<MeasurementComponent ID="DecisionMakerTeamName" Type="Entity" DataSourceSubscriptionType="Passive" QueryFrequency="1000">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" From="Organization.DecisionMaker" Select="TeamMember" Where="%P%ObjectID == ID"/>
+			</MeasurementComponent>
+		<!-- Attack events -->
+			<MeasurementComponent ID="AttackObjectObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="AttackObject"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackObjectTargetObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="TargetObjectID" From="AttackObject"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackSucceededTargetIDByObjectID" Type="Interaction">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="TargetID" From="AttackSucceeded" Where="%P%ObjectID == ObjectID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackSucceededObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="AttackSucceeded"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackSucceededTargetID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="TargetID" From="AttackSucceeded"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="AttackObjectDecisionMakerID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="DecisionMakerID" From="AttackObject"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="WeaponLaunchObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="WeaponLaunch"/>
+			</MeasurementComponent>
+			<!--Move Object components-->
+			<MeasurementComponent ID="MovedObjectByID" Type="Interaction">
+				<Parameter Name="ObjectID" Type="String"/>
+				<DataSourceQuery DataSourceRef="DDD" Select="1" From="MoveObject" Where="%p%ObjectID == ObjectID"/>
+			</MeasurementComponent>
+			<MeasurementComponent ID="MovedObjectObjectID" Type="Interaction">
+				<DataSourceQuery DataSourceRef="DDD" Select="ObjectID" From="MoveObject"/>
+			</MeasurementComponent>
+		</MeasurementComponents>
+		<!--OUTCOME MEASURES-->
+		<Measurement ID="Outcome_Weapons left" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComponentRef Ref="WeaponsDockedByAsset">
+					<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="Asset"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Outcome_Weapons initial" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<Constant Name="OneThousand" Type="Int32" Value="1000"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComponentRef Ref="WeaponsDockedByAssetActive">
+					<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="Asset"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<Timing Type="totalrunningtime"/>
+					<ConstantRef Name="OneThousand"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!--Fuel Measures-->
+		<Measurement ID="Outcome_Fuel left" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="FuelRemainingByAsset">
+					<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="Asset"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="FuelCapacityByAsset" Continuity="Continuous">
+			<Parameter Name="ObjectID" Type="String"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="FuelCapacityByAsset">
+					<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="ObjectID"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Outcome_Fuel initial" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<Constant Name="OneThousand" Type="Int32" Value="1000"/>
+			<MeasurementComputation Operator="Value">
+				<MeasurementComponentRef Ref="FuelRemainingByAsset">
+					<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="Asset"/>
+				</MeasurementComponentRef>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<Timing Type="totalrunningtime"/>
+					<ConstantRef Name="OneThousand"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<!--Health Measures-->
+		<!-- 1 if Fully Functional, 0 if not -->
+		<Measurement ID="Outcome_Health left" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<Constant Name="FullyFunctional" Type="String" Value="Fully Functional"/>
+			<MeasurementComputation Operator="BoolToInt">
+				<MeasurementComputation Operator="Equals">
+					<ConstantRef Name="FullyFunctional"/>
+					<MeasurementComponentRef Ref="BaseObjectState">
+						<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="Asset"/>
+					</MeasurementComponentRef>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<!--Targets Engaged Measures-->
+		<Measurement ID="Outcome_Targets engaged" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="AttackSucceededTargetIDByObjectID">
+						<ParameterValue Name="ObjectID" Type="ParameterRef" Ref="Asset"/>
+					</MeasurementComponentRef>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="TargetsEngagedCountByDecisionMakerID" Continuity="Continuous">
+			<Parameter Name="DecisionMakerID" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="AttackSucceededTargetID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<ParameterRef Name="DecisionMakerID"/>
+					<MeasurementComponentRef Ref="BaseObjectOwnerID">
+						<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+							<MeasurementComponentRef Ref="AttackSucceededObjectID"/>
+						</ParameterValue>
+					</MeasurementComponentRef>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="TargetsEngagedCountByTeam" Continuity="Continuous">
+			<Parameter Name="TeamName" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="AttackSucceededTargetID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<MeasurementComponentRef Ref="DecisionMakerTeamName">
+						<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+							<MeasurementComponentRef Ref="BaseObjectOwnerID">
+								<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+									<MeasurementComponentRef Ref="AttackSucceededObjectID"/>
+								</ParameterValue>
+							</MeasurementComponentRef>
+						</ParameterValue>
+					</MeasurementComponentRef>
+					<ParameterRef Name="TeamName"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="TargetsEngagedCountAll" Continuity="Continuous">
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="AttackSucceededTargetID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<!--Assets deployed-->
+		<Measurement ID="AssetsDeployedCountByDecisionMakerID" Continuity="Continuous">
+			<Parameter Name="DecisionMakerID" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<MeasurementComponentRef Ref="BaseObjectOwnerID">
+						<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+							<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+						</ParameterValue>
+					</MeasurementComponentRef>
+					<ParameterRef Name="DecisionMakerID"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="AssetsDeployedCountByTeam" Continuity="Continuous">
+			<Parameter Name="TeamName" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<MeasurementComponentRef Ref="DecisionMakerTeamName">
+						<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+							<MeasurementComponentRef Ref="BaseObjectOwnerID">
+								<ParameterValue Name="ObjectID" Type="MeasurementComponentRef">
+									<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+								</ParameterValue>
+							</MeasurementComponentRef>
+						</ParameterValue>
+					</MeasurementComponentRef>
+					<ParameterRef Name="TeamName"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		<Measurement ID="AssetsDeployedCountAll" Continuity="Continuous">
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="Outcome_Assets deployed" Continuity="Continuous">
+			<Parameter Name="Asset" Type="String"/>
+			<MeasurementComputation Operator="ListCount">
+				<MeasurementComputation Operator="UniqueListAggregator">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+				</MeasurementComputation>
+			</MeasurementComputation>
+			<EvaluateCondition>
+				<MeasurementComputation Operator="Equals">
+					<MeasurementComponentRef Ref="MovedObjectObjectID"/>
+					<ParameterRef Name="Asset"/>
+				</MeasurementComputation>
+			</EvaluateCondition>
+		</Measurement>
+		
+		<Measurement ID="Difference" Continuity="Continuous">
+			<Parameter Name="Operand1" Type="Int32"/>
+			<Parameter Name="Operand2" Type="Int32"/>
+			<MeasurementComputation Operator="subtract">
+				<ParameterRef Name="Operand1"/>
+				<ParameterRef Name="Operand2"/>
+			</MeasurementComputation>
+		</Measurement>
+				
+		<Measurement ID="SumInt1" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt2" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt3" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt4" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt5" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<Parameter Name="Value5" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+				<ParameterRef Name="Value5"/>
+			</MeasurementComputation>
+		</Measurement>
+		<Measurement ID="SumInt6" Continuity="Continuous">
+			<Parameter Name="Value1" Type="Int32"/>
+			<Parameter Name="Value2" Type="Int32"/>
+			<Parameter Name="Value3" Type="Int32"/>
+			<Parameter Name="Value4" Type="Int32"/>
+			<Parameter Name="Value5" Type="Int32"/>
+			<Parameter Name="Value6" Type="Int32"/>
+			<MeasurementComputation Operator="Sum">
+				<ParameterRef Name="Value1"/>
+				<ParameterRef Name="Value2"/>
+				<ParameterRef Name="Value3"/>
+				<ParameterRef Name="Value4"/>
+				<ParameterRef Name="Value5"/>
+				<ParameterRef Name="Value6"/>
+			</MeasurementComputation>
+		</Measurement>
+				
+	</Measurements>
+</HPML>

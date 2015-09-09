@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="vsg" configurationNamespace="VSG.Models.vsg" xsdNamespace="VSG.Models.vsg.xsd" xslNamespace="VSG.Models.vsg.xsl" imgNamespace="VSG.Models.vsg.img" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Models/vsg/xsd/model.xsd">
+	<Directories>
+		<Model relative="true">
+			<Path>Config\model</Path>
+		</Model>
+		<Output relative="false">
+			<Path>Config\output</Path>
+		</Output>
+		<Data relative="true">
+			<Path>Config\data</Path>
+		</Data>
+		<Xml relative="true">
+			<Path>Config\xml</Path>
+		</Xml>
+		<Documentation relative="true">
+			<Path>Config\doc</Path>
+		</Documentation>
+		<License relative="true">
+			<Path>Config\doc</Path>
+		</License>
+	</Directories>
+	<Database>
+		<Import relative="true">
+			<Path>Config</Path>
+		</Import>
+		<Format relative="true">
+			<Path>Config</Path>
+		</Format>
+	</Database>
+</Configuration>

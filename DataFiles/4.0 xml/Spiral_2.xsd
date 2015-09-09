@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:element name="Scenario">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Playfield" />
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element ref="Create_Event" />
+          <xsd:element ref="Move_Event" />
+          <xsd:element ref="Completion_Event" />
+          <xsd:element ref="DecisionMaker" />
+        </xsd:choice>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Playfield">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="MapFileName" />
+        <xsd:element ref="UtmZone" />
+        <xsd:element ref="Northing" />
+        <xsd:element ref="Easting" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="MapFileName" type="xsd:string" />
+  <xsd:element name="UtmZone">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="UtmLatitude" />
+        <xsd:element ref="UtmLongitude" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:simpleType name="UtmLatitudeType">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1" />
+      <xsd:maxInclusive value="60" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UtmLongtitudeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="1" fixed="true" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="UtmLatitude" type="UtmLatitudeType" />
+  <xsd:element name="UtmLongitude" type="UtmLongtitudeType" />
+  <xsd:element name="Northing" type="xsd:decimal" />
+  <xsd:element name="Easting" type="xsd:decimal" />
+  <xsd:element name="Create_Event">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ID" />
+        <xsd:element ref="Kind" />
+        <xsd:element ref="MaximumVelocity" />
+        <xsd:element ref="InitialLocation" />
+        <xsd:element ref="Owner" />
+        <xsd:element name="ParameterSetting" type="ParameterSettingType" minOccurs="0" maxOccurs="unbounded" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+
+
+  <xsd:element name="ID" type="xsd:string" />
+  <xsd:element name="Kind" type="xsd:string" />
+  <xsd:element name="MaximumVelocity" type="xsd:decimal" />
+  <xsd:element name="Owner" type="xsd:string" />
+
+ 
+    <xsd:complexType name="VectorType">
+      <xsd:sequence>
+        <xsd:element name="X" type="xsd:decimal"/>
+        <xsd:element name="Y" type="xsd:decimal"/>
+        <xsd:element name="Z" type="xsd:decimal"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+
+
+
+  <xsd:element name="InitialLocation" type="VectorType" />
+
+
+
+
+    <xsd:complexType name="ParameterSettingType">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="Parameter" />
+        <xsd:element ref="Setting" />
+      </xsd:choice>
+    </xsd:complexType>
+
+
+
+
+  <xsd:element name="Parameter" type="xsd:string" />
+  <xsd:element name="Setting" type="xsd:string" />
+
+
+  <xsd:element name="Move_Event">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ID" />
+        <xsd:element ref="Timer" />
+        <xsd:element ref="Throttle" />
+        <xsd:element ref="Position" />
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Timer" type="xsd:integer" />
+  <xsd:element name="Throttle" type="xsd:integer" />
+  <xsd:element name="Position" type="VectorType" />
+  <xsd:element name="DecisionMaker">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="DM_Name" />
+        <xsd:element ref="DM_Number" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="DM_Name" type="xsd:string" />
+  <xsd:element name="DM_Number" type="xsd:string" />
+  <xsd:element name="Completion_Event">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ID" />
+        <xsd:element ref="Action" />
+        <xsd:element ref="DoThis" />
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Action" type="xsd:string" />
+  <xsd:element name="DoThis">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Move_Event" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  
+</xsd:schema>

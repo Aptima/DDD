@@ -1,0 +1,75 @@
+VSG 4.0 Release Notes
+============================
+
+Requirements
+============
+1. VSG 4.0 produces scenario files that are compatible with DDD SP3 and above. Running a scenario file produced by the VSG in a prior version of DDD may have unexpected results.
+
+
+
+Notes
+=====
+1. Combination Vulnerability Contribution Names
+-----------------------------------------------
+(2333) The VSG automatically renames Contributions on Import (Open). Previously entered user names are not preserved.
+
+2. Unit/Event duplication
+-------------------------
+(2507) VSG provides the ability to make multiple copies of a Unit and its Events in the Scenario Director. System response time varies based on the number of copies being created. Currently, no progress indication is provided – please be patient. A feature request has been entered to include a progress indication in a future VSG release.
+
+3. Sensor - Spheres
+--------------------
+All sensors "created" by the VSG created with a Sensor Spread of 360 and directional vector of 0, effectively changing the sensor operation from a directional cone, to a spherical sensor. Imported scenarios already containing conical sensors, will remain unchanged and exported as conical, unless edited by the user.
+
+4. Launched Subplatform Tag - Deprecated
+-----------------------------------------
+The Launched Subplatform DDD feature is being deprecated for use within the VSG. This means that this DDD scenario expression is not supported in the VSG. The language and functionality of this feature substantially overlaps with the Adopt Subplatform feature. The VSG will not read in or recognize this expression when it is encountered in a DDD scenario file.
+
+Please note that the LaunchSubplatform "event" is still supported in the DDD, so it is still possible to script the launch of a docked subplatforms. Also, the Adopt Platform feature still exists, which will allow you to accomplish the same result as the Launched Subplatform feature. This is the preferred method of scripting this event.
+
+Workaround - If a scenario with the Launched Subplatform expression is imported by the VSG, the launched subplatforms will not register or be recognized within the VSG. After the scenario has been read into the VSG, the user should then use the VSG to create units corresponding to the (now) missing launched subplatforms. They should then use the Adopt Platform feature of the VSG to make the subplatforms of the unit that originally had launched subplatforms.
+
+5. Re-loading a Raw Scenario File
+-----------------------------------------
+If you have been using the Beta version of VSG 4.0 to create scenarios and have any “work in progress” Raw Scenario Files (i.e., not yet validated and saved as XML), complete your work before installing the new VSG 4.0. The final deliverable uses a SQL Server Express database and will not import files generated for the prior MySQL database.
+
+
+
+Using the VSG Tips and Shortcuts
+================================
+1.	I’m running a Preview and some objects on the playfield have an unknown icon instead of the icon I selected for that species.
+Tip: 	In the Scenario Director, check whether Kind is specified for the allocated object (click on the corresponding object in the Allocated tab in upper left and then check the Event Properties tab in lower right). If the Kind of object is not specified, VSG will display it using the default Unknown icon because it doesn’t know what the object is.
+
+2.	In the Scenario Director, I’ve allocated a unit to a DM and created a Reveal Event. I tried to specify its Initial State but the list of States is empty.
+Tip: 	Check whether Kind is specified for the allocated object (click on the Unit’s Events tab in lower left and then check the Event Properties tab in lower right). If the Kind of object is not specified, VSG can’t populate the Initial State list because it doesn’t know what the object is (i.e., so can’t infer what the list of valid initial states for it would be).
+
+3.	I’m running a Preview and some objects are not moving on the playfield even though I created Move events for them.
+Tip: 	In the Scenario Director, check the Throttle for the allocated object (click on the corresponding object in the Allocated tab in upper left, click on the corresponding MoveEvent in the Unit’s Events tab, and then check the Event Properties tab in lower right). If the Throttle has a value of 0, the object will not move.
+
+4.	Regions are not drawing the way I expected they have one less side than I drew.
+Tip: 	When drawing regions, be sure to left click for each point you are specifying. If you hit Enter without clicking to specify your last vertex point, it will not be included in the region.
+
+5.	I’ve been working on a scenario and need to stop for a while. When I try to save my file I get validation errors that prevent me from saving it. How can I save my work in progress?
+Tip: 	To prevent attempts to load invalid files into DDD, VSG will not save an invalid scenario file in XML format. You can, however, save the database session for your work in progress and then continue your work in a future VSG session. In the Save As window, select Raw Scenario Files (*.sql) for the Save as type.  When you return to VSG, be sure to select Raw Scenario Files (*.sql) for the file type in the in the Open Scenario File window, and then select the database session you want to continue working on.
+
+6.	I'm not sure what UTM coordinates are.
+Tip: 	Check out this UTM informative web site: http://www.uwgb.edu/dutchs/FieldMethods/UTMSystem.htm
+
+7.	I expect my Engrams to show up as a list to choose from.
+Tip:	Engrams are unstructed "free" text that the DDD matches when the scenario files are run. In the VSG you just enter Engram values where appropriate in a list form, one per line.
+
+8.	What is the order in which events are executed? Which Events happen first if they are at the same time?
+Tip:	Events are of two types -- Events with exact, pre-determined times, known as Static Events, or Events that can happen at any time based on other events occurring, known as Conditional Events. Static events occur in the order specified by their times. When two static events have the same time, for example, at Time = 1, the order is determined by the order that they are listed in the scenario file. This order is also the order that they are shown in the unit event window. So, if two events have the same time, the one listed first in the unit event window will be fired first by the DDD.
+
+9.	Some of my events don't show up in the Event Timeline window
+Tip:	The Event Timeline window shows Static Events (see Tip #9). Conditional Events can occur at any time during scenario execution, so it is impossible to predict a position for them on an event timeline.
+
+
+
+
+
+
+
+
+
+

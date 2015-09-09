@@ -1,0 +1,199 @@
+=====================================================
+DDD 4.0 Service Pack 1, Release Notes, April 26, 2007
+=====================================================
+=====================================================
+
+
+Contents:
+=========
+
+	1. !!NEW!! in this Service Pack Release
+	2. DDD 4.0 Release Notes
+
+
+
+
+
+
+
+=====================================
+!!NEW!! in this Service Pack Release:
+=====================================
+
+
+
+1. Visual Scenario Generator (VSG) included in this release:
+------------------------------------------------------------
+A conceptual prototype of the VSG (Visual Scenario Generator) is available for preview.  ** Admin Privileges Required for installation **.
+
+A. Prerequisites
+	i. The VSG requires MySQL to installed prior to use.  MySQL is a
+           free and open source database available for download from 
+	   http://www.mysql.com/.
+
+	ii. The VSG includes a utility for creating user customizable icon
+	    sets for use with the DDD.  This utility requires the 
+	    Microsoft .Net 2.0 Framework SDK to be installed prior to use.
+            Once the Framework SDK has been installed please verify that
+	    "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727" exists in  
+	    your PATH environment variable. 
+
+    	    ***Note*** This is DIFFERENT download from the Microsoft 
+	    .Net 2.0 Framework Runtime required previously by the DDD. 
+	    The Microsoft .Net 2.0 Framework SDK may be downloaded from
+	    Microsoft.
+
+
+
+2. User Customizable Icon Libraries for DDD Scenarios:
+------------------------------------------------------
+To use this feature; create an icon libary using the VSG Library Manager and export it to your DDDClient share folder, then do one of the following:
+
+	A. In the VSG, navigate to the IconLibrary attribute in the VSG
+	   attribute tree and edit the value directly
+.. or ..
+
+	B. Manually edit a scenario file.  Simply, add an <IconLibrary>
+	   tag, between the <MapFileName> and the <UtmZone> tag in the   	   	   <Playfield> hierarchy of a scenario.
+
+	Example,
+
+    	- <Playfield>
+          	<MapFileName>Map.jpg</MapFileName>
+          	<IconLibrary>YourImageLibraryName</IconLibrary>
+          	<UtmZone>25 M</UtmZone>
+          	<VerticalScale>8.5</VerticalScale>
+      		<HorizontalScale>8.6</HorizontalScale>
+    	  </Playfield>
+
+** In order to create icon libraries, the user must include a default Icon of the name Unknown.png.  Unknown.png must be located at the top level.
+
+
+
+3. Using the VSG, scenario changes may need to be applied in multiple areas:
+----------------------------------------------------------------------------
+Please refer to the Guide: TagCrossReference.pdf.  Changes to a scenario object may need to happen in multiple places in a scenario.  The Cross reference guide will highlight scenario interdependencies.
+
+
+
+
+=====================
+DDD 4.0 Release Notes
+=====================
+
+
+
+1. DDD 4.0 Installation Prerequisites:
+--------------------------------------
+
+** Admin Privileges Required for installation **
+
+
+A. Client prerequisites
+
+	i. Managed DirectX 9.  Download the latest Managed DirectX 9 libraries
+	   from Microsoft or Refer to the "Required Software" directory, from 
+	   your DDD 4.0 distribution directory.
+
+	ii. Microsoft .Net 2.0 Framework.  Download the .Net 2.0 Framework from
+	    Microsoft.
+
+
+B. Server prerequisites
+
+	i. Microsoft .Net 2.0 Framework.  Download the .Net 2.0 Framework from
+	   Microsoft.
+
+
+
+2. Admin Privileges Required for Installation:
+----------------------------------------------
+The DDD 4.0 Client requires Managed DirectX 9 and the Microsoft .Net 2.0 Framework.  Both may be acquired from Microsoft.  Admin privileges may be required by your system administrator.
+
+
+
+3. Simulation Time Limit:
+-------------------------
+DDD 4.0 simulations can be a maximum of 24 hours in duration.
+
+
+
+4. Uninstall leaves directories and files on the system:
+--------------------------------------------------------
+The application root directory (C:\Program Files\Aptima\DDD 4.0) is not removed if applications are accessing the directory.  Make sure no one is accessing the directory while an uninstall is in progress. Otherwise, remove the “DDD 4.0” folder from the directory manually.
+
+
+
+5. Installer requires Microsoft Word to print license agreement:
+----------------------------------------------------------------
+The DDD installer launches Microsoft Word to print the Aptima License agreement. If Word is not installed on the host machine, the license agreement cannot be printed.
+
+
+
+6. Operating System Requirements:
+---------------------------------
+Windows XP has a limitation of 10 incoming network connections, several of which are taken up by standard windows services.  In order to run a simulation with more than 8 players, you will need to run the DDD Server on a machine running the Windows Server 2003 operating system.
+
+
+
+7. Wireless networking may cause server crashes:
+------------------------------------------------
+Wireless networking interfaces are not recommended for use with the DDD.
+
+
+
+8. Visual artifacts from previous scenario runs may be displayed in a current scenario:
+---------------------------------------------------------------------------------------
+These visual artifacts are Active Regions. If this occurs, exit the DDD Server application and re-launch it.
+
+
+
+9. Inconsistent active zone/obstruction behaviors:
+--------------------------------------------------
+The client display and server can get out of sync when objects move through active regions. You may see a temporary discontinuity in an object's motion as the client synchronizes with the server.
+
+
+
+10. State change score rule double counts:
+------------------------------------------
+The current State Change scoring rules will credit the score for each attacker that participated in the engagement, rather than once for the whole engagement.  This could lead to double (or more) counting of an attack if the scenario writer is not aware of this behavior when defining the score.
+
+
+
+11. Scores are not deleted between scenario runs:
+-------------------------------------------------
+A scenario with no scoring defined, may show scoring from a previous scenario.   Manually delete “ScoreSummary.htm” from the DDDClient share directory.
+
+
+
+12. User accounts may not be maintained between installs:
+---------------------------------------------------------
+User accounts may not be maintained when upgrading the DDD 4.0 Server software to a new release, especially if the license key has changed.  To insure continuity of user accounts, make a backup of the C:\Program Files\Aptima\DDD 4.0\Server\passwords.txt file and then restore it after the software upgrade.
+
+
+
+
+13. DDD client comes from an unknown publisher:
+-----------------------------------------------
+Running the DDD client on a computer for the first time, a pop-up may be displayed (depending on your security settings):
+
+	Application Run Security Warning
+	Publisher cannot be verified.
+	Are you sure you want to run this application?
+	Name: DDDClient
+	From: <server host name>
+	Publisher: Unknown Publisher.
+
+Click "Run" to run the DDD 4.0 client.
+
+
+
+14. Misprint, Scenario Writing Guide:
+-------------------------------------
+On page 11 of the Scenario Writing Guide:
+"There must be at **most** one region specified, otherwise there is no field on which to play. "
+
+Should read:
+"There must be at **LEAST** one region specified, otherwise there is no field on which to play. " 
+
+

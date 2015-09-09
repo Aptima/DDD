@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VisDashboardDB" Class="VisDashboardDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLExpress;Initial Catalog=VisDashboardDB;Integrated Security=True" SettingsObjectName="DashboardDataAccess.Properties.Settings" SettingsPropertyName="VisDashboardDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="User_UsersInExperiment" Member="UsersInExperiments" OtherKey="UserID" Type="UsersInExperiment" />
+      <Association Name="User_UserInRole" Member="UserInRoles" OtherKey="UserID" Type="UserInRole" />
+      <Association Name="User_UsersInConfig" Member="UsersInConfigs" OtherKey="UserID" Type="UsersInConfig" />
+      <Association Name="User_ExperimentDisplay" Member="ExperimentDisplays" OtherKey="UserID" Type="ExperimentDisplay" />
+      <Association Name="User_ExperimentMeasure" Member="ExperimentMeasures" OtherKey="UserID" Type="ExperimentMeasure" />
+      <Association Name="User_Experiment" Member="Experiments" OtherKey="CreatorID" Type="Experiment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UsersInExperiment" Member="UsersInExperiments">
+    <Type Name="UsersInExperiment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExperimentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsExperimentor" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveConfig" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="User_UsersInExperiment" Member="User" ThisKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="Experiment_UsersInExperiment" Member="Experiment" ThisKey="ExperimentID" Type="Experiment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserInRole" Member="UserInRoles">
+    <Type Name="UserInRole">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ApplicationName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="User_UserInRole" Member="User" ThisKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="Role_UserInRole" Member="Role" ThisKey="RoleID" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Role" Member="Roles">
+    <Type Name="Role">
+      <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ApplicationName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Role_UserInRole" Member="UserInRoles" OtherKey="RoleID" Type="UserInRole" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Config" Member="Configs">
+    <Type Name="Config">
+      <Column Name="ConfigID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExperimentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Config_UsersInConfig" Member="UsersInConfigs" OtherKey="ConfigID" Type="UsersInConfig" />
+      <Association Name="Config_ConfigDisplay" Member="ConfigDisplays" OtherKey="ConfigID" Type="ConfigDisplay" />
+      <Association Name="Experiment_Config" Member="Experiment" ThisKey="ExperimentID" Type="Experiment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UsersInConfig" Member="UsersInConfigs">
+    <Type Name="UsersInConfig">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConfigID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Config_UsersInConfig" Member="Config" ThisKey="ConfigID" Type="Config" IsForeignKey="true" />
+      <Association Name="User_UsersInConfig" Member="User" ThisKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExperimentDisplay" Member="ExperimentDisplays">
+    <Type Name="ExperimentDisplay">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExperimentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_ExperimentDisplay" Member="User" ThisKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="Display_ExperimentDisplay" Member="Display" ThisKey="DisplayID" Type="Display" IsForeignKey="true" />
+      <Association Name="Experiment_ExperimentDisplay" Member="Experiment" ThisKey="ExperimentID" Type="Experiment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Display" Member="Displays">
+    <Type Name="Display">
+      <Column Name="DisplayID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageResourcePath" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Display_ExperimentDisplay" Member="ExperimentDisplays" OtherKey="DisplayID" Type="ExperimentDisplay" />
+      <Association Name="Display_DisplayFactorLabel" Member="DisplayFactorLabels" OtherKey="DisplayID" Type="DisplayFactorLabel" />
+      <Association Name="Display_ConfigDisplay" Member="ConfigDisplays" OtherKey="DisplayID" Type="ConfigDisplay" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DisplayFactorLabel" Member="DisplayFactorLabels">
+    <Type Name="DisplayFactorLabel">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DisplayID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FactorPos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Display_DisplayFactorLabel" Member="Display" ThisKey="DisplayID" Type="Display" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DisplayFactor" Member="DisplayFactors">
+    <Type Name="DisplayFactor">
+      <Column Name="DisplayFactorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConfigDisplayID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FactorName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FactorPos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FactorLabel" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="ConfigDisplay_DisplayFactor" Member="ConfigDisplay" ThisKey="ConfigDisplayID" Type="ConfigDisplay" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DisplayBlockedFactor" Member="DisplayBlockedFactors">
+    <Type Name="DisplayBlockedFactor">
+      <Column Name="DisplayBlockedFactorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ConfigDisplayID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeasureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LevelName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Measure_DisplayBlockedFactor" Member="Measure" ThisKey="MeasureID" Type="Measure" IsForeignKey="true" />
+      <Association Name="ConfigDisplay_DisplayBlockedFactor" Member="ConfigDisplay" ThisKey="ConfigDisplayID" Type="ConfigDisplay" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Measures" Member="Measures">
+    <Type Name="Measure">
+      <Column Name="MeasureID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HPML" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SubCategory" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="RTPMEngineType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Measure_DisplayBlockedFactor" Member="DisplayBlockedFactors" OtherKey="MeasureID" Type="DisplayBlockedFactor" />
+      <Association Name="Measure_ExperimentMeasure" Member="ExperimentMeasures" OtherKey="MeasureID" Type="ExperimentMeasure" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ConfigDisplay" Member="ConfigDisplays">
+    <Type Name="ConfigDisplay">
+      <Column Name="ConfigDisplayID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ConfigID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeasureName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MetricName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NumFactors" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumBlockedFactors" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Width" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Height" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ConfigDisplay_DisplayFactor" Member="DisplayFactors" OtherKey="ConfigDisplayID" Type="DisplayFactor" />
+      <Association Name="ConfigDisplay_DisplayBlockedFactor" Member="DisplayBlockedFactors" OtherKey="ConfigDisplayID" Type="DisplayBlockedFactor" />
+      <Association Name="Config_ConfigDisplay" Member="Config" ThisKey="ConfigID" Type="Config" IsForeignKey="true" />
+      <Association Name="Display_ConfigDisplay" Member="Display" ThisKey="DisplayID" Type="Display" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExperimentMeasures" Member="ExperimentMeasures">
+    <Type Name="ExperimentMeasure">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExperimentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MeasureID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExperimentEntityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Allowed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Measure_ExperimentMeasure" Member="Measure" ThisKey="MeasureID" Type="Measure" IsForeignKey="true" />
+      <Association Name="User_ExperimentMeasure" Member="User" ThisKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="Experiment_ExperimentMeasure" Member="Experiment" ThisKey="ExperimentID" Type="Experiment" IsForeignKey="true" />
+      <Association Name="ExperimentEntity_ExperimentMeasure" Member="ExperimentEntity" ThisKey="ExperimentEntityID" Type="ExperimentEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Experiment" Member="Experiments">
+    <Type Name="Experiment">
+      <Column Name="ExperimentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Other" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ScenarioFilePath" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ScenarioFileType" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Experiment_UsersInExperiment" Member="UsersInExperiments" OtherKey="ExperimentID" Type="UsersInExperiment" />
+      <Association Name="Experiment_Config" Member="Configs" OtherKey="ExperimentID" Type="Config" />
+      <Association Name="Experiment_ExperimentDisplay" Member="ExperimentDisplays" OtherKey="ExperimentID" Type="ExperimentDisplay" />
+      <Association Name="Experiment_ExperimentMeasure" Member="ExperimentMeasures" OtherKey="ExperimentID" Type="ExperimentMeasure" />
+      <Association Name="Experiment_ExperimentEntity" Member="ExperimentEntities" OtherKey="ExperimentID" Type="ExperimentEntity" />
+      <Association Name="User_Experiment" Member="User" ThisKey="CreatorID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EntityType" Member="EntityTypes">
+    <Type Name="EntityType">
+      <Column Name="EntityTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="EntityType_ExperimentEntity" Member="ExperimentEntities" OtherKey="EntityTypeID" Type="ExperimentEntity" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExperimentEntity" Member="ExperimentEntities">
+    <Type Name="ExperimentEntity">
+      <Column Name="ExperimentEntityID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EntityTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ExperimentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerExperimentEntityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ExperimentEntity_ExperimentMeasure" Member="ExperimentMeasures" OtherKey="ExperimentEntityID" Type="ExperimentMeasure" />
+      <Association Name="ExperimentEntity_ExperimentEntity" Member="ExperimentEntities" OtherKey="OwnerExperimentEntityID" Type="ExperimentEntity" />
+      <Association Name="EntityType_ExperimentEntity" Member="EntityType" ThisKey="EntityTypeID" Type="EntityType" IsForeignKey="true" />
+      <Association Name="Experiment_ExperimentEntity" Member="Experiment" ThisKey="ExperimentID" Type="Experiment" IsForeignKey="true" />
+      <Association Name="ExperimentEntity_ExperimentEntity" Member="ExperimentEntity1" ThisKey="OwnerExperimentEntityID" Type="ExperimentEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

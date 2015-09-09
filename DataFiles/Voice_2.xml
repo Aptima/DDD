@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scenario xsi:noNamespaceSchemaLocation="DDDSchema_4_1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ScenarioName>AuthorityTest Root</ScenarioName>
+	<Description>Creates the basic characters for the regression tests for the authority enhancements to 4.1.</Description>
+	<Playfield>
+		<MapFileName>Map.jpg</MapFileName>
+		<IconLibrary>MilStd2525b</IconLibrary>
+		<UtmZone>None</UtmZone>
+		<VerticalScale>1.0</VerticalScale>
+		<HorizontalScale>1.0</HorizontalScale>
+	</Playfield>
+	<LandRegion>
+		<ID>Gabriola</ID>
+		<Vertex>1584 2658</Vertex>
+		<Vertex>1120 2526</Vertex>
+		<Vertex>1256 2314</Vertex>
+		<Vertex>1112 2322</Vertex>
+		<Vertex>1176 2110</Vertex>
+		<Vertex>1872 1806</Vertex>
+		<Vertex>2368 1670</Vertex>
+		<Vertex>2476 1798</Vertex>
+		<Vertex>2708 1994</Vertex>
+		<Vertex>2416 2082</Vertex>
+		<Vertex>2004 2178</Vertex>
+		<Vertex>1760 2374</Vertex>
+		<Vertex>1604 2646</Vertex>
+	</LandRegion>
+	<LandRegion>
+		<ID>Vancouver</ID>
+		<Vertex>56 3158</Vertex>
+		<Vertex>224 3158</Vertex>
+		<Vertex>400 3030</Vertex>
+		<Vertex>536 2790</Vertex>
+		<Vertex>412 2766</Vertex>
+		<Vertex>292 2690</Vertex>
+		<Vertex>300 2626</Vertex>
+		<Vertex>448 2482</Vertex>
+		<Vertex>528 2298</Vertex>
+		<Vertex>656 2114</Vertex>
+		<Vertex>648 1930</Vertex>
+		<Vertex>748 1706</Vertex>
+		<Vertex>928 1834</Vertex>
+		<Vertex>1048 1802</Vertex>
+		<Vertex>940 2158</Vertex>
+		<Vertex>1180 1866</Vertex>
+		<Vertex>1584 1782</Vertex>
+		<Vertex>1740 1262</Vertex>
+		<Vertex>2180 558</Vertex>
+		<Vertex>1832 378</Vertex>
+		<Vertex>2068 39</Vertex>
+		<Vertex>-4 47</Vertex>
+	</LandRegion>
+	<Team>
+		<Name>RedTeam</Name>
+		<Against>BlueTeam</Against>
+	</Team>
+	<Team>
+		<Name>BlueTeam</Name>
+		<Against>RedTeam</Against>
+	</Team>
+	<DecisionMaker>
+		<Role>Top level</Role>
+		<Identifier>DM1</Identifier>
+		<Color>BlueViolet</Color>
+		<Briefing>Highest rank</Briefing>
+		<CanTransfer>false</CanTransfer>
+		<CanForceTransfers>true</CanForceTransfers>
+		<Team>BlueTeam</Team>
+		<CanChat>DM4</CanChat>
+	</DecisionMaker>
+	<DecisionMaker>
+		<Role>Separate hierarchy</Role>
+		<Identifier>DM4</Identifier>
+		<Color>DodgerBlue</Color>
+		<CanTransfer>true</CanTransfer>
+		<CanForceTransfers>false</CanForceTransfers>
+		<Team>BlueTeam</Team>
+		<CanChat>DM2,DM3,DM1</CanChat>
+	</DecisionMaker>
+	<DecisionMaker>
+		<Role>2nd level</Role>
+		<Identifier>DM2</Identifier>
+		<Color>CornflowerBlue</Color>
+		<Briefing>Middle rank, 2 direct supervisors</Briefing>
+		<ReportsTo>DM1,DM4</ReportsTo>
+		<CanTransfer>false</CanTransfer>
+		<CanForceTransfers>true</CanForceTransfers>
+		<Team>BlueTeam</Team>
+		<CanChat>DM4,DM1</CanChat>
+	</DecisionMaker>
+	<DecisionMaker>
+		<Role>3rd level</Role>
+		<Identifier>DM3</Identifier>
+		<Color>Cyan</Color>
+		<Briefing>intermediate level, reports to DM2</Briefing>
+		<ReportsTo>DM2</ReportsTo>
+		<CanTransfer>true</CanTransfer>
+		<CanForceTransfers>true</CanForceTransfers>
+		<Team>BlueTeam</Team>
+		<CanChat>DM1</CanChat>
+	</DecisionMaker>
+	<DecisionMaker>
+		<Role>lowest level</Role>
+		<Identifier>DM5</Identifier>
+		<Color>Blue</Color>
+		<Briefing>lowest level, reports to DM3</Briefing>
+		<ReportsTo>DM3</ReportsTo>
+		<CanTransfer>true</CanTransfer>
+		<CanForceTransfers>false</CanForceTransfers>
+		<Team>BlueTeam</Team>
+		<CanChat>DM3</CanChat>
+	</DecisionMaker>
+	<DecisionMaker>
+		<Role>Generic enemy</Role>
+		<Identifier>Red</Identifier>
+		<Color>Crimson</Color>
+		<Team>RedTeam</Team>
+	</DecisionMaker>
+	<Network>
+		<Name>SensorNet</Name>
+		<Member>DM1,DM2,DM3,DM4</Member>
+	</Network>
+	<TimeToAttack>10</TimeToAttack>
+	<Genus>
+		<Name>AirObject</Name>
+	</Genus>
+	<Genus>
+		<Name>LandObject</Name>
+	</Genus>
+	<Genus>
+		<Name>SeaObject</Name>
+	</Genus>
+	<Species>
+		<Name>spw</Name>
+		<Base>LandObject</Base>
+		<IsWeapon>true</IsWeapon>
+		<RemoveOnDestruction>true</RemoveOnDestruction>
+		<CanOwn>DM3,DM4</CanOwn>
+		<LaunchedByOwner>false</LaunchedByOwner>
+		<FullyFunctional>
+			<Icon>SeaSurfaceTrack-Hostile.png</Icon>
+			<StateParameters>
+				<LaunchDuration>0</LaunchDuration>
+				<DockingDuration>0</DockingDuration>
+				<TimeToAttack>1</TimeToAttack>
+				<MaximumSpeed>500</MaximumSpeed>
+				<FuelCapacity>0</FuelCapacity>
+				<InitialFuelLoad>0</InitialFuelLoad>
+				<FuelConsumptionRate>0</FuelConsumptionRate>
+				<FuelDepletionState>Dead</FuelDepletionState>
+			</StateParameters>
+		</FullyFunctional>
+		<DefineState>
+			<State>Dead</State>
+		</DefineState>
+	</Species>
+	<Species>
+		<Name>spw2</Name>
+		<Base>LandObject</Base>
+		<IsWeapon>true</IsWeapon>
+		<RemoveOnDestruction>true</RemoveOnDestruction>
+		<CanOwn>DM3,DM4</CanOwn>
+		<LaunchedByOwner>true</LaunchedByOwner>
+		<FullyFunctional>
+			<Icon>SeaSurfaceTrack-Hostile.png</Icon>
+			<StateParameters>
+				<LaunchDuration>0</LaunchDuration>
+				<DockingDuration>0</DockingDuration>
+				<TimeToAttack>1</TimeToAttack>
+				<MaximumSpeed>500</MaximumSpeed>
+				<FuelCapacity>0</FuelCapacity>
+				<InitialFuelLoad>0</InitialFuelLoad>
+				<FuelConsumptionRate>0</FuelConsumptionRate>
+				<FuelDepletionState>Dead</FuelDepletionState>
+			</StateParameters>
+		</FullyFunctional>
+		<DefineState>
+			<State>Dead</State>
+		</DefineState>
+	</Species>
+	<Species>
+		<Name>sp3</Name>
+		<Base>LandObject</Base>
+		<IsWeapon>false</IsWeapon>
+		<RemoveOnDestruction>true</RemoveOnDestruction>
+		<CanOwn>DM2,DM3</CanOwn>
+		<LaunchedByOwner>true</LaunchedByOwner>
+		<SubplatformLimit>1</SubplatformLimit>
+		<Subplatforms>spw</Subplatforms>
+		<FullyFunctional>
+			<Icon>GroundTrack.Equipment.Special.LandMines.Claymore-Friend.png</Icon>
+			<StateParameters>
+				<LaunchDuration>0</LaunchDuration>
+				<DockingDuration>0</DockingDuration>
+				<TimeToAttack>1</TimeToAttack>
+				<MaximumSpeed>300</MaximumSpeed>
+				<FuelCapacity>0</FuelCapacity>
+				<InitialFuelLoad>0</InitialFuelLoad>
+				<FuelConsumptionRate>0</FuelConsumptionRate>
+				<FuelDepletionState>Dead</FuelDepletionState>
+			</StateParameters>
+		</FullyFunctional>
+		<DefineState>
+			<State>Dead</State>
+		</DefineState>
+	</Species>
+	<Species>
+		<Name>sp2</Name>
+		<Base>LandObject</Base>
+		<IsWeapon>false</IsWeapon>
+		<RemoveOnDestruction>true</RemoveOnDestruction>
+		<CanOwn>DM1,DM3</CanOwn>
+		<LaunchedByOwner>false</LaunchedByOwner>
+		<SubplatformLimit>6</SubplatformLimit>
+		<Subplatforms>sp3,spw</Subplatforms>
+		<FullyFunctional>
+			<Icon>GroundTrack.Equipment.GroundVehicle.Armored.Tank-Hostile.png</Icon>
+			<StateParameters>
+				<LaunchDuration>0</LaunchDuration>
+				<DockingDuration>0</DockingDuration>
+				<TimeToAttack>1</TimeToAttack>
+				<MaximumSpeed>300</MaximumSpeed>
+				<FuelCapacity>0</FuelCapacity>
+				<InitialFuelLoad>0</InitialFuelLoad>
+				<FuelConsumptionRate>0</FuelConsumptionRate>
+				<FuelDepletionState>Dead</FuelDepletionState>
+			</StateParameters>
+		</FullyFunctional>
+		<DefineState>
+			<State>Dead</State>
+		</DefineState>
+	</Species>
+	<Species>
+		<Name>sp1</Name>
+		<Base>LandObject</Base>
+		<IsWeapon>false</IsWeapon>
+		<RemoveOnDestruction>true</RemoveOnDestruction>
+		<CanOwn>DM1,DM2,DM4,DM5</CanOwn>
+		<LaunchedByOwner>true</LaunchedByOwner>
+		<SubplatformLimit>2</SubplatformLimit>
+		<Subplatforms>sp2,sp3</Subplatforms>
+		<FullyFunctional>
+			<Icon>GroundTrack.Equipment.GroundVehicle.Armored.ArmoredPersonnelCarrier-Friend.png</Icon>
+			<StateParameters>
+				<LaunchDuration>0</LaunchDuration>
+				<DockingDuration>0</DockingDuration>
+				<TimeToAttack>1</TimeToAttack>
+				<MaximumSpeed>500</MaximumSpeed>
+				<FuelCapacity>0</FuelCapacity>
+				<InitialFuelLoad>0</InitialFuelLoad>
+				<FuelConsumptionRate>0</FuelConsumptionRate>
+				<FuelDepletionState>Dead</FuelDepletionState>
+			</StateParameters>
+		</FullyFunctional>
+		<DefineState>
+			<State>Dead</State>
+		</DefineState>
+	</Species>
+	<Species>
+		<Name>spRed</Name>
+		<Base>LandObject</Base>
+		<IsWeapon>false</IsWeapon>
+		<RemoveOnDestruction>true</RemoveOnDestruction>
+		<FullyFunctional>
+			<Icon>GroundTrack.Unit.Combat.Infantry.AirAssault-Friend.png</Icon>
+			<StateParameters>
+				<LaunchDuration>0</LaunchDuration>
+				<DockingDuration>0</DockingDuration>
+				<TimeToAttack>1</TimeToAttack>
+				<MaximumSpeed>200</MaximumSpeed>
+				<FuelCapacity>0</FuelCapacity>
+				<InitialFuelLoad>0</InitialFuelLoad>
+				<FuelConsumptionRate>0</FuelConsumptionRate>
+				<FuelDepletionState>Dead</FuelDepletionState>
+			</StateParameters>
+		</FullyFunctional>
+		<DefineState>
+			<State>Dead</State>
+		</DefineState>
+	</Species>
+	<OpenChatRoom>
+		<Room>Room_1_3_4</Room>
+		<Time>2</Time>
+		<Owner>DM1</Owner>
+		<Members>DM1,DM4,DM3</Members>
+	</OpenChatRoom>
+	<OpenChatRoom>
+		<Room>Room_1_3_5_X</Room>
+		<Time>4</Time>
+		<Owner>DM1</Owner>
+		<Members>DM1,DM5,DM3</Members>
+	</OpenChatRoom>
+	<OpenVoiceChannel>
+		<Name>Channel_2_3_5</Name>
+		<Time>6</Time>
+		<Access>DM2,DM3,DM5</Access>
+	</OpenVoiceChannel>
+	<OpenVoiceChannel>
+		<Name>Channel_1_2_3</Name>
+		<Time>8</Time>
+		<Access>DM1,DM2,DM3</Access>
+	</OpenVoiceChannel>
+	<OpenVoiceChannel>
+		<Name>Channel_All</Name>
+		<Time>1</Time>
+		<Access>DM1,DM2,DM3,DM4,DM5</Access>
+	</OpenVoiceChannel>
+		<OpenVoiceChannel>
+		<Name>Channel_All_2</Name>
+		<Time>1</Time>
+		<Access>DM1,DM2,DM3,DM4,DM5</Access>
+	</OpenVoiceChannel>
+	<CloseVoiceChannel>
+		<Name>Channel_2_3_5</Name>
+		<Time>400</Time>
+	</CloseVoiceChannel>
+	<CloseVoiceChannel>
+		<Name>Channel_1_2_3</Name>
+		<Time>300</Time>
+	</CloseVoiceChannel>
+	<OpenChatRoom>
+		<Room>Room_1_3_4_Repeat</Room>
+		<Time>6</Time>
+		<Owner>DM3</Owner>
+		<Members>DM1,DM4,DM3</Members>
+	</OpenChatRoom>
+	<OpenChatRoom>
+		<Room>Room_1_3_4</Room>
+		<Time>8</Time>
+		<Owner>DM1</Owner>
+		<Members>DM1,DM4,DM3</Members>
+	</OpenChatRoom>
+	<CloseChatRoom>
+		<Room>Room_1_3_4_Repeat</Room>
+		<Time>15</Time>
+	</CloseChatRoom>
+	<CloseChatRoom>
+		<Room>Room_1_3_4_Repeat</Room>
+		<Time>17</Time>
+	</CloseChatRoom>
+	<Create_Event>
+		<ID>Sub_1_1</ID>
+		<Kind>sp3</Kind>
+		<Owner>DM2</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_1_1</ID>
+		<Kind>sp1</Kind>
+		<Owner>DM1</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_1_2</ID>
+		<Kind>sp2</Kind>
+		<Owner>DM1</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_2_1</ID>
+		<Kind>sp1</Kind>
+		<Owner>DM2</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_3_W1</ID>
+		<Kind>spw</Kind>
+		<Owner>DM3</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_3_W21</ID>
+		<Kind>spw2</Kind>
+		<Owner>DM3</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_2_3</ID>
+		<Kind>sp3</Kind>
+		<Owner>DM2</Owner>
+		<Subplatform>Unit_3_W1,Unit_3_W21</Subplatform>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_3_2</ID>
+		<Kind>sp2</Kind>
+		<Owner>DM3</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_3_3</ID>
+		<Kind>sp3</Kind>
+		<Owner>DM3</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_3_3B</ID>
+		<Kind>sp3</Kind>
+		<Owner>DM3</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_4_1</ID>
+		<Kind>sp1</Kind>
+		<Owner>DM4</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_4_W1</ID>
+		<Kind>spw</Kind>
+		<Owner>DM4</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_4_W2</ID>
+		<Kind>spw</Kind>
+		<Owner>DM4</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_4_W3</ID>
+		<Kind>spw</Kind>
+		<Owner>DM4</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_3_W2</ID>
+		<Kind>spw</Kind>
+		<Owner>DM3</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_3_W3</ID>
+		<Kind>spw</Kind>
+		<Owner>DM3</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_3_W4</ID>
+		<Kind>spw</Kind>
+		<Owner>DM3</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_5_1</ID>
+		<Kind>sp1</Kind>
+		<Owner>DM5</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_Red_1</ID>
+		<Kind>spRed</Kind>
+		<Owner>Red</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_Red_2</ID>
+		<Kind>spRed</Kind>
+		<Owner>Red</Owner>
+	</Create_Event>
+	<Create_Event>
+		<ID>Unit_Red_3</ID>
+		<Kind>spRed</Kind>
+		<Owner>Red</Owner>
+	</Create_Event>
+	<Reveal_Event>
+		<ID>Sub_1_1</ID>
+		<Time>1</Time>
+		<InitialLocation>226 280 50</InitialLocation>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_1_1</ID>
+		<Time>1</Time>
+		<InitialLocation>206 290 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_1_2</ID>
+		<Time>1</Time>
+		<InitialLocation>488 284 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_2_1</ID>
+		<Time>1</Time>
+		<InitialLocation>76 516 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Move_Event>
+		<ID>Unit_2_3</ID>
+		<Time>1</Time>
+		<Throttle>100</Throttle>
+		<Destination>708 582 0</Destination>
+	</Move_Event>
+	<Reveal_Event>
+		<ID>Unit_3_2</ID>
+		<Time>1</Time>
+		<InitialLocation>124 638 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_3_3</ID>
+		<Time>1</Time>
+		<InitialLocation>840 524 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_3_3B</ID>
+		<Time>1</Time>
+		<InitialLocation>1540 1524 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_4_1</ID>
+		<Time>1</Time>
+		<InitialLocation>848 582 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_4_W1</ID>
+		<Time>1</Time>
+		<InitialLocation>85 610 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_4_W2</ID>
+		<Time>1</Time>
+		<InitialLocation>122 630 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_4_W3</ID>
+		<Time>1</Time>
+		<InitialLocation>106 592 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_3_W1</ID>
+		<Time>1</Time>
+		<InitialLocation>498 558 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_3_W2</ID>
+		<Time>1</Time>
+		<InitialLocation>398 530 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_3_W3</ID>
+		<Time>1</Time>
+		<InitialLocation>412 558 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_3_W4</ID>
+		<Time>1</Time>
+		<InitialLocation>496 580 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_5_1</ID>
+		<Time>1</Time>
+		<InitialLocation>796 980 0</InitialLocation>
+		<InitialState>FullyFunctional</InitialState>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_Red_1</ID>
+		<Time>1</Time>
+		<InitialLocation>1800 3200 0</InitialLocation>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_Red_2</ID>
+		<Time>1</Time>
+		<InitialLocation>2800 200 0</InitialLocation>
+	</Reveal_Event>
+	<Reveal_Event>
+		<ID>Unit_Red_3</ID>
+		<Time>1</Time>
+		<InitialLocation>800 1200 0</InitialLocation>
+	</Reveal_Event>
+	<Transfer_Event>
+		<ID>Unit_3_W3</ID>
+		<Time>35</Time>
+		<From>DM3</From>
+		<To>DM4</To>
+	</Transfer_Event>
+	<Transfer_Event>
+		<ID>Unit_3_W3</ID>
+		<Time>45</Time>
+		<From>DM4</From>
+		<To>DM5</To>
+	</Transfer_Event>
+	<Launch_Event>
+		<Parent>Unit_3_3</Parent>
+		<Time>30</Time>
+		<Child>Unit_1_1</Child>
+		<RelativeLocation>30 89 0</RelativeLocation>
+	</Launch_Event>
+	<Launch_Event>
+		<Parent>Unit_1_1</Parent>
+		<Time>30</Time>
+		<Child>Unit_3_2</Child>
+		<RelativeLocation>30 89 0</RelativeLocation>
+	</Launch_Event>
+	<SendChatMessage>
+		<Room>Room_1_3_4</Room>
+		<Time>5</Time>
+		<Message>This is a chat message from your experimenter. Go
+		back to your cages and await further pellets.</Message>
+	</SendChatMessage>
+	<SendChatMessage>
+		<Room>Room_1_3_4</Room>
+		<Sender>DM2</Sender>
+		<Time>9</Time>
+		<Message>I'm not in the room but I can send to it anyway,
+		because I'm special!</Message>
+	</SendChatMessage>
+</Scenario>

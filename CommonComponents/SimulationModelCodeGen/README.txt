@@ -1,0 +1,2 @@
+﻿xsd.exe was moved by Microsoft inbetween VS 2005 and VS 2008.  In 2005, it was a part of VS, so you could call "xsd.exe ....", now, this file is located in: C:\Program Files\Microsoft SDKs\Windows\v6.0A\Bin
+You'll need to add this to the build path, or open a command window and CD to this directory.

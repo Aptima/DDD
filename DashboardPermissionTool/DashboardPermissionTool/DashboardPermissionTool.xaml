@@ -1,0 +1,584 @@
+﻿<Window x:Class="DashboardPermissionTool.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:WpfToolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+    xmlns:dbda="clr-namespace:DashboardDataAccess;assembly=DashboardDataAccess"         
+    xmlns:lib="clr-namespace:DashboardPermissionTool"         
+    Title="Dashboard Permissions Interface" Height="480.144" Width="797.382" Background="#FFB9C9D0">
+    <Window.Resources>
+        <SolidColorBrush x:Key="GroupHeaderBackgroundBrush" Color="#FFB9D1EA"/>
+        <SolidColorBrush x:Key="DefaultControlForegroundBrush" Color="#FF10257F"/>
+        <dbda:MeasuresDataModel x:Key="MeasureData" />
+        <dbda:DisplayDataModel x:Key="DisplayData" />
+        <dbda:UserDataModel x:Key="UserData" />
+        <dbda:ExperimentDataModel x:Key="ExperimentData" />
+        <Style TargetType="TabItem">
+            <Style.Triggers>
+                <DataTrigger Binding ="{Binding ElementName=experimentNameCB, Path=SelectedIndex}" Value="-1">
+                    <Setter Property="TabItem.IsEnabled" Value="false"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TabControl">
+            <Style.Triggers>
+                <DataTrigger Binding ="{Binding ElementName=experimentNameCB, Path=SelectedIndex}" Value="-1">
+                    <Setter Property="TabControl.IsEnabled" Value="False"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <DataTemplate x:Key="myRadioButtonAll">
+            <Button Click="RadioButton_Click" Tag="All">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=All}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=All}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator1">
+            <Button Click="RadioButton_Click" Tag="Operator1">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[0]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[0]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator2">
+            <Button Click="RadioButton_Click" Tag="Operator2">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[1]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[1]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator3">
+            <Button Click="RadioButton_Click" Tag="Operator3">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[2]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[2]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator4">
+            <Button Click="RadioButton_Click" Tag="Operator4">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[3]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[3]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator5">
+            <Button Click="RadioButton_Click" Tag="Operator5">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[4]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[4]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator6">
+            <Button Click="RadioButton_Click" Tag="Operator6">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[5]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[5]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator7">
+            <Button Click="RadioButton_Click" Tag="Operator7">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[6]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[6]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator8">
+            <Button Click="RadioButton_Click" Tag="Operator8">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[7]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[7]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator9">
+            <Button Click="RadioButton_Click" Tag="Operator3">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[8]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[8]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <DataTemplate x:Key="myRadioButtonOperator10">
+            <Button Click="RadioButton_Click" Tag="Operator10">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="20" Width="20" Background="#00FFFFFF" x:Name="MyEllipse">
+                            <Ellipse x:Name="Circle" StrokeThickness="1" Stroke="Black" Fill="Red">
+                            </Ellipse>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=[9]}">
+                                <DataTrigger.Value>
+                                    On
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=[9]}">
+                                <DataTrigger.Value>
+                                    Partial
+                                </DataTrigger.Value>
+                                <Setter TargetName="Circle" Property="Fill" Value="LightGray"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+        <ControlTemplate x:Key="TabItemControlTemplate1" TargetType="{x:Type TabItem}">
+        	<Border SnapsToDevicePixels="True">
+        		<Grid Margin="0,0,1,0">
+        			<Grid x:Name="Transform">
+        				<Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3,3,0,0"/>
+        				<Border x:Name="HighlightBorder" BorderThickness="1,1,1,0" CornerRadius="3,3,0,0" Height="3" VerticalAlignment="Top"/>
+        			</Grid>
+        			<Border BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}">
+        				<ContentPresenter ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" ContentStringFormat="{TemplateBinding HeaderStringFormat}" ContentSource="Header" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}"/>
+        			</Border>
+        		</Grid>
+        	</Border>
+        	<ControlTemplate.Triggers>
+        		<Trigger Property="IsMouseOver" Value="True">
+        			<Setter Property="BorderBrush" TargetName="HighlightBorder" Value="#FFE68B2C"/>
+        			<Setter Property="Background" TargetName="HighlightBorder" Value="#FFFFC73C"/>
+        			<Setter Property="Background" TargetName="Bd">
+        				<Setter.Value>
+        					<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+        						<GradientStop Color="White" Offset="0"/>
+        						<GradientStop Color="#FFECEBE6" Offset="1"/>
+        					</LinearGradientBrush>
+        				</Setter.Value>
+        			</Setter>
+        		</Trigger>
+        		<Trigger Property="IsSelected" Value="True">
+        			<Setter Property="Panel.ZIndex" Value="1"/>
+        			<Setter Property="BorderBrush" TargetName="HighlightBorder" Value="#FFE68B2C"/>
+        			<Setter Property="Background" TargetName="HighlightBorder" Value="#FFFFC73C"/>
+        			<Setter Property="Background" TargetName="Bd" Value="#FFB0C1CE"/>
+        		</Trigger>
+        		<Trigger Property="TabStripPlacement" Value="Bottom">
+        			<Setter Property="LayoutTransform" TargetName="Transform">
+        				<Setter.Value>
+        					<ScaleTransform ScaleY="-1" ScaleX="1"/>
+        				</Setter.Value>
+        			</Setter>
+        		</Trigger>
+        		<Trigger Property="TabStripPlacement" Value="Left">
+        			<Setter Property="LayoutTransform" TargetName="Transform">
+        				<Setter.Value>
+        					<RotateTransform Angle="-90"/>
+        				</Setter.Value>
+        			</Setter>
+        		</Trigger>
+        		<Trigger Property="TabStripPlacement" Value="Right">
+        			<Setter Property="LayoutTransform" TargetName="Transform">
+        				<Setter.Value>
+        					<RotateTransform Angle="90"/>
+        				</Setter.Value>
+        			</Setter>
+        		</Trigger>
+        		<Trigger Property="IsEnabled" Value="False">
+        			<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+        			<Setter Property="Background" TargetName="Bd" Value="#FFF5F4EA"/>
+        			<Setter Property="BorderBrush" TargetName="Bd" Value="#FFC9C7BA"/>
+        		</Trigger>
+        		<MultiTrigger>
+        			<MultiTrigger.Conditions>
+        				<Condition Property="IsSelected" Value="True"/>
+        				<Condition Property="TabStripPlacement" Value="Top"/>
+        			</MultiTrigger.Conditions>
+        			<Setter Property="Margin" Value="-2,-2,-2,-1"/>
+        		</MultiTrigger>
+        		<MultiTrigger>
+        			<MultiTrigger.Conditions>
+        				<Condition Property="IsSelected" Value="True"/>
+        				<Condition Property="TabStripPlacement" Value="Bottom"/>
+        			</MultiTrigger.Conditions>
+        			<Setter Property="Margin" Value="-2"/>
+        		</MultiTrigger>
+        		<MultiTrigger>
+        			<MultiTrigger.Conditions>
+        				<Condition Property="IsSelected" Value="True"/>
+        				<Condition Property="TabStripPlacement" Value="Left"/>
+        			</MultiTrigger.Conditions>
+        			<Setter Property="Margin" Value="-2,-2,-1,-2"/>
+        		</MultiTrigger>
+        		<MultiTrigger>
+        			<MultiTrigger.Conditions>
+        				<Condition Property="IsSelected" Value="True"/>
+        				<Condition Property="TabStripPlacement" Value="Right"/>
+        			</MultiTrigger.Conditions>
+        			<Setter Property="Margin" Value="-1,-2,-2,-2"/>
+        		</MultiTrigger>
+        	</ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Height="22" Name="menu1" VerticalAlignment="Top" Background="#FF7D9AAA">
+            <MenuItem Header="Login">
+                <MenuItem Name="loginMenuItem" Header="_Login to Database..." Click="loginMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Name="ExperimentMenu" Header="Experiment" Visibility="Collapsed" >
+                <MenuItem Name="newExpMenuItem" Header="_New Experiment..." Click="newExpMenuItem_Click"/>
+                <MenuItem Name="selectExpUsersMenuItem" Header="_Select Experiment Users" Click="selectExpUsersMenuItem_Click"/>
+                <MenuItem Name="deleteExpMenuItem" Header="_Delete Current Experiment" Click="deleteExpMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Name="AdminMenu" Header="Administration" Visibility="Collapsed">
+                <MenuItem Name="addUserMenuItem" Header="_Add User..." Click="addUserMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid Name="userInfoGrid" DockPanel.Dock="Top" DataContext="{Binding Source={StaticResource UserData}}" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Username: " FontWeight="Bold" />
+            <Label Grid.Row="0" Grid.Column="1" Name="usernameLB" Content="{Binding Path=User.Username}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Grid.Column="0" Content="Role: " FontWeight="Bold" />
+            <Label Grid.Row="1" Grid.Column="1" Name="roleLB" Content="{Binding Path=RoleName}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Label Grid.Row="2" Grid.Column="0" Content="Experiment:" FontWeight="Bold" />
+            <ComboBox Grid.Row="2" Grid.Column="1" Name="experimentNameCB" DataContext="{Binding Source={StaticResource ExperimentData}}"
+                      ItemsSource="{Binding Path=ExperimentNames}" Margin="1.429,1.429,-1.429,-1.429"
+                      SelectionChanged="experimentNameCB_SelectionChanged" >
+            </ComboBox>
+        </Grid>
+        <TabControl Name="experimentTabControl" SelectedIndex="0">
+        	<TabControl.Background>
+        		<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+        			<GradientStop Color="#FFFCFCFE" Offset="0"/>
+        			<GradientStop Color="#FFB9C9D0" Offset="1"/>
+        		</LinearGradientBrush>
+        	</TabControl.Background>
+            <TabItem Name="experimentTab" Header="Experiment Properties" Template="{DynamicResource TabItemControlTemplate1}" Background="#FFE5EAEF">
+                <Grid Margin="10">
+                    <Grid.Resources>
+                        <Style TargetType="{x:Type Grid}">
+                            <Setter Property="Margin" Value="10" />
+                        </Style>
+                        <Style TargetType="{x:Type Label}">
+                            <Setter Property="Margin" Value="0,3,5,5" />
+                            <Setter Property="Padding" Value="0,0,0,5" />
+                        </Style>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Margin" Value="0,0,0,5" />
+                        </Style>
+                    </Grid.Resources>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <!-- Experiment Users -->
+                    <Label Grid.Row="0" Grid.Column="0">Experiment Users:</Label>
+                    <ListBox Grid.Row="0" Grid.Column="1"  Name="usersInExpLB" Height="100" Width="100" ItemsSource="{Binding UsersInExperiment}" Margin="0,0,0,10">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Username}" FontWeight="Bold"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    
+                    <!-- Experiment Scenario File -->
+                    <Label Grid.Row="1" Grid.Column="0">Experiment Scenario File:</Label>
+                    <TextBox Grid.Column="1" Grid.Row="1" Height="20" Margin="10,0,10,10" Name="scenarioPathTB" VerticalAlignment="Top" Text="{Binding CurExperiment.ScenarioFilePath}" IsReadOnly="True" />
+                    <Button Grid.Column="2" Grid.Row="1" Height="20" HorizontalAlignment="Right" Name="scenarioPathBrowseB" VerticalAlignment="Top" Width="75" Click="scenarioPathBrowseB_Click" Content="Browse">
+                        <Button.Style>
+                            <Style>
+                                <Style.Triggers>
+                                    <DataTrigger Binding ="{Binding CurExperiment}" Value="{x:Null}">
+                                        <Setter Property="Button.IsEnabled" Value="false"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <Label Grid.Row="2" Grid.Column="0">Experiment Scenario Type</Label>
+                    <Label Grid.Row="2" Grid.Column="1" Name="scenarioTypeLB" Margin="10,0,10,10" Content="{Binding CurExperiment.ScenarioFileType}"/>
+
+                    <Button Grid.Column="1" Grid.Row="3" Height="20" Name="scanScenarioB" VerticalAlignment="Top" Click="scanScenarioB_Click" Content="Scan Scenario" Margin="50,0.769,50,0" Grid.RowSpan="2">
+                        <Button.Style>
+                            <Style>
+                                <Style.Triggers>
+                                    <DataTrigger Binding ="{Binding ElementName=scenarioPathTB, Path=Text.Length}" Value="0">
+                                        <Setter Property="Button.IsEnabled" Value="false"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding ="{Binding ElementName=scenarioPathTB, Path=Text.Length}" Value="-1">
+                                        <Setter Property="Button.IsEnabled" Value="false"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Grid >
+            </TabItem>
+            <TabItem Name="measuresTab" Header="Measures" Template="{DynamicResource TabItemControlTemplate1}" Background="#FFE5EAEF">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                        <Button Height="23" Name="SaveMeasuresB" Width="75" Margin="0,0,0,0" Click="SaveMeasuresB_Click">Save</Button>
+                        <Button Height="23" Name="reloadMeasuresB" Width="91.456" Margin="10,0,0,0" Click="reloadMeasuresB_Click">Cancel Changes</Button>
+                        <Button Height="23" Name="resetMeasuresB" Width="75" Margin="10,0,0,0" Click="resetMeasuresB_Click">Clear</Button>
+                    </StackPanel>
+                    <WpfToolkit:DataGrid
+                        x:Name="measuresDataGrid"
+                        AutoGenerateColumns="True"
+                        ItemsSource="{Binding Source={StaticResource MeasureData}}" >
+                        <WpfToolkit:DataGrid.Columns>
+                            <WpfToolkit:DataGridTemplateColumn>
+                                <WpfToolkit:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="{Binding Mode=OneWay,ConverterParameter=Margin,Converter={x:Static lib:CategoryCheckConverter.CategoryCheckInstance}}" Orientation="Horizontal">
+                                            <ToggleButton x:Name="ExpandButton" Click="measureTreeClicked" Width="20" Height="20" Content="-" Visibility="{Binding Mode=OneWay,Converter={x:Static lib:CategoryCheckConverter.CategoryCheckInstance},ConverterParameter=Visibility}"></ToggleButton>
+                                            <TextBlock Margin="5,5,0,0" Text="{Binding MeasureName}" FontWeight="{Binding Mode=OneWay,ConverterParameter=FontWeight,Converter={x:Static lib:CategoryCheckConverter.CategoryCheckInstance}}" />                                        
+                                        </StackPanel>
+                                        <DataTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding Path=ExpandedFlag}">
+                                                <DataTrigger.Value>
+                                                    False
+                                                </DataTrigger.Value>
+                                                <Setter TargetName="ExpandButton" Property="Content" Value="+"/>
+                                            </DataTrigger>
+                                        </DataTemplate.Triggers>
+                                    </DataTemplate>
+                                </WpfToolkit:DataGridTemplateColumn.CellTemplate>
+                            </WpfToolkit:DataGridTemplateColumn>
+                        </WpfToolkit:DataGrid.Columns>
+                    </WpfToolkit:DataGrid>
+                </DockPanel>
+            </TabItem>
+            <TabItem Name="displaysTab" Header="Displays" Template="{DynamicResource TabItemControlTemplate1}" Background="#FFE5EAEF">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                        <Button Height="23" Name="SaveDisplaysB" Width="75" Margin="0,0,0,0" Click="SaveDisplaysB_Click">Save</Button>
+                        <Button Height="23" Name="reloadDisplaysB" Width="91.456" Margin="10,0,0,0" Click="ReloadDisplaysB_Click">Cancel Changes</Button>
+                        <Button Height="23" Name="resetDisplaysB" Width="75" Margin="10,0,0,0" Click="ResetDisplaysB_Click">Clear</Button>
+                    </StackPanel>
+                    <WpfToolkit:DataGrid
+                        x:Name="displayDataGrid"
+                        AutoGenerateColumns="True"
+                        ItemsSource="{Binding Source={StaticResource DisplayData}}" >
+                        <WpfToolkit:DataGrid.Columns>
+                            <WpfToolkit:DataGridTemplateColumn>
+                                <WpfToolkit:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid Height="33" Width="200">
+                                        	<Grid.ColumnDefinitions>
+                                        		<ColumnDefinition Width="0.376*"/>
+                                        		<ColumnDefinition Width="0.624*"/>
+                                        	</Grid.ColumnDefinitions>
+                                            <Image Source="{Binding Path=ImageResourcePath}"/>
+                                            <TextBlock Text="{Binding DisplayName}" Grid.Column="1" VerticalAlignment="Center"/>
+                                        </Grid>
+
+                                    </DataTemplate>
+                                </WpfToolkit:DataGridTemplateColumn.CellTemplate>
+                            </WpfToolkit:DataGridTemplateColumn>
+                        </WpfToolkit:DataGrid.Columns>
+                    </WpfToolkit:DataGrid>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

@@ -1,0 +1,2674 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="BestPracticesGuide_files/filelist.xml">
+<link rel=Edit-Time-Data href="BestPracticesGuide_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>DDD v4.0 Best Practices Guide</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Aptima, Inc.</o:Author>
+  <o:Template>DDDDocumentationTemplate.dot</o:Template>
+  <o:LastAuthor>Adam</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>87</o:TotalTime>
+  <o:LastPrinted>2006-12-04T15:37:00Z</o:LastPrinted>
+  <o:Created>2011-11-29T13:30:00Z</o:Created>
+  <o:LastSaved>2011-11-29T13:30:00Z</o:LastSaved>
+  <o:Pages>12</o:Pages>
+  <o:Words>3719</o:Words>
+  <o:Characters>21199</o:Characters>
+  <o:Company>Aptima, Inc.</o:Company>
+  <o:Lines>176</o:Lines>
+  <o:Paragraphs>49</o:Paragraphs>
+  <o:CharactersWithSpaces>24869</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:TargetScreenSize>800x600</o:TargetScreenSize>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="BestPracticesGuide_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="BestPracticesGuide_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131078"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="FR" VendorID="64" DLLVersion="131078" NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+   <w:DontUseIndentAsNumberingTabStop/>
+   <w:FELineBreak11/>
+   <w:WW11IndentRules/>
+   <w:DontAutofitConstrainedTables/>
+   <w:AutofitLikeWW11/>
+   <w:HangulWidthLikeWW11/>
+   <w:UseNormalStyleForList/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" LatentStyleCount="267">
+  <w:LsdException Locked="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="99" Name="Hyperlink"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true"
+   Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"Body Text";
+	mso-style-next:"Body Text";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:9.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	mso-bidi-font-style:italic;}
+h3
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-unhide:no;
+	mso-style-next:Normal;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-unhide:no;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.15in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-unhide:no;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-name:"Caption\,Char\, Char";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"Body Text";
+	mso-style-link:"Caption Char\,Char Char\, Char Char";
+	mso-style-next:"Body Text";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-weight:bold;}
+span.MsoFootnoteReference
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	vertical-align:super;}
+span.MsoCommentReference
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;}
+span.MsoEndnoteReference
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	mso-list:l1 level1 lfo1;
+	tab-stops:list .25in;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber
+	{mso-style-unhide:no;
+	mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	mso-list:l0 level1 lfo4;
+	tab-stops:list .25in;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-next:"Body Text";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListContinue, li.MsoListContinue, div.MsoListContinue
+	{mso-style-unhide:no;
+	mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextFirstIndent, li.MsoBodyTextFirstIndent, div.MsoBodyTextFirstIndent
+	{mso-style-unhide:no;
+	mso-style-parent:"Body Text";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:10.5pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:200%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-unhide:no;
+	mso-style-parent:"";
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"Comment Text";
+	mso-style-next:"Comment Text";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-unhide:no;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.Bold
+	{mso-style-name:Bold;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Contents, li.Contents, div.Contents
+	{mso-style-name:Contents;
+	mso-style-unhide:no;
+	mso-style-parent:"Heading 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	tab-stops:right dotted 503.5pt;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+span.ZBold
+	{mso-style-name:"Z Bold";
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.ZUnderline
+	{mso-style-name:"Z Underline";
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	text-decoration:underline;
+	text-underline:single;}
+span.ZItalic
+	{mso-style-name:"Z Italic";
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.ZNormal
+	{mso-style-name:"Z Normal";
+	mso-style-unhide:no;}
+p.TableHeading, li.TableHeading, div.TableHeading
+	{mso-style-name:"Table Heading";
+	mso-style-unhide:no;
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.TableText, li.TableText, div.TableText
+	{mso-style-name:"Table Text";
+	mso-style-unhide:no;
+	mso-style-parent:"Table Heading";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.ParagraphNoNumber, li.ParagraphNoNumber, div.ParagraphNoNumber
+	{mso-style-name:"Paragraph No Number";
+	mso-style-unhide:no;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.ZNormal0
+	{mso-style-name:ZNormal;
+	mso-style-unhide:no;}
+span.acicollapsed1
+	{mso-style-name:acicollapsed1;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-hide:none;}
+span.acicollapsed2
+	{mso-style-name:acicollapsed2;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-hide:none;}
+span.CaptionChar
+	{mso-style-name:"Caption Char\,Char Char\, Char Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Caption\,Char\, Char";
+	mso-ansi-font-size:11.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	mso-bidi-font-weight:bold;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("BestPracticesGuide_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("BestPracticesGuide_files/header.htm") fcs;
+	mso-endnote-separator:url("BestPracticesGuide_files/header.htm") es;
+	mso-endnote-continuation-separator:url("BestPracticesGuide_files/header.htm") ecs;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:.5in .75in .5in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-title-page:yes;
+	mso-header:url("BestPracticesGuide_files/header.htm") h1;
+	mso-footer:url("BestPracticesGuide_files/header.htm") f1;
+	mso-first-header:url("BestPracticesGuide_files/header.htm") fh1;
+	mso-first-footer:url("BestPracticesGuide_files/header.htm") ff1;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:1669609328;}
+@list l0:level1
+	{mso-level-style-link:"List Number";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:692208378;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"List Bullet";
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:684407748;
+	mso-list-type:hybrid;
+	mso-list-template-ids:987685294 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l3
+	{mso-list-id:699745072;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2138216176 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l4
+	{mso-list-id:1928660120;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-726599640 67698703 67698713 67698703 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-tab-stop:117.0pt;
+	mso-level-number-position:left;
+	margin-left:117.0pt;
+	text-indent:-.25in;}
+@list l4:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoTitle><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:282.75pt;
+ height:110.25pt'>
+ <v:imagedata src="BestPracticesGuide_files/image001.png" o:title="logo_lg_horiz_md_blue_white"/>
+</v:shape><![endif]--><![if !vml]><img width=377 height=147
+src="BestPracticesGuide_files/image002.jpg" v:shapes="_x0000_i1025"><![endif]></p>
+
+<p class=MsoTitle>DDD v4.2 Best Practices Guide</p>
+
+<p class=MsoSubtitle>November 2011</p>
+
+<p class=Contents>Contents</p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 503.5pt'><a name="_Toc91415233"></a><a
+name="_Toc27217138"></a><a name="_Ref26938372"><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></a><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='font-weight:normal;mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'> </span>TOC \h \z \t &quot;Heading 1,1,Heading
+2,2&quot; <span style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><a href="#_Toc308597546"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Using the DDD
+Simulation Server Console</span></span></span></span><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'><span style='color:windowtext;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597546 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500340036000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";font-weight:normal;
+mso-no-proof:yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597547"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Before the
+Experiment Begins</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597547 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500340037000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597548"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Opening the
+DDD Simulation Server</span></span></span></span><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'><span style='color:windowtext;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597548 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500340038000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597549"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Selecting a
+Scenario</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597549 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500340039000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597550"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Specifying the
+Directory for the Current Scenario’s Log File</span></span></span></span><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597550 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350030000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597551"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Specifying a
+Simulation Run ID</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597551 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350031000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597552"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Enable Voice
+Communications and Recording</span></span></span></span><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'><span style='color:windowtext;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597552 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350032000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597553"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Loading the
+Scenario</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597553 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350033000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597554"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Verifying That
+the Minimum Number of Players Have Entered the Simulation</span></span></span></span><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>.. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597554 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350034000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597555"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Starting the
+Simulation</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597555 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350035000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597556"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Running the
+Simulation</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597556 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350036000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597557"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Getting
+Information During the Simulation</span></span></span></span><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>.. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597557 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350037000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597558"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Replaying a
+Simulation</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597558 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350038000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597559"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Managing
+Simulation Data</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597559 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500350039000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";font-weight:normal;
+mso-no-proof:yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597560"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Simulation Run
+ID Name Tips</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597560 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360030000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597561"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>File Directory
+Tips</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597561 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>9<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360031000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597562"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Backup Tips</span></span></span></span><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597562 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>9<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360032000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597563"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Providing
+Information to Players</span></span></span></span><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'><span style='color:windowtext;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597563 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>9<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360033000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";font-weight:normal;
+mso-no-proof:yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597564"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>The ClickOnce
+Link to Install the DDD Client Software</span></span></span></span><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597564 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>10<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360034000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597565"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>The User Name</span></span></span></span><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597565 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>10<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360035000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597566"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>The Password</span></span></span></span><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597566 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>10<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360036000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597567"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>The Player
+Briefing</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597567 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>10<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360037000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597568"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Assets
+Available to the Player</span></span></span></span><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'><span style='color:windowtext;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597568 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>10<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360038000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597569"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Assets
+Required to Destroy Enemy Objects</span></span></span></span><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597569 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>10<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500360039000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597570"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Subplatform
+Information</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597570 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>11<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500370030000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597571"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Practice
+Sessions for New Players</span></span></span></span><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'><span style='color:windowtext;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597571 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>11<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500370031000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";font-weight:normal;
+mso-no-proof:yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597572"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Troubleshooting
+Tips</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597572 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>11<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500370032000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";font-weight:normal;
+mso-no-proof:yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right dotted 503.5pt'><span style='mso-bookmark:
+_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:
+_Toc91415233'></span></span></span><a href="#_Toc308597573"><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='mso-no-proof:yes'>Understanding
+the Player’s View</span></span></span></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><span
+style='color:windowtext;display:none;mso-hide:screen;mso-no-proof:yes;
+text-decoration:none;text-underline:none'> PAGEREF _Toc308597573 \h <span
+style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='color:windowtext;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'>11<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003300300038003500390037003500370033000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span></a><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'><span style='font-size:11.0pt;font-family:
+"Calibri","sans-serif";mso-bidi-font-family:"Times New Roman";font-weight:normal;
+mso-no-proof:yes'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref26938372'><span style='mso-bookmark:_Toc27217138'><span
+style='mso-bookmark:_Toc91415233'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Ref26938372'><span
+style='mso-bookmark:_Toc27217138'><span style='mso-bookmark:_Toc91415233'><o:p>&nbsp;</o:p></span></span></span></p>
+
+<b><span style='font-size:14.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+<span style='mso-bookmark:_Toc91415233'></span><span style='mso-bookmark:_Toc27217138'></span><span
+style='mso-bookmark:_Ref26938372'></span></span></b>
+
+<h1><a name="_Toc308597546">Using the DDD Simulation Server Console</a></h1>
+
+<p class=MsoBodyText>The DDD is used to run simulations (also known as <i>experiments</i>
+or <i>training sessions</i>) for individuals or teams participating in
+pre-defined “scripted” scenarios. Data for simulation participants (scripted or
+human) is logged during the execution of the scenario and is available for
+replay, analysis, and feedback purposes.</p>
+
+<p class=MsoBodyText>The person who runs the simulation (“the experimenter”)
+uses the PC on which the DDD Simulation Server is installed (“the server
+machine”) to log onto the DDD Simulation Server. The experimenter also uses the
+DDD Simulation Server console to start and stop the experiment and to manage
+data. All the data files generated by experiments are stored on the server
+machine. Players who participate in the experiment (meaning, play the scenario)
+are referred to as “Decision Makers.”</p>
+
+<p class=MsoBodyText>The experimenter should be aware that when DDD is
+installed, it also is possible to install the Visual Scenario Generator (VSG)
+version 4.2, a graphical scenario editor for modifying an existing DDD 4.2 scenario
+file. With VSG v4.2, the user can change maps, move assets on the map, create
+new assets for the simulation, copy existing assets, and save the edited
+scenario. The VSG requires SQL Server 2005.</p>
+
+<h2><a name="_Toc308597547">Before the Experiment Begins</a></h2>
+
+<p class=MsoBodyText>The experimenter must make decisions before running an
+experiment. The experimenter will have normally one or more scenarios from
+which to choose, as well as one or more groups of players (“teams”). </p>
+
+<p class=MsoBodyText>A default scenario is loaded during installation of the
+DDD Simulation Server. Additional scenarios created and saved using the VSG
+will be saved to the same folder and will be available for use by the
+experimenter when running the DDD Simulation Server. Before the experiment
+begins, it is important to verify or change the location where the data
+generated by that experiment will be stored.</p>
+
+<p class=MsoBodyText>Before the experiment begins, the experimenter performs
+the following tasks:</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Open the DDD Simulation Server.</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>(Optional) If the current scenario will not be used,
+change the scenario.</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>(Optional) Specify the directory for the current
+scenario’s log file.</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>(Optional) Specify a Simulation Run ID name to identify
+the group of players.</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>(Optional) If the scenario includes the use of voice
+channels, enable voice communications and recording.</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Load the scenario.</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Verify that the minimum number of players have entered
+the simulation.</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Start the simulation.</p>
+
+<p class=MsoListNumber style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:0in;text-indent:0in;mso-list:none;tab-stops:.5in'>These steps
+are described in more detail below.</p>
+
+<h2><a name="_Toc308597548"></a><a name="_Toc153018482"><span style='mso-bookmark:
+_Toc308597548'>Opening the DDD Simulation Server</span></a></h2>
+
+<p class=MsoBodyText>Use the following steps to open the DDD Simulation Server:</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo33'><![if !supportLists]><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>To open the DDD Simulation Server on the server machine,
+double-click the DDD 4.2 icon on the machine’s desktop or select All Programs –
+Aptima – DDD 4.2 from the Microsoft Start menu.</p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>In the resulting Server Configuration window (Figure
+1), enter the Hostname (i.e., machine name) of the server machine (if it is not
+displayed by default). You can use the default Port number (typically 9999) or
+optionally enter a different one. </p>
+
+<p class=MsoListNumber align=center style='margin-left:0in;text-align:center;
+text-indent:0in;mso-list:none;tab-stops:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoListNumber align=center style='margin-left:0in;text-align:center;
+text-indent:0in;mso-list:none;tab-stops:.5in'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:177.75pt;
+ height:129.75pt;visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=237 height=173
+src="BestPracticesGuide_files/image004.jpg" v:shapes="Picture_x0020_1"><![endif]></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Toc243293931"></a><span class=GramE><span style='mso-bookmark:_Toc243293931'><b><span
+style='font-size:12.0pt'>Figure 1.</span></b></span></span><span
+style='mso-bookmark:_Toc243293931'><b><span style='font-size:12.0pt'> </span></b></span><b><span
+style='font-size:12.0pt'>DDD Server Configuration<o:p></o:p></span></b></p>
+
+<p class=MsoListNumber align=center style='margin-left:0in;text-align:center;
+text-indent:0in;mso-list:none;tab-stops:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoListNumber style='margin-bottom:6.0pt;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Click <b style='mso-bidi-font-weight:normal'>OK</b>. The
+DDD Simulation Server console is displayed, as shown in Figure 2 below. </p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:468pt;height:225.75pt;visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=301
+src="BestPracticesGuide_files/image006.jpg" v:shapes="_x0000_i1027"><![endif]></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span class=GramE><b><span
+style='font-size:12.0pt'>Figure 2.</span></b></span><b><span style='font-size:
+12.0pt'> DDD Simulation Server <o:p></o:p></span></b></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc308597549">Selecting a Scenario</a></h2>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo35'><![if !supportLists]><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>The name of the scenario file in current use is
+displayed to the right of the ‘Scenario File’ field label in the DDD Simulation
+Server console (see Figure 2, above). Use <span class=ZBold>Browse</span> to select
+a new scenario file from the set of available files listed in the resulting
+file browse window.</p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo29'><![if !supportLists]><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Click <span class=ZBold>OK</span>.</p>
+
+<p class=MsoBodyText>The new scenario will be in use until the DDD Simulation
+Server is stopped or another scenario is chosen using the above steps.</p>
+
+<h2><a name="_Toc308597550">Specifying the Directory for the Current Scenario’s
+Log File</a></h2>
+
+<p class=MsoBodyText>In addition to selecting the scenario file to run, the experimenter
+can also verify or change the location where the data generated by the
+experiment will be saved. The event log file contains the data generated when
+the simulation is run.</p>
+
+<p class=MsoBodyText>When the DDD Simulation Server is installed and configured,
+the administrator will verify or set new default values. Therefore, default
+values will have already been set for storing log files. The experimenter may
+save the log files in another directory, if desired. To do so, use <span
+class=ZBold>Browse</span> to select a new Event Log Path.</p>
+
+<h2><a name="_Toc308597551">Specifying a Simulation Run ID</a></h2>
+
+<p class=MsoBodyText>The experimenter can assign a name to each simulation
+being run as a strategy for organizing log file data. In other words, one way
+to make it easier to keep track of data is to add information to the log
+filename as a way to identify a simulation in a more specific way. The best
+type of information to add is information that identifies the group of players
+participating in the simulation.</p>
+
+<p class=MsoBodyText>For example, suppose two different teams play the same
+simulation, one in the morning and the other in the afternoon. Use Simulation
+Run ID to assign a name to each team, such as “A” and “B” or “Morning Team” and
+“Afternoon Team.” The Simulation Run ID will be included in the log file name,
+making it easier to keep track of data.</p>
+
+<p class=MsoBodyText>To specify a Simulation Run ID, simply enter a name in the
+Simulation Run ID box before loading the scenario.</p>
+
+<p class=MsoBodyText>Note: The order of the above steps is critical. The name
+for the simulation run must be entered before the scenario is loaded.
+Otherwise, the name will not be added to the log filename.</p>
+
+<p class=MsoBodyText>See <!--[if supportFields]><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>REF _Ref162078597 <span style='mso-element:
+field-separator'></span><![endif]-->Simulation Run ID Name Tips<!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--> on page <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>PAGEREF _Ref162078624 <span style='mso-element:
+field-separator'></span><![endif]--><span style='mso-no-proof:yes'>7</span><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--> for more information.</p>
+
+<h2><a name="_Toc308597552">Enable Voice Communications and Recording</a></h2>
+
+<p class=MsoBodyText>DMs can communicate with each other using voice chat. Voice
+chat channels, and the DMs permitted to use them, are specified in the scenario
+file. To enable voice communications during the experiment, click the <b
+style='mso-bidi-font-weight:normal'>Enable Voice Comm</b> button located in the
+lower right area of the DDD Simulation Server (see Figure 2, above). The label
+of the toggle button will update to <b style='mso-bidi-font-weight:normal'>Disable
+Voice Comm </b>(see Figure 3). Click the button again to disable voice
+communication.</p>
+
+<p class=MsoBodyText>To record voice communications for replay, check the <b
+style='mso-bidi-font-weight:normal'>Record Sound</b> checkbox.</p>
+
+<p class=MsoBodyText><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:468pt;height:225.75pt;
+ visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=301
+src="BestPracticesGuide_files/image008.jpg" v:shapes="_x0000_i1028"><![endif]></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span class=GramE><b><span
+style='font-size:12.0pt'>Figure 3.</span></b></span><b><span style='font-size:
+12.0pt'> DDD Voice Communication Settings <o:p></o:p></span></b></p>
+
+<p class=MsoBodyText>Note: Voice communications and recording of sound must be
+enabled prior to the start of the simulation. Otherwise, the voice channels will
+not be loaded and sound will not be recorded during the scenario run, even if
+the scenario itself includes voice channels.<span style='mso-spacerun:yes'> 
+</span>If you forget to enable these settings prior to a scenario run, stop the
+scenario, enable the settings, and then re-load and re-run it.<span
+style='mso-spacerun:yes'>  </span>For each computer running the DDD Client,
+those computers will need to access the DDDClient shared folder, and run the Register_EvoVoIP_COM_client.bat
+file to utilize the voice over IP libraries.</p>
+
+<p class=MsoBodyText><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc308597553">Loading the Scenario</a></h2>
+
+<p class=MsoBodyText style='page-break-after:avoid'>Click the <span
+class=ZBold>Load Scenario</span> button to load the scenario.</p>
+
+<p class=MsoBodyText style='page-break-after:avoid'>Notice the changes in the
+DDD Simulation Server console, shown below. In the Simulation field, the
+Decision Maker (DM) information box has been populated with player information.
+The name of the <span class=ZBold>Start Scenario</span> button has changed to <span
+class=ZBold>Stop Scenario </span><span class=ZBold><span style='font-weight:
+normal;mso-bidi-font-weight:bold'>and</span></span> the <span class=ZBold>Start
+</span>button on the right is now enabled.</p>
+
+<p class=MsoBodyText><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:468pt;height:225.75pt;
+ visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image009.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=301
+src="BestPracticesGuide_files/image010.jpg" v:shapes="_x0000_i1029"><![endif]></span></p>
+
+<p class=MsoBodyText>Also notice that in this example, the <span class=ZBold>Load
+Replay</span> button in the Replay field is currently disabled. This button is
+enabled only when a replay file is selected in the Replay field by using <span
+class=ZBold>Browse </span><span class=ZBold><span style='font-weight:normal'>button
+within the Replay panel</span></span><span class=ZBold><span style='font-weight:
+normal;mso-bidi-font-weight:bold'>, which is also disabled. The Replay field
+can only be used when the server is stopped. When you click </span></span><b
+style='mso-bidi-font-weight:normal'>Browse</b> in the Replay panel, the<span
+class=ZBold><span style='font-weight:normal;mso-bidi-font-weight:bold'> browse
+window opens, which is shown below.<o:p></o:p></span></span></p>
+
+<p class=MsoBodyText><b><!--[if gte vml 1]><v:shape id="_x0000_i1030" type="#_x0000_t75"
+ style='width:316.5pt;height:235.5pt'>
+ <v:imagedata src="BestPracticesGuide_files/image011.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=422 height=314
+src="BestPracticesGuide_files/image012.jpg" v:shapes="_x0000_i1030"><![endif]><o:p></o:p></b></p>
+
+<p class=MsoBodyText><b><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoBodyText><b><o:p>&nbsp;</o:p></b></p>
+
+<h2><a name="_Toc308597554">Verifying That the Minimum Number of Players Have
+Entered the Simulation</a></h2>
+
+<p class=MsoBodyText>Player information is displayed in the Simulation field in
+the DDD Simulation Server console. Player names are listed in the DM (Decision
+Maker) Name column, and player roles are listed in the DM Role column. Player
+availability status is listed in the Availability column. </p>
+
+<p class=MsoBodyText>The experimenter should verify that the minimum number of
+players required have entered the simulation. This means that players have used
+their user account names and passwords to log onto the DDD Simulation Server
+and have chosen a player name from a list of pre-defined names.</p>
+
+<p class=MsoBodyText style='mso-pagination:widow-orphan lines-together'>When “Available”
+is displayed next to a Decision Maker name, this indicates that no one has used
+that name to enter the simulation. Therefore, when all DM names display “Available,”
+this indicates that no one has entered the simulation.</p>
+
+<p class=MsoBodyText><span class=GramE>Once a client is prepared to run the
+simulation, the availability changes to “Ready.”</span> This typically happens
+a few seconds after a player chooses a Decision Maker name.</p>
+
+<p class=MsoBodyText><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:468pt;height:225.75pt;
+ visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image013.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=301
+src="BestPracticesGuide_files/image014.jpg" v:shapes="_x0000_i1031"><![endif]></span></p>
+
+<h2><a name="_Toc308597555">Starting the Simulation</a></h2>
+
+<p class=MsoBodyText>To start the simulation, click <span class=ZBold>Start
+Simulation</span>. When the simulation begins, the timer starts ticking and the
+elapsed time <span class=GramE>is</span> displayed in the Current Simulation
+Time box. </p>
+
+<p class=MsoBodyText>The experimenter can choose to start the simulation
+without the minimum number of players. In this case, a dialog box will display
+a message that not all Decision Makers have been assigned yet. Click <span
+class=GramE><span class=ZBold>Yes</span></span> to run the simulation without
+the minimum number of players. </p>
+
+<h2><a name="_Toc308597556">Running the Simulation</a></h2>
+
+<p class=MsoBodyText style='mso-pagination:widow-orphan lines-together;
+page-break-after:avoid'>Once the simulation has begun, the experimenter can pause,
+resume, and stop the simulation. The current state of the server and the
+simulation is displayed in the status bar at the bottom of the DDD Simulation
+Server console. <span class=GramE>Once the simulation begins running, notice
+that the <span class=ZBold>Start </span>button changes to <span class=ZBold>Pause</span>.</span></p>
+
+<p class=MsoBodyText style='mso-pagination:widow-orphan lines-together;
+page-break-after:avoid'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:468pt;height:225.75pt;
+ visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image015.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=301
+src="BestPracticesGuide_files/image016.jpg" v:shapes="_x0000_i1032"><![endif]></span></p>
+
+<p class=MsoBodyText>The experimenter can take the following actions:</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>To <span class=GramE>pause</span> the
+simulation, click <span class=ZBold>Pause</span>. The simulation and timer will
+pause, and this button’s name changes to <span class=ZBold>Resume</span>.</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>To resume the simulation, click <span
+class=ZBold>Resume</span>. The simulation and timer will resume, and this button’s
+name changes to <span class=ZBold>Pause</span>.</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>To stop the simulation, click <span class=ZBold>Stop
+Scenario</span></p>
+
+<p class=MsoBodyText>Note: every time a scenario ends, all players must exit
+the DDD client.</p>
+
+<h2><a name="_Toc308597557">Getting Information </a><span class=GramE><span
+style='mso-bookmark:_Toc308597557'>During</span></span><span style='mso-bookmark:
+_Toc308597557'> the Simulation</span></h2>
+
+<p class=MsoBodyText>The Current Simulation Time box in the DDD Simulation
+Server console displays the time that has elapsed during a simulation. When the
+simulation ends, a screen with scoring information is displayed on the server
+machine.</p>
+
+<h2><a name="_Toc308597558">Replaying a Simulation</a></h2>
+
+<p class=MsoBodyText>After a simulation has been completed and its data has
+been stored in a log file, it is possible to replay that simulation. Both the
+experimenter and the players can watch the replay. Scenario logs may be
+replayed faster, slower, or at the same speed at which they were logged. Before
+replaying a simulation, all players must be logged off, and the server must be
+stopped. It is not possible to replay a simulation while a current simulation
+is being played.</p>
+
+<p class=MsoBodyText>Use the following steps to replay a simulation: </p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo32'><![if !supportLists]><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>If the server is running, click <span class=ZBold>Stop Scenario</span>.
+The Replay field is now enabled, as shown below.</p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo32'><![if !supportLists]><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>To choose a log file, use <span class=ZBold>Browse</span>
+in the Replay field. </p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo32'><![if !supportLists]><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>To replay the simulation at the same speed at which it
+was played, leave the Replay Speed at its default of 100%. Otherwise, choose
+another value to replay the simulation at a faster or slower speed.</p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Once a log file is chosen, click <span class=ZBold>Load
+Replay</span>. If a log file has not been chosen, an error message is
+displayed, which states that the selected file could not be opened for replay.
+If this happens, use <span class=ZBold>Browse</span> to choose a log file, <span
+class=GramE>then</span> click <span class=ZBold>Load Replay</span> again.</p>
+
+<p class=MsoListContinue>The server starts running, and the Decision Makers are
+displayed in the Simulation field, as shown below. The players can now connect
+to the server so that they can watch the replay of the simulation. Notice that
+the <span class=ZBold>Load Replay</span> button has changed to <span
+class=ZBold>Stop Replay</span>.</p>
+
+<p class=MsoListContinue><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:468pt;height:225.75pt;
+ visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image017.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=301
+src="BestPracticesGuide_files/image018.jpg" v:shapes="_x0000_i1033"><![endif]></span></p>
+
+<p class=MsoListNumber style='page-break-after:avoid;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Click <span class=ZBold>Start </span><span class=ZBold><span
+style='font-weight:normal;mso-bidi-font-weight:bold'>to begin the replay of the
+simulation. The clock begins ticking, as shown in Current Simulation Time,
+below. Notice also that</span></span> the <span class=ZBold>Start </span>button
+changes to <span class=ZBold>Pause</span>. </p>
+
+<p class=MsoListNumber style='mso-pagination:widow-orphan lines-together;
+page-break-after:avoid;mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Click <span class=ZBold>Pause </span>to pause the
+replay. When the replay is paused, the clock is also paused. <span class=ZBold><span
+style='font-weight:normal;mso-bidi-font-weight:bold'>T</span></span>he <span
+class=ZBold>Pause </span>button changes to <span class=ZBold>Resume</span><span
+class=ZBold><span style='font-weight:normal;mso-bidi-font-weight:bold'>, </span></span>and
+the simulation is flagged as “PAUSED” at the bottom of the server console.</p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Click <span class=ZBold>Resume </span>to continue the
+replay.</p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo4'><![if !supportLists]><span
+style='mso-list:Ignore'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]>Click <span class=ZBold>Stop Replay</span> to end the
+replay. When the replay stops, the server stops running, as well. Remember that
+it is not possible to run a simulation at the same time a log file is being
+replayed.</p>
+
+<h1><a name="_Toc308597559">Managing Simulation Data</a></h1>
+
+<p class=MsoBodyText>An experimenter is likely to run a variety of scenarios
+with different teams over a period of time. For example, an experimenter might
+have three teams, called Team A, Team B, and Team C. The experimenter might
+have two different scenarios, called Scenario 1 and Scenario 2. The
+experimenter will draw up a schedule that lists the date and time at which a
+specific team will play a specific scenario. For example, Team A might play
+Scenario 1 from 10:00 to 10:30 a.m. on Monday and then play Scenario 2 from
+10:30 to 11:00 a.m. the same day. Team B might play Scenario 2 on Tuesday from
+2:30 to 3:15 p.m. and then play Scenario 1 from 3:15 to 4:00 p.m. </p>
+
+<p class=MsoBodyText style='page-break-after:avoid'>Use the following
+strategies to manage data that is generated by running each scenario:</p>
+
+<p class=MsoListBullet style='page-break-after:avoid;mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Specify a Simulation Run ID.</p>
+
+<p class=MsoListBullet style='page-break-after:avoid;mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Organize log files in directories for easy
+retrieval.</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Back <a name="_Ref153072538"></a><a
+name="_Ref153072563"><span style='mso-bookmark:_Ref153072538'>up data on a
+regular basis.</span></a></p>
+
+<h2><span style='mso-bookmark:_Ref153072563'><span style='mso-bookmark:_Ref153072538'><a
+name="_Toc308597560"></a><a name="_Ref162078624"></a><a name="_Ref162078597"><span
+style='mso-bookmark:_Ref162078624'><span style='mso-bookmark:_Toc308597560'>Simulation
+Run ID Name Tips</span></span></a></span></span></h2>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref153072563'><span
+style='mso-bookmark:_Ref153072538'>As previously described, a Simulation Run ID
+can be entered in the Simulation Run ID text box, but this must be done before
+starting the DDD server and loading a scenario. Files are named automatically
+using the following convention:</span></span></p>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref153072563'><span
+style='mso-bookmark:_Ref153072538'>scenarioname.simulationrunID.datetime.ddd</span></span></p>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref153072563'><span
+style='mso-bookmark:_Ref153072538'>Therefore, if a Simulation Run ID is
+specified, it will be added to the file name between the scenario name and the
+date and time that the simulation is run. For example, if the name “TeamA” is
+entered in the Simulation Run ID box and a simulation named Scenario1 is run on
+September 1, 2009 at 10:00:00 a.m., then the log file name will be:</span></span></p>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref153072563'><span
+style='mso-bookmark:_Ref153072538'>Scenario1.TeamA.20090901100000.ddd</span></span></p>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref153072563'><span
+style='mso-bookmark:_Ref153072538'>Alternatively, if no group name is specified
+in the Simulation Run ID box, the file name in this example will be:</span></span></p>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref153072563'><span
+style='mso-bookmark:_Ref153072538'>Scenario1<span class=GramE>..</span>20090901100000<span
+class=GramE>.ddd</span></span></span></p>
+
+<h2><span style='mso-bookmark:_Ref153072563'><span style='mso-bookmark:_Ref153072538'><a
+name="_Toc308597561">File Directory Tips</a></span></span><span
+style='mso-bookmark:_Ref153072538'></span></h2>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref153072538'>Before running
+simulations, it is a good practice to create a directory structure for storing
+the log files that will be created when simulations are run. It is a good
+practice to organize the directory structure according to <i>either</i>:</span></p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><span style='mso-bookmark:
+_Ref153072538'><![if !supportLists]><span style='font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Experiments <i>or</i></span></p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><span style='mso-bookmark:
+_Ref153072538'><![if !supportLists]><span style='font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Teams</span></p>
+
+<h3><span style='mso-bookmark:_Ref153072538'>Organizing File Structure by
+Experiments</span></h3>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref153072538'>Use the following
+steps to organize the directory structure according to experiments: </span></p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo37'><span style='mso-bookmark:
+_Ref153072538'><![if !supportLists]><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Create
+a folder for each experiment. For example, create a folder named Scenario1.</span></p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo4'><span style='mso-bookmark:
+_Ref153072538'><![if !supportLists]><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Before
+running a new simulation, use the DDD Simulation Server console to specify the
+directory in which the log file for that simulation will be stored. For
+example, suppose there is a simulation scheduled for Team A to play Scenario 1.
+To specify the directory, use <span class=ZBold>Browse</span> to display the
+Scenario1 folder in the Event Logging Options box.</span></p>
+
+<h3><span style='mso-bookmark:_Ref153072538'>Organizing File Structure by Teams</span></h3>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Ref153072538'>Use the following
+steps to organize the directory structure according to teams: </span></p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo38'><span style='mso-bookmark:
+_Ref153072538'><![if !supportLists]><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Create
+a folder for each team. For example, create three folders named TeamA, TeamB,
+and TeamC.</span></p>
+
+<p class=MsoListNumber style='mso-list:l0 level1 lfo4'><span style='mso-bookmark:
+_Ref153072538'><![if !supportLists]><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Before
+running a new simulation, use the DDD Simulation Server console to specify the
+directory in which the log file for that simulation will be stored. For
+example, suppose there is a simulation scheduled for Team A to play Scenario 1.
+To specify the directory, use <span class=ZBold>Browse</span> to display the
+TeamA folder in the Event Logging Options box.</span></p>
+
+<span style='mso-bookmark:_Ref153072538'></span>
+
+<h2><a name="_Toc308597562">Backup Tips</a></h2>
+
+<p class=MsoBodyText>It is a good practice to back up all data at the end of
+each day that experiments have been run. Back up the entire data directory to
+some media separate from the server machine. The best approach is to burn the
+entire data directory onto a CD or DVD.</p>
+
+<h1><a name="_Toc308597563">Providing Information to Players</a></h1>
+
+<p class=MsoBodyText>It is a good practice to prepare a list of information to
+give to players before the simulation begins. This list should include the
+following:</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The URL to access the DDD Client on a Windows 7
+computer hosting the DDD server:</p>
+
+<p class=MsoListBullet style='text-indent:0in;mso-list:none;tab-stops:.5in'><a
+href="file:///\\hostname\Users\Public\DDDClient\index.htm">file://///hostname/Users/Public/DDDClient/index.htm</a></p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The URL to access the DDD Client on a Windows XP
+computer hosting the DDD server:</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><a href="file:///\\hostname%20\DDDClient\index.htm">file://///hostname
+/DDDClient/index.htm</a></p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The user name assigned to that player</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The password assigned to that player</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>(Optional) The player briefing</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>(Optional) Assets available to the player </p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>(Optional) Assets required to destroy enemy
+objects</p>
+
+<p class=MsoListBullet style='mso-list:l1 level1 lfo1'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>(Optional) Subplatform information</p>
+
+<h2><a name="_Toc308597564">The ClickOnce Link to Install the DDD Client
+Software</a></h2>
+
+<p class=MsoBodyText>The DDD client software is downloaded when players connect
+their machines to the DDD server by using a ClickOnce installation link. This
+means players install the DDD client software by clicking once on a link
+provided to them. The DDD client can only be installed in online mode. This
+ensures that every player is using the same and the most current version of the
+DDD client software.</p>
+
+<p class=MsoBodyText style='page-break-after:avoid'>Players select the
+following file from a shared folder located on the machine on which the DDD
+Simulation Server is installed:</p>
+
+<p class=MsoListBullet style='text-indent:0in;mso-list:none;tab-stops:.5in'><a
+href="file:///\\hostname\Users\Public\DDDClient\index.htm">file://///hostname/Users/Public/DDDClient/index.htm</a><span
+style='mso-spacerun:yes'>  </span>(Windows 7 DDD Server and Client
+configuration)</p>
+
+<p class=MsoListBullet style='text-indent:0in;mso-list:none;tab-stops:.5in'>or</p>
+
+<p class=MsoListBullet style='text-indent:0in;mso-list:none;tab-stops:.5in'><a
+href="file:///\\hostname\Users\Public\DDDClient\index.htm">file://///hostname/
+/DDDClient/index.htm</a><span style='mso-spacerun:yes'>  </span>(Windows XP DDD
+Server and Client configuration)</p>
+
+<p class=MsoListBullet style='text-indent:0in;mso-list:none;tab-stops:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoBodyText><span class=GramE>where</span> &lt;<i>hostname</i>&gt; is
+the name of the DDD server machine, <i>DDDClient</i> is the name of the shared
+folder on the server machine, and <i>index.htm</i> is the file needed to use
+ClickOnce. The DDDClient shared folder is created on the server machine
+automatically when the DDD Simulation Server is installed.</p>
+
+<p class=MsoBodyText><i style='mso-bidi-font-style:normal'>Note that the DDD
+runs on either Windows 7 or Windows XP, but the OS on the DDD Client machines
+must match that of the DDD Server.<o:p></o:p></i></p>
+
+<p class=MsoBodyText>When the player exits the client application, the DDD
+client software is automatically removed from that user’s machine. In other
+words, this installation is not permanent. Therefore, it is always a good
+practice to give the ClickOnce installation link needed to players before the
+simulation.</p>
+
+<h2><a name="_Toc308597565">The User Name</a></h2>
+
+<p class=MsoBodyText>Once the DDD client software is installed, the players
+will be prompted to enter a user name and password. Before the simulation, a
+user account must be created for every player. However, these user accounts may
+be used by different groups of players, as long as those groups do not play at
+the same time. For example, suppose Team A has four players, Team B has six
+players, and the teams never play at the same time. That means it is necessary
+to create six user accounts, and each account must have a unique user name.
+Team B will need all six user accounts, and Team A will use four of those six
+accounts.</p>
+
+<p class=MsoBodyText>The DDD <i>Installation and Configuration Guide</i> <span
+class=GramE>has</span> instructions on how to manage user accounts.</p>
+
+<h2><a name="_Toc308597566">The Password</a></h2>
+
+<p class=MsoBodyText>When players are prompted to enter a user name, they must
+also enter a password if one was created for the user account.</p>
+
+<h2><a name="_Toc308597567">The Player Briefing</a></h2>
+
+<p class=MsoBodyText>Some scenarios include a player briefing. When players
+enter the simulation, the player briefing is displayed, if one exists. Players
+can also display the briefing on the client screen during play. However, it may
+be useful to provide a hard copy of the player briefing before the players
+enter the simulation. For example, players may need time to strategize before
+the simulation begins.</p>
+
+<h2><a name="_Toc308597568">Assets Available to the Player</a> </h2>
+
+<p class=MsoBodyText>Players can use the DDD client to discover which assets
+are available. If players need to strategize before the simulation begins, it
+will be helpful for them to have a list of the assets available to them.</p>
+
+<h2><a name="_Toc308597569">Assets Required to Destroy Enemy Objects</a></h2>
+
+<p class=MsoBodyText>Many scenarios assign a task of destroying enemy objects.
+Each enemy object can have an individual set of vulnerabilities. In other
+words, every enemy can have its own set of requirements for what is needed to
+destroy it. A given player may not have all the weapons required to destroy an
+enemy, necessitating team attack planning. Therefore, it is helpful for players
+to have a list of the assets they need to destroy each type of enemy object.</p>
+
+<h2><a name="_Toc308597570">Subplatform Information</a></h2>
+
+<p class=MsoBodyText>Some scenarios use subplatforms, which are objects that
+must be launched from a parent object before they can be used. For example, a
+parent object might be a submarine. The submarine might have a platoon of
+soldiers as a subplatform, and those soldiers are armed with weapons. However,
+it makes no sense for those soldiers to use their weapons while on the
+submarine. In this case, the soldiers must be launched from the submarine, and
+they will then appear on the scenario map. Once those soldiers have been
+launched, their weapons can be used.</p>
+
+<p class=MsoBodyText><a name="_Toc162066734">Players can locate subplatforms
+during the simulation, but finding subplatforms can be time consuming,
+especially if there are many objects in the scenario. If a scenario includes
+subplatforms, it is helpful for players to know in advance the subplatforms
+that are available and where they are located.</a></p>
+
+<h1><span style='mso-bookmark:_Toc162066734'><a name="_Toc308597571">Practice
+Sessions for New Players</a></span></h1>
+
+<p class=MsoBodyText><span style='mso-bookmark:_Toc162066734'>It is a good
+practice to train novice Decision Makers (players) in DDD concepts and
+operations by having them participate in practice simulations prior to running
+experiments where data will be captured and analyzed.</span></p>
+
+<h1><span style='mso-bookmark:_Toc162066734'><a name="_Toc308597572">Troubleshooting
+Tips</a></span></h1>
+
+<p class=MsoBodyText>If it is not possible to start the DDD Simulation Server,
+another application installed on the machine may be using the port number
+specified in the Port Number box on the DDD Simulation Server console. Try
+entering a different number in the Port Number box and try starting the server
+again. </p>
+
+<p class=MsoBodyText>Do not use Ctrl-Alt-Del to bring up the task manager or
+when switching applications on the server. Otherwise, it will be necessary to
+restart the server.</p>
+
+<p class=MsoBodyText>Between scenario runs, be sure to exit the simulation
+server and restart it. Otherwise, the DDD client’s Decision Maker list may not
+be populated correctly.</p>
+
+<h1><a name="_Toc308597573">Understanding the Player’s View</a></h1>
+
+<p class=MsoBodyText style='mso-pagination:widow-orphan lines-together;
+page-break-after:avoid'>It may be helpful for experimenters to understand what
+the players see on the DDD client.</p>
+
+<p class=MsoBodyText style='page-break-after:avoid'>After the player follows
+the URL to the DDD Client and executes ‘DDDClient.application’, the following
+DDD Client Network window is displayed.</p>
+
+<p class=MsoBodyText><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:337.5pt;height:127.5pt;
+ visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image019.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=450 height=170
+src="BestPracticesGuide_files/image020.jpg" v:shapes="_x0000_i1034"><![endif]></span></p>
+
+<p class=MsoBodyText style='page-break-after:avoid'>After the player clicks <span
+class=ZBold>Connect</span>, the player enters the user name and password
+provided by the experimenter in the following dialog box, <span class=GramE>then</span>
+clicks <span class=ZBold>Login</span>.</p>
+
+<p class=MsoBodyText><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:241.5pt;height:84.75pt;
+ visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image021.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=322 height=113
+src="BestPracticesGuide_files/image022.jpg" v:shapes="_x0000_i1035"><![endif]></span></p>
+
+<p class=MsoBodyText style='page-break-after:avoid'>Next, the player chooses a
+Decision Maker name from a list of pre-defined names, as shown below.</p>
+
+<p class=MsoBodyText><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1036" type="#_x0000_t75" style='width:257.25pt;height:267pt;
+ visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image023.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=343 height=356
+src="BestPracticesGuide_files/image024.jpg" v:shapes="_x0000_i1036"><![endif]></span></p>
+
+<p class=MsoBodyText>After the player chooses a Decision Maker name, clicks <span
+class=ZBold>OK</span>, s/he may see a Player Briefing (if the scenario included
+one). </p>
+
+<p class=MsoBodyText><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1037" type="#_x0000_t75" style='width:223.5pt;height:217.5pt;
+ visibility:visible'>
+ <v:imagedata src="BestPracticesGuide_files/image025.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=298 height=290
+src="BestPracticesGuide_files/image026.jpg" v:shapes="_x0000_i1037"><![endif]></span></p>
+
+<p class=MsoBodyText>Once that window is closed, the scenario map begins
+loading.</p>
+
+</div>
+
+</body>
+
+</html>

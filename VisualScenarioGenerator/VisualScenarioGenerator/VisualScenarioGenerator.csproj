@@ -1,0 +1,822 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCD96232-48C1-4946-B946-AC0ECE4CFC0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisualScenarioGenerator</RootNamespace>
+    <AssemblyName>VisualScenarioGenerator</AssemblyName>
+    <ApplicationIcon>images\ddd_48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AptimaLicenseKeyVerifier, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\AptimaLicenseKeyVerifier.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GME\Trunk\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2910.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Mvp.Xml, Version=2.0.2158.1055, Culture=neutral, PublicKeyToken=dd92544dc05f5671, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GME\Trunk\DLL\Mvp.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=1.0.7.30072, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GME\Trunk\DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="netchartdir, Version=4.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GME\Trunk\DLL\netchartdir.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go, Version=2.5.1.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GME\Trunk\DLL\Northwoods.Go.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\Ctl_BalanceBoxes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_BalanceBoxes.Designer.cs">
+      <DependentUpon>Ctl_BalanceBoxes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Capabilities.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Capabilities.Designer.cs">
+      <DependentUpon>Ctl_Capabilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Combos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Combos.Designer.cs">
+      <DependentUpon>Ctl_Combos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ContentPaneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ContentPaneControl.Designer.cs">
+      <DependentUpon>Ctl_ContentPaneControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_DecisionMaker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_DecisionMaker.Designer.cs">
+      <DependentUpon>Ctl_DecisionMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_DefineEngram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_DefineEngram.Designer.cs">
+      <DependentUpon>Ctl_DefineEngram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Emitters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Emitters.Designer.cs">
+      <DependentUpon>Ctl_Emitters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Networks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Networks.Designer.cs">
+      <DependentUpon>Ctl_Networks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_PreviewScenario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_PreviewScenario.Designer.cs">
+      <DependentUpon>Ctl_PreviewScenario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ScenarioImages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ScenarioImages.Designer.cs">
+      <DependentUpon>Ctl_ScenarioImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Score.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Score.Designer.cs">
+      <DependentUpon>Ctl_Score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ScoringRule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ScoringRule.Designer.cs">
+      <DependentUpon>Ctl_ScoringRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Sensors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Sensors.Designer.cs">
+      <DependentUpon>Ctl_Sensors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Singletons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Singletons.Designer.cs">
+      <DependentUpon>Ctl_Singletons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Species.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Species.Designer.cs">
+      <DependentUpon>Ctl_Species.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_States.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_States.Designer.cs">
+      <DependentUpon>Ctl_States.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Teams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Teams.Designer.cs">
+      <DependentUpon>Ctl_Teams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Decimal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_CreateAssetInstance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_CreateAssetInstance.Designer.cs">
+      <DependentUpon>Dlg_CreateAssetInstance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Event.Designer.cs">
+      <DependentUpon>Dlg_Event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_ChangeEngramEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_ChangeEngramEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_ChangeEngramEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_CloseChatRoomEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_CloseChatRoomEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_CloseChatRoomEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_FlushEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_FlushEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_FlushEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_LaunchEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_LaunchEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_LaunchEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_MoveEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_MoveEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_MoveEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_OpenChatRoomEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_OpenChatRoomEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_OpenChatRoomEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_RemoveEngramEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_RemoveEngramEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_RemoveEngramEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_RevealEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_RevealEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_RevealEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_StateChangeEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_StateChangeEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_StateChangeEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_TransferEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_Node_TransferEvent.Designer.cs">
+      <DependentUpon>Dlg_Node_TransferEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_TimelineProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Dlg_TimelineProperties.Designer.cs">
+      <DependentUpon>Dlg_TimelineProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NamedColorDialog.cs">
+    </Compile>
+    <Compile Include="Dialogs\NonNegDecimal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NonNegDecimal.Designer.cs">
+      <DependentUpon>NonNegDecimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\XYZ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View_Playfield.cs" />
+    <Compile Include="View_ObjectTypes.cs" />
+    <Compile Include="Dialogs\Ctl_CreateEngramRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_CreateEngramRange.Designer.cs">
+      <DependentUpon>Ctl_CreateEngramRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_EventCommands.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_EventCommands.Designer.cs">
+      <DependentUpon>Ctl_EventCommands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateLibraryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CreateLibraryDialog.Designer.cs">
+      <DependentUpon>CreateLibraryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_ChangeEngramEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_ChangeEngramEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_ChangeEngramEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_CloseChatRoomEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_CloseChatRoomEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_CloseChatRoomEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_CreateAssetEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_CreateAssetEvent.Designer.cs">
+      <DependentUpon>Ctl_CreateAssetEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Event.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Event.Designer.cs">
+      <DependentUpon>Ctl_Event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_FlushEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_FlushEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_FlushEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node.Designer.cs">
+      <DependentUpon>Ctl_Node.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_LaunchEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_LaunchEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_LaunchEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_RevealEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_RevealEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_RevealEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ChooseEngramRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ChooseEngramRange.Designer.cs">
+      <DependentUpon>Ctl_ChooseEngramRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_MoveEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_MoveEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_MoveEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_Parameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_Parameters.Designer.cs">
+      <DependentUpon>Ctl_Node_Parameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_OpenChatRoomEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_OpenChatRoomEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_OpenChatRoomEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_RemoveEngramEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_RemoveEngramEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_RemoveEngramEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_StateChangeEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_StateChangeEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_StateChangeEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_TransferEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_Node_TransferEvent.Designer.cs">
+      <DependentUpon>Ctl_Node_TransferEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DatabaseDialog.Designer.cs">
+      <DependentUpon>DatabaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ICtl_Event.cs" />
+    <Compile Include="Dialogs\IEventCommands.cs" />
+    <Compile Include="Dialogs\ITimelinePanel.cs" />
+    <Compile Include="Dialogs\TimelinePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TimelinePanel.Designer.cs">
+      <DependentUpon>TimelinePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View.cs" />
+    <Compile Include="Dialogs\Ctl_NavigatorPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_NavigatorPane.Designer.cs">
+      <DependentUpon>Ctl_NavigatorPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ContentPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Ctl_ContentPane.Designer.cs">
+      <DependentUpon>Ctl_ContentPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Preview.cs" />
+    <Compile Include="View_Scenario.cs" />
+    <Compile Include="View_Scoring.cs" />
+    <Compile Include="View_Timeline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VSGForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VSGForm.Designer.cs">
+      <DependentUpon>VSGForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libraries\ImageLibrary.cs" />
+    <Compile Include="IVSGForm.cs" />
+    <Compile Include="Dialogs\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGPanes\CntP_Playfield.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\CntP_Playfield.Designer.cs">
+      <DependentUpon>CntP_Playfield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Playfield.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Playfield.Designer.cs">
+      <DependentUpon>NavP_Playfield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Preview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Preview.Designer.cs">
+      <DependentUpon>NavP_Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VSGForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VSGForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSG_Panel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VSG_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Scenario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Scenario.Designer.cs">
+      <DependentUpon>NavP_Scenario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGPanes\CntP_Scenario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\CntP_Scenario.Designer.cs">
+      <DependentUpon>CntP_Scenario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Scoring.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Scoring.Designer.cs">
+      <DependentUpon>NavP_Scoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGPanes\CntP_Scoring.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\CntP_Scoring.Designer.cs">
+      <DependentUpon>CntP_Scoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Timeline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Timeline.Designer.cs">
+      <DependentUpon>NavP_Timeline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGPanes\CntP_Types.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\CntP_Types.Designer.cs">
+      <DependentUpon>CntP_Types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Types.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSGPanes\NavP_Types.designer.cs">
+      <DependentUpon>NavP_Types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSG_Panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VSG_Panel.Designer.cs">
+      <DependentUpon>VSG_Panel.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\Ctl_CreateEngramRange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_CreateEngramRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_EventCommands.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_EventCommands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CreateLibraryDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CreateLibraryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_ChangeEngramEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_ChangeEngramEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_CloseChatRoomEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_CloseChatRoomEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_CreateAssetEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_CreateAssetEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Event.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_FlushEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_FlushEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_LaunchEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_LaunchEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_OpenChatRoomEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_OpenChatRoomEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_RevealEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_RevealEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_ChooseEngramRange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_ChooseEngramRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_MoveEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_MoveEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_Parameters.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_Parameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_StateChangeEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_StateChangeEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_TransferEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_TransferEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Node_RemoveEngramEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Node_RemoveEngramEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DatabaseDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatabaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TimelinePanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimelinePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SplashScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGPanes\NavP_Playfield.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NavP_Playfield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGPanes\NavP_Preview.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NavP_Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGPanes\NavP_Scenario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NavP_Scenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGPanes\CntP_Scenario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CntP_Scenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGPanes\NavP_Scoring.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NavP_Scoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGPanes\CntP_Scoring.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CntP_Scoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGPanes\NavP_Timeline.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NavP_Timeline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGPanes\CntP_Types.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CntP_Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\FontDialogHS.png" />
+    <None Include="Resources\FontHS.png" />
+    <None Include="Resources\ItalicHS.png" />
+    <None Include="Resources\boldhs.png" />
+    <None Include="Resources\AttachmentHS.png" />
+    <None Include="Resources\AlignTableCellMiddleCenterHS.png" />
+    <None Include="Resources\List_BulletsHS.png" />
+    <None Include="Resources\List_NumberedHS.png" />
+    <EmbeddedResource Include="images\ddd_48.ico" />
+    <EmbeddedResource Include="images\Unknown.png" />
+    <EmbeddedResource Include="images\Splashscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialogs\Ctl_BalanceBoxes.resx">
+      <DependentUpon>Ctl_BalanceBoxes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Capabilities.resx">
+      <DependentUpon>Ctl_Capabilities.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Combos.resx">
+      <DependentUpon>Ctl_Combos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_ContentPaneControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_ContentPaneControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_DecisionMaker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_DecisionMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_DefineEngram.resx">
+      <DependentUpon>Ctl_DefineEngram.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Emitters.resx">
+      <DependentUpon>Ctl_Emitters.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Networks.resx">
+      <DependentUpon>Ctl_Networks.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_PreviewScenario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_PreviewScenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_ScenarioImages.resx">
+      <DependentUpon>Ctl_ScenarioImages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Score.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_ScoringRule.resx">
+      <DependentUpon>Ctl_ScoringRule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Sensors.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Sensors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Singletons.resx">
+      <DependentUpon>Ctl_Singletons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Species.resx">
+      <DependentUpon>Ctl_Species.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_States.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_States.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Ctl_Teams.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ctl_Teams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Decimal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Decimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_CreateAssetInstance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_CreateAssetInstance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Event.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_ChangeEngramEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_ChangeEngramEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_CloseChatRoomEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_CloseChatRoomEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_FlushEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_FlushEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_LaunchEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_LaunchEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_MoveEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_MoveEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_OpenChatRoomEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_OpenChatRoomEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_RemoveEngramEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_RemoveEngramEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_RevealEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_RevealEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_StateChangeEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_StateChangeEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_Node_TransferEvent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_Node_TransferEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Dlg_TimelineProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Dlg_TimelineProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NonNegDecimal.resx">
+      <DependentUpon>NonNegDecimal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\XYZ.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XYZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="images\Node.png" />
+    <EmbeddedResource Include="VSGPanes\CntP_Playfield.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CntP_Playfield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSGPanes\NavP_Types.resx">
+      <DependentUpon>NavP_Types.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewDocumentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ImageLib.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\otheroptions.ico" />
+    <Content Include="Resources\Ramadi.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AptimaGraphicsToolkit\AptimaGraphicsToolkit\AptimaGraphicsToolkit.csproj">
+      <Project>{D6C4302B-EF23-4D1E-A642-2A31622E610D}</Project>
+      <Name>AptimaGraphicsToolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GME\Trunk\src\GME.csproj">
+      <Project>{D61A4D2E-5BD0-4241-9C6A-33305F69FF16}</Project>
+      <Name>GME</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

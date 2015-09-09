@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scenario xsi:noNamespaceSchemaLocation="DDDSchema_4_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ScenarioName>Active Zone</ScenarioName>
+  <Description>The blue unit flies in a straight line at full throttle. When it crosses into the active zone, its speed is reduced; when it leaves the active zone its speed is restored..</Description>
+  <Playfield>
+    <MapFileName>scenario.1200x1024.jpg</MapFileName>
+    <IconLibrary>MilStd2525b</IconLibrary>
+    <UtmZone>11 M</UtmZone>
+    <VerticalScale>1.0</VerticalScale>
+    <HorizontalScale>1.0</HorizontalScale>
+  </Playfield>
+  <LandRegion>
+    <ID>Coastline</ID>
+    <Vertex>489 1002</Vertex>
+    <Vertex>643 808</Vertex>
+    <Vertex>701 614</Vertex>
+    <Vertex>695 516</Vertex>
+    <Vertex>769 471</Vertex>
+    <Vertex>793 267</Vertex>
+    <Vertex>817 182</Vertex>
+    <Vertex>879 148</Vertex>
+    <Vertex>901 38</Vertex>
+    <Vertex>911 0</Vertex>
+    <Vertex>1193 0</Vertex>
+    <Vertex>1195 1004</Vertex>
+  </LandRegion>
+  <ActiveRegion>
+    <ID>Half speed</ID>
+    <Vertex>351 1024</Vertex>
+    <Vertex>31 230</Vertex>
+    <Vertex>696 286</Vertex>
+    <Vertex>475 900</Vertex>
+    <Start>0.0</Start>
+    <End>0.0</End>
+    <SpeedMultiplier>0.4</SpeedMultiplier>
+    <BlocksMovement>false</BlocksMovement>
+    <IsVisible>true</IsVisible>
+    <Color>DarkGreen</Color>
+  </ActiveRegion>
+  <Team>
+    <Name>red team</Name>
+    <Against>blue team</Against>
+  </Team>
+  <Team>
+    <Name>blue team</Name>
+    <Against>red team</Against>
+  </Team>
+  <DecisionMaker>
+    <Role>red dm</Role>
+    <Identifier>red dm</Identifier>
+    <Color>Red</Color>
+    <Team>red team</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>blue dm</Role>
+    <Identifier>blue dm</Identifier>
+    <Color>Blue</Color>
+    <Team>blue team</Team>
+  </DecisionMaker>
+  <Sensor>
+    <Name>radar</Name>
+    <Extent>1000</Extent>
+  </Sensor>
+  <TimeToAttack>10</TimeToAttack>
+  <Genus>
+    <Name>AirObject</Name>
+  </Genus>
+  <Genus>
+    <Name>LandObject</Name>
+  </Genus>
+  <Genus>
+    <Name>SeaObject</Name>
+  </Genus>
+  <Species>
+    <Name>aircraft</Name>
+    <Base>AirObject</Base>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>false</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>AirTrack.Military.FixedWing-Friend.png</Icon>
+      <StateParameters>
+        <LaunchDuration>0</LaunchDuration>
+        <DockingDuration>0</DockingDuration>
+        <TimeToAttack>10</TimeToAttack>
+        <MaximumSpeed>10</MaximumSpeed>
+        <FuelCapacity>0</FuelCapacity>
+        <InitialFuelLoad>0</InitialFuelLoad>
+        <FuelConsumptionRate>0</FuelConsumptionRate>
+        <FuelDepletionState>Dead</FuelDepletionState>
+        <Sense>radar</Sense>
+        <SingletonVulnerability>
+          <Capability>attack aircraft</Capability>
+          <Transitions>
+            <Effect>10</Effect>
+            <Range>0</Range>
+            <Probability>100</Probability>
+            <State>Dead</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Dead</State>
+      <Icon>SeaSurfaceTrack-Unknown.png</Icon>
+    </DefineState>
+  </Species>
+  <Species>
+    <Name>sam</Name>
+    <Base>LandObject</Base>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>GroundTrack.Unit.Combat.Aviation.FixedWing-Hostile.png</Icon>
+      <StateParameters>
+        <LaunchDuration>0</LaunchDuration>
+        <DockingDuration>0</DockingDuration>
+        <TimeToAttack>1</TimeToAttack>
+        <MaximumSpeed>0</MaximumSpeed>
+        <FuelCapacity>0</FuelCapacity>
+        <InitialFuelLoad>0</InitialFuelLoad>
+        <FuelConsumptionRate>0</FuelConsumptionRate>
+        <FuelDepletionState>Dead</FuelDepletionState>
+        <Capability>
+          <Name>attack aircraft</Name>
+          <Proximity>
+            <Range>500</Range>
+            <Effect>
+              <Intensity>10</Intensity>
+              <Probability>100.0</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Dead</State>
+      <Icon>SeaSurfaceTrack-Unknown.png</Icon>
+    </DefineState>
+  </Species>
+  <Create_Event>
+    <ID>red unit</ID>
+    <Kind>sam</Kind>
+    <Owner>red dm</Owner>
+  </Create_Event>
+  <Create_Event>
+    <ID>blue unit</ID>
+    <Kind>aircraft</Kind>
+    <Owner>blue dm</Owner>
+  </Create_Event>
+  <Reveal_Event>
+    <ID>red unit</ID>
+    <Time>1</Time>
+    <InitialLocation>652 872 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+  <Reveal_Event>
+    <ID>blue unit</ID>
+    <Time>1</Time>
+    <InitialLocation>90 654 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+  <Move_Event>
+    <ID>blue unit</ID>
+    <Time>1</Time>
+    <Throttle>100</Throttle>
+    <Destination>570 85 0</Destination>
+  </Move_Event>
+</Scenario>

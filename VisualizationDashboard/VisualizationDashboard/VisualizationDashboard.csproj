@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0346D22F-A7C9-4ED4-B8B6-0F87A2983E08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisualizationDashboard</RootNamespace>
+    <AssemblyName>VisualizationDashboard</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ExpressionBlendVersion>3.0.1927.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="netchartdir, Version=4.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\netchartdir.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="ConfigDisplayInfoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateConfigurationDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DisplayBuilderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DisplayControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DisplayPreviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectConfigUsersDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\GroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\TabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\TabItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ToolTip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\TreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VisualizationDashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VisualizationDashboard.xaml.cs">
+      <DependentUpon>VisualizationDashboard.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigDisplayInfoControl.xaml.cs">
+      <DependentUpon>ConfigDisplayInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateConfigurationDialog.xaml.cs">
+      <DependentUpon>CreateConfigurationDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizations\Barcode.cs" />
+    <Compile Include="Visualizations\Bubbles.cs" />
+    <Compile Include="Visualizations\ColorWheel.cs" />
+    <Compile Include="Visualizations\DashboardVisualization.cs" />
+    <Compile Include="DataConverters.cs" />
+    <Compile Include="DisplayBuilderControl.xaml.cs">
+      <DependentUpon>DisplayBuilderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayControl.xaml.cs">
+      <DependentUpon>DisplayControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayPreviewControl.xaml.cs">
+      <DependentUpon>DisplayPreviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DragAdorner.cs" />
+    <Compile Include="LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RTPMEConnector.cs" />
+    <Compile Include="SelectConfigUsersDialog.xaml.cs">
+      <DependentUpon>SelectConfigUsersDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RTPMEServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Validators.cs" />
+    <Compile Include="Visualizations\Heatmap.cs" />
+    <Compile Include="Visualizations\MultiLevelBowTie.cs" />
+    <Compile Include="Visualizations\Radar.cs" />
+    <Compile Include="Visualizations\StarSpider.cs" />
+    <Compile Include="Visualizations\Visualization\Data\HierarchicalValue.cs" />
+    <Compile Include="Visualizations\Visualization\Data\PieSlice.cs" />
+    <Compile Include="Visualizations\MultiPieChart.cs" />
+    <Compile Include="Visualizations\StackedHistogram.cs" />
+    <Compile Include="Visualizations\Visualization\Utility\ColorUtils.cs" />
+    <Compile Include="Visualizations\Visualization\ColorWheel.cs" />
+    <Compile Include="Visualizations\Visualization\Heatmap.cs" />
+    <Compile Include="Visualizations\Visualization\Ladder.cs" />
+    <Compile Include="Visualizations\Visualization\MultilevelBowTie.cs" />
+    <Compile Include="Visualizations\Visualization\Radar.cs" />
+    <Compile Include="Visualizations\Visualization\Star.cs" />
+    <Compile Include="Visualizations\Visualization\StarSpider.cs" />
+    <Compile Include="Visualizations\Visualization\Visualization.cs" />
+    <Compile Include="Visualizations\Visualization\Wedge.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\RT_PMEngine\Connectors\DDD\DDDConnector\trunk\DDDConnector.csproj">
+      <Project>{C0CF8888-231A-4A4C-B085-142E82B9E70B}</Project>
+      <Name>DDDConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RT_PMEngine\Connectors\IConnector\branches\Real Time Engine\IConnector\IConnector.csproj">
+      <Project>{4B305B99-260A-4F9D-A268-EDAF9B2CC1C0}</Project>
+      <Name>IConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RT_PMEngine\RTPMEngineServices\RTPMEngineServices.csproj">
+      <Project>{B2A211BF-990A-4FC5-A990-301D46CAA4C4}</Project>
+      <Name>RTPMEngineServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RT_PMEngine\ServiceHosts\ServiceHosts.csproj">
+      <Project>{2FAEE35E-3577-47E9-8EF4-94FEAB34D372}</Project>
+      <Name>ServiceHosts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RT_PMEngine\Shared\Shared.csproj">
+      <Project>{0028D6A6-E6D4-45B8-9084-DE914087E6A7}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DashboardDataAccess\DashboardDataAccess.csproj">
+      <Project>{98C1F747-2B66-482A-BA83-9B919601C41C}</Project>
+      <Name>DashboardDataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Aptima.RTPMEngine.Services.MeasureResult.datasource" />
+    <None Include="Service References\RTPMEServiceRef\Aptima.RTPMEngine.Services.xsd" />
+    <None Include="Service References\RTPMEServiceRef\Aptima.RTPMEngine.wsdl" />
+    <None Include="Service References\RTPMEServiceRef\Aptima.RTPMEngine.xsd" />
+    <None Include="Service References\RTPMEServiceRef\Arrays.xsd" />
+    <None Include="Service References\RTPMEServiceRef\service.wsdl" />
+    <None Include="Service References\RTPMEServiceRef\service.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\RTPMEServiceRef\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RTPMEServiceRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RTPMEServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RTPMEServiceRef\VisualizationDashboard.RTPMEServiceRef.MeasureResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\barcode.gif" />
+    <Resource Include="Images\bubbles.gif" />
+    <Resource Include="Images\multipie.gif" />
+    <Resource Include="Images\stakedhistograms.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CoVE Communication Measures.xml" />
+    <Resource Include="Resources\CoVE Outcome Definitions.xml" />
+    <Resource Include="Resources\CoVE Workload Trigger Definitions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CoVE Execution Measure Definitions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bowtie.jpg" />
+    <Resource Include="Images\colorwheel.jpg" />
+    <Resource Include="Images\heatmap.jpg" />
+    <Resource Include="Images\radar.jpg" />
+    <Resource Include="Images\starspider.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

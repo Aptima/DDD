@@ -1,0 +1,847 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D61A4D2E-5BD0-4241-9C6A-33305F69FF16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AME</RootNamespace>
+    <AssemblyName>AME</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/GME/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="Adapters\BaseImportAdapter.cs" />
+    <Compile Include="Adapters\BaseModelingAdapter.cs" />
+    <Compile Include="Adapters\ControllerToXmlAdapter.cs" />
+    <Compile Include="Adapters\ExportToFileAdapter.cs" />
+    <Compile Include="Adapters\ExportToXmlFileAdapter.cs" />
+    <Compile Include="Adapters\IExportDataAdapter.cs" />
+    <Compile Include="Adapters\IExportDeviceAdapter.cs" />
+    <Compile Include="Adapters\IImportAdapter.cs" />
+    <Compile Include="Adapters\IModelingAdapter.cs" />
+    <Compile Include="Adapters\InternalInputAdapter.cs" />
+    <Compile Include="Adapters\InternalOutputAdapter.cs" />
+    <Compile Include="Adapters\InternalToolAdapter.cs" />
+    <Compile Include="Adapters\ToCsvOutputAdapter.cs" />
+    <Compile Include="AMEManager.cs" />
+    <Compile Include="AMEManager_Copy.cs" />
+    <Compile Include="Collections\ReverseComparer.cs" />
+    <Compile Include="Collections\SortedValueList.cs" />
+    <Compile Include="Collections\SortedValuePair.cs" />
+    <Compile Include="Controllers\Base\BulkHelper.cs" />
+    <Compile Include="Controllers\Base\Caching\XMLCache.cs" />
+    <Compile Include="Controllers\Base\ComponentIDName.cs" />
+    <Compile Include="Controllers\Base\ComponentOptions.cs" />
+    <Compile Include="Controllers\Base\Controller_Background.cs" />
+    <Compile Include="Controllers\Base\Controller_Bulk.cs" />
+    <Compile Include="Controllers\Base\Controller_LinkValidation.cs" />
+    <Compile Include="Controllers\Base\Controller_Parameter.cs" />
+    <Compile Include="Controllers\Base\DataStructures\Include.cs" />
+    <Compile Include="Controllers\Base\DataStructures\LinkFromToType.cs" />
+    <Compile Include="Controllers\Base\DataStructures\NameValuePair.cs" />
+    <Compile Include="Controllers\Base\DataStructures\ParameterValidationInfo.cs" />
+    <Compile Include="Controllers\Base\DataStructures\LinkInfo.cs" />
+    <Compile Include="Controllers\Base\DataStructures\ComponentInfo.cs" />
+    <Compile Include="Controllers\Base\DataStructures\ComponentAndLinkID.cs" />
+    <Compile Include="Controllers\Base\DataStructures\ParameterInfo.cs" />
+    <Compile Include="Controllers\Base\SchemaReader\ComponentFunction.cs" />
+    <Compile Include="Controllers\Base\SchemaReader\SchemaXmlParser.cs" />
+    <Compile Include="Controllers\Base\SchemaReader\SchemaDefaults.cs" />
+    <Compile Include="Controllers\Base\DataStructures\TopIDAndLinkType.cs" />
+    <Compile Include="Controllers\Base\TypeConversion\StringEnum.cs" />
+    <Compile Include="Controllers\Base\TypeConversion\MilitaryTimeConverter.cs" />
+    <Compile Include="Controllers\DDDController.cs" />
+    <Compile Include="Controllers\IDDDController.cs" />
+    <Compile Include="Controllers\IModelingController.cs" />
+    <Compile Include="Controllers\IDynamicLinkBuilder.cs" />
+    <Compile Include="Controllers\MeasuresController.cs" />
+    <Compile Include="Controllers\ModelingController.cs" />
+    <Compile Include="Controllers\AssessmentController.cs" />
+    <Compile Include="Controllers\Base\ConfigReader\ParamConstraint.cs" />
+    <Compile Include="Controllers\Base\ConfigReader\RangeConstraint.cs" />
+    <Compile Include="Controllers\Base\Constants\Component.cs" />
+    <Compile Include="Controllers\Base\Constants\Parameter.cs" />
+    <Compile Include="Controllers\Base\Controller.cs" />
+    <Compile Include="EngineModels\BaseEngineModel.cs" />
+    <Compile Include="EngineModels\IAlgorithm.cs" />
+    <Compile Include="EngineModels\IEngineModel.cs" />
+    <Compile Include="EngineModels\Measure.cs" />
+    <Compile Include="Controllers\Base\Controller_DB.cs" />
+    <Compile Include="Controllers\Base\Controller_Others.cs" />
+    <Compile Include="Controllers\Base\Controller_Public.cs" />
+    <Compile Include="Controllers\Base\Controller_Xml.cs" />
+    <Compile Include="Controllers\Base\eParameterParentType.cs" />
+    <Compile Include="Controllers\IAssessmentController.cs" />
+    <Compile Include="Controllers\Base\IController.cs" />
+    <Compile Include="Controllers\Base\Constants\XmlSchemaConstants.cs" />
+    <Compile Include="Controllers\IRootController.cs" />
+    <Compile Include="Controllers\RootController.cs" />
+    <Compile Include="Initialization\AMEInit.cs">
+    </Compile>
+    <Compile Include="MeasureModels\IMeasureInfo.cs" />
+    <Compile Include="MeasureModels\IMeasureModel.cs" />
+    <Compile Include="MeasureModels\MatrixHelper.cs" />
+    <Compile Include="MeasureModels\MeasureGraphConverter.cs" />
+    <Compile Include="MeasureModels\MeasureInfo.cs" />
+    <Compile Include="MeasureModels\MeasureInputWriter.cs" />
+    <Compile Include="MeasureModels\MeasureModel.cs" />
+    <Compile Include="Model\ConfigFileConstants.cs" />
+    <Compile Include="Model\Configuration\ModelConfiguration.cs" />
+    <Compile Include="Model\IModel.cs" />
+    <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\SchemaConstants.cs" />
+    <Compile Include="Model\SqlServerExpressModel.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ExportTool.cs" />
+    <Compile Include="Tools\IExportTool.cs" />
+    <Compile Include="Tools\IImportTool.cs" />
+    <Compile Include="Tools\ImportTool.cs" />
+    <Compile Include="Tools\ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Assessment\AssessmentTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Assessment\AssessmentXmlCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Assessment\AssessmentComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Assessment\AssessmentDBCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Assessment\DefaultViewHelper.cs" />
+    <Compile Include="Views\Assessment\IAssessmentView.cs" />
+    <Compile Include="Views\Assessment\IAssessmentViewHelper.cs" />
+    <Compile Include="Views\Forms\SqlServerExpressSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\SqlServerExpressSetupForm.designer.cs">
+      <DependentUpon>SqlServerExpressSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\NumberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\NumberForm.designer.cs">
+      <DependentUpon>NumberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Updating\NonControlViewComponentHelper.cs" />
+    <Compile Include="Views\Updating\ViewPanelHelper.cs" />
+    <Compile Include="Views\User Controls\Optimization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EngineModels\ProcessApplicationAdapter.cs" />
+    <Compile Include="Views\User Controls\ProcessPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User Controls\ProcessPanel.Designer.cs">
+      <DependentUpon>ProcessPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EngineModels\ProcessType.cs" />
+    <Compile Include="Views\User Controls\SimulationProcessPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Updating\IViewComponentPanel.cs" />
+    <Compile Include="Views\Updating\ViewComponentPanel.Designer.cs">
+      <DependentUpon>ViewComponentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\AssessmentToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\AssessmentToolStrip.Designer.cs">
+      <DependentUpon>AssessmentToolStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CardLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CardLayoutPanel.Designer.cs">
+      <DependentUpon>CardLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\BarChartData.cs" />
+    <Compile Include="Views\View Components\Chart\BarLayer.cs" />
+    <Compile Include="Views\View Components\Chart\ChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\ChartForm.Designer.cs">
+      <DependentUpon>ChartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\ChartGlobal.cs" />
+    <Compile Include="Views\View Components\Chart\FinanceChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\FinanceChart.Designer.cs">
+      <DependentUpon>FinanceChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\FinanceChartData.cs" />
+    <Compile Include="Views\View Components\Chart\GanttChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\GanttChart.Designer.cs">
+      <DependentUpon>GanttChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\IChartData.cs" />
+    <Compile Include="Views\View Components\Chart\IChartExplorer.cs" />
+    <Compile Include="Views\View Components\Chart\ILayer.cs" />
+    <Compile Include="Views\View Components\Chart\InfoTablePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\InfoTablePopUp.Designer.cs">
+      <DependentUpon>InfoTablePopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\LinearLayer.cs" />
+    <Compile Include="Views\View Components\Chart\LinearChartData.cs" />
+    <Compile Include="Views\Forms\WarningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\WarningForm.Designer.cs">
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Updating\ViewComponentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\AssessemntResults.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\AssessemntResults.Designer.cs">
+      <DependentUpon>AssessemntResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\ChartThumbnail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\ChartThumbnail.Designer.cs">
+      <DependentUpon>ChartThumbnail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\ChartExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\MultiBarChartData.cs" />
+    <Compile Include="Views\View Components\Chart\PercentDistributionPieChartPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\PercentDistributionPieChartPanel.Designer.cs">
+      <DependentUpon>PercentDistributionPieChartPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\PieChartData.cs" />
+    <Compile Include="Views\View Components\Chart\TablePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Chart\TablePopUp.Designer.cs">
+      <DependentUpon>TablePopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CheckBoxCustomTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CheckBoxCustomTree.Designer.cs">
+      <DependentUpon>CheckBoxCustomTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CoordinateTransform\IdentityCoordinateTransform.cs" />
+    <Compile Include="Views\View Components\CustomDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomDateTimePicker.Designer.cs">
+      <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomLinkBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomLinkBox.Designer.cs">
+      <DependentUpon>CustomLinkBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomLinkComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomLinkComboBox.Designer.cs">
+      <DependentUpon>CustomLinkComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomParameterCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomParameterCheckBox.Designer.cs">
+      <DependentUpon>CustomParameterCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomParameterColorBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomParameterColorBox.Designer.cs">
+      <DependentUpon>CustomParameterColorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomParameterEnumBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomParameterEnumBox.Designer.cs">
+      <DependentUpon>CustomParameterEnumBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomParameterTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomParameterTextBox.Designer.cs">
+      <DependentUpon>CustomParameterTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Editors\ColorChangedEventArgs.cs" />
+    <Compile Include="Views\View Components\Editors\ColorHandler.cs" />
+    <Compile Include="Views\View Components\Editors\ColorWheel.cs" />
+    <Compile Include="Views\View Components\Editors\ColorWheelContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Editors\ColorWheelContainer.Designer.cs">
+      <DependentUpon>ColorWheelContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Editors\ColorWheelEditor.cs" />
+    <Compile Include="Views\View Components\Editors\SliderEditor.cs" />
+    <Compile Include="Views\View Components\Editors\SliderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\EnvironmentPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\EnvironmentPropertiesForm.Designer.cs">
+      <DependentUpon>EnvironmentPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\FunctionHelper.cs" />
+    <Compile Include="Views\View Components\CoordinateTransform\ICoordinateTransform.cs" />
+    <Compile Include="Views\Updating\ViewComponentHelper.cs" />
+    <Compile Include="Views\Updating\IViewComponentHelper.cs" />
+    <Compile Include="Views\View Components\Helpers\ColorHelper.cs" />
+    <Compile Include="Views\View Components\ListDialogs\CopyingListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\ListDialogs\InstancingListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\ListDialogs\InstanceLinkingListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\ListDialogs\SingleChildLinkingListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\MeasureToGraphSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\MeasureToGraphSelector.Designer.cs">
+      <DependentUpon>MeasureToGraphSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Nodes\CloningProcessingNode.cs" />
+    <Compile Include="Views\View Components\CustomAddButtonToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomComboToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomDeleteButtonToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomTabControl.Designer.cs">
+      <DependentUpon>CustomTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomTabPage.Designer.cs">
+      <DependentUpon>CustomTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomTabPageCollectionEditor.cs" />
+    <Compile Include="Views\View Components\CustomToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\DiagramGridPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\DiagramGridPanel.Designer.cs">
+      <DependentUpon>DiagramGridPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\GraphSetupControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\GraphSetupControl.Designer.cs">
+      <DependentUpon>GraphSetupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\IToolStripEnabled.cs" />
+    <Compile Include="Views\View Components\Nodes\InstancingProcessingNode.cs" />
+    <Compile Include="Views\View Components\Nodes\LinkToRootProcessingNode.cs" />
+    <Compile Include="Views\View Components\MultiParameterGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Diagram.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\DBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\DBForm.designer.cs">
+      <DependentUpon>DBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\InputForm.designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\ProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\ProjectForm.designer.cs">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\MySqlSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\MySqlSetupForm.designer.cs">
+      <DependentUpon>MySqlSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomAddButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomAddButton.Designer.cs">
+      <DependentUpon>CustomAddButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomDeleteButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomDeleteButton.Designer.cs">
+      <DependentUpon>CustomDeleteButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomCombo.designer.cs">
+      <DependentUpon>CustomCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\CustomToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\CustomTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\DiagramPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\DiagramPanel.designer.cs">
+      <DependentUpon>DiagramPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\DrawingUtility.cs" />
+    <Compile Include="Views\View Components\DiagramGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\ISimulationComponent.cs" />
+    <Compile Include="Views\View Components\ListDialogs\ListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\NavigatorGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\NavigatorGrid.Designer.cs">
+      <DependentUpon>NavigatorGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Nodes\NoActionProcessingNode.cs" />
+    <Compile Include="Views\View Components\ParameterTablePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\ParameterTablePanel.Designer.cs">
+      <DependentUpon>ParameterTablePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\ParameterTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\ParameterTable.designer.cs">
+      <DependentUpon>ParameterTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\View Components\Nodes\ProcessingNode.cs" />
+    <Compile Include="Views\View Components\PolygonDrawingTool.cs" />
+    <Compile Include="Views\View Components\ReportCardHelper.cs" />
+    <Compile Include="Views\View Components\ReportCardModel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\ScrollingListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Split_Aware_North_South_Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Split_Aware_Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\Split_Aware_West_East_Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Updating\IViewComponent.cs" />
+    <Compile Include="Views\View Components\ThresholdData.cs" />
+    <Compile Include="Views\View Components\ThresholdDataSet.cs" />
+    <Compile Include="Views\View Components\Timeline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\ToolTipTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\WindowWrapper.cs" />
+    <Compile Include="Views\View Components\XmlCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\View Components\XmlCombo.Designer.cs">
+      <DependentUpon>XmlCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Web\CustomParameterTextBoxWeb.cs" />
+    <Compile Include="Views\Web\DiagramWeb.cs">
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ProgressDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\SqlServerExpressSetupForm.resx">
+      <DependentUpon>SqlServerExpressSetupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\NumberForm.resx">
+      <DependentUpon>NumberForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\DBForm.resx">
+      <DependentUpon>DBForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\ProjectForm.resx">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\MySqlSetupForm.resx">
+      <DependentUpon>MySqlSetupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\WarningForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User Controls\ProcessPanel.resx">
+      <DependentUpon>ProcessPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Updating\ViewComponentPanel.resx">
+      <DependentUpon>ViewComponentPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\AssessemntResults.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssessemntResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\AssessmentToolStrip.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssessmentToolStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\CardLayoutPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Chart\ChartForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Chart\ChartThumbnail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChartThumbnail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Chart\ChartExplorer.resx">
+      <DependentUpon>ChartExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Chart\InfoTablePopUp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoTablePopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Chart\PercentDistributionPieChartPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PercentDistributionPieChartPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Chart\GanttChart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GanttChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Chart\TablePopUp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TablePopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\CustomCombo.resx">
+      <DependentUpon>CustomCombo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\CustomDateTimePicker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\CustomLinkBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomLinkBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\CustomParameterEnumBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomParameterEnumBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\CustomTabPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\CustomParameterTextBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomParameterTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\CustomTreeView.resx">
+      <DependentUpon>CustomTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Diagram.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Diagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\DiagramGrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DiagramGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\DiagramGridPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DiagramGridPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\DiagramPanel.resx">
+      <DependentUpon>DiagramPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Editors\ColorWheelContainer.resx">
+      <DependentUpon>ColorWheelContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Editors\SliderForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SliderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\EnvironmentPropertiesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EnvironmentPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\GraphSetupControl.resx">
+      <DependentUpon>GraphSetupControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\ListDialogs\ListDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\MeasureToGraphSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MeasureToGraphSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\MultiParameterGrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MultiParameterGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\NavigatorGrid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NavigatorGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\ParameterTablePanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ParameterTablePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\ParameterTable.resx">
+      <DependentUpon>ParameterTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\View Components\Timeline.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Timeline.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.DataTypeTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Aptima.Asim.DDD.CommonComponents.DataTypeTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.NetworkTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Aptima.Asim.DDD.CommonComponents.NetworkTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationEventTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Aptima.Asim.DDD.CommonComponents.SimulationEventTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Aptima.Asim.DDD.CommonComponents.SimulationModelTools, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ad5480814cdeaa86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.dll</HintPath>
+    </Reference>
+    <Reference Include="C5, Version=1.0.1.0, Culture=neutral, PublicKeyToken=06a1b38866503b69, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium, Version=2007.3.8.35795, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="Mvp.Xml, Version=2.0.2158.1055, Culture=neutral, PublicKeyToken=dd92544dc05f5671, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Mvp.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=1.0.7.30072, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="netchartdir, Version=4.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\netchartdir.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go, Version=3.0.3.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Northwoods.Go.DLL</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.GoWeb, Version=3.0.2.2, Culture=neutral, PublicKeyToken=a4e3b7b70161cfe8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Northwoods.GoWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assessments\" />
+    <Folder Include="Connectors\" />
+  </ItemGroup>
+</Project>

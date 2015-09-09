@@ -1,0 +1,1142 @@
+<?xml version="1.0"?>
+<SeamateItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Timeline>
+    <ScheduledItem>
+      <Time>4</Time>
+      <ID>4</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>66</Time>
+      <ID>2</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>116</Time>
+      <ID>15</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>183</Time>
+      <ID>60</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>235</Time>
+      <ID>1</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>291</Time>
+      <ID>28</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>351</Time>
+      <ID>34</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>420</Time>
+      <ID>3</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>488</Time>
+      <ID>36</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>546</Time>
+      <ID>41</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>609</Time>
+      <ID>70</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>657</Time>
+      <ID>18</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>714</Time>
+      <ID>13</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>781</Time>
+      <ID>8</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>848</Time>
+      <ID>48</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>894</Time>
+      <ID>5</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>966</Time>
+      <ID>11</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>1027</Time>
+      <ID>25</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>1087</Time>
+      <ID>72</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>1133</Time>
+      <ID>56</ID>
+      <DM_ID>BAMS DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>7</Time>
+      <ID>4</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>51</Time>
+      <ID>2</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>128</Time>
+      <ID>22</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>189</Time>
+      <ID>20</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>234</Time>
+      <ID>41</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>296</Time>
+      <ID>28</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>354</Time>
+      <ID>49</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>429</Time>
+      <ID>6</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>488</Time>
+      <ID>40</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>537</Time>
+      <ID>7</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>607</Time>
+      <ID>69</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>666</Time>
+      <ID>27</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>715</Time>
+      <ID>42</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>785</Time>
+      <ID>3</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>844</Time>
+      <ID>44</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>905</Time>
+      <ID>16</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>967</Time>
+      <ID>44</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>1027</Time>
+      <ID>1</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>1070</Time>
+      <ID>24</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+    <ScheduledItem>
+      <Time>1145</Time>
+      <ID>62</ID>
+      <DM_ID>Firescout DM</DM_ID>
+    </ScheduledItem>
+  </Timeline>
+  <Items>
+    <Item>
+      <ID>1</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>2</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>3</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>4</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>1.3888888888888888</FF_Difficulty>
+        <TT_Difficulty>1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>5</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>6</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>7</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>8</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>9</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>10</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>11</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>-1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>12</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-1.3888888888888888</FF_Difficulty>
+        <TT_Difficulty>-1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>13</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+<FF_Difficulty>0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>-1.3888888888888888</TT_Difficulty>      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>14</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>-1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>15</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>16</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>17</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>18</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>19</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>20</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>21</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>22</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>23</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>24</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>25</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>26</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>27</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-1.3888888888888888</FF_Difficulty>
+        <TT_Difficulty>1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>28</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-1.3888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>29</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-1.3888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>30</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-1.3888888888888888</FF_Difficulty>
+        <TT_Difficulty>1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>31</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>32</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>33</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>34</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-1.3888888888888888</FF_Difficulty>
+        <TT_Difficulty>-1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>35</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>36</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>37</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>38</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>39</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.413888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>40</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>-0.8013888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.413888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>41</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-0.813888888888888888</FF_Difficulty>
+        <TT_Difficulty>-1.3888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>42</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>-1.3888888888888888</FF_Difficulty>
+        <TT_Difficulty>-0.813888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>43</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>44</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>45</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>46</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>47</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>48</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>49</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>50</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>51</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>52</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>53</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>54</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>55</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>56</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Available</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>57</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>58</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+       <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>59</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>60</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>61</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+       <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>62</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>63</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Available</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>64</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>65</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>66</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>67</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>68</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>69</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>70</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>71</ID>
+      <Parameters>
+        <Crossing>true</Crossing>
+        <Groupings>Two</Groupings>
+        <Threat>Unambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+    <Item>
+      <ID>72</ID>
+      <Parameters>
+        <Crossing>false</Crossing>
+        <Groupings>One</Groupings>
+        <Threat>Ambiguous</Threat>
+        <PlayerResources>Unavailable</PlayerResources>
+        <TeammateResources>Unavailable</TeammateResources>
+        <FF_Difficulty>0.013888888888888888</FF_Difficulty>
+        <TT_Difficulty>0.013888888888888888</TT_Difficulty>
+      </Parameters>
+      <Action />
+    </Item>
+  </Items>
+</SeamateItems>

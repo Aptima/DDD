@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Visual Scenario Generator - Scoring Rule</title>
+
+<style type="text/css">
+h1 {
+  border-bottom-color: #339999;
+  border-bottom-style: solid;
+  font-family: Arial;
+  color: #339999;
+  font-size: large;
+}
+p {
+  font-family: Tahoma;
+  font-size: small;
+}
+ol {
+  font-size: small;
+}
+ul {
+  font-family: tahoma;
+  font-size: small;
+}
+
+</style></head>
+<body>
+<h1>Introduction to Scoring Rules</h1>
+<p><span style="font-family: Tahoma;">Scoring Rules are the fundamental
+building blocks when defining <a href="Scores.html">Scores</a>. &nbsp;They enable the user to
+define the conditions that lead to a score being incremented or
+decremented.</span></p><p><span style="font-style: italic; text-decoration: underline;">Score Increment</span>: &nbsp;The amount by which the score is incremented if its conditions are met. (Can be negative).</p><p><span style="font-style: italic; text-decoration: underline;">Scoring Rule Type</span>: There are two types of rules; <span style="font-weight: bold;">Existence</span> and <span style="font-weight: bold;">State Transition</span>. &nbsp;</p><p><span style="font-style: italic;">Existence
+rules</span> are applied for every second that an object satisfies the rule's
+Who/What/Where conditions. &nbsp;A <span style="font-style: italic;">State Transition Rule</span> is applied
+when Object 1 causes Object 2 to transition states.</p><ul><li><span style="font-style: italic; text-decoration: underline;">Who?</span>: &nbsp;The owner of the object is me, a friendly decision maker, or a hostile decision maker.</li><li><span style="font-style: italic; text-decoration: underline;">What?:</span> The object is of any object, an object of a specific Unit Type or Unit.</li><li><span style="font-style: italic; text-decoration: underline;">Where?</span>: The object is anywhere on the map, in a specifiec active region, or not in a specific active region.</li></ul><br><h1>Examples</h1><span style="font-family: Tahoma;"></span><p style="font-weight: bold;">Example 1:</p><p>Create a rule that decrements the score by 1 point for every second that an enemy unit is present in a no-fly-zone.</p><ul><li>The user selects a Scoring Rule Type of Object_1_Exists and a Score Increment of -1. &nbsp;</li><li>In the&nbsp;Object 1 group box:</li><ul><li>Set the Who condition to Hostile,&nbsp;</li></ul><ul><li>Set the What condition to Anywhere,&nbsp;</li></ul><ul><li>Set the Where condition to In_Region (and then selects the region from a list of active regions).</li></ul></ul><p style="font-weight: bold;">&nbsp;Example 2:</p><p>&nbsp;Create a rule that awards a player 10 points every time a hostile aircraft is destroyed within a no-fly-zone.</p><ul><li>The user selects a Scoring Rule Type of Object_2_State_Transition and a Score Increment of 10.</li><li>In the Object 1 group box:</li><ul><li>Set the Who condition to Myselft.</li><li>Set the What condition to Any.</li><li>Set the Where condition to Anywhere.</li></ul><li>In the Object 2 group box:</li><ul><li>Set the Who condition to Hostile.</li><li>Set the What condition to Any.</li><li>Set the Where condition to In_Region (and then select the desired region).</li><li>Set the New State to Dead, and leave the From State Blank.</li></ul></ul><h1>How to Define a Scoring Rule</h1>
+<p>1. Right click on the "Scoring Rules" entry on the Scoring
+tree
+to the left.</p>
+<p>2. Select Create Scoring Rule. &nbsp;Enter an Score
+name in the
+resulting dialog.</p>
+<p>3. Follow the onscreen instructions for defining a Scoring Rule.</p>
+<span style="font-family: Tahoma;"></span>
+<p> </p>
+</body></html>

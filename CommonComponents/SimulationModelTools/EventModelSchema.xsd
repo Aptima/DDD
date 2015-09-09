@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<xs:schema id="SimulationModel" targetNamespace="SimulationModel.xsd" xmlns:mstns="SimulationModel.xsd" xmlns="SimulationModel.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:include id="DataTypesSchema" schemaLocation="DataTypesSchema.xsd">
+  </xs:include>
+  <xs:complexType name="ParameterInfo">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="Name" type="xs:string" use="required">
+        </xs:attribute>
+        <xs:attribute name="DataType" type="DataTypeNames" use="required">
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="EventTypeInfo">
+    <xs:sequence>
+      <xs:element name="Description" type="xs:string" maxOccurs="1" minOccurs="0">
+      </xs:element>
+      <xs:element name="Parameter" type="ParameterInfo" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+      <xs:element name="EventType" type="EventTypeInfo" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required">
+    </xs:attribute>
+    <xs:attribute name="Log" type="xs:boolean" use="optional" default="true">
+    </xs:attribute>
+    <xs:attribute name="Replay" type="xs:boolean" use="optional" default="false">
+    </xs:attribute>
+    <xs:attribute name="ForkReplay" type="xs:boolean" use="optional" default="false">
+    </xs:attribute>
+    <xs:attribute name="SimCoreSubscribe" type="xs:boolean" use="optional" default="true">
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="EventModelType">
+    <xs:sequence>
+      <xs:element name="EventType" type="EventTypeInfo" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

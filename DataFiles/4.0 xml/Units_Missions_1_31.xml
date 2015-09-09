@@ -1,0 +1,7339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Scenario>
+  <ScenarioName>Test Beta Schema</ScenarioName>
+  <Description>THis is the field of action for the Persuade project</Description>
+  <Playfield>
+    <MapFileName>RamadiCenter.jpg</MapFileName>
+    <UtmZone>25 M</UtmZone>
+    <VerticalScale>6.512</VerticalScale>
+    <HorizontalScale>6.671</HorizontalScale>
+  </Playfield>
+
+  <LandRegion>
+    <ID>RamadiCenter</ID>
+    <Vertex>
+      <X>237.5</X>
+      <Y>4424</Y>
+    </Vertex>
+    <Vertex>
+      <X>678.5</X>
+      <Y>4399</Y>
+    </Vertex>
+    <Vertex>
+      <X>1160</X>
+      <Y>4424</Y>
+    </Vertex>
+    <Vertex>
+      <X>1968</X>
+      <Y>4323</Y>
+    </Vertex>
+    <Vertex>
+      <X>2375</X>
+      <Y>4190</Y>
+    </Vertex>
+    <Vertex>
+      <X>2626</X>
+      <Y>4115</Y>
+    </Vertex>
+    <Vertex>
+      <X>3040</X>
+      <Y>4390</Y>
+    </Vertex>
+    <Vertex>
+      <X>3386</X>
+      <Y>4348</Y>
+    </Vertex>
+    <Vertex>
+      <X>4037</X>
+      <Y>4424</Y>
+    </Vertex>
+    <Vertex>
+      <X>5489</X>
+      <Y>4432</Y>
+    </Vertex>
+    <Vertex>
+      <X>5516</X>
+      <Y>25.04</Y>
+    </Vertex>
+    <Vertex>
+      <X>4268</X>
+      <Y>8.345</Y>
+    </Vertex>
+    <Vertex>
+      <X>3535</X>
+      <Y>1369</Y>
+    </Vertex>
+    <Vertex>
+      <X>3026</X>
+      <Y>2120</Y>
+    </Vertex>
+    <Vertex>
+      <X>237.5</X>
+      <Y>4424</Y>
+    </Vertex>
+    <Vertex>
+      <X>678.5</X>
+      <Y>4399</Y>
+    </Vertex>
+    <Vertex>
+      <X>1160</X>
+      <Y>4424</Y>
+    </Vertex>
+    <Vertex>
+      <X>1968</X>
+      <Y>4323</Y>
+    </Vertex>
+    <Vertex>
+      <X>2375</X>
+      <Y>4190</Y>
+    </Vertex>
+    <Vertex>
+      <X>2626</X>
+      <Y>4115</Y>
+    </Vertex>
+    <Vertex>
+      <X>3040</X>
+      <Y>4390</Y>
+    </Vertex>
+    <Vertex>
+      <X>3386</X>
+      <Y>4348</Y>
+    </Vertex>
+    <Vertex>
+      <X>4037</X>
+      <Y>4424</Y>
+    </Vertex>
+    <Vertex>
+      <X>5489</X>
+      <Y>4432</Y>
+    </Vertex>
+    <Vertex>
+      <X>5516</X>
+      <Y>25.04</Y>
+    </Vertex>
+    <Vertex>
+      <X>4268</X>
+      <Y>8.345</Y>
+    </Vertex>
+    <Vertex>
+      <X>3535</X>
+      <Y>1369</Y>
+    </Vertex>
+    <Vertex>
+      <X>3026</X>
+      <Y>2120</Y>
+    </Vertex>
+    <Vertex>
+      <X>2911</X>
+      <Y>2003</Y>
+    </Vertex>
+    <Vertex>
+      <X>4105</X>
+      <Y>-25.04</Y>
+    </Vertex>
+    <Vertex>
+      <X>13.57</X>
+      <Y>-0.00136</Y>
+    </Vertex>
+    <Vertex>
+      <X>6.784</X>
+      <Y>4257</Y>
+    </Vertex>
+    <Vertex>
+      <X>2761</X>
+      <Y>2020</Y>
+    </Vertex>
+    <Vertex>
+      <X>2945</X>
+      <Y>2187</Y>
+    </Vertex>
+    <Vertex>
+      <X>2768</X>
+      <Y>2329</Y>
+    </Vertex>
+    <Vertex>
+      <X>1479</X>
+      <Y>3380</Y>
+    </Vertex>
+    <Vertex>
+      <X>257.8</X>
+      <Y>4332</Y>
+    </Vertex>
+
+
+  </LandRegion>
+  <Team>
+    <Name>BlueTeam</Name>
+    <Against>Red</Against>
+  </Team>
+  <Team>
+    <Name>RedTeam</Name>
+    <Against>Blue</Against>
+  </Team>
+  <Team>
+    <Name>Civilians</Name>
+  </Team>
+
+  <DecisionMaker>
+    <Role>1BCT</Role>
+    <Identifier>DM1</Identifier>
+    <Color>AliceBlue</Color>
+    <Team>BlueTeam</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>3BCT</Role>
+    <Identifier>DM2</Identifier>
+    <Color>DarkBlue</Color>
+    <Team>BlueTeam</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>4BCT</Role>
+    <Identifier>DM3</Identifier>
+    <Color>DodgerBlue</Color>
+    <Team>BlueTeam</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>CAB</Role>
+    <Identifier>DM4</Identifier>
+    <Color>SkyBlue</Color>
+    <Team>BlueTeam</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>FA-MP-ENGR-CA</Role>
+    <Identifier>DM5</Identifier>
+    <Color>Turquoise</Color>
+    <Team>BlueTeam</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Red</Role>
+    <Identifier>RED</Identifier>
+    <Color>Crimson</Color>
+    <Team>RedTeam</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Civilians</Role>
+    <Identifier>CIV</Identifier>
+    <Color>RosyBrown</Color>
+    <Team>Civilians</Team>
+  </DecisionMaker>
+  <!--    S P E C I E S  D E F I N I T I O N S  G O  H E R E -->
+
+
+  <Genus>
+    <Name>LandObject</Name>
+  </Genus>
+
+  <Genus>
+    <Name>AirObject</Name>
+  </Genus>
+
+  <Species>
+    <Name>BlueFolk</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <Emitter>
+          <Attribute>Default</Attribute>
+        </Emitter>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Dead</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+
+  </Species>
+
+  <Species>
+    <Name>BlueFlier</Name>
+    <Base>AirObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <Emitter>
+          <Attribute>Default</Attribute>
+        </Emitter>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <StateParameters>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+    </DefineState>
+    <DefineState>
+      <State>SearchAndRescue</State>
+    </DefineState>
+  </Species>
+
+
+  <Species>
+    <Name>BlueClassA</Name>
+    <Base>BlueFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>30</Range>
+            <Probability>.5</Probability>
+            <State>Casualties</State>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>Casualties</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>30</Range>
+            <Probability>.8</Probability>
+            <State>Casualties</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>IED</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>30</Range>
+            <Probability>1.0</Probability>
+            <State>Inoperable</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>IED</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>30</Range>
+            <Probability>1.0</Probability>
+            <State>Inoperable</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>4</Effect>
+            <Range>30</Range>
+            <Probability>.8</Probability>
+            <State>Inoperable</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.RIFLE-CO.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>TRSP</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>10</Range>
+            <Probability>.8</Probability>
+            <State>FullyFunctional</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>Inoperable</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>30</Range>
+            <Probability>.8</Probability>
+            <State>Inoperable</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>IED</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>30</Range>
+            <Probability>.8</Probability>
+            <State>Inoperable</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+
+  <Species>
+    <Name>BlueClassB</Name>
+    <Base>BlueFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>30</Range>
+            <Probability>.4</Probability>
+            <State>Casualties</State>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.2</Probability>
+            <State>Casualties</State>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+            <State>Casualties</State>
+            <Effect>4</Effect>
+            <Range>50</Range>
+            <Probability>.6</Probability>
+            <State>Casualties</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>IED</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>30</Range>
+            <Probability>1</Probability>
+            <State>Casualties</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>MED</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>10</Range>
+            <Probability>.8</Probability>
+            <State>FullyFunctional</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>Inoperable</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>BlueClassC</Name>
+    <Base>BlueFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>30</Range>
+            <Probability>.4</Probability>
+            <State>HalfCapability</State>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.2</Probability>
+            <State>HalfCapability</State>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+            <State>HalfCapability</State>
+            <Effect>4</Effect>
+            <Range>50</Range>
+            <Probability>.6</Probability>
+            <State>HalfCapability</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>IED</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>10</Range>
+            <Probability>.8</Probability>
+            <State>HalfCapability</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>HalfCapability</State>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>CENGR</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>10</Range>
+            <Probability>.8</Probability>
+            <State>FullyFunctional</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>FullyFunctional</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>TNK CO</Name>
+    <Base>BlueFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.TNK-CO.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>11.11</MaximumSpeed>
+        <Capability>
+          <Name>SCR</Name>
+          <Proximity>
+            <Range>50</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>EN</Name>
+          <Proximity>
+            <Range>50</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>300</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>3</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+            <State>Damaged</State>
+            <Effect>4</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>Damaged</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Damaged</State>
+      <Icon>ImageLib.Persuade.Blue.Casualties.TNK-CO.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+        <SingletonVulnerability>
+          <Capability>CENGR</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>10</Range>
+            <Probability>.8</Probability>
+            <State>FullyFunctional</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>Inoperable</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Dead</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+ 
+  <Species>
+    <Name>BlueHelo</Name>
+    <Base>BlueFlier</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.Unknown.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>4</Effect>
+            <Range>100</Range>
+            <Probability>.6</Probability>
+            <State>SearchAndRescue</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>SearchAndRescue</State>
+      <StateParameters>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>RFL CO</Name>
+    <Base>BlueClassA</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.RIFLE-CO.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>2.77</MaximumSpeed>
+        <Capability>
+          <Name>SCR</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>SZ</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>MAN</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>STOP</Name>
+          <Proximity>
+            <Range>100</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>SNIP</Name>
+          <Proximity>
+            <Range>50</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>CRIOT</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>DTN</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>PTRL</Name>
+          <Proximity>
+            <Range>200</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.RIFLE-CO.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.RIFLE-CO.png</Icon>
+    </DefineState>   
+  </Species>
+
+  <Species>
+    <Name>WPN CO</Name>
+    <Base>BlueClassB</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+          <Icon>ImageLib.Persuade.Blue.WPN-TRP.png</Icon>
+        <StateParameters>
+        <MaximumSpeed>2.77</MaximumSpeed>
+
+        <Capability>
+          <Name>SCR</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>SZ</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>EN</Name>
+          <Proximity>
+            <Range>50</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>STOP</Name>
+          <Proximity>
+            <Range>100</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>150</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1</Probability>
+            </Effect>
+          </Proximity>
+          <Proximity>
+            <Range>150</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>0.5</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.WPN-TRP.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.WPN-TRP.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>MTD TRP</Name>
+    <Base>BlueClassB</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.MTD-TRP.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>13.9</MaximumSpeed>
+        <Capability>
+          <Name>SCR</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>SZ</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>EN</Name>
+          <Proximity>
+            <Range>50</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>STOP</Name>
+          <Proximity>
+            <Range>100</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>150</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+
+        <Capability>
+          <Name>PTRL</Name>
+          <Proximity>
+            <Range>200</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.MTD-TRP.png</Icon>
+       </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.MTD-TRP.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>DSM TRP</Name>
+    <Base>BlueClassA</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Casualties.Blue.DSM-TRP.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>2.77</MaximumSpeed>
+        <Capability>
+          <Name>SCR</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>SZ</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>EN</Name>
+          <Proximity>
+            <Range>50</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>MAN</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>STOP</Name>
+          <Proximity>
+            <Range>100</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>SNIP</Name>
+          <Proximity>
+            <Range>50</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+
+        <Capability>
+          <Name>CRIOT</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>DTN</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>PTRL</Name>
+          <Proximity>
+            <Range>200</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.DSM-TRP.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.DSM-TRP.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>REC TRP</Name>
+    <Base>BlueClassA</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Casualties.Blue.REC-TRP.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>2.77</MaximumSpeed>
+        <Capability>
+          <Name>GREC</Name>
+          <Proximity>
+            <Range>200</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+        <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.REC-TRP.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.REC-TRP.png</Icon>
+    </DefineState>   
+  </Species>
+
+  <Species>
+    <Name>BTTR</Name>
+    <Base>BlueClassC</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.BTTR.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>66.48</MaximumSpeed>
+        <Emitter>
+          <Attribute>Default</Attribute>
+        </Emitter>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>HalfCapability</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.BTTR.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.BTTR.png</Icon>
+    </DefineState>
+    
+  </Species>
+
+
+
+  <Species>
+    <Name>MECH ENGR CO</Name>
+    <Base>BlueClassA</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Casualties.Blue.MECH-ENGR.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>66.48</MaximumSpeed>
+        <Capability>
+          <Name>MENGR</Name>
+          <Proximity>
+            <Range>40</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.MECH-ENGR-CO.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.MECH-ENGR-CO.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>CMBT ENGR CO</Name>
+    <Base>BlueClassA</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.CMBT-ENGR.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>138.5</MaximumSpeed>
+        <Capability>
+          <Name>CENGR</Name>
+          <Proximity>
+            <Range>40</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>MAN</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>CIED</Name>
+          <Proximity>
+            <Range>40</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>STOP</Name>
+          <Proximity>
+            <Range>100</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.CMBR-ENGR-CO.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.CMBT-ENGR-CO.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>FA BTR</Name>
+    <Base>BlueClassC</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.FA-BTR.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>HalfCapability</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.FA-BTTR.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.FA-BTTR.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>MP CO</Name>
+    <Base>BlueClassA</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.MP-CO.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>138.5</MaximumSpeed>
+        <Capability>
+          <Name>MAN</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>INT</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>CRIOT</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>DTN</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>PTRL</Name>
+          <Proximity>
+            <Range>200</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.MP-CO.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.MP-CO.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>MI CO</Name>
+    <Base>BlueFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.MI-CO.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>138.5</MaximumSpeed>
+        <Capability>
+          <Name>INT</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>CRIOT</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>DTN</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.MI-CO.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.MI-CO.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>OH58D</Name>
+    <Base>BlueHelo</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.OH58D.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>614.94</MaximumSpeed>
+        <Capability>
+          <Name>AREC</Name>
+          <Proximity>
+            <Range>500</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>SearchAndRescue</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.OH58D.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.OH58D.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>AH64</Name>
+    <Base>BlueFlier</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.AH64.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>614.94</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>SearchAndRescue</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.AH64.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.AH64.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>UH60</Name>
+    <Base>BlueHelo</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.UH60.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>614.94</MaximumSpeed>
+        <Capability>
+          <Name>TRSP</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>RECON</Name>
+          <Proximity>
+            <Range>500</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>SearchAndRescue</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.UH60.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.UH60.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>CH47</Name>
+    <Base>BlueHelo</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.CH47.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>664.8</MaximumSpeed>
+        <Capability>
+          <Name>TRSP</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>SearchAndRescue</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.CH47.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.CH47.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>CA</Name>
+    <Base>BlueClassA</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Blue.CA.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>27.7</MaximumSpeed>
+        <Capability>
+          <Name>INT</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>CRIOT</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <Capability>
+          <Name>CA</Name>
+          <Proximity>
+            <Range>10</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Casualties.Blue.CA.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Inoperable</State>
+      <Icon>ImageLib.Persuade.Inoperable.Blue.CA.png</Icon>
+    </DefineState>
+  </Species>
+  <!--                           E N D   B L U E     --> 
+  <Species>
+    <Name>HELLFIRE Msl</Name>
+    <Base>BlueFlier</Base>
+    <Size>0</Size>
+    <IsWeapon>true</IsWeapon>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Common.Missile.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>2777.77</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>30</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+
+  <Species>
+    <Name>HOW 105 Msl</Name>
+    <Base>BlueFlier</Base>
+    <Size>0</Size>
+    <IsWeapon>true</IsWeapon>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Common.Missile.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>831</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>25</Range>
+            <Effect>
+              <Intensity>4</Intensity>
+              <Probability>1</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+
+  <Species>
+    <Name>HOW 155 Msl</Name>
+    <Base>BlueFlier</Base>
+    <Size>0</Size>
+    <IsWeapon>true</IsWeapon>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Common.Missile.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>1385</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>100</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+  <!-- E N D  M I S S I L E S -->
+
+  <Species>
+    <Name>RedFolk</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <Emitter>
+          <Attribute>Default</Attribute>
+        </Emitter>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Destroyed</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Damaged</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Explosion</State>
+      <Icon>Image.Lib.Persuade.Common.Explosion.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Stopped</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Captured</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Detained</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>CivilCasualties</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Disappear</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>DetainedAndInterrogated</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Killed</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Flee</State>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>RFL CO (Red)</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+     <Icon>ImageLib.Persuade.Red.RedRifleCo.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>2.77</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>50</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>Damaged</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>300</Range>
+            <Probability>.7</Probability>
+            <State>Damaged</State>
+            <Effect>3</Effect>
+            <Range>100</Range>
+            <Probability>.90</Probability>
+            <State>Damaged</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>5</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>6</Effect>
+            <Range>300</Range>
+            <Probability>.5</Probability>
+            <State>Destroyed</State>
+            <Effect>6</Effect>
+            <Range>100</Range>
+            <Probability>.90</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Damaged</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.RedRifleCo.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>300</Range>
+            <Probability>.5</Probability>
+            <State>Destroyed</State>
+            <Effect>3</Effect>
+            <Range>100</Range>
+            <Probability>.90</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.RedRifleCo.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>T-62 (Red)</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.T-62.png</Icon>
+      <StateParameters>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>300</Range>
+            <Effect>
+              <Intensity>3</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>5</Effect>
+            <Range>100</Range>
+            <Probability>.5</Probability>
+            <State>Damaged</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>AREC</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>5</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>AREC</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.9</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>6</Effect>
+            <Range>50</Range>
+            <Probability>.9</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.3</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>5</Effect>
+            <Range>50</Range>
+            <Probability>.3</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>6</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Damaged</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.T-62.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>100</Range>
+            <Probability>1</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>AREC</Capability>
+            <Effect>1</Effect>
+            <Range>100</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>5</Effect>
+            <Range>100</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>2</Effect>
+            <Range>100</Range>
+            <Probability>.6</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>5</Effect>
+            <Range>100</Range>
+            <Probability>.6</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.T-62.png</Icon>
+    </DefineState>
+  </Species>
+
+
+  <Species>
+    <Name>RedClass1</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>4</Effect>
+            <Range>100</Range>
+            <Probability>.5</Probability>
+            <State>Damaged</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>AREC</Capability>
+            <Effect>1</Effect>
+            <Probability>.7</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>4</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>4</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+  </Species>
+
+
+  <Species>
+    <Name>RedClass2</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>100</Range>
+            <Probability>.5</Probability>
+            <State>Damaged</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>AREC</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Damaged</State>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>100</Range>
+            <Probability>.5</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>AREC</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+
+  <Species>
+    <Name>IED (Red)</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.IED.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>16.62</MaximumSpeed>
+        <Capability>
+          <Name>BOMB</Name>
+          <Proximity>
+            <Range>55</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>CENGR</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>40</Range>
+            <Probability>.9</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.IED.png</Icon>
+    </DefineState>
+    
+  </Species>
+
+  <!-- Fully functional is NOT a sensible initial state for a VBIED truck -->
+  <Species>
+    <Name>VBIED (Red)</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.VBIED.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>16.62</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+
+    <DefineState>
+      <State>VBIED-1</State>
+      <StateParameters>
+        <Capability>
+          <Name>BOMB</Name>
+          <Proximity>
+            <Range>55</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>PTRL</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>200</Range>
+            <Probability>.7</Probability>
+            <State>Normal-Stopped</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Normal-Stopped</State>
+      <Icon>ImageLib.Persuade.Red.VBIED.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>40</Range>
+            <Probability>.6</Probability>
+            <State>Destroyed</State>
+            <Effect>2</Effect>
+            <Range>60</Range>
+            <Probability>.7</Probability>
+            <State>Destroyed</State>
+            <Effect>3</Effect>
+            <Range>100</Range>
+            <Probability>.9</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>VBIED-2</State>
+      <Icon>ImageLib.Persuade.Red.VBIED.png</Icon>
+      <StateParameters>
+        <Capability>
+          <Name>BOMB</Name>
+          <Proximity>
+            <Range>55</Range>
+            <Effect>
+              <Intensity>2</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>STOP</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+            <State>Stopped</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>40</Range>
+            <Probability>.6</Probability>
+            <State>Destroyed</State>
+            <Effect>2</Effect>
+            <Range>60</Range>
+            <Probability>.7</Probability>
+            <State>Destroyed</State>
+            <Effect>3</Effect>
+            <Range>100</Range>
+            <Probability>.9</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Stopped</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.VBIED.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Stopped</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.VBIED.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Explosion</State>
+      <Icon>Image.Lib.Persuade.Common.Explosion.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>Attackers (Red)</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.Attackers.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>1.39</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>50</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>100</Range>
+            <Probability>.8</Probability>
+            <State>Casualties</State>
+          </Transitions>
+        </SingletonVulnerability>
+
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>EN</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>INT</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SNIP</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>DTN</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>PTRL</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <NewState>Captured</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>EN</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>1.0</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>INT</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>1.0</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SNIP</Capability>
+            <Effect>4</Effect>
+          </Contribution>
+          <Contribution>
+            <Capability>DTN</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>1.0</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>PTRL</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>1.0</Probability>
+          </Contribution>
+          <NewState>Captured</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>EN</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <Contribution>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.5</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>EN</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.9</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SNIP</Capability>
+            <Effect>4</Effect>
+            <Range>50</Range>
+            <Probability>.9</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.VBIED.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+            <State>Casualties</State>
+            <Effect>4</Effect>
+            <Range>50</Range>
+            <Probability>1.0</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Stopped</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.Attackers.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Captured</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.Attackers.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.Attackers.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>Snipers (Red)</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.Snipers.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>1.39</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>100</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>PTRL</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>200</Range>
+            <Probability>.7</Probability>
+            <State>Idle</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+            <State>Idle</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Idle</State>
+      <Icon>ImageLib.Persuade.Red.Snipers.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Dstroyed</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.Snipers.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>Rioting Crowd (Red)</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.RiotingCrowd.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>1.39</MaximumSpeed>
+        <Capability>
+          <Name>RIOT</Name>
+          <Proximity>
+            <Range>1</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>100</Range>
+            <Probability>1.0</Probability>
+            <State>CivilCasualties</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>100</Range>
+            <Probability>1.0</Probability>
+            <State>CivilCasualties</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>EN</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>CRIOT</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>DTN</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <NewState>Detained</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>CRIOT</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <NewState>Dispersed</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>CivilCasualties</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.RiotingCrowd.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Detained</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.RiotingCrowd.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Dispersed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.RiotingCrowd.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>Mortar Site (Red)</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.MortarSite.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>25</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>FIRE</Capability>
+          <Transitions>
+            <Effect>4</Effect>
+            <Range>200</Range>
+            <Probability>.8</Probability>
+            <State>CivilCasualties</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>AREC</Capability>
+            <Effect>2</Effect>
+            <Range>200</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>4</Effect>
+            <Range>200</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <NewState>Destroyed</NewState>
+        </ComboVulnerability>
+
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>CivilCasualties</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.MortarSite.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.MortarSite.png</Icon>
+    </DefineState>
+
+  </Species>
+  <!-- This state has two undetecteds: "Not appeared" and Undetected" For now assuming latter will be start state, but again, how does it get acted on if it is invisible? -->
+  <Species>
+    <Name>Criminals (Red)</Name>
+    <Base>RedFolk</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.Criminals.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>1.39</MaximumSpeed>
+        <Capability>
+          <Name>CRIME</Name>
+          <Proximity>
+            <Range>1</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>UndetectedCriminals</State>
+      <Icon>ImageLib.Persuade.Red.Criminals.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>AREC</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <State>DetectedCriminals</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>GREC</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <State>DetectedCriminals</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+
+    <DefineState>
+      <State>DetectedCriminals</State>
+      <Icon>ImageLib.Persuade.Red.Criminals.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>SNIP</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>100</Range>
+            <Probability>1</Probability>
+            <State>Killed</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>PTRL</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>200</Range>
+            <Probability>.8</Probability>
+            <State>Flee</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>CRIOT</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+            <State>Flee</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>INT</Capability>
+            <Effect>1</Effect>
+          </Contribution>
+          <Contribution>
+            <Capability>CRIOT</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>DTN</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <NewState>DetainedAndInterrogated</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>DetainedAndInterrogated</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.Criminals.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Killed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.Criminals.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>FLEE</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.Criminals.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>BMP (Red)</Name>
+    <Base>RedClass1</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.BMP.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>13.85</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>150</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Damaged</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.BMP.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.BMP.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>122mm D-3 (Red)</Name>
+    <Base>RedClass2</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.D3-122mm.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>8.31</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>5000</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Damaged</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.D3-122mm.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.D3-122mm.png</Icon>
+    </DefineState>
+    
+  </Species>
+
+  <Species>
+    <Name>122mm SP 2S1 (Red)</Name>
+    <Base>RedClass2</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.SP2S1-122mm.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>11.08</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>5000</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Damaged</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.SP2S1-122mm.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.SP2S1-122mm.png</Icon>
+    </DefineState>   
+  </Species>
+
+  <Species>
+    <Name>BM-21 (Red)</Name>
+    <Base>RedClass1</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.BM-21.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>16.62</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>1000</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Damaged</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.BM-21.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.BM-21.png</Icon>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>ZSU-23-4 (Red)</Name>
+    <Base>RedClass1</Base>
+    <Size>0</Size>
+    <FullyFunctional>
+      <Icon>ImageLib.Persuade.Red.ZSU-23-4.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>11.08</MaximumSpeed>
+        <Capability>
+          <Name>FIRE</Name>
+          <Proximity>
+            <Range>500</Range>
+            <Effect>
+              <Intensity>1</Intensity>
+              <Probability>1.00</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Damaged</State>
+      <Icon>ImageLib.Persuade.Red.Casualties.ZSU-23-4.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+      <Icon>ImageLib.Persuade.Red.Inoperable.ZSU-23-4.png</Icon>
+    </DefineState>
+  </Species>
+  <!-- M I S S I O N S-->
+  <Species>
+    <Name>Block/BuildingSearch</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.BlockBuildingSearch.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>SearchNeeded</State>
+      <Icon>Image.Lib.Persuade.Civilian.BlockBuildingSearch.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>GREC</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>20</Range>
+            <Probability>.7</Probability>
+            <State>Completed-1</State>
+            <Effect>3</Effect>
+            <Range>20</Range>
+            <Probability>.7</Probability>
+            <State>Completed-2</State>
+            <Effect>4</Effect>
+            <Range>20</Range>
+            <Probability>.9</Probability>
+            <State>Completed-1</State>
+            <Effect>4</Effect>
+            <Range>20</Range>
+            <Probability>.9</Probability>
+            <State>Completed-2</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+
+    <DefineState>
+      <State>Completed-1</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.BlockBuildingSearch.png</Icon>
+
+    </DefineState>
+    <DefineState>
+      <State>Completed-2</State>
+      <Icon>Image.Lib.Persuade.Civilian.Inoperable.BlockBuildingSearch.png</Icon>
+
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>SiteSecure</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.SiteSecure.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>SiteSecurityNeeded</State>
+      <Icon>Image.Lib.Persuade.Civilian.SiteSecure.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+        <SingletonVulnerability>
+          <Capability>SCR</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>20</Range>
+            <Probability>.5</Probability>
+            <State>Completed-1</State>
+            <Effect>3</Effect>
+            <Range>20</Range>
+            <Probability>.5</Probability>
+            <State>SecuredAndEnemyLeaves</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>SCR</Capability>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.9</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SNIP</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.9</Probability>
+          </Contribution>
+          <NewState>SecuredAndEnemyLeaves</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>SCR</Capability>
+            <Effect>3</Effect>
+            <Range>50</Range>
+            <Probability>.9</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SNIP</Capability>
+            <Effect>2</Effect>
+            <Range>50</Range>
+            <Probability>.9</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>DTN</Capability>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.9</Probability>
+          </Contribution>
+          <NewState>SecuredAndEnemyEnemyDetained</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>NoNeedForSecurity</State>
+      <Icon>Image.Lib.Persuade.Civilian.Inoperable.SiteSecure.png</Icon>
+
+    </DefineState>
+    <DefineState>
+      <State>SecuredAndEnemyLeaves</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.SiteSecure.png</Icon>
+
+    </DefineState>
+    <DefineState>
+      <State>SecuredAndEnemyDetained</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.SiteSecure.png</Icon>
+
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>AreaSecure</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.AreaSecure.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>AreaSecurityNeeded</State>
+      <Icon>Image.Lib.Persuade.Civilian.AreaSecure.png</Icon>
+
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>SCR</Capability>
+          <Transitions>
+            <Effect>6</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+            <State>AreaSecured</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>AreaSecured</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.AreaSecure.png</Icon>
+    </DefineState>
+  </Species>
+
+
+  <Species>
+    <Name>FacilityReconstruction</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.FacilityMaintenance.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>NormalFacility</State>
+      <Icon>Image.Lib.Persuade.Civilian.FacilityMaintenance.png</Icon>
+
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>IED</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>10</Range>
+            <Probability>1</Probability>
+            <State>Casualties</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>SCR</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>10</Range>
+            <Probability>.5</Probability>
+            <State>FacilitySecured</State>
+            <Effect>4</Effect>
+            <Range>10</Range>
+            <Probability>1</Probability>
+            <State>FacilitySecured</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>IED</Capability>
+            <Effect>3</Effect>
+            <Range>20</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>CRIME</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <NewState>DamageAndStolenProperty</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>FacilitySecured</State>
+      <Icon>Image.Lib.Persuade.Civilian.Inoperable.FacilityMaintenance.png</Icon>
+
+    </DefineState>
+    <DefineState>
+      <State>Casualties</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.FacilityMaintenance.png</Icon>
+
+    </DefineState>
+    <DefineState>
+      <State>DamageAndStolenProperty</State>
+      <Icon>Image.Lib.Persuade.Civilian.Inoperable.FacilityMaintenance.png</Icon>
+
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>IED</Capability>
+          <Transitions>
+            <Effect>3</Effect>
+            <Range>10</Range>
+            <Probability>1</Probability>
+            <State>Unrepairable</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>MENGR</Capability>
+            <Effect>2</Effect>
+            <Range>10</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SCR</Capability>
+            <Effect>2</Effect>
+            <Range>10</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <NewState>DamageAndStolenProperty</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Unrepairable</State>
+      <Icon>Image.Lib.Persuade.Civilian.Inoperable.FacilityMaintenance.png</Icon>
+
+    </DefineState>
+    <DefineState>
+      <State>LightDamage</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.FacilityMaintenance.png</Icon>
+
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>CRIME</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>10</Range>
+            <Probability>1</Probability>
+            <State>DamageAndStolenProperty</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>SetupMannedCheckpoint</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.SetupManCheckpoint.png</Icon>
+
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>CheckpointNeeded</State>
+      <Icon>Image.Lib.Persuade.Civilian.SetupManCheckpoint.png</Icon>
+
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>RIOT</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+            <State>CannotSetupCheckpoint</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>CENGR</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>10</Range>
+            <Probability>1</Probability>
+            <State>CheckPointSetDoManning</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>CannotSetupCheckpoint</State>
+      <Icon>Image.Lib.Persuade.Civilian.Inoperable.SetupManCheckpoint.png</Icon>
+
+    </DefineState>
+    <DefineState>
+      <State>CheckPointSetupDoManning</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.SetupManCheckpoint.png</Icon>
+      <StateParameters>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>SCR</Capability>
+            <Effect>1</Effect>
+            <Range>10</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>MAN</Capability>
+            <Effect>3</Effect>
+            <Range>10</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <NewState>Dead</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>FacilityMaintenance</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.FacilityMaintenance.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>FacilityMaintenanceRequirements</State>
+      <Icon>Image.Lib.Persuade.Civilian.FacilityMaintenance.png</Icon>
+      <StateParameters>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>CENGR</Capability>
+            <Effect>2</Effect>
+            <Range>20</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>MAN</Capability>
+            <Effect>2</Effect>
+            <Range>20</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <NewState>Dead</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+  </Species>
+
+  <Species>
+    <Name>RelocationCenter</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.RelocationCenter.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>RelocationCenterNeeded</State>
+      <Icon>Image.Lib.Persuade.Civilian.RelocationCenter.png</Icon>
+
+      <StateParameters>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>MENGR</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SCR</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <NewState>CenterSetupMaintenanceNeeded</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>CenterSetupMaintenanceNeeded</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.RelocationCenter.png</Icon>
+
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>MAN</Capability>
+          <Transitions>
+            <Effect>4</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+            <State>HostageSituation</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>IED</Capability>
+          <Transitions>
+            <Effect>2</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+            <State>SearchAndRescue</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>MAN</Capability>
+            <Effect>4</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SCR</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>INT</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <NewState>IntelGathered</NewState>
+        </ComboVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>MAN</Capability>
+            <Effect>4</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SCR</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <NewState>Dead</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>IntelGathered</State>
+      <Icon>Icon</Icon>
+    </DefineState>
+    <DefineState>
+      <State>SearchAndRescue</State>
+      <Icon>Image.Lib.Persuade.Civilian.Inoperable.RelocationCenter.png</Icon>
+
+      <StateParameters>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>SCR</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>TRSP</Capability>
+            <Effect>2</Effect>
+            <Range>20</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <NewState>Dead</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>HostageSituation</State>
+      <Icon>Image.Lib.Persuade.Civilian.HostageSituation.png</Icon>
+
+      <StateParameters>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>REC</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>INT</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>SNP</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <NewState>HostagesFreed</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>HostagesFreed</State>
+      <Icon>Image.Lib.Persuade.Civilian.Inoperable.HostageSituation.png</Icon>
+    </DefineState>
+    </Species>
+
+  <Species>
+    <Name>ObjectiveSeizeOccupy</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.ObjectiveSeizeOccupy.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>ObjectiveSeizeOccupy</State>
+      <Icon>Image.Lib.Persuade.Civilian.ObjectiveSeizeOccupy.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>SZ</Capability>
+          <Transitions>
+            <Effect>6</Effect>
+            <Range>20</Range>
+            <Probability>.7</Probability>
+            <State>Reconstruction</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>SZ</Capability>
+            <Effect>6</Effect>
+            <Range>20</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>MENGR</Capability>
+            <Effect>2</Effect>
+            <Range>20</Range>
+            <Probability>1</Probability>
+          </Contribution>
+          <NewState>OperationFinished</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Reconstruction</State>
+      <Icon>Image.Lib.Persuade.Civilian.Reconstruction.png</Icon>
+      <StateParameters>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>SZ</Capability>
+            <Effect>2</Effect>
+            <Range>20</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>MENGR</Capability>
+            <Effect>2</Effect>
+            <Range>20</Range>
+            <Probability>.7</Probability>
+          </Contribution>
+          <NewState>Dead</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>OperationFinished</State>
+      <Icon>Image.Lib.Persuade.CivilianInoperable.ObjectiveSeizeOccupy.png</Icon>
+    </DefineState>
+  </Species>
+
+
+  <Species>
+    <Name>HostageSituation</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.HostageSituation.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>HostageSituation</State>
+      <Icon>Image.Lib.Persuade.Civilian.HostageSituation.png</Icon>
+      <StateParameters>
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>INT</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>1</Effect>
+          </Contribution>
+          <Contribution>
+            <Capability>CA</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <NewState>FreedAndInterrogated</NewState>
+        </ComboVulnerability>
+
+        <ComboVulnerability>
+          <Contribution>
+            <Capability>GREC</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>FIRE</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <Contribution>
+            <Capability>CA</Capability>
+            <Effect>1</Effect>
+            <Range>20</Range>
+            <Probability>.8</Probability>
+          </Contribution>
+          <NewState>Freed</NewState>
+        </ComboVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>FreedAndInterrogated</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.HostageSituation.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Freed</State>
+      <Icon>Image.Lib.Persuade.Civilian.Inoperable.HostageSituation.png</Icon>
+    </DefineState>
+
+  </Species>
+
+
+
+  <Species>
+    <Name>Truck</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>Image.Lib.Persuade.Civilian.Truck.png</Icon>
+      <StateParameters>
+        <MaximumSpeed>0</MaximumSpeed>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>VBIED-1</State>
+      <Icon>Image.Lib.Persuade.Red.VBIED.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>PTRL</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>200</Range>
+            <Probability>.7</Probability>
+            <State>Normal</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+
+    <DefineState>
+      <State>VBIED-2</State>
+      <Icon>Image.Lib.Persuade.Red.VBIED.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>STOP</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+            <State>Stopped</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+
+    <DefineState>
+      <State>Normal</State>
+      <Icon>Image.Lib.Persuade.Civilian.Truck.png</Icon>
+      <StateParameters>
+        <SingletonVulnerability>
+          <Capability>Fire</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>40</Range>
+            <Probability>.6</Probability>
+            <State>Destroyed</State>
+            <Effect>2</Effect>
+            <Range>60</Range>
+            <Probability>.7</Probability>
+            <State>Destroyed</State>
+            <Effect>3</Effect>
+            <Range>100</Range>
+            <Probability>.9</Probability>
+            <State>Destroyed</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <SingletonVulnerability>
+          <Capability>STOP</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>50</Range>
+            <Probability>.8</Probability>
+            <State>Stopped-2</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </DefineState>
+    <DefineState>
+      <State>Stopped</State>
+      <Icon>Image.Lib.Persuade.Red.VBIED.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Stopped-2</State>
+      <Icon>Image.Lib.Persuade.Civilian.Casualties.Truck.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Explosion</State>
+  <Icon>Image.Lib.Persuade.Common.Explosion.png</Icon>
+    </DefineState>
+    <DefineState>
+      <State>Destroyed</State>
+    </DefineState>
+  </Species>
+  
+ <!--    A R T I F I C I A L   P L A T F O R M S --> 
+  <Species>
+    <Name>MilUnit</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+    </FullyFunctional>
+  </Species>
+
+  <!-- S P E C I E S  C O M P L E T I O N  E V E N T S -->
+
+  <Species_Completion_Event>
+    <Species>BlueFolk</Species>
+    <NewState>Casualties</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>300</Time>
+        <NewState>Inoperable</NewState>
+        <From>Casualties</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>BlueFolk</Species>
+    <NewState>Inoperable</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Inoperable</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>BlueFolk</Species>
+    <NewState>HalfCapability</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>300</Time>
+        <NewState>Inoperable</NewState>
+        <From>HalfCapability</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>BlueFolk</Species>
+    <NewState>Damaged</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>300</Time>
+        <NewState>Inoperable</NewState>
+        <From>Damaged</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>BlueFlier</Species>
+    <NewState>SearchAndRescue</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>60</Time>
+        <NewState>Dead</NewState>
+        <From>SearchAndRescue</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+
+
+
+  <Species_Completion_Event>
+    <Species>RedFolk</Species>
+    <NewState>Damaged</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>120</Time>
+        <NewState>FullyFunctional</NewState>
+        <From>Damaged</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>RedFolk</Species>
+    <NewState>Destroyed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Destroyed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>RedFolk</Species>
+    <NewState>Explosion</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Explosion</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>VBIED (Red)</Species>
+    <NewState>Stopped</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>120</Time>
+        <NewState>Dead</NewState>
+        <From>Stopped</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+
+  <Species_Completion_Event>
+    <Species>VBIED (Red)</Species>
+    <NewState>VBIED-1</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>VBIED-2</NewState>
+        <From>VBIED-1</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>RedFolk</Species>
+    <NewState>Captured</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Captured</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Redfolk</Species>
+    <NewState>Idle</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>30</Time>
+        <NewState>FullyFunctional</NewState>
+        <From>Idle</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+
+  <Species_Completion_Event>
+    <Species>Redfolk</Species>
+    <NewState>Detained</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>10</Time>
+        <NewState>Dead</NewState>
+        <From>Detained</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+
+  <Species_Completion_Event>
+    <Species>Redfolk</Species>
+    <NewState>Dispersed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Dispersed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+
+  <Species_Completion_Event>
+    <Species>Redfolk</Species>
+    <NewState>CivilCasualties</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>CivilCasualties</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Redfolk</Species>
+    <NewState>DetainedAndInterrogated</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>10</Time>
+        <NewState>Dead</NewState>
+        <From>DetainedAndInterrogated</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Redfolk</Species>
+    <NewState>Flee</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Flee</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Redfolk</Species>
+    <NewState>Killed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Killed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <!-- The ones from before -->
+
+
+
+  <Species_Completion_Event>
+    <Species>RedClassA</Species>
+    <NewState>Damaged</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>120</Time>
+        <NewState>FullyFunctional</NewState>
+        <From>Damaged</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>RedClassA</Species>
+    <NewState>Destroyed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Destroyed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>VBIED (Red)</Species>
+    <NewState>Destroyed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Destroyed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>VBIED (Red)</Species>
+    <NewState>Stopped</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>120</Time>
+        <NewState>Dead</NewState>
+        <From>Stopped</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>VBIED (Red)</Species>
+    <NewState>Destroyed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Destroyed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>IED (Red)</Species>
+    <NewState>Destroyed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Destroyed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>Attackers (Red)</Species>
+    <NewState>Destroyed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Destroyed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>Attackers (Red)</Species>
+    <NewState>Captured</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Captured</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+
+
+
+
+  <Species_Completion_Event>
+    <Species>Snipers (Red)</Species>
+    <NewState>Destroyed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Destroyed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+
+  <Species_Completion_Event>
+    <Species>Rioting Crowd (Red)</Species>
+    <NewState>Dispersed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Dispersed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Rioting Crowd (Red)</Species>
+    <NewState>CivilCasualties</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>CivilCasualties</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+
+
+
+
+  <Species_Completion_Event>
+    <Species>Mortar Site (Red)</Species>
+    <NewState>Destroyed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Destroyed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Mortar Site (Red)</Species>
+    <NewState>CivilCasualties</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>CivilCasualties</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Criminals (Red)</Species>
+    <NewState>DetainedAndInterrogated</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>10</Time>
+        <NewState>Dead</NewState>
+        <From>DetainedAndInterrogated</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Criminals (Red)</Species>
+    <NewState>Killed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>DetainedAndInterrogated</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>Criminals (Red)</Species>
+    <NewState>Flee</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>DetainedAndInterrogated</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+
+
+
+  <Species_Completion_Event>
+    <Species>Block/BuildingSearch</Species>
+    <NewState>Completed-1</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Completed-1</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Block/BuildingSearch</Species>
+    <NewState>Completed-2</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Completed-2</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>SiteSecure</Species>
+    <NewState>NoNeedForSecurity</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>NoNeedForSecurity-2</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>SiteSecure</Species>
+    <NewState>SiteSecuredAndEnemyLeaves</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>SiteSecuredAndEnemyLeaves</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>SiteSecure</Species>
+    <NewState>SiteSecuredAndEnemyDetained</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>SiteSecuredAndEnemyDetained</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>AreaSecure</Species>
+    <NewState>AreaSecured</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>AreaSecured</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>FacilityReconstruction</Species>
+    <NewState>FacilitySecured</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>FacilitySecured</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>FacilityReconstruction</Species>
+    <NewState>Unrepairable</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Unrepairable</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>FacilityReconstruction</Species>
+    <NewState>DamageAndStolenProperty</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>600</Time>
+        <NewState>Unrepairable</NewState>
+        <From>DamageAndStolenProperty</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>SetupMannedCheckpoint</Species>
+    <NewState>CannotSetupCheckpoint</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>60</Time>
+        <NewState>CheckpointNeeded</NewState>
+        <From>CannotSetupCheckpoint</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>SetupMannedCheckpoint</Species>
+    <NewState>CheckpointSetupDoManning</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>60</Time>
+        <NewState>CheckpointNeeded</NewState>
+        <From>ReadyForManning</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>RelocationCenter</Species>
+    <NewState>HostageSituation</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>120</Time>
+        <NewState>Dead</NewState>
+        <From>HostageSituation</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>RelocationCenter</Species>
+    <NewState>HostagesFreed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>HostagesFreed</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>RelocationCenter</Species>
+    <NewState>IntelGathered</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>IntelGathered</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>RelocationCenter</Species>
+    <NewState>OperationFinished</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>OperationFinished</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>HostageSituation</Species>
+    <NewState>FreedAndInterrogated</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>FreedAndInterrogated</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>HostageSituation</Species>
+    <NewState>Freed</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>FreedAndInterrogated</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Truck</Species>
+    <NewState>VBIED-1</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>VBIED-2</NewState>
+        <From>VBIED-1</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+
+  <Species_Completion_Event>
+    <Species>Truck</Species>
+    <NewState>Explosion</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Explosion</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>Truck</Species>
+    <NewState>Stopped</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>120</Time>
+        <NewState>Dead</NewState>
+        <From>Stopped</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  <Species_Completion_Event>
+    <Species>Truck</Species>
+    <NewState>Stopped-2</NewState>
+    <DoThis>
+      <StateChange_Event>
+        <ID>UNIT</ID>
+        <Time>5</Time>
+        <NewState>Dead</NewState>
+        <From>Stopped-2</From>
+      </StateChange_Event>
+    </DoThis>
+  </Species_Completion_Event>
+  
+  <!--                             C R E A T I O N S                    -->
+
+
+
+  <Create_Event>
+    <ID>DM1-1-504 PIR BTN</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM1</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM1-1-504 PIR BTN RFL CO 1</ID>
+        <Location>
+          <X>26700.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM1-1-504 PIR BTN RFL CO 2</ID>
+        <Location>
+          <X>26700.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM1-1-504 PIR BTN RFL CO 3</ID>
+        <Location>
+          <X>26700.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>WPN CO</Kind>
+      <Launched>
+        <ID>DM1-1-504 PIR BTN WPN CO 1</ID>
+        <Location>
+          <X>26700.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM1-2-504 PIR BTN</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM1</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM1-2-504 PIR BTN RFL CO 1</ID>
+        <Location>
+        <X>27234.00</X>
+        <Y>13144.00</Y>
+        <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM1-2-504 PIR BTN RFL CO 2</ID>
+        <Location>
+          <X>27234.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM1-2-504 PIR BTN RFL CO 3</ID>
+        <Location>
+          <X>27234.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>WPN CO</Kind>
+      <Launched>
+        <ID>DM1-2-504 PIR BTN WPN CO 1</ID>
+        <Location>
+          <X>27234.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM1-3-73 CAV SQDR</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM1</Owner>
+    <Subplatform>
+      <Kind>MTD TRP</Kind>
+      <Launched>
+        <ID>DM1-3-73 CAV SQDR MTD TRP 1</ID>
+        <Location>
+          <X>27768.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>DM1-3-73 CAV SQDR MTD TRP 2</ID>
+        <Location>
+          <X>27768.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+
+    <Subplatform>
+      <Kind>DSM TRP</Kind>
+      <Launched>
+        <ID>DM1-3-73 CAV SQDR DSM TRP 1</ID>
+        <Location>
+          <X>27768.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+ 
+  <Create_Event>
+    <ID>DM1-2-319 FA BN BTTR</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM1</Owner>
+    <Subplatform>
+      <Kind>BTTR</Kind>
+      <Armament>
+        <Weapon>HOW 105 Msl</Weapon>
+        <Count>10</Count>
+      </Armament>
+      <Launched>
+        <ID>DM1-2-319 FA BN BTTR 1</ID>
+         <Location>
+          <X>28302.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>DM1-2-319 FA BN BTTR 2</ID>
+        <Location>
+          <X>28302.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM1-1/A/4 AR (MBT)</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM1</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM1-1/A4-64 AR (MBT) RFL CO 1</ID>
+        <Location>
+          <X>28836.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM1-1/A/4 AR (MBT) RFL CO 2</ID>
+        <Location>
+          <X>28836.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>TNK CO</Kind>
+      <Launched>
+        <ID>DM1-1/A4-64 AR (MBT) TNK CO 1</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>DM1-1/A4-64 AR (MBT) TNK CO 2</ID>
+        <Location>
+          <X>28836.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>CMBT ENGR CO</Kind>
+      <Launched>
+        <ID>DM1-1/A/4 AR (MBT) CMBT ENGR CO 1</ID>
+        <Location>
+          <X>28836.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM1-1/C/4-64 AR (IFV)</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM1</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM1-1/C/4-64 AR (IFV) RFL CO 1</ID>
+        <Location>
+          <X>29370.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM1-1/C/4-64 AR (IFV) RFL CO 2</ID>
+        <Location>
+          <X>29370.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM1-1/C/4-64 AR (IFV) RFL CO 3</ID>
+        <Location>
+          <X>29370.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>CMBT ENGR CO</Kind>
+      <Launched>
+        <ID>DM1-1/C/4-64 AR (IFV) CMBT ENGR CO 1</ID>
+        <Location>
+          <X>29370.00</X>
+          <Y>13144.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+  <!--     Completes DM 1 -->
+
+
+  <Create_Event>
+    <ID>DM2-1-505 PIR BN</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM2</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM2-1-505 PIR BN RFL CO 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>6572.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM2-1-505 PIR BN RFL CO 2</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>6572.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM2-1-505 PIR BN RFL CO 3</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>6572.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>WPN CO</Kind>
+      <Launched>
+        <ID>DM2-1-505 PIR BN WPN CO 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>6572.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM2-2-505 PIR BN</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM2</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM2-2-505 PIR BN RFL CO 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>5914.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM2-2-505 PIR BN RFL CO 2</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>5914.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM2-2-505 PIR BN RFL CO 3</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>5914.80</Y>
+          <Z>0</Z>
+        </Location>
+        <Location>
+          <X>17355.00</X>
+          <Y>3943.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>WPN CO</Kind>
+      <Launched>
+        <ID>DM2-2-505 PIR BN WPN CO 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>5914.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM2-5-73 CAV SQDR</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM1</Owner>
+    <Subplatform>
+      <Kind>MTD TRP</Kind>
+      <Launched>
+        <ID>DM2-5-73 CAV SQDR MTD TRP 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>5257.60</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM2-5-73 CAV SQDR MTD TRP 2</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>5257.60</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>DSM TRP</Kind>
+      <Launched>
+        <ID>DM2-5-73 CAV SQDR DSM TRP 1</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM2-1-319 FA BN</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM2</Owner>
+    <Subplatform>
+      <Kind>BTTR</Kind>
+      <Armament>
+        <Weapon>HOW 105 Msl</Weapon>
+        <Count>2</Count>
+      </Armament>
+      <Launched>
+        <ID>DM2-1-319 FA BN BTTR 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>4600.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM2-1-319 FA BN BTTR 2</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>4600.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM2-A/4 AR (MBT)</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM2</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM2-A4-64 AR (MBT) RFL CO 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>3943.20</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>DM2-A/4 AR (MBT) RFL CO 2</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>3943.20</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>TNK CO</Kind>
+      <Launched>
+        <ID>DM2-A4-64 AR (MBT) TNK CO 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>3943.20</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>DM2-A4-64 AR (MBT) TNK CO 2</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>3943.20</Y>
+          <Z>0</Z>
+        </Location>
+
+
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>CMBT ENGR CO</Kind>
+      <Launched>
+        <ID>DM2-A/4 AR (MBT) CMBT ENGR CO 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>3943.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM2-C/4-64 AR (IFV)</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM2</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM2-C/4-64 AR (IFV) RFL CO 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>3286.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM2-C/4-64 AR (IFV) RFL CO 2</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>3286.00</Y>
+          <Z>0</Z>
+        </Location>
+        </Launched>
+      <Launched>
+        <ID>DM2-C/4-64 AR (IFV) RFL CO 3</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>3286.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>CMBT ENGR CO</Kind>
+      <Launched>
+        <ID>DM2-C/4-64 AR (IFV) CMBT ENGR CO 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>3286.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+  <!-- >Completes DM 2 -->
+
+  <Create_Event>
+    <ID>DM3-4-64 AR (-)</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM3</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM3-4-64 AR (-) RFL CO 1</ID>
+        <Location>
+          <X>4005.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM3-4-64 AR (-) RFL CO 2</ID>
+        <Location>
+          <X>4005.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>TNK CO</Kind>
+      <Launched>
+        <ID>DM3-4-64 AR (-) TNK CO 1</ID>
+        <Location>
+          <X>4005.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM3-4-64 AR (-) TNK CO 2</ID>
+        <Location>
+          <X>4005.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>CMBT ENGR CO</Kind>
+      <Launched>
+        <ID>DM3-4-64 AR (-) CMBT ENGR CO 1</ID>
+        <Location>
+          <X>4005.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM3-3-69 AR</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM3</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM3-3-69 AR RFL CO 1</ID>
+        <Location>
+          <X>4539.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM3-3-69 AR RFL CO 2</ID>
+        <Location>
+          <X>4539.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>TNK CO</Kind>
+      <Launched>
+        <ID>DM3-3-69 AR TNK CO 1</ID>
+        <Location>
+          <X>4539.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM3-3-69 AR TNK CO 2</ID>
+     
+          <Location>
+            <X>4539.00</X>
+            <Y>26288.00</Y>
+            <Z>0</Z>
+          </Location>
+        </Launched>
+        </Subplatform>
+    <Subplatform>
+      <Kind>CMBT ENGR CO</Kind>
+      <Launched>
+        <ID>DM3-3-69 AR CMBT ENGR CO 1</ID>
+        <Location>
+          <X>4539.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM3-3-7-IN (M)</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM3</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM3-3-7-IN (M) RFL CO 1</ID>
+        <Location>
+          <X>5073.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM3-3-7-IN (M) RFL CO 2</ID>
+        <Location>
+          <X>5073.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM3-3-7-IN (M) RFL CO 3</ID>
+        <Location>
+          <X>5073.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM3-6-8 CAV</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM3</Owner>
+    <Subplatform>
+      <Kind>REC TRP</Kind>
+      <Launched>
+        <ID>DM3-6-8 CAV REC TRP 1</ID>
+        <Location>
+          <X>5607.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM3-6-8 CAV REC TRP 2</ID>
+        <Location>
+          <X>5607.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM3-6-8 CAV REC TRP 3</ID>
+        <Location>
+          <X>5607.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM3-MI</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM3</Owner>
+    <Subplatform>
+      <Kind>MI CO</Kind>
+      <Launched>
+        <ID>DM3-MI MI CO 1</ID>
+        <Location>
+          <X>6141.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+  <!-- Ends DM3 -->
+
+  <Create_Event>
+    <ID>DM4-1-17 CAV</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM4</Owner>
+    <Subplatform>
+      <Kind>REC TRP</Kind>
+      <Launched>
+        <ID>DM4-1-17 CAV REC TRP 1</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-17 CAV REC TRP 2</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-17 CAV REC TRP 3</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>OH58D</Kind>
+      <Launched>
+        <ID>DM4-1-17 CAV OH58D 1</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-17 CAV OH58D 2</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-17 CAV OH58D 3</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-17 CAV OH58D 4</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-17 CAV OH58D 5</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-17 CAV OH58D 6</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-17 CAV OH58D 7</ID>
+       <Location>
+<X>6675.00</X>
+<Y>9858.00</Y>
+<Z>0</Z>
+</Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM4-1-82-Atk Av Bn</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM4</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM4-1-82-Atk Av Bn RFL CO 1</ID>
+        <Location>
+          <X>7209.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-82-Atk Av Bn RFL CO 2</ID>
+        <Location>
+          <X>7209.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-82-Atk Av Bn RFL CO 3</ID>
+        <Location>
+          <X>7209.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>AH64</Kind>
+      <Armament>
+        <Weapon>HELLFIRE Msl</Weapon>
+        <Count>8</Count>
+      </Armament>
+      <Launched>
+        <ID>DM4-1-82-Atk Av Bn AH64 1</ID>
+        <Location>
+          <X>7209.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-82-Atk Av Bn AH64 2</ID>
+        <Location>
+          <X>7209.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-82-Atk Av Bn AH64 3</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>DM4-1-82-Atk Av Bn AH64 4</ID>
+        <Location>
+          <X>7209.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-82-Atk Av Bn AH64 5</ID>
+        <Location>
+          <X>7209.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-1-82-Atk Av Bn AH64 6</ID>
+        <Location>
+          <X>7209.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM4-2-82 Av Bn</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM4</Owner>
+    <Subplatform>
+      <Kind>RFL CO</Kind>
+      <Launched>
+        <ID>DM4-2-82 Av Bn RFL CO 1</ID>
+       <Location>
+<X>7743.00</X>
+<Y>9858.00</Y>
+<Z>0</Z>
+</Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-2-82 Av Bn RFL CO 2</ID>
+        <Location>
+          <X>7743.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-2-82 Av Bn RFL CO 3</ID>
+        <Location>
+          <X>7743.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>UH60</Kind>
+      <Launched>
+        <ID>DM4-2-82 Av Bn UH60 1</ID>
+        <Location>
+          <X>7743.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-2-82 Av Bn UH60 2</ID>
+        <Location>
+          <X>7743.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-2-82 Av Bn UH60 3</ID>
+        <Location>
+          <X>7743.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-2-82 Av Bn UH60 4</ID>
+        <Location>
+          <X>7743.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-2-82 Av Bn UH60 5</ID>
+        <Location>
+          <X>7743.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-2-82 Av Bn UH60 6</ID>
+        <Location>
+          <X>7743.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-2-82 Av Bn UH60 7</ID>
+        <Location>
+          <X>7743.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM4-3-82 Gen Sprt Av Bn</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM4</Owner>
+    <Subplatform>
+      <Kind>UH60</Kind>
+      <Launched>
+        <ID>DM4-3-82 Gen Sprt Av Bn UH60 1</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>DM4-3-82 Gen Sprt Av Bn UH60 2</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>DM4-3-82 Gen Sprt Av Bn UH60 3</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>DM4-3-82 Gen Sprt Av Bn UH60 4</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>DM4-3-82 Gen Sprt Av Bn UH60 5</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>CH47</Kind>
+      <Launched>
+        <ID>DDM4-3-82 Gen Sprt Av Bn CH47 1</ID>
+        <Location>
+            <X>8277.00</X>
+            <Y>9858.00</Y>
+            <Z>0</Z>
+          </Location>
+
+        </Launched>
+      <Launched>
+        <ID>DM4-3-82 Gen Sprt Av Bn CH47 2</ID>
+        <Location>
+          <X>8277.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM4-3-82 Gen Sprt Av Bn CH47 3</ID>
+        <Location>
+          <X>8277.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM4-122 Avn Sprt Av Bn</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM4</Owner>
+  </Create_Event>
+  <!-- Completes DM4 -->
+
+  <Create_Event>
+    <ID>DM5-FA BN</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM5</Owner>
+    <Subplatform>
+      <Kind>FA BTR</Kind>
+      <Armament>
+        <Weapon>HOW 155 Msl</Weapon>
+        <Count>10</Count>
+      </Armament>
+      <Launched>
+        <ID>DM5-FA BN FA BTR 1</ID>
+        <Location>
+          <X>26700.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM5-FA BN FA BTR 2</ID>
+        <Location>
+          <X>26700.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM5-FA BN FA BTR 3</ID>
+        <Location>
+          <X>26700.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM5-MP BN</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM5</Owner>
+    <Subplatform>
+      <Kind>MP CO</Kind>
+      <Launched>
+        <ID>DM5-MP MP CO 1</ID>
+        <Location>
+          <X>27234.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM5-MP MP CO 2</ID>
+        <Location>
+          <X>27234.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM5-MP MP CO 3</ID>
+        <Location>
+          <X>27234.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM5-MP MP CO 4</ID>
+        <Location>
+          <X>27234.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM5-MP MP CO 5</ID>
+        <Location>
+          <X>27234.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM5-ENGR</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM5</Owner>
+    <Subplatform>
+      <Kind>MECH ENGR CO</Kind>
+      <Launched>
+        <ID>DM5-MECH ENGR CO 1</ID>
+        <Location>
+          <X>27768.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM5-MECH ENGR CO 2</ID>
+        <Location>
+          <X>27768.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM5-MECH ENGR CO 3</ID>
+        <Location>
+          <X>27768.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>DM5-CA</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>DM5</Owner>
+    <Subplatform>
+      <Kind>CA</Kind>
+      <Launched>
+        <ID>DM5-CA 1</ID>
+        <Location>
+          <X>28302.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>DM5-CA 2</ID>
+        <Location>
+          <X>28302.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+  <Note>End Blue DM5</Note>
+
+  <Create_Event>
+    <ID>RED 31st IN RGT</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>RFL CO (Red)</Kind>
+      <Launched>
+        <ID>RED 31st IN RGT RFL CO (Red) 1</ID>
+        <Location>
+          <X>21627.00</X>
+          <Y>27931.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 31st IN RGT RFL CO (Red) 2</ID>
+        <Location>
+          <X>21894.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 31st IN RGT RFL CO (Red) 3</ID>
+        <Location>
+          <X>22161.00</X>
+          <Y>30888.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>122mm D-3 (Red)</Kind>
+      <Launched>
+        <ID>RED 31st IN RGT 122mm D-3 (Red) 1</ID>
+        <Location>
+          <X>20292.00</X>
+          <Y>29574.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 31st IN RGT 122mm D-3 (Red) 2</ID>
+        <Location>
+          <X>20292.00</X>
+          <Y>27273.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 31st IN RGT 122mm D-3 (Red) 3</ID>
+        <Location>
+          <X>20292.00</X>
+          <Y>25302.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>BM-21 (Red)</Kind>
+      <Launched>
+        <ID>RED 31st IN RGT BM-21 (Red) 1</ID>
+        <Location>
+          <X>18957.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 31st IN RGT BM-21 (Red) 2</ID>
+    <Location>
+<X>19491.00</X>
+<Y>28588.20</Y>
+<Z>0</Z>
+</Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>RED 32nd IN RGT</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>RFL CO (Red)</Kind>
+      <Launched>
+        <ID>RED 32nd IN RGT RFL CO (Red) 1</ID>
+        <Location>
+          <X>21093.00</X>
+          <Y>21687.60</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 32nd IN RGT RFL CO (Red) 2</ID>
+        <Location>
+          <X>21627.00</X>
+          <Y>19716.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 32nd IN RGT RFL CO (Red) 3</ID>
+        <Location>
+          <X>21894.00</X>
+          <Y>23987.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>122mm D-3 (Red)</Kind>
+      <Launched>
+        <ID>RED 32nd IN RGT 122mm D-3 (Red) 1</ID>
+        <Location>
+          <X>20025.00</X>
+          <Y>23002.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 32nd IN RGT 122mm D-3 (Red) 2</ID>
+        <Location>
+          <X>20025.00</X>
+          <Y>21030.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 32nd IN RGT 122mm D-3 (Red) 3</ID>
+        <Location>
+          <X>20025.00</X>
+          <Y>18730.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>BM-21 (Red)</Kind>
+      <Launched>
+        <ID>RED 32nd IN RGT BM-21 (Red) 1</ID>
+        <Location>
+          <X>18423.00</X>
+          <Y>19716.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 32nd IN RGT BM-21 (Red) 2</ID>
+        <Location>
+          <X>18957.00</X>
+          <Y>22016.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>RED 33d IN RGT</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>RFL CO (Red)</Kind>
+      <Launched>
+        <ID>RED 33d IN RGT RFL CO (Red) 1</ID>
+        <Location>
+          <X>20826.00</X>
+          <Y>14458.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 33d IN RGT RFL CO (Red) 2</ID>
+        <Location>
+          <X>20025.00</X>
+          <Y>13472.60</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 33d IN RGT RFL CO (Red) 3</ID>
+        <Location>
+          <X>20292.00</X>
+          <Y>16430.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>122mm D-3 (Red)</Kind>
+      <Launched>
+        <ID>RED 33d IN RGT 122mm D-3 (Red) 1</ID>
+        <Location>
+          <X>19491.00</X>
+          <Y>14458.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 33d IN RGT 122mm D-3 (Red) 2</ID>
+        <Location>
+          <X>18957.00</X>
+          <Y>16430.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 33d IN RGT 122mm D-3 (Red) 3</ID>
+        <Location>
+          <X>18423.00</X>
+          <Y>14129.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>BM-21 (Red)</Kind>
+      <Launched>
+        <ID>RED 33d IN RGT BM-21 (Red) 1</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>14129.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 33d IN RGT BM-21 (Red) 2</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>15772.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>RED 34th IN RGT</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>RFL CO (Red)</Kind>
+      <Launched>
+        <ID>RED 34th IN RGT RFL CO (Red) 1</ID>
+        <Location>
+          <X>17622.00</X>
+          <Y>8215.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 34th IN RGT RFL CO (Red) 2</ID>
+        <Location>
+          <X>16554.00</X>
+          <Y>7229.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 34th IN RGT RFL CO (Red) 3</ID>
+        <Location>
+          <X>16821.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>122mm D-3 (Red)</Kind>
+      <Launched>
+        <ID>RED 34th IN RGT 122mm D-3 (Red) 1</ID>
+        <Location>
+          <X>14952.00</X>
+          <Y>7557.80</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>RED 34th IN RGT 122mm D-3 (Red) 2</ID>
+        <Location>
+          <X>15753.00</X>
+          <Y>8215.00</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>RED 34th IN RGT 122mm D-3 (Red) 3</ID>
+        <Location>
+          <X>15219.00</X>
+          <Y>10186.60</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>BM-21 (Red)</Kind>
+      <Launched>
+        <ID>RED 34th IN RGT BM-21 (Red) 1</ID>
+        <Location>
+          <X>13350.00</X>
+          <Y>7229.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 34th IN RGT BM-21 (Red) 2</ID>
+        <Location>
+          <X>14151.00</X>
+          <Y>9858.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>RED 331 IN BN MTZ (BMP)</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>T-62 (Red)</Kind>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) T-62 (Red) 1</ID>
+        <Location>
+          <X>16821.00</X>
+          <Y>21030.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) T-62 (Red) 2</ID>
+        <Location>
+          <X>13884.00</X>
+          <Y>23002.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) T-62 (Red) 3</ID>
+        <Location>
+          <X>12816.00</X>
+          <Y>21359.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) T-62 (Red) 4</ID>
+        <Location>
+          <X>16554.00</X>
+          <Y>24645.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) T-62 (Red) 5</ID>
+        <Location>
+          <X>14685.00</X>
+          <Y>26288.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>BMP (Red)</Kind>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) BMP (Red) 1</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) BMP (Red) 2</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) BMP (Red) 3</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) BMP (Red) 4</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) BMP (Red) 5</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>122mm SP 2S1 (Red)</Kind>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) 122mm SP 2S1 (Red) 1</ID>
+        <Location>
+          <X>14952.00</X>
+          <Y>24645.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) 122mm SP 2S1 (Red) 2</ID>
+        <Location>
+          <X>14952.00</X>
+          <Y>16430.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>ZSU-23-4 (Red)</Kind>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) ZSU-23-4 (Red) 1</ID>
+        <Location>
+          <X>16821.00</X>
+          <Y>22673.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) ZSU-23-4 (Red) 2</ID>
+        <Location>
+          <X>13350.00</X>
+          <Y>24645.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) ZSU-23-4 (Red) 3</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 331 IN BN MTZ (BMP) ZSU-23-4 (Red) 4</ID>
+        <Location>
+          <X>13350.00</X>
+          <Y>24645.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>RED 332 IN BN MTZ (BMP)</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>T-62 (Red)</Kind>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) T-62 (Red) 1</ID>
+        <Location>
+          <X>13884.00</X>
+          <Y>30559.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) T-62 (Red) 2</ID>
+        <Location>
+          <X>10413.00</X>
+          <Y>31874.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) T-62 (Red) 3</ID>
+        <Location>
+          <X>10146.00</X>
+          <Y>30559.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) T-62 (Red) 4</ID>
+        <Location>
+          <X>13083.00</X>
+          <Y>33845.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) T-62 (Red) 5</ID>
+        <Location>
+          <X>11481.00</X>
+          <Y>33517.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>BMP (Red)</Kind>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) BMP (Red) 1</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) BMP (Red) 2</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) BMP (Red) 3</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) BMP (Red) 4</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) BMP (Red) 5</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>122mm SP 2S1 (Red)</Kind>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) 122mm SP 2S1 (Red) 1</ID>
+        <Location>
+          <X>13617.00</X>
+          <Y>28588.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) 122mm SP 2S1 (Red) 2</ID>
+        <Location>
+          <X>11748.00</X>
+          <Y>25302.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+    <Subplatform>
+      <Kind>ZSU-23-4 (Red)</Kind>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) ZSU-23-4 (Red) 1</ID>
+        <Location>
+          <X>11748.00</X>
+          <Y>30231.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) ZSU-23-4 (Red) 2</ID>
+        <Location>
+          <X>9879.00</X>
+          <Y>27931.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) ZSU-23-4 (Red) 3</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED 332 IN BN MTZ (BMP) ZSU-23-4 (Red) 4</ID>
+        <Location>
+          <X>333</X>
+          <Y>333</Y>
+          <Z>333</Z>
+        </Location>
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>TRUCK FLEET</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>VBIED (Red)</Kind>
+      <Launched>
+        <ID>TRUCK FLEET VBIED TRUCK (Red) 1</ID>
+        <Location>
+          <X>16287.00</X>
+          <Y>31545.60</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>TRUCK FLEET VBIED TRUCK (Red) 2</ID>
+        <Location>
+          <X>20025.00</X>
+          <Y>17087.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>TRUCK FLEET VBIED TRUCK (Red) 3</ID>
+        <Location>
+          <X>25899.00</X>
+          <Y>14458.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>TRUCK FLEET VBIED (Red) 4</ID>
+        <Location>
+          <X>28035.00</X>
+          <Y>22344.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>TRUCK FLEET VBIED (Red) 5</ID>
+        <Location>
+          <X>24030.00</X>
+          <Y>33845.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>IEDS</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+ 
+    <Subplatform>
+      <Kind>IED (Red)</Kind>
+      <Launched>
+        <ID>IED (Red) IED (Red) 1</ID>
+        <Location>
+          <X>3471.00</X>
+          <Y>29574.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>IED (Red) IED (Red) 2</ID>
+        <Location>
+          <X>5340.00</X>
+          <Y>27931.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>IED (Red) IED (Red) 3</ID>
+        <Location>
+          <X>6675.00</X>
+          <Y>25630.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>IED (Red) IED (Red) 4</ID>
+        <Location>
+          <X>14952.00</X>
+          <Y>21359.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>IED (Red) IED (Red) 5</ID>
+        <Location>
+          <X>17088.00</X>
+          <Y>22344.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>IED (Red) IED (Red) 6</ID>
+        <Location>
+          <X>18423.00</X>
+          <Y>16101.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>IED (Red) IED (Red) 7</ID>
+        <Location>
+          <X>24831.00</X>
+          <Y>17415.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>IED (Red) IED (Red) 8</ID>
+        <Location>
+          <X>15486.00</X>
+          <Y>12486.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      
+           <Launched>
+        <ID>IED (Red) IED (Red) 9</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>26945.20</Y>
+          <Z>0</Z>
+        </Location>
+      </Launched>     
+      <Launched>
+        <ID>IED (Red) IED (Red) 10</ID> 
+          <Location>
+            <X>24297.00</X>
+            <Y>9858.00</Y>
+            <Z>0</Z>
+          </Location>
+      </Launched>
+      
+
+  
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>Attackers</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>Attackers (Red)</Kind>
+      <Launched>
+        <ID>Attackers Attackers (Red) 1</ID>
+        <Location>
+          <X>16821.00</X>
+          <Y>21359.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED Attackers (Red) 2</ID>
+        <Location>
+          <X>17355.00</X>
+          <Y>18073.00</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>RED Attackers (Red) 3</ID>
+        <Location>
+          <X>19491.00</X>
+          <Y>18730.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED Attackers (Red) 4</ID>
+        <Location>
+          <X>12015.00</X>
+          <Y>32860.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED Attackers (Red) 5</ID>
+        <Location>
+          <X>12816.00</X>
+          <Y>12158.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED Attackers (Red) 6</ID>
+        <Location>
+          <X>10947.00</X>
+          <Y>19058.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED Attackers (Red) 7</ID>
+        <Location>
+          <X>22428.00</X>
+          <Y>14129.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>RED Attackers (Red) 8</ID>
+        <Location>
+          <X>21894.00</X>
+          <Y>31217.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+
+     
+      
+      <Launched>
+        <ID>RED Attackers (Red) 9</ID>
+        <Location>
+          <X>7209.00</X>
+          <Y>29574.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+<Launched>       
+  <ID>RED Attackers (Red) 10</ID>
+        <Location>
+          <X>24831.00</X>
+          <Y>24645.00</Y>
+          <Z>0</Z>
+        </Location>
+      </Launched>
+      <Launched>
+        <ID>RED Attackers (Red) 11</ID>
+        <Location>
+          <X>20826.00</X>
+          <Y>8215.00</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>RED Attackers (Red) 12</ID>
+        <Location>
+          <X>19758.00</X>
+          <Y>12486.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>Snipers</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>Snipers (Red)</Kind>
+      <Launched>
+        <ID>Snipers Snipers (Red) 1</ID>
+        <Location>
+          <X>14952.00</X>
+          <Y>16430.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Snipers Snipers (Red) 2</ID>
+        <Location>
+          <X>10680.00</X>
+          <Y>27931.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Snipers Snipers (Red) 3</ID>
+        <Location>
+          <X>16554.00</X>
+          <Y>25302.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Snipers Snipers (Red) 4</ID>
+        <Location>
+          <X>20559.00</X>
+          <Y>23002.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Snipers Snipers (Red) 5</ID>
+        <Location>
+          <X>12816.00</X>
+          <Y>16430.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Snipers Snipers (Red) 6</ID>
+        <Location>
+          <X>28302.00</X>
+          <Y>13801.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Snipers Snipers (Red) 7</ID>
+        <Location>
+          <X>14952.00</X>
+          <Y>23659.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Snipers Snipers (Red) 8</ID>
+        <Location>
+          <X>24030.00</X>
+          <Y>21359.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <Create_Event>
+    <ID>Crowds</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>Rioting Crowd (Red)</Kind>
+      <Launched>
+        <ID>Crowds Rioting Crowd (Red) 1</ID>
+        <Location>
+          <X>16821.00</X>
+          <Y>16430.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Crowds Rioting Crowd (Red) 2</ID>
+        <Location>
+          <X>24030.00</X>
+          <Y>21687.60</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Crowds Rioting Crowd (Red) 3</ID>
+        <Location>
+          <X>9879.00</X>
+          <Y>18401.60</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Crowds Rioting Crowd (Red) 4</ID>
+        <Location>
+          <X>20559.00</X>
+          <Y>29574.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Crowds Rioting Crowd (Red) 5</ID>
+        <Location>
+          <X>15486.00</X>
+          <Y>6572.00</Y>
+          <Z>0</Z>
+        </Location>
+      </Launched>
+      </Subplatform>
+  </Create_Event>
+  <Create_Event>
+    <ID>Criminals</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>Criminals (Red)</Kind>
+      <Launched>
+        <ID>Criminals Criminals (Red) 1</ID>
+        <Location>
+          <X>16821.00</X>
+          <Y>27602.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Criminals Criminals (Red) 2</ID>
+        <Location>
+          <X>12816.00</X>
+          <Y>24645.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Criminals Criminals (Red) 3</ID>
+        <Location>
+          <X>9879.00</X>
+          <Y>27273.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Criminals Criminals (Red) 4</ID>
+        <Location>
+          <X>19491.00</X>
+          <Y>21359.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Criminals Criminals (Red) 5</ID>
+  <Location>
+          <X>21093.00</X>
+          <Y>12158.20</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>Criminals Criminals (Red) 6</ID>
+        <Location>
+          <X>9078.00</X>
+          <Y>21030.40</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>Criminals Criminals (Red) 7</ID>
+        <Location>
+          <X>15219.00</X>
+          <Y>12486.80</Y>
+          <Z>0</Z>
+        </Location>
+
+
+      </Launched>
+      <Launched>
+        <ID>Criminals Criminals (Red) 8</ID>
+        <Location>
+          <X>18156.00</X>
+          <Y>6572.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Criminals Criminals (Red) 9</ID>
+        <Location>
+          <X>20826.00</X>
+          <Y>14458.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Criminals Criminals (Red) 10</ID>
+        <Location>
+          <X>25632.00</X>
+          <Y>10843.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+  <Create_Event>
+    <ID>Mortars</ID>
+    <Kind>MilUnit</Kind>
+    <Owner>RED</Owner>
+    <Subplatform>
+      <Kind>Mortar Site (Red)</Kind>
+      <Armament>
+        <Weapon>HOW 105 Msl</Weapon>
+        <Count>10</Count>
+      </Armament>
+      <Launched>
+        <ID>Mortars Mortar Site (Red) 1</ID>
+        <Location>
+          <X>10947.00</X>
+          <Y>8215.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Mortars Mortar Site (Red) 2</ID>
+        <Location>
+          <X>25632.00</X>
+          <Y>35817.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Mortars Mortar Site (Red) 3</ID>
+        <Location>
+          <X>16821.00</X>
+          <Y>35160.20</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Mortars Mortar Site (Red) 4</ID>
+        <Location>
+          <X>25098.00</X>
+          <Y>2957.40</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Mortars Mortar Site (Red) 5</ID>
+        <Location>
+          <X>28035.00</X>
+          <Y>8215.00</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Mortars Mortar Site (Red) 6</ID>
+        <Location>
+          <X>9345.00</X>
+          <Y>17415.80</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+      <Launched>
+        <ID>Mortars Mortar Site (Red) 7</ID>
+        <Location>
+          <X>30171.00</X>
+          <Y>28259.60</Y>
+          <Z>0</Z>
+        </Location>
+
+      </Launched>
+    </Subplatform>
+  </Create_Event>
+
+  <!--     R E V E A L  M A J O R  P L A T F O R M S -->
+
+  <Reveal_Event>
+    <ID>DM1-1-504 PIR BTN</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>26700.00</X>
+      <Y>13144.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM1-2-504 PIR BTN</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>27234.00</X>
+      <Y>13144.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM1-3-73 CAV SQDR</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>27768.00</X>
+      <Y>13144.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM1-2-319 FA BN BTTR</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM1-1/A/4 AR (MBT)</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM1-1/C/4-64 AR (IFV)</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>29370.00</X>
+      <Y>13144.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM2-1-505 PIR BN</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>17355.00</X>
+      <Y>6572.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM2-2-505 PIR BN</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>17355.00</X>
+      <Y>5914.80</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM2-5-73 CAV SQDR</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>17355.00</X>
+      <Y>5257.60</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM2-A/4 AR (MBT)</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>17355.00</X>
+      <Y>3943.20</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM2-1-319 FA BN</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>17355.00</X>
+      <Y>4600.40</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+  
+  <Reveal_Event>
+    <ID>DM2-C/4-64 AR (IFV)</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>17355.00</X>
+      <Y>3286.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM3-4-64 AR (-)</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>4005.00</X>
+      <Y>26288.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM3-3-69 AR</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>4539.00</X>
+      <Y>26288.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM3-3-7-IN (M)</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>5073.00</X>
+      <Y>26288.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM3-6-8 CAV</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>5607.00</X>
+      <Y>26288.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM3-MI</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>6141.00</X>
+      <Y>26288.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM4-1-17 CAV</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>6675.00</X>
+      <Y>9858.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM4-1-82-Atk Av Bn</ID>
+    <Time>1</Time>
+    <InitialLocation>
+ <X>8811.00</X>
+<Y>9858.00</Y>
+<Z>0</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM4-2-82 Av Bn</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>7743.00</X>
+      <Y>9858.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM4-3-82 Gen Sprt Av Bn</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>8277.00</X>
+      <Y>9858.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM4-122 Avn Sprt Av Bn</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>8811.00</X>
+      <Y>9858.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM5-FA BN</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>26700.00</X>
+      <Y>32860.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM5-MP BN</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>27234.00</X>
+      <Y>32860.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>DM5-ENGR</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>27768.00</X>
+      <Y>32860.00</Y>
+      <Z>0</Z>
+
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>RED 31st IN RGT</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>RED 32nd IN RGT</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>RED 33d IN RGT</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>RED 34th IN RGT</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>RED 331 IN BN MTZ (BMP)</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>RED 332 IN BN MTZ (BMP)</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>TRUCK FLEET</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>IEDS</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>Attackers</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>Snipers</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>Crowds</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>Criminals</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  <Reveal_Event>
+    <ID>Mortars</ID>
+    <Time>1</Time>
+    <InitialLocation>
+      <X>333</X>
+      <Y>333</Y>
+      <Z>333</Z>
+    </InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+
+  
+
+
+
+    </Scenario>

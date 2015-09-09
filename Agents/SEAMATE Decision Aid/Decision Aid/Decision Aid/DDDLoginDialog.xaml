@@ -1,0 +1,40 @@
+﻿<Window x:Class="Decision_Aid.DDDLoginDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DDD Connection Info" Height="294" Width="450" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" Background="White">
+    <StackPanel Height="243">
+        <GroupBox Header="DDD Connection Info" Height="132" Name="groupBox1" Width="400">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Decision Makers" Height="28" Name="label1" />
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Hostname:" Width="70"/>
+                    <TextBox Name="tbHostname" Width="200" TextAlignment="Right" Text="host"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Port:" Width="70"/>
+                    <TextBox Name="tbPort" Width="200" Text="9999" TextAlignment="Right"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Share Path:" Width="90"/>
+                    <TextBox Name="tbSharePath" Width="180" Text="DDDClient" TextAlignment="Right"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Experiment Info"  Width="400">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="User ID:" Width="70"/>
+                    <TextBox Name="tbUserid" Width="200" TextAlignment="Right" Text=""/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Team ID:" Width="70"/>
+                    <TextBox Name="tbTeamid" Width="200" Text="" TextAlignment="Right"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button Content="Quit" Height="23" Name="buttonCancel" Width="75" Margin="10,0,0,0" IsCancel="True" Click="buttonCancel_Click" />
+            <Button Content="Ok" Height="23" Name="buttonOk" Width="75" Padding="1" Margin="10,0,0,0" IsDefault="True" Click="buttonOk_Click" />
+        </StackPanel>
+    </StackPanel>
+</Window>

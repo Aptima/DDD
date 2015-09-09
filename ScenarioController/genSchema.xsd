@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xsd:element name="Scenario">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="Create_Event"/>
+        <xsd:element ref="Move_Event"/>
+        <xsd:element ref="Completion_Event"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="Create_Event">
+    <xsd:complexType mixed="true">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ID"/>
+        <xsd:element ref="Kind"/>
+        <xsd:element ref="ParameterSetting"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="ID" type="xsd:string"/>
+
+  <xsd:element name="Kind" type="xsd:string"/>
+
+  <xsd:element name="ParameterSetting">
+    <xsd:complexType mixed="true">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="Parameter"/>
+        <xsd:element ref="Setting"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="Parameter" type="xsd:string"/>
+
+  <xsd:element name="Setting">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="VectorType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="VectorType">
+    <xsd:complexType mixed="true">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="X"/>
+        <xsd:element ref="Y"/>
+        <xsd:element ref="Z"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="X" type="xsd:string"/>
+
+  <xsd:element name="Y" type="xsd:string"/>
+
+  <xsd:element name="Z" type="xsd:string"/>
+
+  <xsd:element name="Move_Event">
+    <xsd:complexType mixed="true">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ID"/>
+        <xsd:element ref="Timer"/>
+        <xsd:element ref="Throttle"/>
+        <xsd:element ref="Location"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="Timer" type="xsd:string"/>
+
+  <xsd:element name="Throttle" type="xsd:string"/>
+
+  <xsd:element name="Location">
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="VectorType"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="Completion_Event">
+    <xsd:complexType mixed="true">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="ID"/>
+        <xsd:element ref="Action"/>
+        <xsd:element ref="DoThis"/>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="Action" type="xsd:string"/>
+
+  <xsd:element name="DoThis">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Move_Event"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

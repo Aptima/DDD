@@ -1,0 +1,5 @@
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AssemblyGenerator\Trunk\src\bin\Debug\AssemblyGenerator.dll
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AssemblyGenerator\Trunk\src\bin\Debug\AssemblyGenerator.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AssemblyGenerator\Trunk\src\obj\Debug\AssemblyGenerator.dll
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AssemblyGenerator\Trunk\src\obj\Debug\AssemblyGenerator.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD\src\VisualScenarioGenerator\AssemblyGenerator\Trunk\src\obj\Debug\AssemblyGenerator.csprojResolveAssemblyReference.cache

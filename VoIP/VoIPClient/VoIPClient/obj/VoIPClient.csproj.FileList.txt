@@ -1,0 +1,11 @@
+bin\Debug\VoIPClient.exe
+bin\Debug\VoIPClient.pdb
+bin\Debug\Interop.ConaitoLib.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interop.ConaitoLib.dll
+obj\Debug\VoIPClient.csproj.ResolveComReference.cache
+obj\Debug\Aptima.Asim.DDD.VoIPClient.Form1.resources
+obj\Debug\Aptima.Asim.DDD.VoIPClient.Properties.Resources.resources
+obj\Debug\VoIPClient.csproj.GenerateResource.Cache
+obj\Debug\VoIPClient.exe
+obj\Debug\VoIPClient.pdb

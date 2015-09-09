@@ -1,0 +1,7 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\UserTools\bin\Debug\Aptima.Asim.DDD.CommonComponents.UserTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\UserTools\bin\Debug\Aptima.Asim.DDD.CommonComponents.UserTools.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\UserTools\bin\Debug\Aptima.Asim.DDD.CommonComponents.PasswordHashing.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\UserTools\bin\Debug\Aptima.Asim.DDD.CommonComponents.PasswordHashing.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\UserTools\obj\Debug\UserTools.csprojResolveAssemblyReference.cache
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\UserTools\obj\Debug\Aptima.Asim.DDD.CommonComponents.UserTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\CommonComponents\UserTools\obj\Debug\Aptima.Asim.DDD.CommonComponents.UserTools.pdb

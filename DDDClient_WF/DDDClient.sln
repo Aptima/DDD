@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDClient", "DDDClient\DDDClient.csproj", "{E8484B18-9289-4336-907C-5F44D9B2DE24}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E} = {AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DDD4_Installer", "DDDClient_Installer\DDDClient_Installer.vdproj", "{B34283C6-3D7F-4048-AADA-9C3F6B598FC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLCore", "GLCore\GLCore\GLCore.csproj", "{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8484B18-9289-4336-907C-5F44D9B2DE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8484B18-9289-4336-907C-5F44D9B2DE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8484B18-9289-4336-907C-5F44D9B2DE24}.Debug|x86.ActiveCfg = Debug|x86
+		{E8484B18-9289-4336-907C-5F44D9B2DE24}.Debug|x86.Build.0 = Debug|x86
+		{E8484B18-9289-4336-907C-5F44D9B2DE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8484B18-9289-4336-907C-5F44D9B2DE24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8484B18-9289-4336-907C-5F44D9B2DE24}.Release|x86.ActiveCfg = Release|x86
+		{E8484B18-9289-4336-907C-5F44D9B2DE24}.Release|x86.Build.0 = Release|x86
+		{B34283C6-3D7F-4048-AADA-9C3F6B598FC6}.Debug|Any CPU.ActiveCfg = Debug
+		{B34283C6-3D7F-4048-AADA-9C3F6B598FC6}.Debug|x86.ActiveCfg = Debug
+		{B34283C6-3D7F-4048-AADA-9C3F6B598FC6}.Release|Any CPU.ActiveCfg = Release
+		{B34283C6-3D7F-4048-AADA-9C3F6B598FC6}.Release|x86.ActiveCfg = Release
+		{B34283C6-3D7F-4048-AADA-9C3F6B598FC6}.Release|x86.Build.0 = Release
+		{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}.Debug|x86.ActiveCfg = Debug|x86
+		{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}.Debug|x86.Build.0 = Debug|x86
+		{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}.Release|x86.ActiveCfg = Release|x86
+		{AC3D74D4-0EB7-4AF7-A2AD-F264FA3EBD9E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

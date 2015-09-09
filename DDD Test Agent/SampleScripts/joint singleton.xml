@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scenario xsi:noNamespaceSchemaLocation="DDDSchema_4_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ScenarioName>joint singleton</ScenarioName>
+  <Description>Two units  combine attacks with the same capability (singleton vulnerability).. . Player will choose to play blue dm. When Blue Unit A stops moving near the red unit, attack it. The attack window will count down, and the engagement will fail. Later, when two blue units are at rest near the red unit, use both to attack. If the second attack begins within the countdown window the engagement will succeed.</Description>
+  <Playfield>
+    <MapFileName>scenario.1200x1024.jpg</MapFileName>
+    <IconLibrary>MilStd2525b</IconLibrary>
+    <UtmZone>11 M</UtmZone>
+    <VerticalScale>1.0</VerticalScale>
+    <HorizontalScale>1.0</HorizontalScale>
+  </Playfield>
+  <LandRegion>
+    <ID>Coastline</ID>
+    <Vertex>494 1020</Vertex>
+    <Vertex>648 826</Vertex>
+    <Vertex>706 632</Vertex>
+    <Vertex>700 534</Vertex>
+    <Vertex>774 489</Vertex>
+    <Vertex>792 262</Vertex>
+    <Vertex>822 200</Vertex>
+    <Vertex>884 166</Vertex>
+    <Vertex>906 56</Vertex>
+    <Vertex>916 4</Vertex>
+    <Vertex>1198 2</Vertex>
+    <Vertex>1200 1022</Vertex>
+  </LandRegion>
+  <ActiveRegion>
+    <ID>temp active</ID>
+    <Vertex>873 397</Vertex>
+    <Vertex>873 308</Vertex>
+    <Vertex>1033 307</Vertex>
+    <Vertex>1031 392</Vertex>
+    <Start>0.0</Start>
+    <End>0.0</End>
+    <SpeedMultiplier>1.0</SpeedMultiplier>
+    <BlocksMovement>false</BlocksMovement>
+    <IsVisible>true</IsVisible>
+    <Color>DarkGreen</Color>
+  </ActiveRegion>
+  <Team>
+    <Name>red team</Name>
+    <Against>blue team</Against>
+  </Team>
+  <Team>
+    <Name>blue team</Name>
+    <Against>red team</Against>
+  </Team>
+  <DecisionMaker>
+    <Role>red dm</Role>
+    <Identifier>red dm</Identifier>
+    <Color>Red</Color>
+    <Team>red team</Team>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>blue dm</Role>
+    <Identifier>blue dm</Identifier>
+    <Color>Blue</Color>
+    <Team>blue team</Team>
+  </DecisionMaker>
+  <Sensor>
+    <Name>radar</Name>
+    <Extent>1000</Extent>
+  </Sensor>
+  <TimeToAttack>10</TimeToAttack>
+  <Genus>
+    <Name>AirObject</Name>
+  </Genus>
+  <Genus>
+    <Name>LandObject</Name>
+  </Genus>
+  <Genus>
+    <Name>SeaObject</Name>
+  </Genus>
+  <Species>
+    <Name>aircraft</Name>
+    <Base>AirObject</Base>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>false</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>AirTrack.Military.FixedWing-Friend.png</Icon>
+      <StateParameters>
+        <LaunchDuration>0</LaunchDuration>
+        <DockingDuration>0</DockingDuration>
+        <TimeToAttack>10</TimeToAttack>
+        <MaximumSpeed>10</MaximumSpeed>
+        <FuelCapacity>0</FuelCapacity>
+        <InitialFuelLoad>0</InitialFuelLoad>
+        <FuelConsumptionRate>0</FuelConsumptionRate>
+        <FuelDepletionState>Dead</FuelDepletionState>
+        <Sense>radar</Sense>
+        <Capability>
+          <Name>BRG-02</Name>
+          <Proximity>
+            <Range>1000</Range>
+            <Effect>
+              <Intensity>50</Intensity>
+              <Probability>100.0</Probability>
+            </Effect>
+          </Proximity>
+        </Capability>
+        <SingletonVulnerability>
+          <Capability>attack aircraft</Capability>
+          <Transitions>
+            <Effect>10</Effect>
+            <Range>0</Range>
+            <Probability>100</Probability>
+            <State>Dead</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Dead</State>
+      <Icon>SeaSurfaceTrack-Unknown.png</Icon>
+    </DefineState>
+  </Species>
+  <Species>
+    <Name>sam</Name>
+    <Base>LandObject</Base>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <FullyFunctional>
+      <Icon>GroundTrack.Equipment.GroundVehicle.Armored.ArmoredPersonnelCarrier-Hostile.png</Icon>
+      <StateParameters>
+        <LaunchDuration>0</LaunchDuration>
+        <DockingDuration>0</DockingDuration>
+        <TimeToAttack>20</TimeToAttack>
+        <MaximumSpeed>0</MaximumSpeed>
+        <FuelCapacity>0</FuelCapacity>
+        <InitialFuelLoad>0</InitialFuelLoad>
+        <FuelConsumptionRate>0</FuelConsumptionRate>
+        <FuelDepletionState>Dead</FuelDepletionState>
+        <SingletonVulnerability>
+          <Capability>BRG-02</Capability>
+          <Transitions>
+            <Effect>70</Effect>
+            <Range>0</Range>
+            <Probability>100</Probability>
+            <State>Dead</State>
+          </Transitions>
+        </SingletonVulnerability>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Dead</State>
+      <Icon>SeaSurfaceTrack-Unknown.png</Icon>
+    </DefineState>
+  </Species>
+  <Create_Event>
+    <ID>red unit</ID>
+    <Kind>sam</Kind>
+    <Owner>red dm</Owner>
+  </Create_Event>
+  <Create_Event>
+    <ID>blue unit A</ID>
+    <Kind>aircraft</Kind>
+    <Owner>blue dm</Owner>
+  </Create_Event>
+  <Create_Event>
+    <ID>blue unit B</ID>
+    <Kind>aircraft</Kind>
+    <Owner>blue dm</Owner>
+  </Create_Event>
+  <Reveal_Event>
+    <ID>red unit</ID>
+    <Time>1</Time>
+    <InitialLocation>556 948 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+  <Reveal_Event>
+    <ID>blue unit A</ID>
+    <Time>1</Time>
+    <InitialLocation>90 654 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+  <Move_Event>
+    <ID>blue unit A</ID>
+    <Time>1</Time>
+    <Throttle>100</Throttle>
+    <Destination>716 994 0</Destination>
+  </Move_Event>
+  <Move_Event>
+    <ID>blue unit A</ID>
+    <Time>70</Time>
+    <Throttle>100</Throttle>
+    <Destination>846 396 0</Destination>
+  </Move_Event>
+  <Completion_Event>
+    <ID>blue unit A</ID>
+    <Action>MoveComplete_Event</Action>
+    <DoThis>
+      <Reveal_Event>
+        <ID>blue unit B</ID>
+        <Time>1</Time>
+        <InitialLocation>-89 946 0</InitialLocation>
+        <InitialState>FullyFunctional</InitialState>
+      </Reveal_Event>
+    </DoThis>
+    <DoThis>
+      <Move_Event>
+        <ID>blue unit B</ID>
+        <Time>1</Time>
+        <Throttle>100</Throttle>
+        <Destination>776 954 0</Destination>
+      </Move_Event>
+    </DoThis>
+    <DoThis>
+      <Move_Event>
+        <ID>blue unit A</ID>
+        <Time>1</Time>
+        <Throttle>100</Throttle>
+        <Destination>776 920 0</Destination>
+      </Move_Event>
+    </DoThis>
+  </Completion_Event>
+</Scenario>

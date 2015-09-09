@@ -1,0 +1,175 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dbda="clr-namespace:DashboardDataAccess;assembly=DashboardDataAccess"         
+    xmlns:lib="clr-namespace:VisualizationDashboard" xmlns:ic="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" mc:Ignorable="d" x:Class="VisualizationDashboard.Window1"
+    Title="VisualizationDashboard" Height="596" Width="957.43"
+    Closed="Window_Closed" x:Name="VisualizationDashboard">
+    <Window.Resources>
+        <SolidColorBrush x:Key="GroupHeaderBackgroundBrush" Color="#FFB9D1EA"/>
+        <SolidColorBrush x:Key="DefaultControlForegroundBrush" Color="#FF10257F"/>
+        <dbda:MeasuresDataModel x:Key="MeasureData" />
+        <dbda:UserDataModel x:Key="UserData" />
+        <dbda:ExperimentDataModel x:Key="ExperimentData" />
+        <dbda:ConfigDataModel x:Key="ConfigData" />
+    </Window.Resources>
+    <DockPanel x:Name="MainWindow" Background="#FFB9C9D0">
+        <VisualStateManager.CustomVisualStateManager>
+            <ic:ExtendedVisualStateManager/>
+        </VisualStateManager.CustomVisualStateManager>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="MainWindowStates" ic:ExtendedVisualStateManager.UseFluidLayout="True">
+            	<VisualStateGroup.Transitions>
+            		<VisualTransition GeneratedDuration="0"/>
+            		<VisualTransition GeneratedDuration="0:0:1" To="DefaultState"/>
+            		<VisualTransition GeneratedDuration="0:0:1" To="PreviewState"/>
+            	</VisualStateGroup.Transitions>
+                <VisualState x:Name="DefaultState"/>
+                <VisualState x:Name="PreviewState">
+                	<Storyboard>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                			<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+                			<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                		</ObjectAnimationUsingKeyFrames>
+                		<Int32AnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Column)" Storyboard.TargetName="AuthoringWindow">
+                			<SplineInt32KeyFrame KeyTime="0" Value="0"/>
+                		</Int32AnimationUsingKeyFrames>
+                		<Int32AnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="AuthoringWindow">
+                			<SplineInt32KeyFrame KeyTime="0" Value="2"/>
+                		</Int32AnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="userInfoGrid">
+                			<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LaunchB">
+                			<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ClosePreviewB">
+                			<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PreviewB">
+                			<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                		</ObjectAnimationUsingKeyFrames>
+                	</Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Menu DockPanel.Dock="Top" Height="22" VerticalAlignment="Top" Background="#FF7D9AAA">
+            <MenuItem Header="Login">
+                <MenuItem x:Name="loginMenuItem" Header="_Login to Database..." Click="loginMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="ConfigurationMenu" Header="Configurations" Visibility="Collapsed" >
+                <MenuItem x:Name="newConfMenuItem" Header="_New Configuration..." Click="newConfMenuItem_Click"/>
+                <MenuItem x:Name="selectConfUsersMenuItem" Header="_Select Configuration Users" Click="selectConfUsersMenuItem_Click"/>
+                <MenuItem x:Name="deleteConfMenuItem" Header="_Delete Configuration" Click="deleteConfMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="AdminMenu" Header="Administration" Visibility="Collapsed"/>
+        </Menu>
+        <lib:DisplayControl DockPanel.Dock="Top" x:Name="displayControl" Width="Auto" Height="Auto" Visibility="Collapsed"/>
+        <Grid x:Name="userInfoGrid" DockPanel.Dock="Top" DataContext="{Binding Source={StaticResource UserData}}" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Username: " FontWeight="Bold" />
+            <Label Grid.Row="0" Grid.Column="1" x:Name="usernameLB" Content="{Binding User.Username}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Grid.Column="0" Content="Role: " FontWeight="Bold" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="roleLB" Content="{Binding RoleName}" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Label Grid.Row="2" Grid.Column="0" Content="Experiment:" FontWeight="Bold" />
+            <ComboBox Grid.Row="2" Grid.Column="1" x:Name="experimentNameCB" DataContext="{Binding Source={StaticResource ExperimentData}}"
+                      ItemsSource="{Binding ExperimentNames}" Margin="1.429,1.429,-1.429,-1.429"
+                      SelectionChanged="experimentNameCB_SelectionChanged" />
+
+            <Label Grid.Row="3" Grid.Column="0" Content="Configuration:" FontWeight="Bold" />
+            <ComboBox Grid.Row="3" Grid.Column="1" x:Name="configNameCB" DataContext="{Binding Source={StaticResource ConfigData}}"
+                      ItemsSource="{Binding ConfigNames}" Margin="1.429,1.429,-1.429,-1.429"
+                      SelectionChanged="configNameCB_SelectionChanged" />
+
+
+        </Grid>
+        <Grid x:Name="dashboardConfigGrid" Margin="0,10,0,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="Col0" Width="600" />
+                <ColumnDefinition x:Name="Col1" Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="Row0" Height="150" />
+                <RowDefinition x:Name="Row1" Height="*" />
+            </Grid.RowDefinitions>
+            <Grid x:Name="grid">
+                <Grid.ColumnDefinitions>
+                	<ColumnDefinition x:Name="SubCol0" Width="50*" />
+                	<ColumnDefinition x:Name="SubCol1" Width="50*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                	<RowDefinition x:Name="SubRow0" Height="100*" />
+                </Grid.RowDefinitions>
+                <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1" CornerRadius="16,16,16,16" Grid.Row="0" Grid.Column="0" Background="#FFEBEADB">
+                    <DockPanel x:Name="MetricsRepP"  Margin="20" Grid.Row="0" Grid.Column="0" >
+                        <TextBlock DockPanel.Dock="Top" FontWeight="Bold"><Run Text="MEASURES"/></TextBlock>
+                        <ListBox Margin="0,10,0,0" x:Name="measureNamesLB" DataContext="{Binding Source={StaticResource ConfigData}}" ItemsSource="{Binding MeasureNames}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <RadioButton Width="Auto" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}" GroupName="MeasureSelection" x:Name="MeasureSelectButton" Content="{Binding .}" Click="MeasureSelectButton_Click"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </DockPanel>
+                </Border>
+                <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1" CornerRadius="16,16,16,16" Grid.Row="0" Grid.Column="1" Background="#FFEBEADB">
+                    <DockPanel x:Name="DisplayRepP"  Margin="20" Grid.Row="0" Grid.Column="0" >
+                        <TextBlock DockPanel.Dock="Top" FontWeight="Bold"><Run Text="DISPLAY"/></TextBlock>
+                        <ListBox Margin="0,10,0,0" x:Name="displayNamesLB" DataContext="{Binding Source={StaticResource ConfigData}}" ItemsSource="{Binding ConfigDisplayTable}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <RadioButton x:Name="DisplaySelectButton" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}" GroupName="DisplaySelection" Width="Auto" Content="{Binding Display.Name}" Click="DisplaySelectButton_Click"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </DockPanel>
+                </Border>
+                <GridSplitter Grid.Column="0" Grid.Row="0"
+                                      Width="5" HorizontalAlignment="Right" Background="Transparent" />
+            </Grid>
+            <Border x:Name="AuthoringWindow" BorderBrush="#FF000000" BorderThickness="1,1,1,1" CornerRadius="16,16,16,16" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Background="#FFEBEADB">
+                <DockPanel Height="Auto" Width="Auto">
+                    <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="LaunchB" Content="Launch" Click="LaunchB_Click"/>
+                    	<Button x:Name="PreviewB" Content="Preview">
+                    		<i:Interaction.Triggers>
+                    			<i:EventTrigger EventName="Click">
+                    				<ic:GoToStateAction StateName="PreviewState"/>
+                    			</i:EventTrigger>
+                    		</i:Interaction.Triggers>
+                    	</Button>
+                    	<Button x:Name="ClosePreviewB" Content="Close Preview" Visibility="Collapsed">
+                    		<i:Interaction.Triggers>
+                    			<i:EventTrigger EventName="Click">
+                    				<ic:GoToStateAction StateName="DefaultState"/>
+                    			</i:EventTrigger>
+                    		</i:Interaction.Triggers>
+                    	</Button>
+                    </StackPanel>
+                    <ScrollViewer x:Name="DashboardPrevP" Margin="15" HorizontalScrollBarVisibility="Auto">
+                        <lib:DisplayPreviewControl Visibility="Visible" x:Name="displayPreview" />
+                    </ScrollViewer>
+                </DockPanel>
+            </Border>
+            <Border x:Name="border" BorderBrush="#FF000000" BorderThickness="1,1,1,1" CornerRadius="16,16,16,16" Grid.Row="1" Grid.Column="0" Background="#FFEBEADB">
+                <ScrollViewer x:Name="DisplayBuildSV" Margin="15" VerticalScrollBarVisibility="Auto">
+                    <lib:DisplayBuilderControl Visibility="Visible" x:Name="displayBuilder" />
+                </ScrollViewer>
+            </Border>
+            <GridSplitter Grid.Column="1" Grid.Row="0" Width="5" HorizontalAlignment="Left" Grid.RowSpan="2" Background="Transparent" />
+            <GridSplitter Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
+                                      Height="5" Background="Transparent" ResizeDirection="Rows" />
+        </Grid>
+    </DockPanel>
+</Window>

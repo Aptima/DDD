@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B26D537-A467-4E52-AF1F-97A61BE9C791}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aptima.Asim.DDD.SimulationEngine</RootNamespace>
+    <AssemblyName>Aptima.Asim.DDD.SimulationEngine</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ENABLE_PASSWORDS|AnyCPU' ">
+    <OutputPath>bin\ENABLE_PASSWORDS\</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '!ENABLE_PASSWORDS|AnyCPU' ">
+    <OutputPath>bin\!ENABLE_PASSWORDS\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ENABLE_PASSWORDS|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ENABLE_PASSWORDS\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '!ENABLE_PASSWORDS|x86' ">
+    <OutputPath>bin\x86\!ENABLE_PASSWORDS\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SimEngine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonComponents\DataTypeTools\DataTypeTools.csproj">
+      <Project>{B31CF76A-8F86-438C-B33D-0440A46A7515}</Project>
+      <Name>DataTypeTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\HandshakeManager\HandshakeManager.csproj">
+      <Project>{CC524B0E-23CD-46F0-BBED-C5875D5E1C8B}</Project>
+      <Name>HandshakeManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\LogPlayer\LogPlayer.csproj">
+      <Project>{0CCD6D9A-9462-47AE-8404-DF022A069223}</Project>
+      <Name>LogPlayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\NetworkTools\NetworkTools.csproj">
+      <Project>{D5EF4CF2-CFEE-4AF2-9DC5-C79B8D19760B}</Project>
+      <Name>NetworkTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\ServerViewers\ServerViewers.csproj">
+      <Project>{7F0AA7F7-9F8D-4981-BD9C-4411E46164DD}</Project>
+      <Name>ServerViewers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimCoreTools\SimCoreTools.csproj">
+      <Project>{E8D570F0-BE4E-4348-8BA6-D5ACF3EDCF88}</Project>
+      <Name>SimCoreTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimulationEventTools\SimulationEventTools.csproj">
+      <Project>{8155AED6-09DC-4993-AD12-B6306F44E99C}</Project>
+      <Name>SimulationEventTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimulationModelTools\SimulationModelTools.csproj">
+      <Project>{A4B74663-DF80-4967-ABEF-F1DDE0E08EBC}</Project>
+      <Name>SimulationModelTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonComponents\SimulationObjectTools\SimulationObjectTools.csproj">
+      <Project>{A8E7A3AE-A909-47DC-83F1-1BE125A04C85}</Project>
+      <Name>SimulationObjectTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReplayLogger\ReplayLogger.csproj">
+      <Project>{6D4651F8-14AB-4CDE-9AC6-8334D04F6F56}</Project>
+      <Name>ReplayLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ScenCon\ScenCon.csproj">
+      <Project>{5967B718-158E-4DD5-B7A1-13B327FB057B}</Project>
+      <Name>ScenCon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextChatServer\TextChatServer.csproj">
+      <Project>{6B33E1FF-B20E-438D-95F6-3854C30CEDE2}</Project>
+      <Name>TextChatServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VoiceServer\VoiceServer.csproj">
+      <Project>{00BBA3EE-9028-43BA-A5D0-F7667538FDEE}</Project>
+      <Name>VoiceServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhiteboardServer\WhiteboardServer.csproj">
+      <Project>{F13BE308-A7DD-48B2-B287-51B74C240AE6}</Project>
+      <Name>WhiteboardServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

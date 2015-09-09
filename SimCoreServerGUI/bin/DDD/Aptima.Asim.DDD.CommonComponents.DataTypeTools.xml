@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aptima.Asim.DDD.CommonComponents.DataTypeTools</name>
+    </assembly>
+    <members>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue">
+            <summary>
+            The base class for all DataValue classes
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.StringValue">
+            <summary>
+            Used to represent values of StringType.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DoubleValue">
+            <summary>
+            Used to represent values of DoubleType.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.IntegerValue">
+            <summary>
+            Used to represent values of IntegerType.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.BooleanValue">
+            <summary>
+            Used to represent values of BooleanType.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.LocationValue">
+            <summary>
+            Used to represent values of LocationType.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.VelocityValue">
+            <summary>
+            Used to represent values of VelocityType.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.AttributeCollectionValue">
+            <summary>
+            Used to represent values of AttributeCollectionType.  
+            This data type is essentially a dictionary of other DataValue objects
+            with a string key.
+            Note:  Cannot contain another AttributeCollectionValue.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.CustomAttributesValue">
+            <summary>
+            Used to represent values of CustomAttributesType.  
+            This data type is essentially a dictionary of other DataValue objects
+            with a string key used for storing and sending user defined attributes to the client.
+            Note:  Cannot contain another AttributeCollectionValue.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.StateTableValue">
+            <summary>
+            Used to represent values of StateTableType.  This is essentially an AttributeCollectionValue.
+            This collection can contain AttributeCollectionValue objects.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.CapabilityValue">
+            <summary>
+            Used to represent values of CapablityType.
+            This is used to store and object's capability info.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.VulnerabilityValue">
+            <summary>
+            Used to represent values of VulnerabilityType.
+            This is used to store and object's vulnerability info.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.StringListValue">
+            <summary>
+            Used to represent values of StringListType.
+            A list of strings.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.EmitterValue">
+            <summary>
+            Used to represent values of EmmitterType.
+            Used to keep track of an objects emmitters.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.ConeValue">
+            <summary>
+            Used to represent values of ConeType.
+            This is used as part of the SensorValue type.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.SensorValue">
+            <summary>
+            Used to represent values of SensorType.
+            This is used to keep track of an individual sensor.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.SensorArrayValue">
+            <summary>
+            Used to represent values of SensorArrayType.
+            This is composed of SensorValue objects is used to keep track of the overall sensor
+            system of an object.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DetectedAttributeValue">
+            <summary>
+            This data value class will only be used internally.
+            </summary>
+            <exclude/>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.RangeRingDisplayValue">
+            <summary>
+            Used to represent values of RangeRing info, aggregated on the server side and sent to the client side in an AttributeCollectionValue.
+            This is used to store and object's capability info.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.RangeRingDisplayValue.GetIntensityForRange(System.Int32)">
+            <summary>
+            This function ASSUMES that the ranges are placed in ASCENDING order.
+            </summary>
+            <param name="range"></param>
+            <returns>-1 for no intensity, otherwise an integer</returns>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.AttackCollectionValue">
+            <summary>
+            Used to represent values of attack info, aggregated on the server side.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.AttackCollectionValue.AddAttack(Aptima.Asim.DDD.CommonComponents.DataTypeTools.AttackCollectionValue.AttackValue,System.String@)">
+            <summary>
+            Adds an attack to this collection.  
+            </summary>
+            <param name="attack">The attack object to add to this collection.</param>
+            <param name="errorMessage">If this has anything besides String.Empty upon return, then the attack was not added in the FULL
+            capacity of the original request.  If this function returned TRUE, then it was added partially.  If it was returned FALSE,
+            then this attack was not added at all.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.AttackCollectionValue.AttackValue">
+            <summary>
+            Represents a single attack between exactly two objects.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.ClassificationDisplayRulesValue">
+            <summary>
+            Used to represent values of StringListType.
+            A list of strings.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory">
+            <summary>
+            The DataValueFactory is a utility class used for building DataValue
+            objects, and for serializing and deserializing DataValue objects to and from XML.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildFromDataValue(Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue)">
+            <summary>
+            
+            </summary>
+            <exclude/>
+            <param name="dv"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildWrapper(Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue)">
+            <summary>
+            A helper method for building and populating a WrapperValue object.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildString(System.String)">
+            <summary>
+            A helper method for building and populating a StringValue object.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildStringList(System.Collections.Generic.List{System.String})">
+            <summary>
+            A helper method for building and populating a StringListValue object.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildInteger(System.Int32)">
+            <summary>
+            A helper method for building and populating an IntegerValue object.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildBoolean(System.Boolean)">
+            <summary>
+            A helper method for building and populating a BooleanValue object.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildDouble(System.Double)">
+            <summary>
+            A helper method for building and populating a DoubleValue object.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildLocation(System.Double,System.Double,System.Double,System.Boolean)">
+            <summary>
+            A helper method for building and populating a LocationValue object.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <param name="exists"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildDouble(System.Double,System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <exclude/>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildVelocity(System.Double,System.Double,System.Double)">
+            <summary>
+            A helper method for building and populating a VelocityValue object.
+            </summary>
+            <param name="vx"></param>
+            <param name="vy"></param>
+            <param name="vz"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildAttributeCollection(System.Collections.Generic.Dictionary{System.String,Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue})">
+            <summary>
+            A helper method for building and populating a AttributeCollectionValue object.
+            </summary>
+            <param name="attCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildCustomAttributes(System.Collections.Generic.Dictionary{System.String,Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue})">
+            <summary>
+            A helper method for building and populating a CustomAttributesValue object.
+            </summary>
+            <param name="attCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildDetectedValue(Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue,System.Int32)">
+            <summary>
+            A Helper method for building and populating a DetectedValue object
+            </summary>
+            <exclude/>
+            <param name="dv"></param>
+            <param name="confidence"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildRangeRingDisplayValue(System.String,System.String,System.Boolean,System.Collections.Generic.Dictionary{System.Int32,System.Int32})">
+            <summary>
+            A helper method for building and populating a RangeRingDisplayValue object.
+            </summary>
+            <param name="name"></param>
+            <param name="type"></param>
+            <param name="isWeapon"></param>
+            <param name="rangeIntensities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.BuildValue(System.String)">
+            <summary>
+            A method that takes a data type name, and returns a new DataValue object that corresponds
+            to that type.
+            </summary>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.XMLSerialize(Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue)">
+            <summary>
+            Takes a DataValue, and returns the xml representation.
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.ToString(Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue)">
+            <summary>
+            Takes a DataValue, and returns a human-readable string representation.
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.XMLDeserialize(System.String)">
+            <summary>
+            Takes an xml string, and returns a DataValue object.
+            Returns null if the xml doesn't represent a DataValue.
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValueFactory.CompareDataValues(Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue,Aptima.Asim.DDD.CommonComponents.DataTypeTools.DataValue)">
+            <summary>
+            This method takes in two data values, and returns true if their values are equal.
+            </summary>
+            <param name="firstDV"></param>
+            <param name="secondDV"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

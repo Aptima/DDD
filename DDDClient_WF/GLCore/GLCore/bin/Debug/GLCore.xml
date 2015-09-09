@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GLCore</name>
+    </assembly>
+    <members>
+        <member name="T:Aptima.Asim.DDD.Client.Common.GLCore.IGameControl">
+            <summary>
+            Interface for GameFramework.  Pick a class in your Game for which
+            you wish to implement this interface, pass its instance to
+            GameFramework.Run.
+            GameFramework will call this interface during its game loop.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.IGameControl.InitializeCanvasOptions(Aptima.Asim.DDD.Client.Common.GLCore.CanvasOptions)">
+            <summary>
+            Initialize the Game canvas.  The Canvas contains the DirectX
+            device that you are rendering to.
+            </summary>
+            <param name="options">A canvas Options class.</param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.IGameControl.InitializeScenes(Aptima.Asim.DDD.Client.Common.GLCore.GameFramework)">
+            <summary>
+            An array of Scenes that the game framework will run through and
+            render.  Typically a Scene will be a game level.
+            </summary>
+            <param name="g">Game Framework instance</param>
+            <returns>Scene array</returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.IGameControl.GameOver(Aptima.Asim.DDD.Client.Common.GLCore.GameFramework)">
+            <summary>
+            Define what to do in when the game ends, here.
+            </summary>
+            <param name="g">Game Framework instance.</param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.IGameControl.GetTargetControl">
+            <summary>
+            A GDI+ control that the GameFramework will render its canvas
+            on.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.MappableObject.ScaleDownWidthHeight(System.Single@,System.Single@)">
+            <summary>
+            Width and Height can be at most 4096 each, due to Texture limitations
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.GameFramework.Run(System.Windows.Forms.Form,Aptima.Asim.DDD.Client.Common.GLCore.IGameControl)">
+            <summary>
+            Starts the Game Framework, registers a form and a gamecontroller.
+            The form is required to intercept keyboard and mouse input.
+            The GameController initializes scenes and feeds them to the GameController.
+            </summary>
+            <param name="form"></param>
+            <param name="game_control"></param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.GameFramework.GameLoop(System.Object,System.EventArgs)">
+            <summary>
+            The Game Loop, runs through the following series of actions:
+            Gets the next scene.
+            Executes the Scene's Initialize Method.
+            Executes the Scene's OnSceneLoading Method.
+               Loops {
+                   Executes the Scene's OnBeforeRender Method.
+                   Passes the Scene to Canvas for rendering.
+                   Executes the Scene's OnAfterRender Method.
+               }
+             Executes the Scene's OnSceneCleanup Method.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Sprite">
+            <summary>
+            GLCore Sprite primative.  A Sprite is a DirectX Bitmap object, differs 
+            from a textured plane in that this is strictly 2D and requires no Mesh data.
+            </summary>
+        </member>
+        <member name="T:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject">
+            <summary>
+            Base object for all GLCore shape primatives.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.min">
+            <summary>
+            Lower left corner of bounding box.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.max">
+            <summary>
+            Upper right corner of bounding box.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject._position">
+            <summary>
+            3D vector position of this object.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject._rotation">
+            <summary>
+            3D rotation of this object.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject._scaling">
+            <summary>
+            3D Scaling of this object.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.BoxBoundProbe(Microsoft.DirectX.Vector3,Microsoft.DirectX.Vector3)">
+            <summary>
+            Determines if the 3D Ray (specified by near and far) Intersects the
+            bounding box of this object.  Ray / Object intersection.
+            </summary>
+            <param name="near">3D position of the ray's near point.</param>
+            <param name="far">3D position of the ray's far point.</param>
+            <returns>True, if ray intersects the bounding volume,
+            False, otherwise.</returns>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.SetScale(System.Single,System.Single,System.Single)">
+            <summary>
+            Changes the X, Y, Z, scaling of this object.
+            </summary>
+            <param name="xScale">Percent X scaling.</param>
+            <param name="yScale">Percent Y scaling.</param>
+            <param name="zScale">Percent Z scaling.</param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.Initialize(Aptima.Asim.DDD.Client.Common.GLCore.Canvas)">
+            <summary>
+            One time initialization required by derived shape primatives.
+            </summary>
+            <param name="canvas"></param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.Texture(Aptima.Asim.DDD.Client.Common.GLCore.Canvas)">
+            <summary>
+            Deprecated?
+            One time texture initialization required by derived shape primatives.
+            </summary>
+            <param name="canvas"></param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.Texture(Microsoft.DirectX.Direct3D.Texture,System.Int32,System.Int32)">
+            <summary>
+            Deprecated?
+            One time texture initialization required by derived shape primatives.
+            </summary>
+            <param name="texture">Texture object</param>
+            <param name="width">width of texture</param>
+            <param name="height">height of texture</param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.Texture(Aptima.Asim.DDD.Client.Common.GLCore.GameTexture)">
+            <summary>
+            Textures the object using GLCore's GameTexture object.
+            </summary>
+            <param name="texture"></param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.Draw(Aptima.Asim.DDD.Client.Common.GLCore.Canvas)">
+            <summary>
+            Draws the object to the Canvas.  This is called from the Canvas
+            Render loop.
+            </summary>
+            <param name="canvas">GLCore Canvas object.</param>
+        </member>
+        <member name="P:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.BaseGameObject.WorldMtx">
+            <summary>
+            Gets this objects DirectX world matrix.  
+            Position * RotationX * RotationY * RotationZ * Scaling.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Sprite.Centered">
+            <summary>
+            Center the object.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Sprite._sprite">
+            <summary>
+            DirectX sprite object, see DirectX Docs for more info.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Sprite._texture">
+            <summary>
+            DirectX Texture object, see DirectX Docs for more info.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Sprite._diffuse_color">
+            <summary>
+            Tints, the object with this select color upon selection.
+            </summary>
+        </member>
+        <member name="P:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Sprite.Diffuse">
+            <summary>
+            Sets the Diffuse color or Tint of the object's bitmap.
+            </summary>
+        </member>
+        <member name="P:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Sprite.Flags">
+            <summary>
+            Gets/set the DirectX sprite flags for rendering. See DirectX Docs for
+            more info on SpriteFlags.
+            </summary>
+        </member>
+        <member name="P:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Sprite.TextureWidth">
+            <summary>
+            Gets the width of the texture.
+            </summary>
+        </member>
+        <member name="P:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Sprite.TextureHeight">
+            <summary>
+            Gets the height of the texture.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.Controls.PanelViewportRegion.StartViewport(Aptima.Asim.DDD.Client.Common.GLCore.Canvas,System.Drawing.Rectangle)">
+            <summary>
+            This might not make sense, revisit.
+            </summary>
+            <param name="c"></param>
+            <param name="r"></param>
+        </member>
+        <member name="T:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane">
+            <summary>
+            Base class for a textured plane, 3D object.
+            Not currently used, currently using Sprite objects instead of textured planes.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane.verts">
+            <summary>
+            Vertices (corners) of the textured plane.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane._filename">
+            <summary>
+            Filename of the texture to use
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane._texture">
+            <summary>
+            A direct x texture object that will house the file.
+            </summary>
+        </member>
+        <member name="F:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane.material">
+            <summary>
+            A direct X material object.
+            </summary>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane.#ctor(System.String,System.Drawing.Color)">
+            <summary>
+            Plane object constructor.  Defines the texture filename the displayed
+            diffuse color.  A texture will be tinted with the diffuse color.
+            </summary>
+            <param name="filename">Texture file.</param>
+            <param name="diffuse">Texture tint.</param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane.#ctor(Microsoft.DirectX.Direct3D.Texture,System.Drawing.Color)">
+            <summary>
+            Plan object constructor.  Defines the Texture object to use, and the
+            diffuse color.  A texture will be tinted with the diffuse color.
+            </summary>
+            <param name="texture">Texture object (DirectX).</param>
+            <param name="diffuse">Texture tint.</param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane.Initialize(Aptima.Asim.DDD.Client.Common.GLCore.Canvas)">
+            <summary>
+            Creates a texture from a specified filename (if specified).  Creates a plane
+            mesh (DirectX mesh object).  Mesh size is the texture size.
+            </summary>
+            <param name="canvas">A GLCore Canvas object.</param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane.Texture(Aptima.Asim.DDD.Client.Common.GLCore.Canvas)">
+            <summary>
+            Notifies the GLCore Canvas to use this object's material and texture.
+            </summary>
+            <param name="canvas">A GLCore texture object.</param>
+        </member>
+        <member name="M:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane.Draw(Aptima.Asim.DDD.Client.Common.GLCore.Canvas)">
+            <summary>
+            Draws a textured Plane mesh to a GLCore canvas object.
+            </summary>
+            <param name="canvas"></param>
+        </member>
+        <member name="P:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane.Width">
+            <summary>
+            Returns the width of the plane's texture object.
+            </summary>
+        </member>
+        <member name="P:Aptima.Asim.DDD.Client.Common.GLCore.CoreObjects.Obj_Plane.Height">
+            <summary>
+            Returns the height of the plane's texture object.
+            </summary>
+        </member>
+    </members>
+</doc>

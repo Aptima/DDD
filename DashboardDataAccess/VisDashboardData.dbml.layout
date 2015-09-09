@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18.75, 14.125" name="VisDashboardData">
+  <DataContextMoniker Name="/VisDashboardDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e95d0659-8d45-43f9-9cac-fc31d1f5eea1" absoluteBounds="4.5, 0.875, 2, 1.271816392838955">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85411fcf-5d49-4564-a24c-96aa9919942c" absoluteBounds="4.515, 1.335, 1.9700000000000002, 0.71181639283895493" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e11d47c-6c7f-434c-aac7-b5fe99f148e9" absoluteBounds="1.375, 4.875, 2, 1.6055403452118235">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/UsersInExperiment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3c53cd8-42ab-47c5-aca9-5b5c71aaa964" absoluteBounds="1.3900000000000001, 5.335, 1.9700000000000002, 1.0455403452118237" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5156265 : 2.14681639283896); (5.5156265 : 2.625); (3.83333333333333 : 2.625 : JumpStart); (3.66666666666667 : 2.625 : JumpEnd); (3.625 : 2.625); (3.625 : 5.67777017260591); (3.375 : 5.67777017260591)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/User/User_UsersInExperiment" />
+      <nodes>
+        <classShapeMoniker Id="e95d0659-8d45-43f9-9cac-fc31d1f5eea1" />
+        <classShapeMoniker Id="1e11d47c-6c7f-434c-aac7-b5fe99f148e9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6eb334af-6480-499b-bb18-5c37f05e04d9" absoluteBounds="4.75, 4.875, 2, 1.4386783690253895">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/UserInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ddb7c113-f133-4eaa-b512-872e8f325749" absoluteBounds="4.7650000000000006, 5.335, 1.9700000000000002, 0.87867836902538943" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.21875 : 2.14681639283896); (6.21875 : 4.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/User/User_UserInRole" />
+      <nodes>
+        <classShapeMoniker Id="e95d0659-8d45-43f9-9cac-fc31d1f5eea1" />
+        <classShapeMoniker Id="6eb334af-6480-499b-bb18-5c37f05e04d9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="02830fb6-c2f2-4a7e-962d-1720c08c436a" absoluteBounds="3.875, 2.75, 2, 1.271816392838955">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="667abe35-19df-416c-a930-d7f17e4c6fb1" absoluteBounds="3.8899999999999997, 3.21, 1.9700000000000002, 0.71181639283895493" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.46875 : 4.02181639283896); (5.46875 : 4.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Role/Role_UserInRole" />
+      <nodes>
+        <classShapeMoniker Id="02830fb6-c2f2-4a7e-962d-1720c08c436a" />
+        <classShapeMoniker Id="6eb334af-6480-499b-bb18-5c37f05e04d9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3a78c298-612c-420d-9296-f57b29376aaf" absoluteBounds="3.375, 7.625, 2, 1.271816392838955">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/Config" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4e1548f-b689-410b-a07d-9ce5d4c159c7" absoluteBounds="3.39, 8.085, 1.9700000000000002, 0.71181639283895493" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15e92b24-4f94-4eaf-873e-3db9fd100658" absoluteBounds="3.25, 9.5, 2, 1.271816392838955">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/UsersInConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7da8352-dac6-448a-a8e3-d67c6200194d" absoluteBounds="3.265, 9.96, 1.9700000000000002, 0.71181639283895493" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.3125 : 8.89681639283896); (4.3125 : 9.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Config/Config_UsersInConfig" />
+      <nodes>
+        <classShapeMoniker Id="3a78c298-612c-420d-9296-f57b29376aaf" />
+        <classShapeMoniker Id="15e92b24-4f94-4eaf-873e-3db9fd100658" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.968748 : 2.14681639283896); (4.968748 : 2.5); (5.43229316666667 : 2.5 : JumpStart); (5.59895983333333 : 2.5 : JumpEnd); (6 : 2.5); (6 : 4.625); (5.55208333333333 : 4.625 : JumpStart); (5.38541666666667 : 4.625 : JumpEnd); (4.5 : 4.625); (4.5 : 7.375); (5.625 : 7.375); (5.625 : 10.1359081964195); (5.25 : 10.1359081964195)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/User/User_UsersInConfig" />
+      <nodes>
+        <classShapeMoniker Id="e95d0659-8d45-43f9-9cac-fc31d1f5eea1" />
+        <classShapeMoniker Id="15e92b24-4f94-4eaf-873e-3db9fd100658" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cf9e53c8-0136-4b74-bf3d-5676b32ed9fb" absoluteBounds="0.625, 9, 2, 1.4386783690253895">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/ExperimentDisplay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40593af3-9a84-4e04-836d-a362b5616432" absoluteBounds="0.64000000000000012, 9.46, 1.9700000000000002, 0.87867836902538943" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.2499995 : 2.14681639283896); (6.2499995 : 2.375); (5.59895983333333 : 2.375 : JumpStart); (5.43229316666667 : 2.375 : JumpEnd); (5.05208133333333 : 2.375 : JumpStart); (4.88541466666667 : 2.375 : JumpEnd); (3.75 : 2.375); (3.75 : 7.375); (3 : 7.375); (3 : 9.71933918451269); (2.625 : 9.71933918451269)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/User/User_ExperimentDisplay" />
+      <nodes>
+        <classShapeMoniker Id="e95d0659-8d45-43f9-9cac-fc31d1f5eea1" />
+        <classShapeMoniker Id="cf9e53c8-0136-4b74-bf3d-5676b32ed9fb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c2d7820d-e216-4425-9ffb-fa63e1a3ee7f" absoluteBounds="3.125, 11.25, 2, 1.271816392838955">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/Display" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb2a9004-df45-48c9-b7ee-4c9112d6f640" absoluteBounds="3.14, 11.71, 1.9700000000000002, 0.71181639283895493" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.15625 : 11.25); (3.15625 : 9.71933918451269); (2.625 : 9.71933918451269)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Display/Display_ExperimentDisplay" />
+      <nodes>
+        <classShapeMoniker Id="c2d7820d-e216-4425-9ffb-fa63e1a3ee7f" />
+        <classShapeMoniker Id="cf9e53c8-0136-4b74-bf3d-5676b32ed9fb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d6c6c12c-58dc-474b-ab67-bd62ee2277c2" absoluteBounds="5.875, 12.125, 2, 1.4386783690253893">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/DisplayFactorLabel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d6442eb-d092-4d29-8f59-684bd133dd3e" absoluteBounds="5.89, 12.585, 1.9700000000000002, 0.87867836902538943" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 12.3234081964195); (5.875 : 12.3234081964195)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Display/Display_DisplayFactorLabel" />
+      <nodes>
+        <classShapeMoniker Id="c2d7820d-e216-4425-9ffb-fa63e1a3ee7f" />
+        <classShapeMoniker Id="d6c6c12c-58dc-474b-ab67-bd62ee2277c2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fbb50804-fdab-45ce-890f-7c75854cd084" absoluteBounds="9, 12.25, 2, 1.6055403452118235">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/DisplayFactor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23b1aabe-5847-4af2-bff2-512aba140b57" absoluteBounds="9.015, 12.71, 1.9700000000000002, 1.0455403452118237" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2c857bd-d080-41bc-ab98-8fcee1dccbae" absoluteBounds="8.75, 5.5, 2, 1.4386783690253895">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/DisplayBlockedFactor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc0f28b8-a408-4579-9659-e9c2833301ab" absoluteBounds="8.765, 5.96, 1.9700000000000002, 0.87867836902538943" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2aaef52f-8328-40ce-aebb-9484366c256a" absoluteBounds="0.875, 0.5, 2, 1.7724023213982583">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/Measure" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51555d9b-392b-444e-9634-7f2b93e6cd3f" absoluteBounds="0.89000000000000012, 0.96, 1.9700000000000002, 1.2124023213982582" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.96875 : 2.27240232139826); (0.96875 : 6.74085935711861); (1.13541666666667 : 6.74085935711861 : JumpStart); (1.33333583333333 : 6.74085935711861 : JumpEnd); (3.66666666666667 : 6.74085935711861 : JumpStart); (3.83333333333333 : 6.74085935711861 : JumpEnd); (4.41666666666667 : 6.74085935711861 : JumpStart); (4.58333333333333 : 6.74085935711861 : JumpEnd); (8.75 : 6.74085935711861)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Measure/Measure_DisplayBlockedFactor" />
+      <nodes>
+        <classShapeMoniker Id="2aaef52f-8328-40ce-aebb-9484366c256a" />
+        <classShapeMoniker Id="d2c857bd-d080-41bc-ab98-8fcee1dccbae" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e8aff026-c2cf-4862-8964-1d82f578fd3d" absoluteBounds="7.625, 9.5, 2, 2.4398502261439958">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/ConfigDisplay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03c80260-d701-42a3-9c83-e68412360a30" absoluteBounds="7.6400000000000006, 9.96, 1.9700000000000002, 1.8798502261439958" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.3125 : 11.939850226144); (9.3125 : 12.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/ConfigDisplay/ConfigDisplay_DisplayFactor" />
+      <nodes>
+        <classShapeMoniker Id="e8aff026-c2cf-4862-8964-1d82f578fd3d" />
+        <classShapeMoniker Id="fbb50804-fdab-45ce-890f-7c75854cd084" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.1875 : 9.5); (9.1875 : 6.93867836902539)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/ConfigDisplay/ConfigDisplay_DisplayBlockedFactor" />
+      <nodes>
+        <classShapeMoniker Id="e8aff026-c2cf-4862-8964-1d82f578fd3d" />
+        <classShapeMoniker Id="d2c857bd-d080-41bc-ab98-8fcee1dccbae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.375 : 8.26090819641948); (8.3749975 : 8.26090819641948); (8.3749975 : 9.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Config/Config_ConfigDisplay" />
+      <nodes>
+        <classShapeMoniker Id="3a78c298-612c-420d-9296-f57b29376aaf" />
+        <classShapeMoniker Id="e8aff026-c2cf-4862-8964-1d82f578fd3d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.125 : 11.594925113072); (7.625 : 11.594925113072)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Display/Display_ConfigDisplay" />
+      <nodes>
+        <classShapeMoniker Id="c2d7820d-e216-4425-9ffb-fa63e1a3ee7f" />
+        <classShapeMoniker Id="e8aff026-c2cf-4862-8964-1d82f578fd3d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="64ecd2d4-5a16-4e64-9f89-08f2585570cc" absoluteBounds="9.25, 3.125, 2, 1.7724023213982583">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/ExperimentMeasure" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ccce8ec-1c10-4a0f-846b-6bf7dda783bc" absoluteBounds="9.265, 3.585, 1.9700000000000002, 1.2124023213982582" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.0000025 : 2.27240232139826); (1.0000025 : 4.71875); (1.13541666666667 : 4.71875 : JumpStart); (1.33333583333333 : 4.71875 : JumpEnd); (2.16666666666667 : 4.71875 : JumpStart); (2.33333333333333 : 4.71875 : JumpEnd); (3.54166666666667 : 4.71875 : JumpStart); (3.83333333333333 : 4.71875 : JumpEnd); (4.41666666666667 : 4.71875 : JumpStart); (4.58333333333333 : 4.71875 : JumpEnd); (5.38541666666667 : 4.71875 : JumpStart); (5.55208333333333 : 4.71875 : JumpEnd); (6.13541666666667 : 4.71875 : JumpStart); (6.30208333333333 : 4.71875 : JumpEnd); (9.25 : 4.71875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Measure/Measure_ExperimentMeasure" />
+      <nodes>
+        <classShapeMoniker Id="2aaef52f-8328-40ce-aebb-9484366c256a" />
+        <classShapeMoniker Id="64ecd2d4-5a16-4e64-9f89-08f2585570cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 1.51090819641948); (9.7187475 : 1.51090819641948); (9.7187475 : 3.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/User/User_ExperimentMeasure" />
+      <nodes>
+        <classShapeMoniker Id="e95d0659-8d45-43f9-9cac-fc31d1f5eea1" />
+        <classShapeMoniker Id="64ecd2d4-5a16-4e64-9f89-08f2585570cc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="93dbea01-642e-4c35-bd17-5cd193a3cb6e" absoluteBounds="1.125, 2.75, 2, 1.7724023213982583">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/Experiment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0fe9bd18-3515-4a20-8270-06619b2c51f7" absoluteBounds="1.1400000000000001, 3.21, 1.9700000000000002, 1.2124023213982582" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.25 : 4.52240232139826); (2.25 : 4.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Experiment/Experiment_UsersInExperiment" />
+      <nodes>
+        <classShapeMoniker Id="93dbea01-642e-4c35-bd17-5cd193a3cb6e" />
+        <classShapeMoniker Id="1e11d47c-6c7f-434c-aac7-b5fe99f148e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.21875 : 4.52240232139826); (1.21875 : 8.26090819641948); (2.91666666666667 : 8.26090819641948 : JumpStart); (3.08333333333333 : 8.26090819641948 : JumpEnd); (3.375 : 8.26090819641948)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Experiment/Experiment_Config" />
+      <nodes>
+        <classShapeMoniker Id="93dbea01-642e-4c35-bd17-5cd193a3cb6e" />
+        <classShapeMoniker Id="3a78c298-612c-420d-9296-f57b29376aaf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.125 : 3.63620116069913); (1.08333583333333 : 3.63620116069913 : JumpStart); (0.885416666666667 : 3.63620116069913 : JumpEnd); (0.796875 : 3.63620116069913); (0.796875 : 9)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Experiment/Experiment_ExperimentDisplay" />
+      <nodes>
+        <classShapeMoniker Id="93dbea01-642e-4c35-bd17-5cd193a3cb6e" />
+        <classShapeMoniker Id="cf9e53c8-0136-4b74-bf3d-5676b32ed9fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 4.30335935711861); (3.66666666666667 : 4.30335935711861 : JumpStart); (3.83333333333333 : 4.30335935711861 : JumpEnd); (6.13541666666667 : 4.30335935711861 : JumpStart); (6.30208333333333 : 4.30335935711861 : JumpEnd); (9.25 : 4.30335935711861)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Experiment/Experiment_ExperimentMeasure" />
+      <nodes>
+        <classShapeMoniker Id="93dbea01-642e-4c35-bd17-5cd193a3cb6e" />
+        <classShapeMoniker Id="64ecd2d4-5a16-4e64-9f89-08f2585570cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.40625225 : 2.14681639283896); (6.40625225 : 4.30335885711861); (6.30208333333333 : 4.30335885711861 : JumpStart); (6.13541666666667 : 4.30335885711861 : JumpEnd); (3.83333333333333 : 4.30335885711861 : JumpStart); (3.66666666666667 : 4.30335885711861 : JumpEnd); (3.125 : 4.30335885711861)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/User/User_Experiment" />
+      <nodes>
+        <classShapeMoniker Id="e95d0659-8d45-43f9-9cac-fc31d1f5eea1" />
+        <classShapeMoniker Id="93dbea01-642e-4c35-bd17-5cd193a3cb6e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="da2d61ba-de52-4e85-bf9d-eac9a633f6e7" absoluteBounds="16.5, 4.625, 2, 1.1049544166525205">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/EntityType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c42926f9-a77f-47ba-a586-1ecbf83ba6f4" absoluteBounds="16.515, 5.085, 1.9700000000000002, 0.54495441665252042" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0305cb2-021c-4d77-a9b9-08223899c45c" absoluteBounds="13.5, 6, 2, 1.6055403452118235">
+      <DataClassMoniker Name="/VisDashboardDataDataContext/ExperimentEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffa2b1a7-c65b-4a6b-8e6d-b41f62233d48" absoluteBounds="13.515, 6.46, 1.9700000000000002, 1.0455403452118237" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.5 : 6); (14.5 : 4.01120116069913); (11.25 : 4.01120116069913)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/ExperimentEntity/ExperimentEntity_ExperimentMeasure" />
+      <nodes>
+        <classShapeMoniker Id="c0305cb2-021c-4d77-a9b9-08223899c45c" />
+        <classShapeMoniker Id="64ecd2d4-5a16-4e64-9f89-08f2585570cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.5 : 5.17747720832626); (15.0312525 : 5.17747720832626); (15.0312525 : 6)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/EntityType/EntityType_ExperimentEntity" />
+      <nodes>
+        <classShapeMoniker Id="da2d61ba-de52-4e85-bf9d-eac9a633f6e7" />
+        <classShapeMoniker Id="c0305cb2-021c-4d77-a9b9-08223899c45c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2500025 : 4.52240232139826); (1.2500025 : 7.18808918451269); (3.66666666666667 : 7.18808918451269 : JumpStart); (3.83333333333333 : 7.18808918451269 : JumpEnd); (4.41666666666667 : 7.18808918451269 : JumpStart); (4.58333333333333 : 7.18808918451269 : JumpEnd); (9.10416666666667 : 7.18808918451269 : JumpStart); (9.27083333333333 : 7.18808918451269 : JumpEnd); (13.5 : 7.18808918451269)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/Experiment/Experiment_ExperimentEntity" />
+      <nodes>
+        <classShapeMoniker Id="93dbea01-642e-4c35-bd17-5cd193a3cb6e" />
+        <classShapeMoniker Id="c0305cb2-021c-4d77-a9b9-08223899c45c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.2028587286534 : 7.60554034521182); (14.2028587286534 : 7.85554034521182); (14.8112908556964 : 7.85554034521182); (14.8112908556964 : 7.60554034521182)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisDashboardDataDataContext/ExperimentEntity/ExperimentEntity_ExperimentEntity" />
+      <nodes>
+        <classShapeMoniker Id="c0305cb2-021c-4d77-a9b9-08223899c45c" />
+        <classShapeMoniker Id="c0305cb2-021c-4d77-a9b9-08223899c45c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:mstns="http://tempuri.org/XMLSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+        <xs:complexType name="VectorType">
+        <xs:sequence>
+          <xs:element name="x" type="xs:double" />
+          <xs:element name="y" type="xs:double" />
+          <xs:element name="z" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+        <xs:simpleType name="ThrottleSettingType">
+           <xs:restriction base="xs:unsignedInt">
+             <xs:maxInclusive value="100" />
+           </xs:restriction>
+        </xs:simpleType>
+        <xs:simpleType name="ScenarioEventName">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="'Create_Event'" />
+          <xs:enumeration value="'Move_Event'" />
+          <xs:enumeration value="'StateChange_Event'" />
+          <xs:enumeration value="Completion_Event" />
+        </xs:restriction>
+      </xs:simpleType>
+        <xs:complexType name="ScenarioEventType">
+          <xs:sequence>
+            <xs:element name="Unit" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+        <xs:simpleType name="UnitClassName">
+          <xs:restriction base="xs:string">
+           <xs:enumeration value="'Generic'" />
+         </xs:restriction>
+        </xs:simpleType>
+        <xs:complexType name="Move_EventType">
+          <xs:complexContent>
+            <xs:extension base="ScenarioEventType">
+              <xs:sequence>
+                <xs:element name="Timer" type="xs:integer"/>
+                <xs:element name="Throttle" type="ThrottleSettingType" />
+                <xs:element name="Location" type="VectorType" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+        <xs:complexType name="Create_EventType">
+          <xs:complexContent>
+            <xs:extension base="ScenarioEventType">
+              <xs:sequence>
+                <xs:element name="Kind" type="UnitClassName" />
+                <xs:element name="ParameterSetting" type="ParameterSettingType" minOccurs="0" maxOccurs="unbounded" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+        <xs:complexType name="ParameterSettingType">
+          <xs:sequence>
+            <xs:element name="Parameter" type="xs:string" />
+            <xs:element name="Setting" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+        <xs:complexType name="StateChange_Event">
+          <xs:complexContent>
+            <xs:extension base="ScenarioEventType">
+              <xs:sequence>
+                <xs:element name="ParameterSet" type="ParameterSettingType" maxOccurs="unbounded" minOccurs="1" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+        <xs:simpleType name="ConditionType">
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="&quot;&lt;&quot;" />
+            <xs:enumeration value="&quot;=&quot;" />
+            <xs:enumeration value="&quot;&lt;=&quot;" />
+            <xs:enumeration value="&quot;&gt;&quot;" />
+            <xs:enumeration value="&quot;&gt;=&quot;" />
+          </xs:restriction>
+        </xs:simpleType>
+        <xs:complexType name="HappeningConditionType">
+          <xs:complexContent>
+            <xs:extension base="ScenarioEventType">
+              <xs:sequence>
+                <xs:element name="ParameterName" type="xs:string" />
+                <xs:element name="Condition" type="ConditionType" />
+                <xs:element name="Value" type="xs:string" />
+                <xs:element name="TheEvent" type="ScenarioEventType" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+  <xs:simpleType name="IncomingAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Move_Complete" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AnyScenarioEventType">
+    <xs:choice>
+      <xs:element name="Move" type="Move_EventType"/>
+    </xs:choice>
+    
+  </xs:complexType>
+  <xs:complexType name="HappeningCompletionType">
+    <xs:complexContent>
+    <xs:extension base="ScenarioEventType">
+      <xs:sequence>
+        <xs:element name="Action"      type="IncomingAction"/>
+        <xs:element name="DoThis" type="AnyScenarioEventType"/>
+      </xs:sequence>
+    </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  
+ 
+  <xs:complexType name="scenario">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="OnCondition" type="HappeningConditionType"/>
+     <xs:element name="OnCompletion" type="HappeningCompletionType"/>
+      <xs:element name="Move" type="Move_EventType"/>
+      <xs:element name="Create" type="Create_EventType"/>
+
+
+    </xs:choice>
+  </xs:complexType>
+</xs:schema>

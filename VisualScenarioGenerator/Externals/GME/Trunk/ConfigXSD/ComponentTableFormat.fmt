@@ -1,0 +1,6 @@
+9.0
+4
+1       SQLCHAR       0       80      "\t"     2     type                       SQL_Latin1_General_CP1_CI_AS
+2       SQLCHAR       0       80      "\t"     3     name                       SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR       0       255     "\t"     4     description                SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR       0       80      "\r\n"   5     etype                      SQL_Latin1_General_CP1_CI_AS

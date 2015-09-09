@@ -1,0 +1,8 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DataFiles\bin\Debug\AttackObjectEvent.txt
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DataFiles\bin\Debug\NewObjectEvent.txt
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DataFiles\bin\Debug\StateChangeEvent.txt
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DataFiles\bin\Debug\Aptima.Asim.DDD.DataFiles.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DataFiles\bin\Debug\Aptima.Asim.DDD.DataFiles.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DataFiles\obj\Debug\Aptima.Asim.DDD.DataFiles.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DataFiles\obj\Debug\Aptima.Asim.DDD.DataFiles.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DataFiles\obj\Debug\DataFiles.csprojResolveAssemblyReference.cache

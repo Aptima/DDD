@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="VisualizationDashboard.DisplayControl"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lib="clr-namespace:VisualizationDashboard"
+    xmlns:fm="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"             
+    xmlns:chart="clr-namespace:ChartDirector;assembly=netchartdir"             
+    Height="Auto" Width="Auto" >
+    <Grid>
+        <ListBox Name="displaysLB" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding .}" SelectionChanged="displaysLB_SelectionChanged">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel
+                     IsItemsHost="True"
+                     Width="{Binding
+                              Path=ActualWidth,
+                              RelativeSource={RelativeSource
+                                  Mode=FindAncestor,
+                                  AncestorType=
+                                     {x:Type ScrollContentPresenter}}}" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="#FF000000" BorderThickness="1,1,1,1">
+                        <StackPanel Loaded="ConfigDisplay_Loaded" Unloaded="ConfigDisplay_Unloaded" Tag="{Binding Path=ConfigDisplayID}" Width="Auto" Height="Auto">
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,14 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.Simulators.SeamateSimulator.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.CommonComponents.DataTypeTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.CommonComponents.ErrorLogTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.CommonComponents.ServerOptionsTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimMathTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimulationEventTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimulationObjectTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimulatorTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\bin\Debug\Aptima.Asim.DDD.ScenarioUnitsData.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\obj\Debug\Aptima.Asim.DDD.Simulators.SeamateSimulator.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\obj\Debug\Aptima.Asim.DDD.Simulators.SeamateSimulator.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\NewSimulators\SEAMATE\SeamateSimulator\SeamateSimulator\obj\Debug\SeamateSimulator.csprojResolveAssemblyReference.cache

@@ -1,0 +1,16 @@
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\DDDAgentFramework.XML
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\DDDAgentFramework.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\DDDAgentFramework.pdb
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\Aptima.Asim.DDD.CommonComponents.DataTypeTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\Aptima.Asim.DDD.CommonComponents.ErrorLogTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\Aptima.Asim.DDD.CommonComponents.NetworkTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\Aptima.Asim.DDD.CommonComponents.ServerOptionsTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimMathTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimulationEventTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\bin\Debug\Aptima.Asim.DDD.CommonComponents.SimulationModelTools.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\obj\Debug\DDDAgentFramework.csprojResolveAssemblyReference.cache
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\obj\Debug\Aptima.Asim.DDD.DDDAgentFramework.UIHelpers.PlayerLoginDialog.resources
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\obj\Debug\Aptima.Asim.DDD.DDDAgentFramework.UIHelpers.ServerConnectDialog.resources
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\obj\Debug\DDDAgentFramework.csproj.GenerateResource.Cache
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\obj\Debug\DDDAgentFramework.dll
+C:\Users\zzuzack\Desktop\Projects\DDD_Phoenix\src\DDDAgentFramework\obj\Debug\DDDAgentFramework.pdb

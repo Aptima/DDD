@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D6C4302B-EF23-4D1E-A642-2A31622E610D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AGT</RootNamespace>
+    <AssemblyName>AptimaGraphicsToolkit</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2910.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.DirectInput, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AGT_SceneLoadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AGT_SceneLoadDialog.Designer.cs">
+      <DependentUpon>AGT_SceneLoadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IAGT_SceneLoadDialog.cs" />
+    <Compile Include="GameToolkit\AGT_PointList.cs" />
+    <Compile Include="GameToolkit\AGT_Text.cs" />
+    <Compile Include="Sprites\AGT_GDIBridge.cs" />
+    <Compile Include="Sprites\AGT_SystemImages.cs" />
+    <Compile Include="GameToolkit\AGT_Label.cs" />
+    <Compile Include="Motion\AGT_LinearMotion.cs" />
+    <Compile Include="GameToolkit\AGT_Heading.cs" />
+    <Compile Include="Sprites\AGT_ImageLibrary.cs" />
+    <Compile Include="Scenes\DDD_Playfield.cs" />
+    <Compile Include="Forms\AGT_SplashDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AGT_SplashDialog.Designer.cs">
+      <DependentUpon>AGT_SplashDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AGT_CanvasControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\AGT_CanvasControl.Designer.cs">
+      <DependentUpon>AGT_CanvasControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameFramework\AGT_GameFramework.cs" />
+    <Compile Include="Sprites\AGT_TextureResource.cs" />
+    <Compile Include="GameToolkit\AGT_RenderableElement.cs" />
+    <Compile Include="Sprites\AGT_SpriteManager.cs" />
+    <Compile Include="Forms\IAGT_SplashDialog.cs" />
+    <Compile Include="GameFramework\IRenderable.cs" />
+    <Compile Include="GameToolkit\AGT_Pawn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AGT_SplashDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AGT_SplashDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="GameFramework\AGT_Scene.cs" />
+    <Compile Include="Mapping\UTM_Mapping.cs" />
+    <Compile Include="Sprites\AGT_SpriteResource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="images\Endpoint.png" />
+    <EmbeddedResource Include="images\Waypoint.png" />
+    <EmbeddedResource Include="images\Unknown.png" />
+    <EmbeddedResource Include="images\Cursor-Engage.png" />
+    <EmbeddedResource Include="images\Cursor-Move.png" />
+    <EmbeddedResource Include="images\Cursor-Undock.png" />
+    <EmbeddedResource Include="images\Waypoint-Add.png" />
+    <EmbeddedResource Include="images\Waypoint-Delete.png" />
+    <EmbeddedResource Include="images\Waypoint-Move.png" />
+    <EmbeddedResource Include="images\Splash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AGT_CanvasControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AGT_CanvasControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AGT_SceneLoadDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AGT_SceneLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="images\Cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

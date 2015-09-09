@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Scenario xsi:noNamespaceSchemaLocation="DDDSchema_4_1_1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ScenarioName>DDD 4.1.1 test scenario</ScenarioName>
+  <Description>This is part of an ongoing series of testing scenarios.  Developed in Feb 2008, this scenario
+  showcases new features added to the DDD.</Description>
+  <ClientSideAssetTransfer>1</ClientSideAssetTransfer>
+  <ClientSideRangeRingVisibility>SharedSensorNetwork</ClientSideRangeRingVisibility>
+  <Playfield>
+    <MapFileName>Map.jpg</MapFileName>
+    <IconLibrary>ImageLib</IconLibrary>
+    <UtmZone>25 M</UtmZone>
+    <VerticalScale>8.5</VerticalScale>
+    <HorizontalScale>8.6</HorizontalScale>
+  </Playfield>
+  <LandRegion>
+    <ID>LeftSide</ID>
+    <Vertex>0 0</Vertex>
+    <Vertex>9615 0</Vertex>
+    <Vertex>9615.35 369.64523</Vertex>
+    <Vertex>17068.87 437.14914</Vertex>
+    <Vertex>14927.89 3423.53</Vertex>
+    <Vertex>18181.06 4768.01</Vertex>
+    <Vertex>13060.21 16368.98</Vertex>
+    <Vertex>9397.73 16570.64</Vertex>
+    <Vertex>6358.70 16026.50</Vertex>
+    <Vertex>4892.77 17328.25</Vertex>
+    <Vertex>4966.35 19160.55</Vertex>
+    <Vertex>3353.11 22339.57</Vertex>
+    <Vertex>1929.79 23829.56</Vertex>
+    <Vertex>4079.24 25304.95</Vertex>
+    <Vertex>2565.09 27122.88</Vertex>
+    <Vertex>1071.78 27851.10</Vertex>
+    <Vertex>164.46437 12917.67</Vertex>
+    <Vertex>0 12917.67</Vertex>
+    <Vertex>0 100</Vertex>
+  </LandRegion>
+  <ActiveRegion>
+    <ID>Region_1</ID>
+    <Vertex>16068.87 937.14914</Vertex>
+    <Vertex>17927.89 3023.53</Vertex>
+    <Vertex>14181.06 4068.01</Vertex>
+    <Vertex>13060.21 1636.98</Vertex>
+    <Start>0</Start>
+    <End>200</End>
+    <SpeedMultiplier>.2</SpeedMultiplier>
+    <BlocksMovement>false</BlocksMovement>
+    <SensorsBlocked>S-20,S-60</SensorsBlocked>
+    <IsVisible>true</IsVisible>
+    <Color>OrangeRed</Color>
+  </ActiveRegion>
+  <ActiveRegion>
+    <ID>Region_2</ID>
+    <Vertex>15068.87 1937.14914</Vertex>
+    <Vertex>18927.89 2523.53</Vertex>
+    <Vertex>16181.06 3068.01</Vertex>
+    <Vertex>10060.21 2368.98</Vertex>
+    <Start>0</Start>
+    <End>200</End>
+    <SpeedMultiplier>1.0</SpeedMultiplier>
+    <BlocksMovement>true</BlocksMovement>
+    <SensorsBlocked>S-20</SensorsBlocked>
+    <IsVisible>true</IsVisible>
+    <Color>OrangeRed</Color>
+  </ActiveRegion>
+  <ActiveRegion>
+    <ID>RulesOfEngagement</ID>
+    <Vertex>1000 1000</Vertex>
+    <Vertex>10000 1000</Vertex>
+    <Vertex>10000 10000</Vertex>
+    <Vertex>1000 10000</Vertex>
+    <Start>0</Start>
+    <End>200</End>
+    <SpeedMultiplier>1.0</SpeedMultiplier>
+    <BlocksMovement>false</BlocksMovement>
+    <IsVisible>true</IsVisible>
+    <Color>OrangeRed</Color>
+  </ActiveRegion>
+  <Team>
+    <Name>Alliance</Name>
+    <Against>Empire</Against>
+  </Team>
+  <Team>
+    <Name>Empire</Name>
+    <Against>Alliance</Against>
+  </Team>
+  <DecisionMaker>
+    <Role>Blue Commander</Role>
+    <Identifier>BluePlayer01</Identifier>
+    <Color>CornflowerBlue</Color>
+    <Briefing>Find, identify and destroy all Red units without loss of civilian lives or property.</Briefing>
+    <CanTransfer>true</CanTransfer>
+    <CanForceTransfers>true</CanForceTransfers>
+    <Team>Alliance</Team>
+    <CanChat>BluePlayer02,RedPlayer02,RedPlayer01</CanChat>
+    <CanWhiteboard>BluePlayer02,RedPlayer01,RedPlayer02</CanWhiteboard>
+    <CanSpeak>BluePlayer02,RedPlayer01,RedPlayer02</CanSpeak>
+    <IsObserver>false</IsObserver>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Blue Underling</Role>
+    <Identifier>BluePlayer02</Identifier>
+    <Color>DarkBlue</Color>
+    <Briefing>Find, identify and destroy all Red units without much loss of civilian lives or property.</Briefing>
+    <CanTransfer>false</CanTransfer>
+    <CanForceTransfers>false</CanForceTransfers>
+    <Team>Alliance</Team>
+    <CanChat>BluePlayer01,RedPlayer01,RedPlayer02</CanChat>
+    <CanWhiteboard>BluePlayer01,RedPlayer01,RedPlayer02</CanWhiteboard>
+    <CanSpeak>BluePlayer01,RedPlayer01,RedPlayer02</CanSpeak>
+    <IsObserver>true</IsObserver>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Red Commander</Role>
+    <Identifier>RedPlayer01</Identifier>
+    <Color>DarkRed</Color>
+    <Briefing>Find, identity and destroy all Blue units without loss of civilian lives or property.</Briefing>
+    <CanTransfer>false</CanTransfer>
+    <CanForceTransfers>false</CanForceTransfers>
+    <Team>Empire</Team>
+    <CanChat>BluePlayer01,BluePlayer02,RedPlayer02</CanChat>
+    <CanWhiteboard>RedPlayer02,BluePlayer02,BluePlayer01</CanWhiteboard>
+    <CanSpeak>RedPlayer02,BluePlayer02,BluePlayer01</CanSpeak>
+    <IsObserver>false</IsObserver>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Support</Role>
+    <Identifier>RedPlayer02</Identifier>
+    <Color>Plum</Color>
+    <Briefing>Support your teammate</Briefing>
+    <CanTransfer>false</CanTransfer>
+    <CanForceTransfers>false</CanForceTransfers>
+    <Team>Empire</Team>
+    <CanChat>BluePlayer01,BluePlayer02,RedPlayer01</CanChat>
+    <CanWhiteboard>BluePlayer01,BluePlayer02,RedPlayer01</CanWhiteboard>
+    <CanSpeak>BluePlayer01,BluePlayer02,RedPlayer01</CanSpeak>
+    <IsObserver>false</IsObserver>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Proxy</Role>
+    <Identifier>BluePlayer03</Identifier>
+    <Color>CornflowerBlue</Color>
+    <CanTransfer>false</CanTransfer>
+    <CanForceTransfers>false</CanForceTransfers>
+    <Team>Alliance</Team>
+    <CanChat>BluePlayer01,BluePlayer02,RedPlayer01,RedPlayer02,RedPlayer03</CanChat>
+    <CanWhiteboard>BluePlayer01,RedPlayer01,BluePlayer02,RedPlayer02,RedPlayer03</CanWhiteboard>
+    <CanSpeak>BluePlayer01,BluePlayer02,RedPlayer01,RedPlayer02,RedPlayer03</CanSpeak>
+    <IsObserver>false</IsObserver>
+  </DecisionMaker>
+  <DecisionMaker>
+    <Role>Proxy</Role>
+    <Identifier>RedPlayer03</Identifier>
+    <Color>Crimson</Color>
+    <CanTransfer>false</CanTransfer>
+    <CanForceTransfers>false</CanForceTransfers>
+    <Team>Empire</Team>
+    <CanChat>BluePlayer01,BluePlayer02,RedPlayer01,RedPlayer02,BluePlayer03</CanChat>
+    <CanWhiteboard>BluePlayer01,BluePlayer02,RedPlayer01,RedPlayer02,BluePlayer03</CanWhiteboard>
+    <CanSpeak>BluePlayer01,BluePlayer02,RedPlayer01,RedPlayer02,BluePlayer03</CanSpeak>
+    <IsObserver>false</IsObserver>
+  </DecisionMaker>
+  <Network>
+    <Name>Red Team</Name>
+    <Member>RedPlayer01,RedPlayer02</Member>
+  </Network>
+  <Network>
+    <Name>Blue Team</Name>
+    <Member>BluePlayer01,BluePlayer02</Member>
+  </Network>
+  <DefineEngram>
+    <Name>EvacuationStarted</Name>
+    <Value>No</Value>
+    <Type>String</Type>
+  </DefineEngram>
+  <DefineEngram>
+    <Name>DerisionLikely</Name>
+    <Value>Yes</Value>
+    <Type>String</Type>
+  </DefineEngram>
+  <DefineEngram>
+    <Name>Fighter02_Control</Name>
+    <Value>OK_To_Go</Value>
+    <Type>String</Type>
+  </DefineEngram>
+  <DefineEngram>
+    <Name>RedFighterLive</Name>
+    <Value>False</Value>
+    <Type>String</Type>
+  </DefineEngram>
+  <DefineEngram>
+    <Name>Has_Moved</Name>
+    <Value>false</Value>
+    <Type>String</Type>
+  </DefineEngram>
+  <Sensor>
+    <Name>S-20</Name>
+    <Extent>20000</Extent>
+  </Sensor>
+  <Sensor>
+    <Name>S-60</Name>
+    <Extent>60000</Extent>
+  </Sensor>
+  <Sensor>
+    <Name>S-160</Name>
+    <Extent>160000</Extent>
+  </Sensor>
+  <Sensor>
+    <Name>S-150</Name>
+    <Extent>150000</Extent>
+  </Sensor>
+  <Sensor>
+    <Name>CustomAttributeSensor1</Name>
+    <Engram>Has_Moved</Engram>
+    <Cone>
+      <Spread>360</Spread>
+      <Extent>15000</Extent>
+      <Direction>0 0 1</Direction>
+      <Level>A</Level>
+    </Cone>
+  </Sensor>
+  <Classifications>
+    <Classification>foo1</Classification>
+    <Classification>foo2</Classification>
+    <Classification>foo3</Classification>
+  </Classifications>
+  <TimeToAttack>10</TimeToAttack>
+  <Genus>
+    <Name>AirObject</Name>
+  </Genus>
+  <Genus>
+    <Name>LandObject</Name>
+  </Genus>
+  <Genus>
+    <Name>SeaObject</Name>
+  </Genus>
+  <Species>
+    <Name>GenericLand</Name>
+    <Base>LandObject</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <DefaultClassification>foo1</DefaultClassification>
+    <LaunchedByOwner>false</LaunchedByOwner>
+    <FullyFunctional>
+      <Icon>ImageLib.Unknown.png</Icon>
+      <StateParameters>
+        <LaunchDuration>0</LaunchDuration>
+        <DockingDuration>0</DockingDuration>
+        <TimeToAttack>1</TimeToAttack>
+        <MaximumSpeed>0</MaximumSpeed>
+        <FuelCapacity>0</FuelCapacity>
+        <InitialFuelLoad>0</InitialFuelLoad>
+        <FuelConsumptionRate>0</FuelConsumptionRate>
+        <FuelDepletionState>Dead</FuelDepletionState>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>Inoperable</State>
+    </DefineState>
+    <DefineState>
+      <State>Dead</State>
+    </DefineState>
+  </Species>
+  <Species>
+    <Name>GroupOfSoldiers</Name>
+    <Base>GenericLand</Base>
+    <Size>0</Size>
+    <IsWeapon>false</IsWeapon>
+    <RemoveOnDestruction>true</RemoveOnDestruction>
+    <DefaultClassification>foo2</DefaultClassification>
+    <ClassificationDisplayRules>
+      <ClassificationDisplayRule>
+        <State>FullyFunctional</State>
+        <Classification>foo1</Classification>
+        <DisplayIcon>ImageLib.f16_small.png</DisplayIcon>
+      </ClassificationDisplayRule>
+      <ClassificationDisplayRule>
+        <State>FullyFunctional</State>
+        <Classification>foo2</Classification>
+        <DisplayIcon>ImageLib.tank_small.png</DisplayIcon>
+      </ClassificationDisplayRule>
+    </ClassificationDisplayRules>
+    <LaunchedByOwner>false</LaunchedByOwner>
+    <SubplatformCapacity>
+      <SpeciesName>GroupOfSoldiers</SpeciesName>
+      <Count>10</Count>
+    </SubplatformCapacity>
+    <FullyFunctional>
+      <Icon>ImageLib.soldier_small.png</Icon>
+      <StateParameters>
+        <EngagementDuration>8</EngagementDuration>
+        <MaximumSpeed>13.9</MaximumSpeed>
+        <FuelCapacity>11111</FuelCapacity>
+        <InitialFuelLoad>9876</InitialFuelLoad>
+        <FuelConsumptionRate>0.25</FuelConsumptionRate>
+        <FuelDepletionState>Dead</FuelDepletionState>
+        <Sense>S-60</Sense>
+        <SingletonVulnerability>
+          <Capability>Destroy</Capability>
+          <Transitions>
+            <Effect>1</Effect>
+            <Range>600</Range>
+            <Probability>100</Probability>
+            <State>Dead</State>
+          </Transitions>
+        </SingletonVulnerability>
+        <Emitter>
+          <Attribute>Default</Attribute>
+        </Emitter>
+      </StateParameters>
+    </FullyFunctional>
+    <DefineState>
+      <State>PartlyFunctional</State>
+    </DefineState>
+    <DefineState>
+      <State>Dead</State>
+    </DefineState>
+  </Species>
+  <OpenChatRoom>
+    <Room>Enormous</Room>
+    <Time>10</Time>
+    <Members>BluePlayer01</Members>
+  </OpenChatRoom>
+  <SendChatMessage>
+    <Room>Enormous</Room>
+    <Time>15</Time>
+    <Message>Testing canned messages!</Message>
+  </SendChatMessage>
+  <SendChatMessage>
+    <Room>Enormous</Room>
+    <Sender>BluePlayer01</Sender>
+    <Time>35</Time>
+    <Message>Testing canned message from dm</Message>
+  </SendChatMessage>
+  <OpenChatRoom>
+    <Room>Green</Room>
+    <Time>2</Time>
+    <Members>BluePlayer01,RedPlayer01,BluePlayer02</Members>
+  </OpenChatRoom>
+  <OpenChatRoom>
+    <Room>Romper</Room>
+    <Time>4</Time>
+    <Members>BluePlayer01</Members>
+  </OpenChatRoom>
+  <CloseChatRoom>
+    <Room>Green</Room>
+    <Time>8</Time>
+  </CloseChatRoom>
+  <CloseChatRoom>
+    <Room>Romper</Room>
+    <Time>10</Time>
+  </CloseChatRoom>
+  <OpenVoiceChannel>
+    <Name>Voice.All</Name>
+    <Time>1</Time>
+    <Access>BluePlayer01,BluePlayer02,RedPlayer01,RedPlayer02</Access>
+  </OpenVoiceChannel>
+  <OpenVoiceChannel>
+    <Name>Voice.Blue</Name>
+    <Time>1</Time>
+    <Access>BluePlayer01,BluePlayer02</Access>
+  </OpenVoiceChannel>
+  <ChangeEngram>
+    <Name>EvacuationStarted</Name>
+    <Time>25</Time>
+    <Value>Yes</Value>
+  </ChangeEngram>
+  <Create_Event>
+    <ID>GroupOfSoldiers_01</ID>
+    <Kind>GroupOfSoldiers</Kind>
+    <Owner>BluePlayer01</Owner>
+  </Create_Event>
+  <Create_Event>
+    <ID>GroupOfSoldiers_02</ID>
+    <Kind>GroupOfSoldiers</Kind>
+    <Owner>BluePlayer01</Owner>
+  </Create_Event>
+  <Create_Event>
+    <ID>RedSoldiers</ID>
+    <Kind>GroupOfSoldiers</Kind>
+    <Owner>RedPlayer01</Owner>
+  </Create_Event>
+  <Reveal_Event>
+    <ID>GroupOfSoldiers_01</ID>
+    <Time>38</Time>
+    <InitialLocation>6317 9251 0</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+    <InitialTag>foo</InitialTag>
+  </Reveal_Event>
+  <Reveal_Event>
+    <ID>GroupOfSoldiers_02</ID>
+    <Time>3</Time>
+    <InitialLocation>13060.00 4505.70 1200</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+  <Reveal_Event>
+    <ID>RedSoldiers</ID>
+    <Time>3</Time>
+    <InitialLocation>14060.00 4505.70 1200</InitialLocation>
+    <InitialState>FullyFunctional</InitialState>
+  </Reveal_Event>
+</Scenario>

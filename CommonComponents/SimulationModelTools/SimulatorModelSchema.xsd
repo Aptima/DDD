@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<xs:schema id="SimulationModel" 
+           targetNamespace="SimulationModel.xsd" 
+           xmlns:mstns="SimulationModel.xsd" 
+           xmlns="SimulationModel.xsd" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+           attributeFormDefault="unqualified" 
+           elementFormDefault="qualified">
+  <xs:include id="DataTypesSchema" schemaLocation="DataTypesSchema.xsd"></xs:include>
+  <xs:complexType name="AttributeSubscription">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="Name" type="xs:string" use="required">
+        </xs:attribute>
+        <xs:attribute name="Publish" type="xs:boolean" use="required">
+        </xs:attribute>
+        <xs:attribute name="Subscribe" type="xs:boolean" use="required">
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ObjectInfo">
+    <xs:sequence>
+      <xs:element name="AttributeName" type="AttributeSubscription" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required">
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="EventSubscription">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="Name" type="xs:string" use="required">
+        </xs:attribute>
+        <xs:attribute name="Publish" type="xs:boolean" use="required">
+        </xs:attribute>
+        <xs:attribute name="Subscribe" type="xs:boolean" use="required">
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="SimulatorInfo">
+    <xs:sequence>
+      <xs:element name="ObjectName" type="ObjectInfo" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+      <xs:element name="EventName" type="EventSubscription" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+      <xs:element name="Description" type="xs:string">
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required">
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType  name="SimulatorModelType">
+    <xs:sequence>
+      <xs:element name="Simulator" type="SimulatorInfo" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

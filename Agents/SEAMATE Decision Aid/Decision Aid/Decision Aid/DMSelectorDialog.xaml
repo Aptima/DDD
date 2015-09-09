@@ -1,0 +1,14 @@
+﻿<Window x:Class="Decision_Aid.DMSelectorDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Choose a Decision Maker" Height="300" Width="300" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" Background="White">
+    <StackPanel>
+        <Label Content="Decision Makers" Height="28" Name="label1" />
+        <ListBox Height="209" Name="listBoxDecisionMakers" Width="Auto" />
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">          
+            <Button Content="Quit" Height="23" Name="buttonCancel" Width="75" Margin="10,0,0,0" IsCancel="True" Click="buttonCancel_Click" />
+            <Button Content="Ok" Height="23" Name="buttonOk" Width="75" Padding="1" Margin="10,0,0,0" IsDefault="True" Click="buttonOk_Click" />
+        </StackPanel>
+        
+    </StackPanel>
+</Window>
