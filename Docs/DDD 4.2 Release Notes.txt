@@ -1,0 +1,130 @@
+=====================================================
+DDD 4.2 , Release Notes, November 2011
+=====================================================
+=====================================================
+
+
+Contents:
+=========
+
+	1. DDD 4.2 Release Notes
+
+
+=====================
+DDD 4.2 Release Notes
+=====================
+
+
+
+1. DDD 4.2 Installation Prerequisites:
+--------------------------------------
+
+
+A. Client prerequisites
+
+	i. Managed DirectX 9.  Download the latest Managed DirectX 9 libraries
+	   from Microsoft or Refer to the "Required Software" directory, from 
+	   your DDD 4.0 distribution directory.
+
+	ii. Microsoft .Net 4.0 Framework.  Download the .Net 4.0 Framework from
+	    Microsoft.
+
+
+B. Server prerequisites
+
+	i. Microsoft .Net 4.0 Framework.  Download the .Net 4.0 Framework from
+	   Microsoft.
+
+
+
+2. Admin Privileges Required for Installation:
+----------------------------------------------
+The DDD 4.2 Client requires Managed DirectX 9 and the Microsoft .Net 4.0 Framework.  Both may be acquired from Microsoft.  Admin privileges may be required by your system administrator.
+
+
+
+3. Simulation Time Limit:
+-------------------------
+DDD 4.2 simulations can be a maximum of 24 hours in duration.
+
+
+
+4. Uninstall leaves directories and files on the system:
+--------------------------------------------------------
+The application root directory (C:\Program Files\Aptima\DDD 4.x or C:\Program Files (x86)\Aptima\DDD 4.x) is not removed if applications are accessing the directory.  Make sure no one is accessing the directory while an uninstall is in progress. Otherwise, remove the “DDD 4.x” folder from the directory manually.
+
+
+
+5. Installer requires Microsoft Word to print license agreement:
+----------------------------------------------------------------
+The DDD installer launches Microsoft Word to print the Aptima License agreement. If Word is not installed on the host machine, the license agreement cannot be printed.
+
+
+
+6. Operating System Requirements:
+---------------------------------
+Windows XP has a limitation of 10 incoming network connections, several of which are taken up by standard windows services.  In order to run a simulation with more than 8 players, you will need to run the DDD Server on a machine running the Windows Server 2003 operating system.
+
+
+
+7. Wireless networking may cause server crashes:
+------------------------------------------------
+Wireless networking interfaces are not recommended for use with the DDD.
+
+
+
+8. Visual artifacts from previous scenario runs may be displayed in a current scenario:
+---------------------------------------------------------------------------------------
+These visual artifacts are Active Regions. If this occurs, exit the DDD Server application and re-launch it.
+
+
+
+9. Inconsistent active zone/obstruction behaviors:
+--------------------------------------------------
+The client display and server can get out of sync when objects move through active regions. You may see a temporary discontinuity in an object's motion as the client synchronizes with the server.
+
+
+
+10. State change score rule double counts:
+------------------------------------------
+The current State Change scoring rules will credit the score for each attacker that participated in the engagement, rather than once for the whole engagement.  This could lead to double (or more) counting of an attack if the scenario writer is not aware of this behavior when defining the score.
+
+
+
+11. Scores are not deleted between scenario runs:
+-------------------------------------------------
+A scenario with no scoring defined may show scoring from a previous scenario.   Manually delete “ScoreSummary.htm” from the DDDClient share directory.
+
+
+
+12. User accounts may not be maintained between installs:
+---------------------------------------------------------
+User accounts may not be maintained when upgrading the DDD 4.x Server software to a new release, especially if the license key has changed.  To insure continuity of user accounts, make a backup of the C:\Program Files\Aptima\DDD 4.x\Server\passwords.txt file and then restore it after the software upgrade.
+
+
+
+13. DDD client comes from an unknown publisher:
+-----------------------------------------------
+Running the DDD client on a computer for the first time, a pop-up may be displayed (depending on your security settings):
+
+	Application Run Security Warning
+	Publisher cannot be verified.
+	Are you sure you want to run this application?
+	Name: DDDClient
+	From: <server host name>
+	Publisher: Unknown Publisher.
+
+Click "Run" to run the DDD 4.2 client.
+
+
+
+14. Whiteboard: text or graphics centered around a point near edge of graph may be cut off at map edge:
+-------------------------------------------------------------------------------------------------------
+Whiteboard objects are drawn centered around the point on the map where the user initiates the draw action. If that point is near the map edge the graphic will be cut off along that edge. 
+
+
+
+15. Whiteboard: drawings made before the scenario begins are not replayed:
+--------------------------------------------------------------------------
+DMs can create whitebaords and draw things before the scenario is actually begun. Annotations made before the scenario is started are logged, but are not rendered during replay.
+
